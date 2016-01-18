@@ -1,0 +1,4 @@
+<map id="FrameServerControlWidget" name="FrameServerControlWidget">
+<area shape="rect" id="node3" href="$class_detection_dataset_control.html" title="{DetectionDatasetControl\l\&lt; TObj \&gt;\n||+ DetectionDatasetControl()\l+ ~DetectionDatasetControl()\l}" alt="" coords="5,403,196,509"/>
+<area shape="rect" id="node4" href="$class_tracking_dataset_control.html" title="{TrackingDatasetControl\l\&lt; TObj \&gt;\n||+ TrackingDatasetControl()\l+ ~TrackingDatasetControl()\l}" alt="" coords="220,403,405,509"/>
+</map>

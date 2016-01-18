@@ -1,0 +1,48 @@
+\hypertarget{class_viscv_1_1_a_r_tag}{}\section{A\+R\+Tag Class Reference}
+\label{class_viscv_1_1_a_r_tag}\index{A\+R\+Tag@{A\+R\+Tag}}
+
+
+Defines a augmented reality tag, which contains a bounding polygon and a tag I\+D.  
+
+
+
+
+{\ttfamily \#include $<$A\+R\+Tag\+Detector\+B\+L\+P.\+h$>$}
+
+
+
+Collaboration diagram for A\+R\+Tag\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{class_viscv_1_1_a_r_tag__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_viscv_1_1_a_r_tag_a2bcd6453fb99cc398f515a689726a570}{}\hyperlink{class_viscv_1_1_a_r_tag_a2bcd6453fb99cc398f515a689726a570}{A\+R\+Tag} (\hyperlink{class_viscv_1_1_polygon}{Polygon}$<$ int, 4 $>$ box\+\_\+, std\+::string tag\+I\+D\+\_\+)\label{class_viscv_1_1_a_r_tag_a2bcd6453fb99cc398f515a689726a570}
+
+\begin{DoxyCompactList}\small\item\em Construtor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_viscv_1_1_a_r_tag_a26187bbb196ebb1cfc736c275db7a898}{}\hyperlink{class_viscv_1_1_polygon}{Polygon}$<$ int, 4 $>$ \hyperlink{class_viscv_1_1_a_r_tag_a26187bbb196ebb1cfc736c275db7a898}{box}\label{class_viscv_1_1_a_r_tag_a26187bbb196ebb1cfc736c275db7a898}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_viscv_1_1_polygon}{Polygon} that represents the external contour of a tag. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_a_r_tag_ab8844dfe29ec9d02f624b2459a3c577c}{}std\+::string \hyperlink{class_viscv_1_1_a_r_tag_ab8844dfe29ec9d02f624b2459a3c577c}{tag\+I\+D}\label{class_viscv_1_1_a_r_tag_ab8844dfe29ec9d02f624b2459a3c577c}
+
+\begin{DoxyCompactList}\small\item\em Tag type (I\+D). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines a augmented reality tag, which contains a bounding polygon and a tag I\+D. 
+
+Definition at line 44 of file A\+R\+Tag\+Detector\+B\+L\+P.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/A\+R\+Tag\+Detector\+B\+L\+P.\+h\end{DoxyCompactItemize}

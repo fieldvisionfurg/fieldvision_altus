@@ -1,0 +1,76 @@
+\hypertarget{class_vision_core_1_1_async_1_1_async_tracker_wrap}{}\section{Async\+Tracker\+Wrap$<$ T\+Img, T\+Obj $>$ Class Template Reference}
+\label{class_vision_core_1_1_async_1_1_async_tracker_wrap}\index{Async\+Tracker\+Wrap$<$ T\+Img, T\+Obj $>$@{Async\+Tracker\+Wrap$<$ T\+Img, T\+Obj $>$}}
+
+
+Allows the execution of a tracker asynchronously in an individual thread.  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Async.\+h$>$}
+
+
+
+Inheritance diagram for Async\+Tracker\+Wrap$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{class_vision_core_1_1_async_1_1_async_tracker_wrap__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Async\+Tracker\+Wrap$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{class_vision_core_1_1_async_1_1_async_tracker_wrap__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_async_1_1_async_tracker_wrap_a1a4463f9a48cbd9bd54494d430d9f656}{}\hyperlink{class_vision_core_1_1_async_1_1_async_tracker_wrap_a1a4463f9a48cbd9bd54494d430d9f656}{Async\+Tracker\+Wrap} (\hyperlink{class_vision_core_1_1_async_1_1_async_frame_server_wrap}{Async\+Frame\+Server\+Wrap}$<$ T\+Img $>$ $\ast$afs\+Ptr, \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker}{Tracker}$<$ T\+Img, T\+Obj $>$ $\ast$tracker)\label{class_vision_core_1_1_async_1_1_async_tracker_wrap_a1a4463f9a48cbd9bd54494d430d9f656}
+
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_async_1_1_async_tracker_wrap_a39c25715a3846239ec1380955fb49e19}{}void \hyperlink{class_vision_core_1_1_async_1_1_async_tracker_wrap_a39c25715a3846239ec1380955fb49e19}{set\+Lost\+Track\+Callback} (const std\+::function$<$ void()$>$ \&r\+Callback)\label{class_vision_core_1_1_async_1_1_async_tracker_wrap_a39c25715a3846239ec1380955fb49e19}
+
+\begin{DoxyCompactList}\small\item\em Set the lost track callback. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_async_1_1_async_tracker_wrap_a67d8937141cc8d2766bc0119a4eabe21}{}\hyperlink{class_vision_core_1_1_interfaces_1_1_tracker}{Tracker}$<$ T\+Img, T\+Obj $>$ $\ast$ {\bfseries get\+Tracker} () const \label{class_vision_core_1_1_async_1_1_async_tracker_wrap_a67d8937141cc8d2766bc0119a4eabe21}
+
+\item 
+\hypertarget{class_vision_core_1_1_async_1_1_async_tracker_wrap_a9556d32505a461b5af0782dfe13e2bce}{}void {\bfseries set\+Tracker} (\hyperlink{class_vision_core_1_1_interfaces_1_1_tracker}{Tracker}$<$ T\+Img, T\+Obj $>$ $\ast$tracker)\label{class_vision_core_1_1_async_1_1_async_tracker_wrap_a9556d32505a461b5af0782dfe13e2bce}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Img, class T\+Obj$>$class Vision\+Core\+::\+Async\+::\+Async\+Tracker\+Wrap$<$ T\+Img, T\+Obj $>$}
+
+Allows the execution of a tracker asynchronously in an individual thread. 
+
+This class is a wrap for a Tracker object. It listens an \hyperlink{class_vision_core_1_1_async_1_1_async_frame_server_wrap}{Async\+Frame\+Server\+Wrap} object (given in the constructor) and, when a new frame becomes available, it updates the tracker.
+
+After every tracker update, the result (i.\+e. current tracked object position) is passed to a user provided callback function (see set\+Calback).
+
+The tracker runs in a exclusive internal thread.
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Img} & Image type. \\
+\hline
+{\em T\+Obj} & Object type. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 506 of file Vision\+Async.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Async.\+h\end{DoxyCompactItemize}

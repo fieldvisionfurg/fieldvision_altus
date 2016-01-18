@@ -1,0 +1,149 @@
+\hypertarget{class_viscv_1_1_circle_detector_h_t_c_f}{}\section{Circle\+Detector\+H\+T\+C\+F Class Reference}
+\label{class_viscv_1_1_circle_detector_h_t_c_f}\index{Circle\+Detector\+H\+T\+C\+F@{Circle\+Detector\+H\+T\+C\+F}}
+
+
+Detects circles using Hough Transform and (optionally) Color Filter (H\+T\+C\+F).  
+
+
+
+
+{\ttfamily \#include $<$Circle\+Detector\+H\+T\+C\+F.\+h$>$}
+
+
+
+Inheritance diagram for Circle\+Detector\+H\+T\+C\+F\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{class_viscv_1_1_circle_detector_h_t_c_f__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Circle\+Detector\+H\+T\+C\+F\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{class_viscv_1_1_circle_detector_h_t_c_f__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_viscv_1_1_circle_detector_h_t_c_f_a8eb782145f34bac05e1ba977e791caf8}{}\hyperlink{class_viscv_1_1_circle_detector_h_t_c_f_a8eb782145f34bac05e1ba977e791caf8}{Circle\+Detector\+H\+T\+C\+F} ()\label{class_viscv_1_1_circle_detector_h_t_c_f_a8eb782145f34bac05e1ba977e791caf8}
+
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_circle_detector_h_t_c_f_a036330f1968940ca58930329dd66f05b}{}virtual \hyperlink{class_viscv_1_1_circle_detector_h_t_c_f_a036330f1968940ca58930329dd66f05b}{$\sim$\+Circle\+Detector\+H\+T\+C\+F} ()\label{class_viscv_1_1_circle_detector_h_t_c_f_a036330f1968940ca58930329dd66f05b}
+
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{class_viscv_1_1_circle}{Circle}$<$$>$ $>$ \hyperlink{class_viscv_1_1_circle_detector_h_t_c_f_ad8f008988f0c246f86a192f8c17c3a88}{detect} (const cv\+::\+Mat \&img) const 
+\begin{DoxyCompactList}\small\item\em Detects objects in the image and returns a vector with the detected objects. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_circle_detector_h_t_c_f_ad4da52b5daa1da09a46aa725cde4bb93}{}void \hyperlink{class_viscv_1_1_circle_detector_h_t_c_f_ad4da52b5daa1da09a46aa725cde4bb93}{color\+Filter} (const cv\+::\+Mat \&src, cv\+::\+Mat \&dst) const \label{class_viscv_1_1_circle_detector_h_t_c_f_ad4da52b5daa1da09a46aa725cde4bb93}
+
+\begin{DoxyCompactList}\small\item\em Computa uma imagem contendo somente os pixels com hue entre os limites especificados em mean\+Hue e var\+Hue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_viscv_1_1_circle_detector_h_t_c_f_ad834b1ab28e93958d183da062dbcbe42}{gauss\+Filter\+Sigma}
+\begin{DoxyCompactList}\small\item\em Desvio padrão do filtro Gaussiano (relativo ao número de linhas da imagem) \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_circle_detector_h_t_c_f_a001ce4c829b6bfed69328dde68c616aa}{}double \hyperlink{class_viscv_1_1_circle_detector_h_t_c_f_a001ce4c829b6bfed69328dde68c616aa}{hough\+Param1}\label{class_viscv_1_1_circle_detector_h_t_c_f_a001ce4c829b6bfed69328dde68c616aa}
+
+\begin{DoxyCompactList}\small\item\em Parametro 1 da transformada de Hough na Open\+Cv. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_circle_detector_h_t_c_f_ab33e718b70d4cbd105ad85370ce6f6c4}{}double \hyperlink{class_viscv_1_1_circle_detector_h_t_c_f_ab33e718b70d4cbd105ad85370ce6f6c4}{hough\+Param2}\label{class_viscv_1_1_circle_detector_h_t_c_f_ab33e718b70d4cbd105ad85370ce6f6c4}
+
+\begin{DoxyCompactList}\small\item\em Parametro 2 da transformada de Hough na Open\+Cv. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_circle_detector_h_t_c_f_a8d3181a667ab3c5a95bafdb5b40abb91}{}int \hyperlink{class_viscv_1_1_circle_detector_h_t_c_f_a8d3181a667ab3c5a95bafdb5b40abb91}{mean\+Hue}\label{class_viscv_1_1_circle_detector_h_t_c_f_a8d3181a667ab3c5a95bafdb5b40abb91}
+
+\begin{DoxyCompactList}\small\item\em Hue médio do filtro de cor \mbox{[}0,179\mbox{]}. \end{DoxyCompactList}\item 
+int \hyperlink{class_viscv_1_1_circle_detector_h_t_c_f_a4b6c2bf89ae1855a664ac3d25a60f71e}{var\+Hue}
+\begin{DoxyCompactList}\small\item\em Variância (tolerância) do filtro de cor \mbox{[}0,90\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_circle_detector_h_t_c_f_ae0ad1d0e8391baa5735df28c7a180328}{}bool \hyperlink{class_viscv_1_1_circle_detector_h_t_c_f_ae0ad1d0e8391baa5735df28c7a180328}{use\+Color\+Filter}\label{class_viscv_1_1_circle_detector_h_t_c_f_ae0ad1d0e8391baa5735df28c7a180328}
+
+\begin{DoxyCompactList}\small\item\em Define se o filtro de cor deve ser utilizado ou não. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_circle_detector_h_t_c_f_aa04568497fd0fc771dc37f6ad1450618}{}bool \hyperlink{class_viscv_1_1_circle_detector_h_t_c_f_aa04568497fd0fc771dc37f6ad1450618}{use\+Blur}\label{class_viscv_1_1_circle_detector_h_t_c_f_aa04568497fd0fc771dc37f6ad1450618}
+
+\begin{DoxyCompactList}\small\item\em Define se o filtro gaussiano (blur) deve ser utilizado ou não. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_circle_detector_h_t_c_f_ad56f3dc42f92c3f920caed1aec8ead03}{}bool \hyperlink{class_viscv_1_1_circle_detector_h_t_c_f_ad56f3dc42f92c3f920caed1aec8ead03}{show\+Processing\+Imgs}\label{class_viscv_1_1_circle_detector_h_t_c_f_ad56f3dc42f92c3f920caed1aec8ead03}
+
+\begin{DoxyCompactList}\small\item\em Define se as imagens intermediárias de processamento devem ser mostradas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Detects circles using Hough Transform and (optionally) Color Filter (H\+T\+C\+F). \begin{Desc}
+\item[Examples\+: ]\par
+\hyperlink{_vision_tests_2main_8cpp-example}{Vision\+Tests/main.\+cpp}.\end{Desc}
+
+
+Definition at line 57 of file Circle\+Detector\+H\+T\+C\+F.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_viscv_1_1_circle_detector_h_t_c_f_ad8f008988f0c246f86a192f8c17c3a88}{}\index{Viscv\+::\+Circle\+Detector\+H\+T\+C\+F@{Viscv\+::\+Circle\+Detector\+H\+T\+C\+F}!detect@{detect}}
+\index{detect@{detect}!Viscv\+::\+Circle\+Detector\+H\+T\+C\+F@{Viscv\+::\+Circle\+Detector\+H\+T\+C\+F}}
+\subsubsection[{detect(const cv\+::\+Mat \&img) const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Circle}$<$$>$ $>$ detect (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{img}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_viscv_1_1_circle_detector_h_t_c_f_ad8f008988f0c246f86a192f8c17c3a88}
+
+
+Detects objects in the image and returns a vector with the detected objects. 
+
+The vector should be empty if no object is detected. 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_detector_a0977745b253f810bb2ec009844618305}{Detector$<$ cv\+::\+Mat, Circle$<$$>$ $>$}.
+
+\begin{Desc}
+\item[Examples\+: ]\par
+\hyperlink{_vision_tests_2main_8cpp-example}{Vision\+Tests/main.\+cpp}.\end{Desc}
+
+
+Definition at line 76 of file Circle\+Detector\+H\+T\+C\+F.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{class_viscv_1_1_circle_detector_h_t_c_f_ad8f008988f0c246f86a192f8c17c3a88_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_viscv_1_1_circle_detector_h_t_c_f_ad834b1ab28e93958d183da062dbcbe42}{}\index{Viscv\+::\+Circle\+Detector\+H\+T\+C\+F@{Viscv\+::\+Circle\+Detector\+H\+T\+C\+F}!gauss\+Filter\+Sigma@{gauss\+Filter\+Sigma}}
+\index{gauss\+Filter\+Sigma@{gauss\+Filter\+Sigma}!Viscv\+::\+Circle\+Detector\+H\+T\+C\+F@{Viscv\+::\+Circle\+Detector\+H\+T\+C\+F}}
+\subsubsection[{gauss\+Filter\+Sigma}]{\setlength{\rightskip}{0pt plus 5cm}double gauss\+Filter\+Sigma}\label{class_viscv_1_1_circle_detector_h_t_c_f_ad834b1ab28e93958d183da062dbcbe42}
+
+
+Desvio padrão do filtro Gaussiano (relativo ao número de linhas da imagem) 
+
+O valor real do desvio padrão utilizado é img.\+rows $\ast$ gauss\+Filter\+Sigma 
+
+Definition at line 73 of file Circle\+Detector\+H\+T\+C\+F.\+h.
+
+\hypertarget{class_viscv_1_1_circle_detector_h_t_c_f_a4b6c2bf89ae1855a664ac3d25a60f71e}{}\index{Viscv\+::\+Circle\+Detector\+H\+T\+C\+F@{Viscv\+::\+Circle\+Detector\+H\+T\+C\+F}!var\+Hue@{var\+Hue}}
+\index{var\+Hue@{var\+Hue}!Viscv\+::\+Circle\+Detector\+H\+T\+C\+F@{Viscv\+::\+Circle\+Detector\+H\+T\+C\+F}}
+\subsubsection[{var\+Hue}]{\setlength{\rightskip}{0pt plus 5cm}int var\+Hue}\label{class_viscv_1_1_circle_detector_h_t_c_f_a4b6c2bf89ae1855a664ac3d25a60f71e}
+
+
+Variância (tolerância) do filtro de cor \mbox{[}0,90\mbox{]}. 
+
+O filtro de cor retem apenas pixels com hue entre \mbox{[}mean\+Hue-\/var\+Hue , mean\+Hue+var\+Hue\mbox{]} 
+
+Definition at line 86 of file Circle\+Detector\+H\+T\+C\+F.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Circle\+Detector\+H\+T\+C\+F.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Circle\+Detector\+H\+T\+C\+F.\+cpp\end{DoxyCompactItemize}

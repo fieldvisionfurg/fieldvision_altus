@@ -1,0 +1,33 @@
+\hypertarget{structqt__meta__stringdata___image_viewer_cv__t}{}\section{qt\+\_\+meta\+\_\+stringdata\+\_\+\+Image\+Viewer\+Cv\+\_\+t Struct Reference}
+\label{structqt__meta__stringdata___image_viewer_cv__t}\index{qt\+\_\+meta\+\_\+stringdata\+\_\+\+Image\+Viewer\+Cv\+\_\+t@{qt\+\_\+meta\+\_\+stringdata\+\_\+\+Image\+Viewer\+Cv\+\_\+t}}
+
+
+Collaboration diagram for qt\+\_\+meta\+\_\+stringdata\+\_\+\+Image\+Viewer\+Cv\+\_\+t\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{structqt__meta__stringdata___image_viewer_cv__t__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structqt__meta__stringdata___image_viewer_cv__t_a3d7b95221b3652347060c202cc62d0f5}{}Q\+Byte\+Array\+Data {\bfseries data} \mbox{[}12\mbox{]}\label{structqt__meta__stringdata___image_viewer_cv__t_a3d7b95221b3652347060c202cc62d0f5}
+
+\item 
+\hypertarget{structqt__meta__stringdata___image_viewer_cv__t_a478e981770b2372c861b436bcfbed5cb}{}char {\bfseries stringdata0} \mbox{[}98\mbox{]}\label{structqt__meta__stringdata___image_viewer_cv__t_a478e981770b2372c861b436bcfbed5cb}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 21 of file moc\+\_\+\+Image\+Viewer\+Cv.\+cpp.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets/release/moc\+\_\+\+Image\+Viewer\+Cv.\+cpp\end{DoxyCompactItemize}

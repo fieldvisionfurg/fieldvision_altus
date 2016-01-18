@@ -1,0 +1,31 @@
+/** \tutorial1
+Introduction
+------------
+In this tutorial, we will create a simple detector, using the Detector interface, to find red objects in an image. The image processing is as follows:
+- Apply a binary threshold in the red channel of image.
+- Apply an erosion to eliminate small blobs.
+- Find the center of blobs.
+The detector output is a list of points containing the blobs center. The image bellow depicts an example.
+
+\image
+
+Objectives
+------------------
+- Learn how to create a new C++ project including OpenCv library and CvWorks framework. 
+- Show how to implement and use the Detector<TImg,TObj> interface.
+
+
+Steps
+----------
+1) Create an empty project in Qt Creator.
+2) Add a cpp file and create a main function.
+3) Include CvWorks header (\ref VisionCore.h) in your project. This header defines all CvWorks interfaces and contains general implementations for usefull tasks and methods.
+4) Include OpenCv headers: imageproc.h, ...
+5) Link OpenCv libraries: imagproc.lib ....
+6) Add the code to load an image with OpenCv.
+7) Create a class derived from Detector<cv::Mat,cv::Rect> to process an image and detect the red objects. This is the most important  step of this tutorial. The Detector interface defines a single function 'detect' that needs to be implemented.
+8) Instanciate the detector and perform a detection.
+
+
+
+*/

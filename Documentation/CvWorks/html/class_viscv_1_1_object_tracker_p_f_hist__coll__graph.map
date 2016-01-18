@@ -1,0 +1,4 @@
+<map id="ObjectTrackerPFHist" name="ObjectTrackerPFHist">
+<area shape="rect" id="node2" href="$class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker.html" title="{AbstractParticleFiltering\lTracker\&lt; cv::Mat, cv::Rect \&gt;\n|# m_randEngine\l|+ ~AbstractParticleFiltering\lTracker()\l+ getLastTrack()\l+ update()\l+ reset()\l# AbstractParticleFiltering\lTracker()\l}" alt="" coords="5,219,192,399"/>
+<area shape="rect" id="node3" href="$class_vision_core_1_1_interfaces_1_1_tracker.html" title="{Tracker\&lt; cv::Mat, cv\l::Rect \&gt;\n|# m_lostTrack\l|+ Tracker()\l+ getLastTrack()\l+ lostTrack()\l+ update()\l+ ~Tracker()\l# lostTrack()\l}" alt="" coords="29,5,168,171"/>
+</map>

@@ -1,0 +1,114 @@
+\hypertarget{class_viscv_1_1_feature_tracker_k_l_t_cv}{}\section{Feature\+Tracker\+K\+L\+T\+Cv Class Reference}
+\label{class_viscv_1_1_feature_tracker_k_l_t_cv}\index{Feature\+Tracker\+K\+L\+T\+Cv@{Feature\+Tracker\+K\+L\+T\+Cv}}
+
+
+Kanade-\/\+Lucas Tracker using Open\+Cv implementation.  
+
+
+
+
+{\ttfamily \#include $<$Feature\+Tracker\+K\+L\+T\+Cv.\+h$>$}
+
+
+
+Inheritance diagram for Feature\+Tracker\+K\+L\+T\+Cv\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{class_viscv_1_1_feature_tracker_k_l_t_cv__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Feature\+Tracker\+K\+L\+T\+Cv\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{class_viscv_1_1_feature_tracker_k_l_t_cv__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_viscv_1_1_feature_tracker_k_l_t_cv_afec5e8db43cff5865d01a6aefa571f75}{}\hyperlink{class_viscv_1_1_feature_tracker_k_l_t_cv_afec5e8db43cff5865d01a6aefa571f75}{Feature\+Tracker\+K\+L\+T\+Cv} (std\+::vector$<$ cv\+::\+Point2f $>$ points)\label{class_viscv_1_1_feature_tracker_k_l_t_cv_afec5e8db43cff5865d01a6aefa571f75}
+
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_feature_tracker_k_l_t_cv_ad31a41e54b06155a819d91ddd00a2e8a}{}\hyperlink{class_viscv_1_1_feature_tracker_k_l_t_cv_ad31a41e54b06155a819d91ddd00a2e8a}{Feature\+Tracker\+K\+L\+T\+Cv} (const cv\+::\+Mat \&img, const cv\+::\+Rect \&roi)\label{class_viscv_1_1_feature_tracker_k_l_t_cv_ad31a41e54b06155a819d91ddd00a2e8a}
+
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_feature_tracker_k_l_t_cv_a92b21030b56cbc6f5bd865dadb2f88ac}{}\hyperlink{class_viscv_1_1_feature_tracker_k_l_t_cv_a92b21030b56cbc6f5bd865dadb2f88ac}{Feature\+Tracker\+K\+L\+T\+Cv} ()\label{class_viscv_1_1_feature_tracker_k_l_t_cv_a92b21030b56cbc6f5bd865dadb2f88ac}
+
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_feature_tracker_k_l_t_cv_a401364423c0eb5076abe2b69c713bdd6}{}virtual \hyperlink{class_viscv_1_1_feature_tracker_k_l_t_cv_a401364423c0eb5076abe2b69c713bdd6}{$\sim$\+Feature\+Tracker\+K\+L\+T\+Cv} ()\label{class_viscv_1_1_feature_tracker_k_l_t_cv_a401364423c0eb5076abe2b69c713bdd6}
+
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_feature_tracker_k_l_t_cv_a2cc406a5869c16af6c0a0eefa34878ed}{}void {\bfseries add\+Point\+To\+Track} (const cv\+::\+Point2f \&point)\label{class_viscv_1_1_feature_tracker_k_l_t_cv_a2cc406a5869c16af6c0a0eefa34878ed}
+
+\item 
+\hypertarget{class_viscv_1_1_feature_tracker_k_l_t_cv_ae54e239708d4ea24db455a2e1f88d086}{}void {\bfseries add\+Points\+From\+Region} (const cv\+::\+Mat \&img, const cv\+::\+Rect \&roi)\label{class_viscv_1_1_feature_tracker_k_l_t_cv_ae54e239708d4ea24db455a2e1f88d086}
+
+\item 
+\hypertarget{class_viscv_1_1_feature_tracker_k_l_t_cv_ad20897c5c8bd47f5d4005989bead0e55}{}void {\bfseries reset} ()\label{class_viscv_1_1_feature_tracker_k_l_t_cv_ad20897c5c8bd47f5d4005989bead0e55}
+
+\item 
+virtual const std\+::vector$<$ cv\+::\+Point2f $>$ \& \hyperlink{class_viscv_1_1_feature_tracker_k_l_t_cv_af54d7c5518cd3377ba19514359d51ca7}{get\+Last\+Track} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the current estimated object state. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_feature_tracker_k_l_t_cv_ab233da15b6c7aad7d83c67057a558bd4}{}void \hyperlink{class_viscv_1_1_feature_tracker_k_l_t_cv_ab233da15b6c7aad7d83c67057a558bd4}{update} (const \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Vision\+Core\+::\+Frame}$<$ cv\+::\+Mat $>$ \&frame)\label{class_viscv_1_1_feature_tracker_k_l_t_cv_ab233da15b6c7aad7d83c67057a558bd4}
+
+\begin{DoxyCompactList}\small\item\em Given an image (i.\+e. video frame), update the tracked objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_viscv_1_1_feature_tracker_k_l_t_cv_a272ed08f7c5f71f877cade1838cbc513}{}static void {\bfseries cv\+Mouse\+Callback} (int click\+Event, int x, int y, int flags, void $\ast$feature\+Tracker\+Ptr)\label{class_viscv_1_1_feature_tracker_k_l_t_cv_a272ed08f7c5f71f877cade1838cbc513}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Kanade-\/\+Lucas Tracker using Open\+Cv implementation. 
+
+Definition at line 38 of file Feature\+Tracker\+K\+L\+T\+Cv.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_viscv_1_1_feature_tracker_k_l_t_cv_af54d7c5518cd3377ba19514359d51ca7}{}\index{Viscv\+::\+Feature\+Tracker\+K\+L\+T\+Cv@{Viscv\+::\+Feature\+Tracker\+K\+L\+T\+Cv}!get\+Last\+Track@{get\+Last\+Track}}
+\index{get\+Last\+Track@{get\+Last\+Track}!Viscv\+::\+Feature\+Tracker\+K\+L\+T\+Cv@{Viscv\+::\+Feature\+Tracker\+K\+L\+T\+Cv}}
+\subsubsection[{get\+Last\+Track()}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::vector$<$ cv\+::\+Point2f $>$ \& get\+Last\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_viscv_1_1_feature_tracker_k_l_t_cv_af54d7c5518cd3377ba19514359d51ca7}
+
+
+Returns a reference to the current estimated object state. 
+
+This function is often call after calling the \hyperlink{class_viscv_1_1_feature_tracker_k_l_t_cv_ab233da15b6c7aad7d83c67057a558bd4}{update()} method. The returned reference is usualy to a class member. 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_a93ee7011307419e8c88db9f22d900657}{Tracker$<$ cv\+::\+Mat, std\+::vector$<$ cv\+::\+Point2f $>$ $>$}.
+
+
+
+Definition at line 119 of file Feature\+Tracker\+K\+L\+T\+Cv.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{class_viscv_1_1_feature_tracker_k_l_t_cv_af54d7c5518cd3377ba19514359d51ca7_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Feature\+Tracker\+K\+L\+T\+Cv.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Feature\+Tracker\+K\+L\+T\+Cv.\+cpp\end{DoxyCompactItemize}

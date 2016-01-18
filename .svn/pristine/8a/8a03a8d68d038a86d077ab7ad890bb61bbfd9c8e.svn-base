@@ -1,0 +1,6 @@
+<map id="TrackingDatasetControl&lt; TObj &gt;" name="TrackingDatasetControl&lt; TObj &gt;">
+<area shape="rect" id="node2" href="$class_frame_server_control_widget.html" title="Esta classe controla a execução e representação gráfica de um vídeo (FrameServer). " alt="" coords="155,492,361,657"/>
+<area shape="rect" id="node4" href="$class_image_viewer_cv.html" title="Esta classe implementa um widget capaz de mostrar uma imagem do tipo cv::Mat. " alt="" coords="51,132,190,429"/>
+<area shape="rect" id="node5" href="$class_vision_core_1_1_async_1_1_async_frame_server_wrap.html" title="{AsyncFrameServerWrap\l\&lt; cv::Mat \&gt;\n||+ AsyncFrameServerWrap()\l+ ~AsyncFrameServerWrap()\l+ start()\l+ stop()\l+ started()\l+ finished()\l+ getCurrentFrame()\l+ lockCurrentFrame()\l+ unlockCurrentFrame()\l+ getThreadPtr()\land 7 more...\l}" alt="" coords="215,161,405,400"/>
+<area shape="rect" id="node6" href="$class_vision_core_1_1_interfaces_1_1_frame_server.html" title="{FrameServer\&lt; cv::Mat \&gt;\n||+ captureFrame()\l+ hasNext()\l+ releaseServer()\l+ ~FrameServer()\l}" alt="" coords="429,220,591,341"/>
+</map>

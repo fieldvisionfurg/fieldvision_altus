@@ -1,0 +1,72 @@
+\hypertarget{class_vision_core_1_1_interfaces_1_1_identified_multi_tracker}{}\section{Identified\+Multi\+Tracker$<$ T\+Img, T\+Obj $>$ Class Template Reference}
+\label{class_vision_core_1_1_interfaces_1_1_identified_multi_tracker}\index{Identified\+Multi\+Tracker$<$ T\+Img, T\+Obj $>$@{Identified\+Multi\+Tracker$<$ T\+Img, T\+Obj $>$}}
+
+
+A \hyperlink{class_vision_core_1_1_interfaces_1_1_identified_multi_tracker}{Identified\+Multi\+Tracker} is a tracker for multiple objects, each having its own I\+D.  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Interfaces.\+h$>$}
+
+
+
+Inheritance diagram for Identified\+Multi\+Tracker$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vision_core_1_1_interfaces_1_1_identified_multi_tracker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Identified\+Multi\+Tracker$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{class_vision_core_1_1_interfaces_1_1_identified_multi_tracker__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_interfaces_1_1_identified_multi_tracker_ac95e3ecbac21b59e26e608da8b79f8ce}{}virtual \hyperlink{class_vision_core_1_1_interfaces_1_1_identified_multi_tracker_ac95e3ecbac21b59e26e608da8b79f8ce}{$\sim$\+Identified\+Multi\+Tracker} ()\label{class_vision_core_1_1_interfaces_1_1_identified_multi_tracker_ac95e3ecbac21b59e26e608da8b79f8ce}
+
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Img, class T\+Obj$>$class Vision\+Core\+::\+Interfaces\+::\+Identified\+Multi\+Tracker$<$ T\+Img, T\+Obj $>$}
+
+A \hyperlink{class_vision_core_1_1_interfaces_1_1_identified_multi_tracker}{Identified\+Multi\+Tracker} is a tracker for multiple objects, each having its own I\+D. 
+
+While the \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker}{Tracker} interface defines that only one object is tracked, this interface assumes multiple objects are tracked at the same time.
+
+To track more than one object at the same time (for example, tracking multiple faces), one solution is to implement interface \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker}{Tracker}$<$T\+Img,std\+::vector$<$\+T\+Obj$>$$>$. With this approach, there is no distinction between objects, which is ok for some applications but inadequate for others.
+
+For example, a multiple person tracker should provide an I\+D for each tracked person that is consistent along the video, and not only an unordered vector of persons.
+
+The \hyperlink{class_vision_core_1_1_interfaces_1_1_identified_multi_tracker}{Identified\+Multi\+Tracker} interface defines a tracker that tracks multiple objects where each object has a distinct I\+D. This tracker provides a std\+::map$<$long,\+T\+Obj$>$ where each object has a unique key.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_vision_core_1_1_interfaces_1_1_tracker}{Tracker} Abstract\+Auto\+Tracker 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Img} & Image type used in the tracker. \\
+\hline
+{\em T\+Obj} & Object type returned by the tracker. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 226 of file Vision\+Interfaces.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Interfaces.\+h\end{DoxyCompactItemize}

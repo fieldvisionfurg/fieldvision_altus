@@ -1,0 +1,213 @@
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detector_evaluator}{}\section{Detector\+Evaluator$<$ T\+Img, T\+Obj1, T\+Obj2 $>$ Class Template Reference}
+\label{class_vision_core_1_1_evaluation_1_1_detector_evaluator}\index{Detector\+Evaluator$<$ T\+Img, T\+Obj1, T\+Obj2 $>$@{Detector\+Evaluator$<$ T\+Img, T\+Obj1, T\+Obj2 $>$}}
+
+
+Provides algorithms for performance evaluation of detectors.  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Evaluation.\+h$>$}
+
+
+
+Collaboration diagram for Detector\+Evaluator$<$ T\+Img, T\+Obj1, T\+Obj2 $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{class_vision_core_1_1_evaluation_1_1_detector_evaluator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a8e476da5933065942abba08cfd26a600}{}\hyperlink{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a8e476da5933065942abba08cfd26a600}{Detector\+Evaluator} ()\label{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a8e476da5933065942abba08cfd26a600}
+
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detector_evaluator_ae9293fe1f4d8ce45ed0d0a00d4df678f}{}void \hyperlink{class_vision_core_1_1_evaluation_1_1_detector_evaluator_ae9293fe1f4d8ce45ed0d0a00d4df678f}{add\+Test\+Point} (std\+::vector$<$ T\+Obj1 $>$ \&det\+Result, std\+::vector$<$ T\+Obj2 $>$ \&ground\+Truth)\label{class_vision_core_1_1_evaluation_1_1_detector_evaluator_ae9293fe1f4d8ce45ed0d0a00d4df678f}
+
+\begin{DoxyCompactList}\small\item\em Add a detection-\/groundtruth pair. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a0c973d5fd9480a0cca418ac96f79cf39}{}void \hyperlink{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a0c973d5fd9480a0cca418ac96f79cf39}{set\+Similarity\+Function} (std\+::function$<$ double(T\+Obj1 \&, T\+Obj2 \&)$>$ similarity\+Fcn)\label{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a0c973d5fd9480a0cca418ac96f79cf39}
+
+\begin{DoxyCompactList}\small\item\em Set a similarity function between a detection and ground truth annotation. If the similarity function between a detected region and a ground truth annotation is greater than the threshold, it will be considered a true positive. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a2494e14c6a1e5bc544aa5e26816267d1}{}void \hyperlink{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a2494e14c6a1e5bc544aa5e26816267d1}{set\+Threshold} (const double t)\label{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a2494e14c6a1e5bc544aa5e26816267d1}
+
+\begin{DoxyCompactList}\small\item\em Set the similarity threshold to decide if two objects are the same. If the similarity function between a detected region and a ground truth annotation is greater than the threshold, it will be considered a true positive. \end{DoxyCompactList}\item 
+\hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result}{Detector\+Eval\+Result} \hyperlink{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a6f39bcdce62583279c364d901a8ab932}{compute\+Result} ()
+\begin{DoxyCompactList}\small\item\em Compute the evaluation metrics using the entries provided via \textquotesingle{}add\+Test\+Point\textquotesingle{} method. Using this \textquotesingle{}compute\+Result\textquotesingle{} the evaluator considers a one to one relation, using the Hungarian Algorithm to find the optimal associations. For instance, that is the same approach which has been used in \char`\"{}\+F\+D\+D\+B -\/ A Benchmark for Face Detection in Unconstrained Settings\char`\"{} -\/ Jain, 2010. \end{DoxyCompactList}\item 
+\hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result}{Detector\+Eval\+Result} \hyperlink{class_vision_core_1_1_evaluation_1_1_detector_evaluator_af0bd934c42ffd9daa7b57142d2fa9129}{compute\+Result\+Many\+To\+Many} ()
+\begin{DoxyCompactList}\small\item\em Compute the evaluation metrics using the entries provided via \textquotesingle{}add\+Test\+Point\textquotesingle{} method. Using this \textquotesingle{}compute\+Result\textquotesingle{} the evaluator considers a N-\/\+N relation where one ground truth annotation can be associated with more than one detection and vice-\/versa. Considering a many to many to many relation may be useful when you can precisely define where a object starts or ends. For instance, that is the same approach as in \char`\"{}\+Sun database Large-\/scale scene recognition from abbey to zoo\char`\"{} -\/ Xiao, 2010. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detector_evaluator_affd22efb035f7daffbc8ce1ae4b1e85f}{}\hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result}{Detector\+Eval\+Result} \hyperlink{class_vision_core_1_1_evaluation_1_1_detector_evaluator_affd22efb035f7daffbc8ce1ae4b1e85f}{evaluate\+Detector} (const \hyperlink{class_vision_core_1_1_interfaces_1_1_detector}{Detector}$<$ T\+Img, T\+Obj1 $>$ \&det, \hyperlink{class_vision_core_1_1_evaluation_1_1_detection_dataset}{Detection\+Dataset}$<$ T\+Img, T\+Obj2 $>$ \&dataset, std\+::function$<$ double(T\+Obj1 \&, T\+Obj2 \&)$>$ match)\label{class_vision_core_1_1_evaluation_1_1_detector_evaluator_affd22efb035f7daffbc8ce1ae4b1e85f}
+
+\begin{DoxyCompactList}\small\item\em Runs a detector over each dataset image and compute the performance statistics, printing the result in the default output. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a4ecff40990b902c608d4df4a5dab0bd3}{}\hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result}{Detector\+Eval\+Result} \hyperlink{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a4ecff40990b902c608d4df4a5dab0bd3}{evaluate\+Detector\+Many\+To\+Many} (const \hyperlink{class_vision_core_1_1_interfaces_1_1_detector}{Detector}$<$ T\+Img, T\+Obj1 $>$ \&det, \hyperlink{class_vision_core_1_1_evaluation_1_1_detection_dataset}{Detection\+Dataset}$<$ T\+Img, T\+Obj2 $>$ \&dataset, std\+::function$<$ double(T\+Obj1 \&, T\+Obj2 \&)$>$ match)\label{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a4ecff40990b902c608d4df4a5dab0bd3}
+
+\begin{DoxyCompactList}\small\item\em Runs a detector over each dataset image and compute the performance statistics based on a many-\/to-\/many matching criteria. Prints the result in the default output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a844fc6a9b1c7fd622bb0ee308bf6d519}{}static void \hyperlink{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a844fc6a9b1c7fd622bb0ee308bf6d519}{print\+Report} (const \hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result}{Detector\+Eval\+Result} \&result, std\+::ostream \&out=std\+::cout)\label{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a844fc6a9b1c7fd622bb0ee308bf6d519}
+
+\begin{DoxyCompactList}\small\item\em Imprime um relatório básico dos resultados. \end{DoxyCompactList}\item 
+static std\+::vector$<$ int $>$ \hyperlink{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a3533b3afc49439cbb196506cffe867f8}{compute\+Assignment\+Optimal} (double $\ast$W, int size\+D, int size\+G\+T)
+\begin{DoxyCompactList}\small\item\em Runs the Hungarian algorithm to solve the optimal assignment problem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Img, class T\+Obj1, class T\+Obj2 = T\+Obj1$>$class Vision\+Core\+::\+Evaluation\+::\+Detector\+Evaluator$<$ T\+Img, T\+Obj1, T\+Obj2 $>$}
+
+Provides algorithms for performance evaluation of detectors. 
+
+There are two forms of running the evaluation of a detector\+:
+
+1) Manual\+: For each image in a test set, call a detector to get a vector of detected objects. Next, you should get the respective ground-\/truth for the same image. Add the pair of detected objects and ground-\/truth to the evaluator calling the function \textquotesingle{}add\+Test\+Point\textquotesingle{}. After repeating this procedure for all images in the test set, call function \textquotesingle{}compute\+Results\textquotesingle{} to get the evaluation statistics. A report can be printed calling \textquotesingle{}print\+Report\textquotesingle{}.
+
+2) Automatic\+: Use function \textquotesingle{}evaluate\+Detector\textquotesingle{} to evaluate a detector (object of class Detector) over a dataset (object of class \hyperlink{class_vision_core_1_1_evaluation_1_1_detection_dataset}{Detection\+Dataset}). This method will execute the steps in the manual mode for all images in the dataset.
+
+Before executing the evaluation, it is necessary to define a similarity function by calling \textquotesingle{}set\+Similarity\+Function\textquotesingle{}. This function computes a similarity score between a detected object and a ground-\/truth object.
+
+T\+O\+D\+O\+: add examples
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Img} & Image type. \\
+\hline
+{\em T\+Obj1} & Type returned by the detector. \\
+\hline
+{\em T\+Obj2} & Type for the ground-\/truth. Usually -\/ and by default -\/ it is the same of T\+Obj1, but could be different. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 373 of file Vision\+Evaluation.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a3533b3afc49439cbb196506cffe867f8}{}\index{Vision\+Core\+::\+Evaluation\+::\+Detector\+Evaluator@{Vision\+Core\+::\+Evaluation\+::\+Detector\+Evaluator}!compute\+Assignment\+Optimal@{compute\+Assignment\+Optimal}}
+\index{compute\+Assignment\+Optimal@{compute\+Assignment\+Optimal}!Vision\+Core\+::\+Evaluation\+::\+Detector\+Evaluator@{Vision\+Core\+::\+Evaluation\+::\+Detector\+Evaluator}}
+\subsubsection[{compute\+Assignment\+Optimal(double $\ast$\+W, int size\+D, int size\+G\+T)}]{\setlength{\rightskip}{0pt plus 5cm}static std\+::vector$<$int$>$ compute\+Assignment\+Optimal (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{W, }
+\item[{int}]{size\+D, }
+\item[{int}]{size\+G\+T}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a3533b3afc49439cbb196506cffe867f8}
+
+
+Runs the Hungarian algorithm to solve the optimal assignment problem. 
+
+The input matrix W stores the similarities between detections (rows) and ground-\/truths (collumns).
+
+The resulting vector A contains the ground-\/truth indexes assigned to detections.
+
+For example A=\mbox{[}2 0 -\/1 -\/1\mbox{]} means that detection 0 (index) has been assigned to ground-\/truth 2, detection 1 to ground-\/truth 0 and detection 2 and 3 have not been assigned to any ground-\/truth (false positive). Note that ground-\/truth 1 was not assigned to any detection (false negative). 
+
+Definition at line 689 of file Vision\+Evaluation.\+h.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a3533b3afc49439cbb196506cffe867f8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a6f39bcdce62583279c364d901a8ab932}{}\index{Vision\+Core\+::\+Evaluation\+::\+Detector\+Evaluator@{Vision\+Core\+::\+Evaluation\+::\+Detector\+Evaluator}!compute\+Result@{compute\+Result}}
+\index{compute\+Result@{compute\+Result}!Vision\+Core\+::\+Evaluation\+::\+Detector\+Evaluator@{Vision\+Core\+::\+Evaluation\+::\+Detector\+Evaluator}}
+\subsubsection[{compute\+Result()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Detector\+Eval\+Result} compute\+Result (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a6f39bcdce62583279c364d901a8ab932}
+
+
+Compute the evaluation metrics using the entries provided via \textquotesingle{}add\+Test\+Point\textquotesingle{} method. Using this \textquotesingle{}compute\+Result\textquotesingle{} the evaluator considers a one to one relation, using the Hungarian Algorithm to find the optimal associations. For instance, that is the same approach which has been used in \char`\"{}\+F\+D\+D\+B -\/ A Benchmark for Face Detection in Unconstrained Settings\char`\"{} -\/ Jain, 2010. 
+
+Computed statistics\+: Precision / P\+P\+V = relevant intersection retrieved / retrieved (precision is the fraction of retrieved documents that are relevant to the find)
+
+Recall/ sensitivity/ Hit rate/ T\+P\+R = relevant intersection retrieved / relevant (percent of all relevant) Due the fact that we work with a 1-\/to-\/\+N cardinality we had to adapt the equation from T\+P\+R = T\+P / (T\+P + F\+N) to T\+P\+R = (G\+T -\/ F\+N)/\+G\+T that is quite the same but written in another way
+
+F1 score is the harmonic mean of precision and sensitivity
+
+False discovery rate (F\+D\+R)
+
+False negative rate (F\+N\+R)
+
+Mean similarity 
+
+Definition at line 422 of file Vision\+Evaluation.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a6f39bcdce62583279c364d901a8ab932_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vision_core_1_1_evaluation_1_1_detector_evaluator_a6f39bcdce62583279c364d901a8ab932_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detector_evaluator_af0bd934c42ffd9daa7b57142d2fa9129}{}\index{Vision\+Core\+::\+Evaluation\+::\+Detector\+Evaluator@{Vision\+Core\+::\+Evaluation\+::\+Detector\+Evaluator}!compute\+Result\+Many\+To\+Many@{compute\+Result\+Many\+To\+Many}}
+\index{compute\+Result\+Many\+To\+Many@{compute\+Result\+Many\+To\+Many}!Vision\+Core\+::\+Evaluation\+::\+Detector\+Evaluator@{Vision\+Core\+::\+Evaluation\+::\+Detector\+Evaluator}}
+\subsubsection[{compute\+Result\+Many\+To\+Many()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Detector\+Eval\+Result} compute\+Result\+Many\+To\+Many (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vision_core_1_1_evaluation_1_1_detector_evaluator_af0bd934c42ffd9daa7b57142d2fa9129}
+
+
+Compute the evaluation metrics using the entries provided via \textquotesingle{}add\+Test\+Point\textquotesingle{} method. Using this \textquotesingle{}compute\+Result\textquotesingle{} the evaluator considers a N-\/\+N relation where one ground truth annotation can be associated with more than one detection and vice-\/versa. Considering a many to many to many relation may be useful when you can precisely define where a object starts or ends. For instance, that is the same approach as in \char`\"{}\+Sun database Large-\/scale scene recognition from abbey to zoo\char`\"{} -\/ Xiao, 2010. 
+
+For each ground truth
+
+Computed statistics\+: Precision / P\+P\+V = relevant intersection retrieved / retrieved (precision is the fraction of retrieved documents that are relevant to the find)
+
+Recall/ sensitivity/ Hit rate/ T\+P\+R = relevant intersection retrieved / relevant (percent of all relevant) Due the fact that we work with a 1-\/to-\/\+N cardinality we had to adapt the equation from T\+P\+R = T\+P / (T\+P + F\+N) to T\+P\+R = (G\+T -\/ F\+N)/\+G\+T that is quite the same but written in another way
+
+F1 score is the harmonic mean of precision and sensitivity
+
+False discovery rate (F\+D\+R)
+
+False negative rate (F\+N\+R)
+
+Mean similarity 
+
+Definition at line 515 of file Vision\+Evaluation.\+h.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vision_core_1_1_evaluation_1_1_detector_evaluator_af0bd934c42ffd9daa7b57142d2fa9129_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Evaluation.\+h\end{DoxyCompactItemize}

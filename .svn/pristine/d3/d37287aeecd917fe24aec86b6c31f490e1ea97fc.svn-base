@@ -1,0 +1,33 @@
+\hypertarget{structqt__meta__stringdata___frame_server_control_widget__t}{}\section{qt\+\_\+meta\+\_\+stringdata\+\_\+\+Frame\+Server\+Control\+Widget\+\_\+t Struct Reference}
+\label{structqt__meta__stringdata___frame_server_control_widget__t}\index{qt\+\_\+meta\+\_\+stringdata\+\_\+\+Frame\+Server\+Control\+Widget\+\_\+t@{qt\+\_\+meta\+\_\+stringdata\+\_\+\+Frame\+Server\+Control\+Widget\+\_\+t}}
+
+
+Collaboration diagram for qt\+\_\+meta\+\_\+stringdata\+\_\+\+Frame\+Server\+Control\+Widget\+\_\+t\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{structqt__meta__stringdata___frame_server_control_widget__t__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structqt__meta__stringdata___frame_server_control_widget__t_a4a1ff2e4d7e0c7b4f16206003fe9d6ff}{}Q\+Byte\+Array\+Data {\bfseries data} \mbox{[}10\mbox{]}\label{structqt__meta__stringdata___frame_server_control_widget__t_a4a1ff2e4d7e0c7b4f16206003fe9d6ff}
+
+\item 
+\hypertarget{structqt__meta__stringdata___frame_server_control_widget__t_a5a2e5241aed15650778e40e7256a8944}{}char {\bfseries stringdata0} \mbox{[}136\mbox{]}\label{structqt__meta__stringdata___frame_server_control_widget__t_a5a2e5241aed15650778e40e7256a8944}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 21 of file moc\+\_\+\+Frame\+Server\+Control\+Widget.\+cpp.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets/release/moc\+\_\+\+Frame\+Server\+Control\+Widget.\+cpp\end{DoxyCompactItemize}

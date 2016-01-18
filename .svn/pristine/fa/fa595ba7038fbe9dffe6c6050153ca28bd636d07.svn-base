@@ -1,0 +1,24 @@
+\hypertarget{namespace_vision_core_1_1_interfaces}{}\section{Vision\+Core\+:\+:Interfaces Namespace Reference}
+\label{namespace_vision_core_1_1_interfaces}\index{Vision\+Core\+::\+Interfaces@{Vision\+Core\+::\+Interfaces}}
+
+
+\hyperlink{namespace_vision_core_1_1_interfaces}{Interfaces} for generic computer vision tasks.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_vision_core_1_1_interfaces_1_1_categorizer}{Categorizer}
+\begin{DoxyCompactList}\small\item\em Interface defining a generic image categorizer (classifier). \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_interfaces_1_1_detector}{Detector}
+\begin{DoxyCompactList}\small\item\em Interface defining a generic object detector (e.\+g. faces, car, people). \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_interfaces_1_1_frame_server}{Frame\+Server}
+\begin{DoxyCompactList}\small\item\em Interface for a source of frames. The frames can come from a video file, webcam, set of images, etc. \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_interfaces_1_1_identified_multi_tracker}{Identified\+Multi\+Tracker}
+\begin{DoxyCompactList}\small\item\em A \hyperlink{class_vision_core_1_1_interfaces_1_1_identified_multi_tracker}{Identified\+Multi\+Tracker} is a tracker for multiple objects, each having its own I\+D. \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker}{Tracker}
+\begin{DoxyCompactList}\small\item\em Interface defining a generic object tracker. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{namespace_vision_core_1_1_interfaces}{Interfaces} for generic computer vision tasks. 

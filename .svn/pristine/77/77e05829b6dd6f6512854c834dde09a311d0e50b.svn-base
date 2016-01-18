@@ -1,0 +1,38 @@
+/** \mainpage
+
+Introduction
+----------
+CvWorks is a computer vision framework composed of a set of interfaces and high-level computer vision methods with focus on applications and systems. It is implemented in C++ using templates and object oriented programming.
+
+Objective
+--------
+The objective is to implement a framework that facilitates the development and evaluation of high-level computer vision systems. The framework should provide a base implementation for common tasks shared between computer vision applications, such as: detection and tracking performance evaluation, threaded execution and generic computer vision algorithms. This project does not intend to implement low-level computer vision and image processing, such as: image filtering, histograms, optical flow, feature extraction, etc.
+
+The expected result is a framework that allows:
+
+- Code reuse.
+
+- 'Plug-and-play' computer vision.
+
+- Quick and easy deployment and evaluation of systems.
+
+- Educational tool.
+
+- Team development.
+
+Architecture
+-----------
+
+CvWorks is organized in three levels:
+
+1. \ref Core - Defines generic interfaces (using template programming) and implements abstract methods that can be reused on different computer vision applications. It also contains generic test routines (using the interfaces) for detection and tracking evaluation. Implemented in VisionCore namespace. 
+
+2. High-level Computer Vision Methods - Contains the implementation of specific computer vision components that can be reused accross applications. In the moment, CvWorks provides a component with implementation of some detection and tracking methods based on OpenCv library (i.e. based on cv::Mat image type), see \ref Viscv. Soon, we plan to implement methods for Kinect cameras and point cloud images (using PCL library).
+
+3. Application - This level complies the final application (i.e. business-logic implementation). Currently, CvWorks contains a generic graphical interface for methods visualization (\ref VisionGUI). Besides this, it is also being used in three other applications: a face recognition biometric system, a computer vision module for PatrolBot robot navigation (C3Scout project) and a vision based industrial plant monitoring system (FieldVision project).
+
+The diagram bellow illustrate CvWorks architecture:
+\image html "Package Diagram simple.jpg"
+
+
+*/

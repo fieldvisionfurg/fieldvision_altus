@@ -1,0 +1,58 @@
+\hypertarget{class_ui___image_viewer_cv}{}\section{Ui\+\_\+\+Image\+Viewer\+Cv Class Reference}
+\label{class_ui___image_viewer_cv}\index{Ui\+\_\+\+Image\+Viewer\+Cv@{Ui\+\_\+\+Image\+Viewer\+Cv}}
+
+
+Inheritance diagram for Ui\+\_\+\+Image\+Viewer\+Cv\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{class_ui___image_viewer_cv__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ui\+\_\+\+Image\+Viewer\+Cv\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{class_ui___image_viewer_cv__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_ui___image_viewer_cv_a0f117f8241b1e6958e5b41d500b7f60b}{}void {\bfseries setup\+Ui} (Q\+Widget $\ast$\hyperlink{class_image_viewer_cv}{Image\+Viewer\+Cv})\label{class_ui___image_viewer_cv_a0f117f8241b1e6958e5b41d500b7f60b}
+
+\item 
+\hypertarget{class_ui___image_viewer_cv_a34ac4f3780f3186dd8871382867fe59c}{}void {\bfseries retranslate\+Ui} (Q\+Widget $\ast$\hyperlink{class_image_viewer_cv}{Image\+Viewer\+Cv})\label{class_ui___image_viewer_cv_a34ac4f3780f3186dd8871382867fe59c}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_ui___image_viewer_cv_a1f81b7e95162efcbe551b64ca41869c8}{}Q\+V\+Box\+Layout $\ast$ {\bfseries vertical\+Layout\+\_\+2}\label{class_ui___image_viewer_cv_a1f81b7e95162efcbe551b64ca41869c8}
+
+\item 
+\hypertarget{class_ui___image_viewer_cv_abdf6ae306987e2427f22eea513893d44}{}Q\+Group\+Box $\ast$ {\bfseries group\+Box}\label{class_ui___image_viewer_cv_abdf6ae306987e2427f22eea513893d44}
+
+\item 
+\hypertarget{class_ui___image_viewer_cv_ad85f9339d941aa92fe82db7dcba6664c}{}Q\+V\+Box\+Layout $\ast$ {\bfseries vertical\+Layout}\label{class_ui___image_viewer_cv_ad85f9339d941aa92fe82db7dcba6664c}
+
+\item 
+\hypertarget{class_ui___image_viewer_cv_ae9b932b739c25e84aa878e134f118742}{}Q\+Label $\ast$ {\bfseries img\+Display}\label{class_ui___image_viewer_cv_ae9b932b739c25e84aa878e134f118742}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 24 of file ui\+\_\+\+Image\+Viewer\+Cv.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets/ui\+\_\+\+Image\+Viewer\+Cv.\+h\end{DoxyCompactItemize}

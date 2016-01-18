@@ -1,0 +1,66 @@
+\hypertarget{class_viscv_1_1_object_tracker_p_f_hist}{}\section{Object\+Tracker\+P\+F\+Hist Class Reference}
+\label{class_viscv_1_1_object_tracker_p_f_hist}\index{Object\+Tracker\+P\+F\+Hist@{Object\+Tracker\+P\+F\+Hist}}
+
+
+Particle Filtering with histogram matching.  
+
+
+
+
+{\ttfamily \#include $<$Object\+Tracker\+P\+F\+Hist.\+h$>$}
+
+
+
+Inheritance diagram for Object\+Tracker\+P\+F\+Hist\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{class_viscv_1_1_object_tracker_p_f_hist__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Object\+Tracker\+P\+F\+Hist\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{class_viscv_1_1_object_tracker_p_f_hist__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_viscv_1_1_object_tracker_p_f_hist_af69f187115e76d8fbd493782fe65150d}{}\hyperlink{class_viscv_1_1_object_tracker_p_f_hist_af69f187115e76d8fbd493782fe65150d}{Object\+Tracker\+P\+F\+Hist} (const unsigned int num\+Particles=100)\label{class_viscv_1_1_object_tracker_p_f_hist_af69f187115e76d8fbd493782fe65150d}
+
+\begin{DoxyCompactList}\small\item\em Default constructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_object_tracker_p_f_hist_a743676c214015ae96f5db586e7ce28f9}{}\hyperlink{class_viscv_1_1_object_tracker_p_f_hist_a743676c214015ae96f5db586e7ce28f9}{Object\+Tracker\+P\+F\+Hist} (const cv\+::\+Mat \&initial\+Img, const cv\+::\+Rect \&initial\+Obj, const unsigned int num\+Particles=100)\label{class_viscv_1_1_object_tracker_p_f_hist_a743676c214015ae96f5db586e7ce28f9}
+
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_object_tracker_p_f_hist_a88453e03bc80f9821e5b75d180b5c897}{}virtual \hyperlink{class_viscv_1_1_object_tracker_p_f_hist_a88453e03bc80f9821e5b75d180b5c897}{$\sim$\+Object\+Tracker\+P\+F\+Hist} ()\label{class_viscv_1_1_object_tracker_p_f_hist_a88453e03bc80f9821e5b75d180b5c897}
+
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_object_tracker_p_f_hist_afe109421e18b9395b067a307fdb85d03}{}void \hyperlink{class_viscv_1_1_object_tracker_p_f_hist_afe109421e18b9395b067a307fdb85d03}{reset} (const cv\+::\+Mat \&img, const cv\+::\+Rect \&rectangle)\label{class_viscv_1_1_object_tracker_p_f_hist_afe109421e18b9395b067a307fdb85d03}
+
+\begin{DoxyCompactList}\small\item\em Reinicia o rastreador para um estado, redefinindo os histogramas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_viscv_1_1_object_tracker_p_f_hist_ab9c3e7031943cd161e651ff99b0d5d5b}{}const Eigen\+::\+Matrix3d \& \hyperlink{class_viscv_1_1_object_tracker_p_f_hist_ab9c3e7031943cd161e651ff99b0d5d5b}{get\+Cholesky\+Trans\+Mat} () const \label{class_viscv_1_1_object_tracker_p_f_hist_ab9c3e7031943cd161e651ff99b0d5d5b}
+
+\begin{DoxyCompactList}\small\item\em Returns the value of member \textquotesingle{}m\+\_\+cholesky\+Trans\+Mat\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Particle Filtering with histogram matching. 
+
+Definition at line 39 of file Object\+Tracker\+P\+F\+Hist.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Object\+Tracker\+P\+F\+Hist.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Object\+Tracker\+P\+F\+Hist.\+cpp\end{DoxyCompactItemize}

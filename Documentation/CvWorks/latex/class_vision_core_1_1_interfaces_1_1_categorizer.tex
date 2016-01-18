@@ -1,0 +1,68 @@
+\hypertarget{class_vision_core_1_1_interfaces_1_1_categorizer}{}\section{Categorizer$<$ T\+In, T\+Ctg $>$ Class Template Reference}
+\label{class_vision_core_1_1_interfaces_1_1_categorizer}\index{Categorizer$<$ T\+In, T\+Ctg $>$@{Categorizer$<$ T\+In, T\+Ctg $>$}}
+
+
+Interface defining a generic image categorizer (classifier).  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Interfaces.\+h$>$}
+
+
+
+Collaboration diagram for Categorizer$<$ T\+In, T\+Ctg $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{class_vision_core_1_1_interfaces_1_1_categorizer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_interfaces_1_1_categorizer_af1a26d383531f9b1b26326efb2790721}{}typedef T\+In {\bfseries In\+Type}\label{class_vision_core_1_1_interfaces_1_1_categorizer_af1a26d383531f9b1b26326efb2790721}
+
+\item 
+\hypertarget{class_vision_core_1_1_interfaces_1_1_categorizer_a502f5b85c2a6367e444122eb8878de94}{}typedef T\+Ctg {\bfseries Ctg\+Type}\label{class_vision_core_1_1_interfaces_1_1_categorizer_a502f5b85c2a6367e444122eb8878de94}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_interfaces_1_1_categorizer_a84db45703ada48a63144e69f63e73bf5}{}virtual T\+Ctg \hyperlink{class_vision_core_1_1_interfaces_1_1_categorizer_a84db45703ada48a63144e69f63e73bf5}{categorize} (const T\+In \&sample) const  =0\label{class_vision_core_1_1_interfaces_1_1_categorizer_a84db45703ada48a63144e69f63e73bf5}
+
+\begin{DoxyCompactList}\small\item\em Process an input sample and outputs its category. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_interfaces_1_1_categorizer_ab8cf3f49e6c511eeccc1d17befdcaf46}{}virtual \hyperlink{class_vision_core_1_1_interfaces_1_1_categorizer_ab8cf3f49e6c511eeccc1d17befdcaf46}{$\sim$\+Categorizer} ()\label{class_vision_core_1_1_interfaces_1_1_categorizer_ab8cf3f49e6c511eeccc1d17befdcaf46}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+In, typename T\+Ctg = std\+::string$>$class Vision\+Core\+::\+Interfaces\+::\+Categorizer$<$ T\+In, T\+Ctg $>$}
+
+Interface defining a generic image categorizer (classifier). 
+
+A image categorizer (or classifier) is capeable of identifing the category of a given image.
+
+For example, a binary classifier could be able to classify an image as being a forest or city.
+
+The interface defines only one method\+: \hyperlink{class_vision_core_1_1_interfaces_1_1_categorizer_a84db45703ada48a63144e69f63e73bf5}{categorize()}, which receives an input image and returns the category. The default category type is std\+::string, but it can be specifyied (for example as bool for binary classifiers).
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+In} & Image type. \\
+\hline
+{\em T\+Obj} & Category type. Default is std\+::string. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 252 of file Vision\+Interfaces.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Interfaces.\+h\end{DoxyCompactItemize}

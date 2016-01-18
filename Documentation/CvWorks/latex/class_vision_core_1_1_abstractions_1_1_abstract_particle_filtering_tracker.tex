@@ -1,0 +1,110 @@
+\hypertarget{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker}{}\section{Abstract\+Particle\+Filtering\+Tracker$<$ T\+Img, T\+Obj $>$ Class Template Reference}
+\label{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker}\index{Abstract\+Particle\+Filtering\+Tracker$<$ T\+Img, T\+Obj $>$@{Abstract\+Particle\+Filtering\+Tracker$<$ T\+Img, T\+Obj $>$}}
+
+
+Implements a particle filtering algorithm for generic tracking models.  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Abstractions.\+h$>$}
+
+
+
+Inheritance diagram for Abstract\+Particle\+Filtering\+Tracker$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Abstract\+Particle\+Filtering\+Tracker$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_ac11a1371779c4e4b8b08c7044a92a3d4}{}virtual \hyperlink{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_ac11a1371779c4e4b8b08c7044a92a3d4}{$\sim$\+Abstract\+Particle\+Filtering\+Tracker} ()\label{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_ac11a1371779c4e4b8b08c7044a92a3d4}
+
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+virtual const T\+Obj \& \hyperlink{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_a60f002795ee2555f25dc4f7a9a0845ce}{get\+Last\+Track} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the current estimated object state. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_af1a54610c9af7fb54d00e4be2e75609e}{}virtual void \hyperlink{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_af1a54610c9af7fb54d00e4be2e75609e}{update} (const \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Frame}$<$ T\+Img $>$ \&frame)\label{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_af1a54610c9af7fb54d00e4be2e75609e}
+
+\begin{DoxyCompactList}\small\item\em Given an image (i.\+e. video frame), update the tracked objects. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_a24876b4e0404782477453810f53fde0b}{}virtual void \hyperlink{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_a24876b4e0404782477453810f53fde0b}{reset} (const T\+Obj \&initial\+Obj)\label{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_a24876b4e0404782477453810f53fde0b}
+
+\begin{DoxyCompactList}\small\item\em Reset the tracked object to a known state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_a9ef9b851a62552f9937d57068bb8da8f}{}\hyperlink{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_a9ef9b851a62552f9937d57068bb8da8f}{Abstract\+Particle\+Filtering\+Tracker} (const T\+Obj \&initial\+Obj=T\+Obj(), const unsigned int num\+Particles=100)\label{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_a9ef9b851a62552f9937d57068bb8da8f}
+
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_aaeca4119bbd17d828ddc999ffe5d23ea}{}std\+::mt19937 {\bfseries m\+\_\+rand\+Engine}\label{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_aaeca4119bbd17d828ddc999ffe5d23ea}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Img, class T\+Obj$>$class Vision\+Core\+::\+Abstractions\+::\+Abstract\+Particle\+Filtering\+Tracker$<$ T\+Img, T\+Obj $>$}
+
+Implements a particle filtering algorithm for generic tracking models. 
+
+There are three application specific functions that must be implemented by derived classes\+:
+\begin{DoxyItemize}
+\item eval\+Obj, which computes the \textquotesingle{}likeliness\textquotesingle{} of a given object be present in the image.
+\item sample\+Transition, which generates a new object given a current object.
+\item average\+Obj, which performs a weighted combination of several objects.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Img} & The type of input image. \\
+\hline
+{\em T\+Obj} & The type of object being tracked. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 847 of file Vision\+Abstractions.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_a60f002795ee2555f25dc4f7a9a0845ce}{}\index{Vision\+Core\+::\+Abstractions\+::\+Abstract\+Particle\+Filtering\+Tracker@{Vision\+Core\+::\+Abstractions\+::\+Abstract\+Particle\+Filtering\+Tracker}!get\+Last\+Track@{get\+Last\+Track}}
+\index{get\+Last\+Track@{get\+Last\+Track}!Vision\+Core\+::\+Abstractions\+::\+Abstract\+Particle\+Filtering\+Tracker@{Vision\+Core\+::\+Abstractions\+::\+Abstract\+Particle\+Filtering\+Tracker}}
+\subsubsection[{get\+Last\+Track()}]{\setlength{\rightskip}{0pt plus 5cm}const T\+Obj \& get\+Last\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_a60f002795ee2555f25dc4f7a9a0845ce}
+
+
+Returns a reference to the current estimated object state. 
+
+This function is often call after calling the \hyperlink{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_af1a54610c9af7fb54d00e4be2e75609e}{update()} method. The returned reference is usualy to a class member. 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_a93ee7011307419e8c88db9f22d900657}{Tracker$<$ T\+Img, T\+Obj $>$}.
+
+
+
+Definition at line 918 of file Vision\+Abstractions.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Abstractions.\+h\end{DoxyCompactItemize}

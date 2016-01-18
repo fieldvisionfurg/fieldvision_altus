@@ -1,0 +1,108 @@
+\hypertarget{class_image_viewer_cv}{}\section{Image\+Viewer\+Cv Class Reference}
+\label{class_image_viewer_cv}\index{Image\+Viewer\+Cv@{Image\+Viewer\+Cv}}
+
+
+Esta classe implementa um widget capaz de mostrar uma imagem do tipo cv\+::\+Mat.  
+
+
+
+
+{\ttfamily \#include $<$Image\+Viewer\+Cv.\+h$>$}
+
+
+
+Inheritance diagram for Image\+Viewer\+Cv\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{class_image_viewer_cv__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Image\+Viewer\+Cv\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{class_image_viewer_cv__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_image_viewer_cv_a3323846e9a9376888949975158332e17}{}void {\bfseries set\+Image} (const cv\+::\+Mat img)\label{class_image_viewer_cv_a3323846e9a9376888949975158332e17}
+
+\item 
+\hypertarget{class_image_viewer_cv_adcc344667008bee1385c17f3189941c2}{}void {\bfseries set\+Scale} (int scale\+\_\+)\label{class_image_viewer_cv_adcc344667008bee1385c17f3189941c2}
+
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_image_viewer_cv_ab5837558f7336324b076b65ed996c378}{}void {\bfseries image\+Redraw} (Q\+Painter $\ast$painter)\label{class_image_viewer_cv_ab5837558f7336324b076b65ed996c378}
+
+\item 
+\hypertarget{class_image_viewer_cv_ad37e9312e6e740f5fdeba25d33bc3cfa}{}void {\bfseries left\+Click} (Q\+Point point)\label{class_image_viewer_cv_ad37e9312e6e740f5fdeba25d33bc3cfa}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_image_viewer_cv_a2c186beb219fbee61574a2ed3b9a9170}{}{\bfseries Image\+Viewer\+Cv} (Q\+Widget $\ast$parent=0)\label{class_image_viewer_cv_a2c186beb219fbee61574a2ed3b9a9170}
+
+\item 
+\hypertarget{class_image_viewer_cv_a8e59a4aa80c802284a1ab4ebe156222e}{}void {\bfseries change\+Title} (Q\+String tit)\label{class_image_viewer_cv_a8e59a4aa80c802284a1ab4ebe156222e}
+
+\item 
+\hypertarget{class_image_viewer_cv_ab396718daaebb64c60262944a5e28755}{}void {\bfseries redraw} ()\label{class_image_viewer_cv_ab396718daaebb64c60262944a5e28755}
+
+\item 
+\hypertarget{class_image_viewer_cv_a117673bfa4d2b6c9245f2dafb131e8a0}{}cv\+::\+Mat {\bfseries get\+Cv\+Img} () const \label{class_image_viewer_cv_a117673bfa4d2b6c9245f2dafb131e8a0}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_image_viewer_cv_a5caa5d40351ec19addf9d3a4a084dc0b}{}static void \hyperlink{class_image_viewer_cv_a5caa5d40351ec19addf9d3a4a084dc0b}{draw} (Q\+Painter $\ast$painter, const cv\+::\+Rect \&rect)\label{class_image_viewer_cv_a5caa5d40351ec19addf9d3a4a084dc0b}
+
+\begin{DoxyCompactList}\small\item\em Desenha um retÃ¢ngulo. \end{DoxyCompactList}\item 
+\hypertarget{class_image_viewer_cv_a6d8036d40e3757098324729c170c3dd8}{}static void {\bfseries draw} (Q\+Painter $\ast$painter, const std\+::vector$<$ cv\+::\+Rect $>$ \&rect)\label{class_image_viewer_cv_a6d8036d40e3757098324729c170c3dd8}
+
+\item 
+\hypertarget{class_image_viewer_cv_afddebc4ae3cf50b81bb8e65349ce80a6}{}static void {\bfseries draw} (Q\+Painter $\ast$painter, const std\+::vector$<$ cv\+::\+Point2f $>$ \&features)\label{class_image_viewer_cv_afddebc4ae3cf50b81bb8e65349ce80a6}
+
+\item 
+\hypertarget{class_image_viewer_cv_a84e2ab1cc09031e99815dd1f7d6f8e2a}{}static void {\bfseries draw} (Q\+Painter $\ast$painter, const std\+::vector$<$ cv\+::\+Point $>$ \&points)\label{class_image_viewer_cv_a84e2ab1cc09031e99815dd1f7d6f8e2a}
+
+\item 
+\hypertarget{class_image_viewer_cv_a61de4cc1c53f594fbff5fb62ee94cca4}{}static void {\bfseries draw} (Q\+Painter $\ast$painter, const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$$>$ \&contours)\label{class_image_viewer_cv_a61de4cc1c53f594fbff5fb62ee94cca4}
+
+\item 
+\hypertarget{class_image_viewer_cv_ac14744093f0ef265ef9eb0b533cc2c29}{}static void {\bfseries draw} (Q\+Painter $\ast$painter, const cv\+::\+Point \&point)\label{class_image_viewer_cv_ac14744093f0ef265ef9eb0b533cc2c29}
+
+\item 
+\hypertarget{class_image_viewer_cv_a3f50e27fec271697691ec5e49a061e36}{}static void {\bfseries draw} (Q\+Painter $\ast$painter, const std\+::map$<$ long, cv\+::\+Rect $>$ \&rect\+List)\label{class_image_viewer_cv_a3f50e27fec271697691ec5e49a061e36}
+
+\item 
+\hypertarget{class_image_viewer_cv_a83584052e2f08ba84cc42da0cccc7c8c}{}static void {\bfseries draw} (Q\+Painter $\ast$painter, const std\+::map$<$ long, std\+::vector$<$ cv\+::\+Point $>$$>$ \&contours)\label{class_image_viewer_cv_a83584052e2f08ba84cc42da0cccc7c8c}
+
+\item 
+\hypertarget{class_image_viewer_cv_af2f7471e6083fbab9377742e44b98427}{}{\footnotesize template$<$typename T $>$ }\\static void {\bfseries draw} (Q\+Painter $\ast$painter, const T \&obj)\label{class_image_viewer_cv_af2f7471e6083fbab9377742e44b98427}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Esta classe implementa um widget capaz de mostrar uma imagem do tipo cv\+::\+Mat. 
+
+Definition at line 46 of file Image\+Viewer\+Cv.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets/Image\+Viewer\+Cv.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets/Image\+Viewer\+Cv.\+cpp\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets/release/moc\+\_\+\+Image\+Viewer\+Cv.\+cpp\end{DoxyCompactItemize}

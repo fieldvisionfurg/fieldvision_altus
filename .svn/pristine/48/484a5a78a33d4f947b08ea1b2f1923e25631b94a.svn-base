@@ -1,0 +1,3 @@
+<map id="FireTrackerChenebert" name="FireTrackerChenebert">
+<area shape="rect" id="node2" href="$class_vision_core_1_1_interfaces_1_1_tracker.html" title="{Tracker\&lt; cv::Mat, std\l::vector\&lt; std::vector\l\&lt; cv::Point \&gt; \&gt; \&gt;\n|# m_lostTrack\l|+ Tracker()\l+ getLastTrack()\l+ lostTrack()\l+ update()\l+ ~Tracker()\l# lostTrack()\l}" alt="" coords="35,5,180,185"/>
+</map>

@@ -1,0 +1,49 @@
+\hypertarget{struct_vision_core_1_1_evaluation_1_1_tracking_eval_result}{}\section{Tracking\+Eval\+Result Struct Reference}
+\label{struct_vision_core_1_1_evaluation_1_1_tracking_eval_result}\index{Tracking\+Eval\+Result@{Tracking\+Eval\+Result}}
+
+
+Data structure that stores the statistics and evaluation results for a tracker.  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Evaluation.\+h$>$}
+
+
+
+Inheritance diagram for Tracking\+Eval\+Result\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{struct_vision_core_1_1_evaluation_1_1_tracking_eval_result__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tracking\+Eval\+Result\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{struct_vision_core_1_1_evaluation_1_1_tracking_eval_result__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Data structure that stores the statistics and evaluation results for a tracker. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_vision_core_1_1_evaluation_1_1_tracker_evaluator}{Tracker\+Evaluator} 
+\end{DoxySeeAlso}
+
+
+Definition at line 1032 of file Vision\+Evaluation.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Evaluation.\+h\end{DoxyCompactItemize}

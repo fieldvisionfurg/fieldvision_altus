@@ -1,0 +1,87 @@
+\hypertarget{class_viscv_1_1_object_detector_f_m_cv}{}\section{Object\+Detector\+F\+M\+Cv Class Reference}
+\label{class_viscv_1_1_object_detector_f_m_cv}\index{Object\+Detector\+F\+M\+Cv@{Object\+Detector\+F\+M\+Cv}}
+
+
+Implementa um detector de objetos genéricos utilizando S\+I\+F\+T features.  
+
+
+
+
+{\ttfamily \#include $<$Object\+Detector\+F\+M\+Cv.\+h$>$}
+
+
+
+Inheritance diagram for Object\+Detector\+F\+M\+Cv\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{class_viscv_1_1_object_detector_f_m_cv__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Object\+Detector\+F\+M\+Cv\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{class_viscv_1_1_object_detector_f_m_cv__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ cv\+::\+Rect $>$ \hyperlink{class_viscv_1_1_object_detector_f_m_cv_a1d0c071b6e7a19b192c86ca0e47fd642}{detect} (const cv\+::\+Mat \&img) const 
+\begin{DoxyCompactList}\small\item\em Detects objects in the image and returns a vector with the detected objects. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_object_detector_f_m_cv_ac96a9fb73aafe02177fd8a0b57de0f3c}{}void {\bfseries set\+Target\+Image} (const cv\+::\+Mat \&img)\label{class_viscv_1_1_object_detector_f_m_cv_ac96a9fb73aafe02177fd8a0b57de0f3c}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_viscv_1_1_object_detector_f_m_cv_a0ab0db5613e549f8bcd30c1dd3cfe31b}{}int {\bfseries min\+Number\+Of\+Features\+Matching}\label{class_viscv_1_1_object_detector_f_m_cv_a0ab0db5613e549f8bcd30c1dd3cfe31b}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementa um detector de objetos genéricos utilizando S\+I\+F\+T features. \begin{Desc}
+\item[Examples\+: ]\par
+\hyperlink{_vision_tests_2main_8cpp-example}{Vision\+Tests/main.\+cpp}.\end{Desc}
+
+
+Definition at line 38 of file Object\+Detector\+F\+M\+Cv.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_viscv_1_1_object_detector_f_m_cv_a1d0c071b6e7a19b192c86ca0e47fd642}{}\index{Viscv\+::\+Object\+Detector\+F\+M\+Cv@{Viscv\+::\+Object\+Detector\+F\+M\+Cv}!detect@{detect}}
+\index{detect@{detect}!Viscv\+::\+Object\+Detector\+F\+M\+Cv@{Viscv\+::\+Object\+Detector\+F\+M\+Cv}}
+\subsubsection[{detect(const cv\+::\+Mat \&img) const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ cv\+::\+Rect $>$ detect (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{img}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_viscv_1_1_object_detector_f_m_cv_a1d0c071b6e7a19b192c86ca0e47fd642}
+
+
+Detects objects in the image and returns a vector with the detected objects. 
+
+The vector should be empty if no object is detected. 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_detector_a0977745b253f810bb2ec009844618305}{Detector$<$ cv\+::\+Mat, cv\+::\+Rect $>$}.
+
+\begin{Desc}
+\item[Examples\+: ]\par
+\hyperlink{_vision_tests_2main_8cpp-example}{Vision\+Tests/main.\+cpp}.\end{Desc}
+
+
+Definition at line 56 of file Object\+Detector\+F\+M\+Cv.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Object\+Detector\+F\+M\+Cv.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Object\+Detector\+F\+M\+Cv.\+cpp\end{DoxyCompactItemize}

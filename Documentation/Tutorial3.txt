@@ -1,0 +1,28 @@
+/** \tutorial3
+Introduction
+------------
+In this tutorial, we will create a simple tracker to track red objects in an image. The processing is similar to \ref tutorial1, but we also add a temporal filtering to remove false detections. The image processing is as follows:
+- Apply a binary threshold in the red channel of image.
+- Apply an erosion to eliminate small blobs.
+- Filter blobs that were not detected in the last 5 frames.
+- Find the center of blobs.
+The tracker returns a vector of points. The image bellow depicts an example.
+
+\image
+
+Objectives
+------------------
+- Show how to implement and use the Tracker<TImg,TObj> interface.
+
+
+Steps
+----------
+1) Create an empty project in Qt Creator.
+2) Add a cpp file and create a main function.
+3) Include CvWorks header (\ref VisionCore.h) in your project. 4) Include OpenCv headers: imageproc.h, ...
+5) Link OpenCv libraries: imagproc.lib ....
+6) ...
+
+
+*/
+

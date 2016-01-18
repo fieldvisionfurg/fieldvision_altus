@@ -1,0 +1,115 @@
+\hypertarget{class_viscv_1_1_templ_matching_detector}{}\section{Templ\+Matching\+Detector Class Reference}
+\label{class_viscv_1_1_templ_matching_detector}\index{Templ\+Matching\+Detector@{Templ\+Matching\+Detector}}
+
+
+Detecta objetos usando template matching.  
+
+
+
+
+{\ttfamily \#include $<$Templ\+Matching\+Detector.\+h$>$}
+
+
+
+Inheritance diagram for Templ\+Matching\+Detector\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{class_viscv_1_1_templ_matching_detector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Templ\+Matching\+Detector\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{class_viscv_1_1_templ_matching_detector__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ cv\+::\+Rect $>$ \hyperlink{class_viscv_1_1_templ_matching_detector_a1d0c071b6e7a19b192c86ca0e47fd642}{detect} (const cv\+::\+Mat \&img) const 
+\begin{DoxyCompactList}\small\item\em Detects objects in the image and returns a vector with the detected objects. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_templ_matching_detector_ad885725f17a30d91f02f762a83e0df22}{}cv\+::\+Mat {\bfseries get\+Template} () const \label{class_viscv_1_1_templ_matching_detector_ad885725f17a30d91f02f762a83e0df22}
+
+\item 
+void \hyperlink{class_viscv_1_1_templ_matching_detector_a60a256669585256ac591f9b7c1e0bbf2}{set\+Template} (const cv\+::\+Mat \&value)
+\item 
+\hypertarget{class_viscv_1_1_templ_matching_detector_a634e061907a567a2412dd2be2f2bd24c}{}int {\bfseries get\+Match\+Method} () const \label{class_viscv_1_1_templ_matching_detector_a634e061907a567a2412dd2be2f2bd24c}
+
+\item 
+\hypertarget{class_viscv_1_1_templ_matching_detector_aec8c39e71fdcbc008cf3ee4a98546993}{}void {\bfseries set\+Match\+Method} (int value)\label{class_viscv_1_1_templ_matching_detector_aec8c39e71fdcbc008cf3ee4a98546993}
+
+\item 
+\hypertarget{class_viscv_1_1_templ_matching_detector_a9fb588fd953e06ac889fc2789a5d3467}{}bool {\bfseries ready} () const \label{class_viscv_1_1_templ_matching_detector_a9fb588fd953e06ac889fc2789a5d3467}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Detecta objetos usando template matching. 
+
+Definition at line 41 of file Templ\+Matching\+Detector.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_viscv_1_1_templ_matching_detector_a1d0c071b6e7a19b192c86ca0e47fd642}{}\index{Viscv\+::\+Templ\+Matching\+Detector@{Viscv\+::\+Templ\+Matching\+Detector}!detect@{detect}}
+\index{detect@{detect}!Viscv\+::\+Templ\+Matching\+Detector@{Viscv\+::\+Templ\+Matching\+Detector}}
+\subsubsection[{detect(const cv\+::\+Mat \&img) const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ cv\+::\+Rect $>$ detect (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{img}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_viscv_1_1_templ_matching_detector_a1d0c071b6e7a19b192c86ca0e47fd642}
+
+
+Detects objects in the image and returns a vector with the detected objects. 
+
+The vector should be empty if no object is detected. Convertendo a imagem para tons de cinza
+
+Match
+
+Localizing the best match with min\+Max\+Loc
+
+For S\+Q\+D\+I\+F\+F and S\+Q\+D\+I\+F\+F\+\_\+\+N\+O\+R\+M\+E\+D, the best matches are lower values. For all the other methods, the higher the better 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_detector_a0977745b253f810bb2ec009844618305}{Detector$<$ cv\+::\+Mat, cv\+::\+Rect $>$}.
+
+
+
+Definition at line 46 of file Templ\+Matching\+Detector.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{class_viscv_1_1_templ_matching_detector_a1d0c071b6e7a19b192c86ca0e47fd642_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_viscv_1_1_templ_matching_detector_a60a256669585256ac591f9b7c1e0bbf2}{}\index{Viscv\+::\+Templ\+Matching\+Detector@{Viscv\+::\+Templ\+Matching\+Detector}!set\+Template@{set\+Template}}
+\index{set\+Template@{set\+Template}!Viscv\+::\+Templ\+Matching\+Detector@{Viscv\+::\+Templ\+Matching\+Detector}}
+\subsubsection[{set\+Template(const cv\+::\+Mat \&value)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Template (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{value}
+\end{DoxyParamCaption}
+)}\label{class_viscv_1_1_templ_matching_detector_a60a256669585256ac591f9b7c1e0bbf2}
+Convertendo a imagem para tons de cinza 
+
+Definition at line 85 of file Templ\+Matching\+Detector.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Templ\+Matching\+Detector.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Templ\+Matching\+Detector.\+cpp\end{DoxyCompactItemize}

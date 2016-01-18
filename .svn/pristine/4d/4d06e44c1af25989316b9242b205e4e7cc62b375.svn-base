@@ -1,0 +1,3 @@
+<map id="DetectorBasedTracker&lt; TImg, TObj &gt;" name="DetectorBasedTracker&lt; TImg, TObj &gt;">
+<area shape="rect" id="node2" href="$class_vision_core_1_1_interfaces_1_1_tracker.html" title="{Tracker\&lt; TImg, std\l::vector\&lt; TObj \&gt; \&gt;\n|# m_lostTrack\l|+ Tracker()\l+ getLastTrack()\l+ lostTrack()\l+ update()\l+ ~Tracker()\l# lostTrack()\l}" alt="" coords="29,5,160,171"/>
+</map>

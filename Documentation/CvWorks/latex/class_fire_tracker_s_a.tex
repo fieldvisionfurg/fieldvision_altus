@@ -1,0 +1,221 @@
+\hypertarget{class_fire_tracker_s_a}{}\section{Fire\+Tracker\+S\+A Class Reference}
+\label{class_fire_tracker_s_a}\index{Fire\+Tracker\+S\+A@{Fire\+Tracker\+S\+A}}
+
+
+Inheritance diagram for Fire\+Tracker\+S\+A\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{class_fire_tracker_s_a__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Fire\+Tracker\+S\+A\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_fire_tracker_s_a__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$ $>$ \& \hyperlink{class_fire_tracker_s_a_ae1ccd303e827f5d00620e54bb11a968c}{get\+Last\+Track} ()
+\begin{DoxyCompactList}\small\item\em Get the last track. \end{DoxyCompactList}\item 
+bool \hyperlink{class_fire_tracker_s_a_ac7e0977fa702f98038bbe303df458a6c}{lost\+Track} () const 
+\begin{DoxyCompactList}\small\item\em True if no fire is detected. \end{DoxyCompactList}\item 
+void \hyperlink{class_fire_tracker_s_a_ab233da15b6c7aad7d83c67057a558bd4}{update} (const \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Vision\+Core\+::\+Frame}$<$ cv\+::\+Mat $>$ \&frame)
+\begin{DoxyCompactList}\small\item\em Given an image (i.\+e. video frame), update the tracked objects. \end{DoxyCompactList}\item 
+\hyperlink{class_fire_tracker_s_a_a84a670238d047b32a9c891e663af11a4}{Fire\+Tracker\+S\+A} (std\+::string region\+\_\+classification\+\_\+model, std\+::string color\+\_\+classification\+\_\+model)
+\item 
+\hypertarget{class_fire_tracker_s_a_abb85070ecc5c08135c32b7de365f8cb4}{}\hyperlink{class_fire_tracker_s_a_abb85070ecc5c08135c32b7de365f8cb4}{$\sim$\+Fire\+Tracker\+S\+A} (void)\label{class_fire_tracker_s_a_abb85070ecc5c08135c32b7de365f8cb4}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \hyperlink{class_fire_tracker_s_a_a68d4ec4232aa3139b0ffa3196f2aa58a}{generate\+Region\+Training\+Data} (std\+::function$<$ double(std\+::vector$<$ cv\+::\+Point $>$ \&dt, cv\+::\+Rect \&gt)$>$ sim\+Fcn, std\+::vector$<$ cv\+::\+Rect $>$ ground\+Truth)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_fire_tracker_s_a_a457f2096ec25f6e7e163ba35744a1f4e}{}Random\+Forests\+Helper \hyperlink{class_fire_tracker_s_a_a457f2096ec25f6e7e163ba35744a1f4e}{rfh\+\_\+color}\label{class_fire_tracker_s_a_a457f2096ec25f6e7e163ba35744a1f4e}
+
+\begin{DoxyCompactList}\small\item\em Random Forests. \end{DoxyCompactList}\item 
+\hypertarget{class_fire_tracker_s_a_aee2677acfd7b6ff50828ee183b1eca0b}{}Random\+Forests\+Helper {\bfseries rfh\+\_\+region}\label{class_fire_tracker_s_a_aee2677acfd7b6ff50828ee183b1eca0b}
+
+\item 
+\hypertarget{class_fire_tracker_s_a_ac139cc55cf55def96683867873bc9841}{}cv\+::\+Mat \hyperlink{class_fire_tracker_s_a_ac139cc55cf55def96683867873bc9841}{color\+\_\+classified}\label{class_fire_tracker_s_a_ac139cc55cf55def96683867873bc9841}
+
+\begin{DoxyCompactList}\small\item\em stores the color classified regions on the last frame \end{DoxyCompactList}\item 
+\hypertarget{class_fire_tracker_s_a_a41191012c3a576338e0a1c18e4670e03}{}std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \hyperlink{class_fire_tracker_s_a_a41191012c3a576338e0a1c18e4670e03}{spatial\+\_\+data}\label{class_fire_tracker_s_a_a41191012c3a576338e0a1c18e4670e03}
+
+\begin{DoxyCompactList}\small\item\em vector with the statistics for each contour \end{DoxyCompactList}\item 
+\hypertarget{class_fire_tracker_s_a_aa436b53f5f363c7ef9ae5dab5d8b6a5b}{}std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$ $>$ \hyperlink{class_fire_tracker_s_a_aa436b53f5f363c7ef9ae5dab5d8b6a5b}{current\+\_\+contours}\label{class_fire_tracker_s_a_aa436b53f5f363c7ef9ae5dab5d8b6a5b}
+
+\begin{DoxyCompactList}\small\item\em temporary contour store for the current frame \end{DoxyCompactList}\item 
+\hypertarget{class_fire_tracker_s_a_abe54bba15c2d4f0c76050eaca5304674}{}bool {\bfseries static\+\_\+video}\label{class_fire_tracker_s_a_abe54bba15c2d4f0c76050eaca5304674}
+
+\item 
+\hypertarget{class_fire_tracker_s_a_a30b38dbacfbdef6a3e9a33f6feefb6cc}{}int {\bfseries frame\+\_\+rate}\label{class_fire_tracker_s_a_a30b38dbacfbdef6a3e9a33f6feefb6cc}
+
+\item 
+\hypertarget{class_fire_tracker_s_a_abc06dfc966087167fe1237e12a3eb36d}{}bool {\bfseries show\+\_\+debug\+\_\+info}\label{class_fire_tracker_s_a_abc06dfc966087167fe1237e12a3eb36d}
+
+\item 
+bool \hyperlink{class_fire_tracker_s_a_abc9326cea4683208d23aa1854bf6cd89}{dont\+\_\+classify\+\_\+by\+\_\+region\+\_\+stats}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Examples\+: ]\par
+\hyperlink{_vision_tests_2main_8cpp-example}{Vision\+Tests/main.\+cpp}.\end{Desc}
+
+
+Definition at line 39 of file Fire\+Tracker\+S\+A.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_fire_tracker_s_a_a84a670238d047b32a9c891e663af11a4}{}\index{Fire\+Tracker\+S\+A@{Fire\+Tracker\+S\+A}!Fire\+Tracker\+S\+A@{Fire\+Tracker\+S\+A}}
+\index{Fire\+Tracker\+S\+A@{Fire\+Tracker\+S\+A}!Fire\+Tracker\+S\+A@{Fire\+Tracker\+S\+A}}
+\subsubsection[{Fire\+Tracker\+S\+A(std\+::string region\+\_\+classification\+\_\+model, std\+::string color\+\_\+classification\+\_\+model)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Fire\+Tracker\+S\+A} (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{region\+\_\+classification\+\_\+model, }
+\item[{std\+::string}]{color\+\_\+classification\+\_\+model}
+\end{DoxyParamCaption}
+)}\label{class_fire_tracker_s_a_a84a670238d047b32a9c891e663af11a4}
+Create a new tracker As parameters you should provide trained classification models. Trained models are provided on the package. If you don\textquotesingle{}t have them now, you can create them using the Random\+Forest\+Helper Class The Region Classification Model takes 14 attributes + a class where 1 is equal fire and 0 is non fire The parameters are given in the following order\+: 0 -\/ area 1 -\/ roundness 2,3,4 -\/ mean 5,6,7 -\/ median 8,9,10 -\/ standard deviation 11,12,13 -\/ skewness The Color Classification Model should be created considering R\+G\+B and H\+S\+V pixel values + a binary class that states the if it represents fire (1) or not (0). The parameters are given in the following order\+: 0,1,2 -\/ B, G, R 3,4,5 -\/ H, S, V
+
+You can also build your own models by accessing the rfh\+\_\+color and rfh\+\_\+region public attributes. Ex\+: rfh\+\_\+region.\+params.\+max\+\_\+depth = 10; rfh\+\_\+region.\+params.\+min\+\_\+sample\+\_\+count = 50; rfh\+\_\+region.\+read\+Train\+Data\+From\+Csv(\char`\"{}region\+\_\+training\+\_\+data3.\+csv\char`\"{}, \textquotesingle{},\textquotesingle{}, true, false); rfh\+\_\+region.\+train\+Classifier(); You can save the generated classification model using\+: rfh\+\_\+region.\+save\+Classifier(\char`\"{}region\+\_\+classification\+\_\+model\char`\"{}); Further information about how the Random Forests are supposed to work can be found in Breiman 2001. 
+
+Definition at line 419 of file Fire\+Tracker\+S\+A.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_fire_tracker_s_a_a68d4ec4232aa3139b0ffa3196f2aa58a}{}\index{Fire\+Tracker\+S\+A@{Fire\+Tracker\+S\+A}!generate\+Region\+Training\+Data@{generate\+Region\+Training\+Data}}
+\index{generate\+Region\+Training\+Data@{generate\+Region\+Training\+Data}!Fire\+Tracker\+S\+A@{Fire\+Tracker\+S\+A}}
+\subsubsection[{generate\+Region\+Training\+Data(std\+::function$<$ double(std\+::vector$<$ cv\+::\+Point $>$ \&dt, cv\+::\+Rect \&gt)$>$ sim\+Fcn, std\+::vector$<$ cv\+::\+Rect $>$ ground\+Truth)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::vector$<$ float $>$ $>$ generate\+Region\+Training\+Data (
+\begin{DoxyParamCaption}
+\item[{std\+::function$<$ double(std\+::vector$<$ cv\+::\+Point $>$ \&dt, cv\+::\+Rect \&gt)$>$}]{sim\+Fcn, }
+\item[{std\+::vector$<$ cv\+::\+Rect $>$}]{ground\+Truth}
+\end{DoxyParamCaption}
+)}\label{class_fire_tracker_s_a_a68d4ec4232aa3139b0ffa3196f2aa58a}
+This is method used to extract region training data. Before you use this, you have to set the \textquotesingle{}dont\+\_\+classify\+\_\+by\+\_\+region\+\_\+stats\textquotesingle{} to false As it is a task that is very hard to do manually we created it so that you can easilly validate the contours against the groud truth. appending the class attribute and returning a string with good and bad contours. By good contours we assume the ones where the similarity is greater than 0.\+8. Bad bad contours we assum the ones that do not have any intersection with the ground truth. Usage example\+: for(auto c\+: tracker.\+generate\+Region\+Training\+Data(sim\+Fc, gt.\+get\+Frame\+At(frame.\+get\+Number()).rect\+On\+Frame))\{ for(auto v\+: c)\{ export\+\_\+data.\+append(to\+\_\+string(v) + \char`\"{};\char`\"{}); \} export\+\_\+data.\+append(\char`\"{}\textbackslash{}n\char`\"{}); \}
+
+This is a helper method used to generate region training data As it is a task that is very hard to do manually we created it so that you can easilly validate the contours against the groud truth appending the class attribute and returning a string with good and bad contours By good contours we assume the ones where the similarity is greater than 0.\+8. Bad bad contours we assum the ones that do not have any intersection with the ground truth 
+
+Definition at line 439 of file Fire\+Tracker\+S\+A.\+cpp.
+
+\hypertarget{class_fire_tracker_s_a_ae1ccd303e827f5d00620e54bb11a968c}{}\index{Fire\+Tracker\+S\+A@{Fire\+Tracker\+S\+A}!get\+Last\+Track@{get\+Last\+Track}}
+\index{get\+Last\+Track@{get\+Last\+Track}!Fire\+Tracker\+S\+A@{Fire\+Tracker\+S\+A}}
+\subsubsection[{get\+Last\+Track()}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$ $>$ \& get\+Last\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_fire_tracker_s_a_ae1ccd303e827f5d00620e54bb11a968c}
+
+
+Get the last track. 
+
+Get last track. 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_a93ee7011307419e8c88db9f22d900657}{Tracker$<$ cv\+::\+Mat, std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$ $>$ $>$}.
+
+
+
+Definition at line 40 of file Fire\+Tracker\+S\+A.\+cpp.
+
+\hypertarget{class_fire_tracker_s_a_ac7e0977fa702f98038bbe303df458a6c}{}\index{Fire\+Tracker\+S\+A@{Fire\+Tracker\+S\+A}!lost\+Track@{lost\+Track}}
+\index{lost\+Track@{lost\+Track}!Fire\+Tracker\+S\+A@{Fire\+Tracker\+S\+A}}
+\subsubsection[{lost\+Track() const }]{\setlength{\rightskip}{0pt plus 5cm}bool lost\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_fire_tracker_s_a_ac7e0977fa702f98038bbe303df458a6c}
+
+
+True if no fire is detected. 
+
+Lost track. 
+
+Reimplemented from \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_af6217aec35983dca6dc39c91d08c1020}{Tracker$<$ cv\+::\+Mat, std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$ $>$ $>$}.
+
+
+
+Definition at line 32 of file Fire\+Tracker\+S\+A.\+cpp.
+
+\hypertarget{class_fire_tracker_s_a_ab233da15b6c7aad7d83c67057a558bd4}{}\index{Fire\+Tracker\+S\+A@{Fire\+Tracker\+S\+A}!update@{update}}
+\index{update@{update}!Fire\+Tracker\+S\+A@{Fire\+Tracker\+S\+A}}
+\subsubsection[{update(const Vision\+Core\+::\+Frame$<$ cv\+::\+Mat $>$ \&frame)}]{\setlength{\rightskip}{0pt plus 5cm}void update (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vision\+Core\+::\+Frame}$<$ cv\+::\+Mat $>$ \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_fire_tracker_s_a_ab233da15b6c7aad7d83c67057a558bd4}
+
+
+Given an image (i.\+e. video frame), update the tracked objects. 
+
+Update tracker. motion
+
+color segmentation
+
+convert everything to float
+
+get the channels as vector
+
+create the color test matrix
+
+apply the color classifier
+
+each pixel is classified using the classifier
+
+filter contours based on roundness
+
+get variance and skewness
+
+match the current data with the last frame data
+
+remove small contours and regions without movement
+
+smooth resulting contours
+
+show debug info 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_aa298892351b5377fcdc227b6d53daf69}{Tracker$<$ cv\+::\+Mat, std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$ $>$ $>$}.
+
+
+
+Definition at line 47 of file Fire\+Tracker\+S\+A.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{class_fire_tracker_s_a_ab233da15b6c7aad7d83c67057a558bd4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_fire_tracker_s_a_abc9326cea4683208d23aa1854bf6cd89}{}\index{Fire\+Tracker\+S\+A@{Fire\+Tracker\+S\+A}!dont\+\_\+classify\+\_\+by\+\_\+region\+\_\+stats@{dont\+\_\+classify\+\_\+by\+\_\+region\+\_\+stats}}
+\index{dont\+\_\+classify\+\_\+by\+\_\+region\+\_\+stats@{dont\+\_\+classify\+\_\+by\+\_\+region\+\_\+stats}!Fire\+Tracker\+S\+A@{Fire\+Tracker\+S\+A}}
+\subsubsection[{dont\+\_\+classify\+\_\+by\+\_\+region\+\_\+stats}]{\setlength{\rightskip}{0pt plus 5cm}bool dont\+\_\+classify\+\_\+by\+\_\+region\+\_\+stats}\label{class_fire_tracker_s_a_abc9326cea4683208d23aa1854bf6cd89}
+Only extract statistics!!! Set as true only if you\textquotesingle{}re trying to generate training data. By setting this parameter as true you can access the statistics. You can easily get the data on \textquotesingle{}spatial\+\_\+data\textquotesingle{} and \textquotesingle{}current\+\_\+contours\textquotesingle{} or call the \textquotesingle{}generate\+Region\+Training\+Data\textquotesingle{} function 
+
+Definition at line 118 of file Fire\+Tracker\+S\+A.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Fire\+Detector/Fire\+Tracker\+S\+A.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Fire\+Detector/Fire\+Tracker\+S\+A.\+cpp\end{DoxyCompactItemize}

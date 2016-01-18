@@ -1,0 +1,43 @@
+\hypertarget{class_tracking_dataset_control}{}\section{Tracking\+Dataset\+Control$<$ T\+Obj $>$ Class Template Reference}
+\label{class_tracking_dataset_control}\index{Tracking\+Dataset\+Control$<$ T\+Obj $>$@{Tracking\+Dataset\+Control$<$ T\+Obj $>$}}
+
+
+Inheritance diagram for Tracking\+Dataset\+Control$<$ T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{class_tracking_dataset_control__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tracking\+Dataset\+Control$<$ T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tracking_dataset_control__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_tracking_dataset_control_a0bffbe12a4bc8eae3fbe8412e7de0a7c}{}{\bfseries Tracking\+Dataset\+Control} (Tracking\+Dataset$<$ cv\+::\+Mat, T\+Obj $>$ $\ast$track\+Data)\label{class_tracking_dataset_control_a0bffbe12a4bc8eae3fbe8412e7de0a7c}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Obj$>$class Tracking\+Dataset\+Control$<$ T\+Obj $>$}
+
+
+
+Definition at line 37 of file Tracking\+Dataset\+Control.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Applications/\+Vision\+G\+U\+I/Tracking\+Dataset\+Control.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_vision_core_1_1_interfaces_1_1_frame_server.html" title="Interface for a source of frames. The frames can come from a video file, webcam, set of images..." alt="" coords="5,13,152,39"/>
+<area shape="rect" id="node2" href="$class_vision_core_1_1_evaluation_1_1_frame_server_det_data.html" title="FrameServer from a detection dataset. " alt="" coords="200,5,343,47"/>
+</map>

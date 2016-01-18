@@ -1,0 +1,106 @@
+\hypertarget{class_viscv_1_1_dataset_f_d_d_b}{}\section{Dataset\+F\+D\+D\+B Class Reference}
+\label{class_viscv_1_1_dataset_f_d_d_b}\index{Dataset\+F\+D\+D\+B@{Dataset\+F\+D\+D\+B}}
+
+
+Dataset público de várias imagens contendo pessoas em ambientes do dia-\/a-\/dia.  
+
+
+
+
+{\ttfamily \#include $<$Dataset\+F\+D\+D\+B.\+h$>$}
+
+
+
+Inheritance diagram for Dataset\+F\+D\+D\+B\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{class_viscv_1_1_dataset_f_d_d_b__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Dataset\+F\+D\+D\+B\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{class_viscv_1_1_dataset_f_d_d_b__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_viscv_1_1_dataset_f_d_d_b_a1f73293d1c0506448791946f30d710ff}{Dataset\+F\+D\+D\+B} (const std\+::string base\+Dir, const std\+::string fold)
+\begin{DoxyCompactList}\small\item\em Construtor. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_dataset_f_d_d_b_af7f8d85c565cd9e7aa5a8b2f5985c134}{}virtual \hyperlink{class_viscv_1_1_dataset_f_d_d_b_af7f8d85c565cd9e7aa5a8b2f5985c134}{$\sim$\+Dataset\+F\+D\+D\+B} (void)\label{class_viscv_1_1_dataset_f_d_d_b_af7f8d85c565cd9e7aa5a8b2f5985c134}
+
+\begin{DoxyCompactList}\small\item\em Destrutor. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_dataset_f_d_d_b_a8f2602813f5b8c2c6512690efbabb2df}{}virtual std\+::vector$<$ std\+::string $>$ \hyperlink{class_viscv_1_1_dataset_f_d_d_b_a8f2602813f5b8c2c6512690efbabb2df}{get\+Samples\+I\+D} () const \label{class_viscv_1_1_dataset_f_d_d_b_a8f2602813f5b8c2c6512690efbabb2df}
+
+\begin{DoxyCompactList}\small\item\em Retorna um vetor com os identificadores de todas as amostras contidas no dataset. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_dataset_f_d_d_b_a64f0340b5a377d18c5199f61a8ee7ffd}{}virtual std\+::shared\+\_\+ptr$<$ cv\+::\+Mat $>$ \hyperlink{class_viscv_1_1_dataset_f_d_d_b_a64f0340b5a377d18c5199f61a8ee7ffd}{get\+Image} (const std\+::string \&sample\+I\+D) const \label{class_viscv_1_1_dataset_f_d_d_b_a64f0340b5a377d18c5199f61a8ee7ffd}
+
+\begin{DoxyCompactList}\small\item\em Retorna um ponteiro para a imagem de uma amostra. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_dataset_f_d_d_b_a8c1fe796c01ff8d85626dd85e6a45418}{}virtual std\+::vector$<$ cv\+::\+Rect $>$ \hyperlink{class_viscv_1_1_dataset_f_d_d_b_a8c1fe796c01ff8d85626dd85e6a45418}{get\+Objects} (const std\+::string \&sample\+I\+D) const \label{class_viscv_1_1_dataset_f_d_d_b_a8c1fe796c01ff8d85626dd85e6a45418}
+
+\begin{DoxyCompactList}\small\item\em Retorna uma lista com os objetos contidos na imagem de uma amostra. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_viscv_1_1_dataset_f_d_d_b_a91e8a6b561989bd8507dbb120957786d}{for\+Each\+Sample} (std\+::function$<$ void(cv\+::\+Mat \&, std\+::vector$<$ cv\+::\+Rect $>$ \&, const std\+::string \&)$>$ funct)
+\begin{DoxyCompactList}\small\item\em Executa uma função para cada amostra do dataset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Dataset público de várias imagens contendo pessoas em ambientes do dia-\/a-\/dia. 
+
+Utilizado principalmente para detecção de faces. Para cada imagem contida no dataset existe uma anotação (extraidas de um arquivo texto) que indica a localização das faces. \begin{Desc}
+\item[Examples\+: ]\par
+\hyperlink{_vision_tests_2main_8cpp-example}{Vision\+Tests/main.\+cpp}.\end{Desc}
+
+
+Definition at line 40 of file Dataset\+F\+D\+D\+B.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_viscv_1_1_dataset_f_d_d_b_a1f73293d1c0506448791946f30d710ff}{}\index{Viscv\+::\+Dataset\+F\+D\+D\+B@{Viscv\+::\+Dataset\+F\+D\+D\+B}!Dataset\+F\+D\+D\+B@{Dataset\+F\+D\+D\+B}}
+\index{Dataset\+F\+D\+D\+B@{Dataset\+F\+D\+D\+B}!Viscv\+::\+Dataset\+F\+D\+D\+B@{Viscv\+::\+Dataset\+F\+D\+D\+B}}
+\subsubsection[{Dataset\+F\+D\+D\+B(const std\+::string base\+Dir, const std\+::string fold)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dataset\+F\+D\+D\+B} (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{base\+Dir, }
+\item[{const std\+::string}]{fold}
+\end{DoxyParamCaption}
+)}\label{class_viscv_1_1_dataset_f_d_d_b_a1f73293d1c0506448791946f30d710ff}
+
+
+Construtor. 
+
+É necessário informar o diretório onde está o dataset e o path completo do arquivo texto conténdo a lista das imagens e anotações de cada imagem (fornecido junto com o dataset). Exemplo\+: \hyperlink{class_viscv_1_1_dataset_f_d_d_b}{Dataset\+F\+D\+D\+B} db(\char`\"{}\+E\+:/\+F\+U\+R\+G/\+Datasets/\+F\+D\+D\+B/\char`\"{},\char`\"{}\+E\+:/\+F\+U\+R\+G/\+Datasets/\+F\+D\+D\+B-\/folds/\+F\+D\+D\+B-\/fold-\/01-\/ellipse\+List.\+txt\char`\"{}); 
+
+Definition at line 33 of file Dataset\+F\+D\+D\+B.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_viscv_1_1_dataset_f_d_d_b_a91e8a6b561989bd8507dbb120957786d}{}\index{Viscv\+::\+Dataset\+F\+D\+D\+B@{Viscv\+::\+Dataset\+F\+D\+D\+B}!for\+Each\+Sample@{for\+Each\+Sample}}
+\index{for\+Each\+Sample@{for\+Each\+Sample}!Viscv\+::\+Dataset\+F\+D\+D\+B@{Viscv\+::\+Dataset\+F\+D\+D\+B}}
+\subsubsection[{for\+Each\+Sample(std\+::function$<$ void(cv\+::\+Mat \&, std\+::vector$<$ cv\+::\+Rect $>$ \&, const std\+::string \&)$>$ funct)}]{\setlength{\rightskip}{0pt plus 5cm}void for\+Each\+Sample (
+\begin{DoxyParamCaption}
+\item[{std\+::function$<$ void(cv\+::\+Mat \&, std\+::vector$<$ cv\+::\+Rect $>$ \&, const std\+::string \&)$>$}]{funct}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_viscv_1_1_dataset_f_d_d_b_a91e8a6b561989bd8507dbb120957786d}
+
+
+Executa uma função para cada amostra do dataset. 
+
+Esta função abre cada uma das imagens do dataset, extrai as informações de anotações (locais das faces), e chama a função passada como argumento. O sample\+Id de cada amostra é o nome do arquivo da imagem. 
+
+Definition at line 70 of file Dataset\+F\+D\+D\+B.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Dataset\+F\+D\+D\+B.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Dataset\+F\+D\+D\+B.\+cpp\end{DoxyCompactItemize}

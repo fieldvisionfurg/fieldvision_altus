@@ -1,0 +1,36 @@
+\hypertarget{group___core}{}\section{Core}
+\label{group___core}\index{Core@{Core}}
+
+
+This module combines several sub-\/modules that form the core functionalities of Cv\+Works.  
+
+
+Collaboration diagram for Core\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{group___core}
+\end{center}
+\end{figure}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___abstractions}{Abstractions}
+\begin{DoxyCompactList}\small\item\em Contains abstract computer vision methods. \end{DoxyCompactList}\item 
+\hyperlink{group___async}{Async}
+\begin{DoxyCompactList}\small\item\em Contains classes that execute the Cv\+Works methods asynchronously in separate threads. \end{DoxyCompactList}\item 
+\hyperlink{group___data_structures}{Data\+Structures}
+\begin{DoxyCompactList}\small\item\em Declaration and implementation of simple data structures for Vision framework. \end{DoxyCompactList}\item 
+\hyperlink{group___evaluation}{Evaluation}
+\begin{DoxyCompactList}\small\item\em Implementation of generic validation algorithms for Cv\+Works interfaces. \end{DoxyCompactList}\item 
+\hyperlink{group___interfaces}{Interfaces}
+\begin{DoxyCompactList}\small\item\em This module contains the generic interfaces used throughout the framework. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This module combines several sub-\/modules that form the core functionalities of Cv\+Works. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group___interfaces}{Interfaces} \hyperlink{group___abstractions}{Abstractions} \hyperlink{group___evaluation}{Evaluation} \hyperlink{group___async}{Async} 
+\end{DoxySeeAlso}

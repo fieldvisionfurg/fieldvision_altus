@@ -1,0 +1,104 @@
+\hypertarget{class_viscv_1_1_circle_tracker_h_t_c_f}{}\section{Circle\+Tracker\+H\+T\+C\+F Class Reference}
+\label{class_viscv_1_1_circle_tracker_h_t_c_f}\index{Circle\+Tracker\+H\+T\+C\+F@{Circle\+Tracker\+H\+T\+C\+F}}
+
+
+Rastreador baseado na classe \hyperlink{class_viscv_1_1_circle_detector_h_t_c_f}{Circle\+Detector\+H\+T\+C\+F}.  
+
+
+
+
+{\ttfamily \#include $<$Circle\+Tracker\+H\+T\+C\+F.\+h$>$}
+
+
+
+Inheritance diagram for Circle\+Tracker\+H\+T\+C\+F\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{class_viscv_1_1_circle_tracker_h_t_c_f__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Circle\+Tracker\+H\+T\+C\+F\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{class_viscv_1_1_circle_tracker_h_t_c_f__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_viscv_1_1_circle_tracker_h_t_c_f_a925ba52aa4c7a0bbbedbcc3bc53b84ad}{}\hyperlink{class_viscv_1_1_circle_tracker_h_t_c_f_a925ba52aa4c7a0bbbedbcc3bc53b84ad}{Circle\+Tracker\+H\+T\+C\+F} (double x, double y, double radius)\label{class_viscv_1_1_circle_tracker_h_t_c_f_a925ba52aa4c7a0bbbedbcc3bc53b84ad}
+
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_circle_tracker_h_t_c_f_ab7bb92a06e7f731d7a4b1782f5b00d7b}{}virtual \hyperlink{class_viscv_1_1_circle_tracker_h_t_c_f_ab7bb92a06e7f731d7a4b1782f5b00d7b}{$\sim$\+Circle\+Tracker\+H\+T\+C\+F} ()\label{class_viscv_1_1_circle_tracker_h_t_c_f_ab7bb92a06e7f731d7a4b1782f5b00d7b}
+
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+const \hyperlink{class_viscv_1_1_circle}{Circle} \& \hyperlink{class_viscv_1_1_circle_tracker_h_t_c_f_a0dcaebc9de9ff2ad85ef0a7ec554c363}{get\+Last\+Track} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the current estimated object state. \end{DoxyCompactList}\item 
+bool \hyperlink{class_viscv_1_1_circle_tracker_h_t_c_f_ac7e0977fa702f98038bbe303df458a6c}{lost\+Track} () const 
+\begin{DoxyCompactList}\small\item\em Returns true if the tracker lost the object track. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_circle_tracker_h_t_c_f_ab233da15b6c7aad7d83c67057a558bd4}{}void \hyperlink{class_viscv_1_1_circle_tracker_h_t_c_f_ab233da15b6c7aad7d83c67057a558bd4}{update} (const \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Vision\+Core\+::\+Frame}$<$ cv\+::\+Mat $>$ \&frame)\label{class_viscv_1_1_circle_tracker_h_t_c_f_ab233da15b6c7aad7d83c67057a558bd4}
+
+\begin{DoxyCompactList}\small\item\em Given an image (i.\+e. video frame), update the tracked objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Rastreador baseado na classe \hyperlink{class_viscv_1_1_circle_detector_h_t_c_f}{Circle\+Detector\+H\+T\+C\+F}. 
+
+O rastreamento é feito limitando a região de interesse (R\+O\+I) de aplicação do detector em cada frame e filtrando o tamanho dos circulos. Ou seja, assume-\/se que houve apenas variação local da posição e tamanho do circulo
+
+Definition at line 40 of file Circle\+Tracker\+H\+T\+C\+F.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_viscv_1_1_circle_tracker_h_t_c_f_a0dcaebc9de9ff2ad85ef0a7ec554c363}{}\index{Viscv\+::\+Circle\+Tracker\+H\+T\+C\+F@{Viscv\+::\+Circle\+Tracker\+H\+T\+C\+F}!get\+Last\+Track@{get\+Last\+Track}}
+\index{get\+Last\+Track@{get\+Last\+Track}!Viscv\+::\+Circle\+Tracker\+H\+T\+C\+F@{Viscv\+::\+Circle\+Tracker\+H\+T\+C\+F}}
+\subsubsection[{get\+Last\+Track()}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Circle} \& get\+Last\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_viscv_1_1_circle_tracker_h_t_c_f_a0dcaebc9de9ff2ad85ef0a7ec554c363}
+
+
+Returns a reference to the current estimated object state. 
+
+This function is often call after calling the \hyperlink{class_viscv_1_1_circle_tracker_h_t_c_f_ab233da15b6c7aad7d83c67057a558bd4}{update()} method. The returned reference is usualy to a class member. 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_a93ee7011307419e8c88db9f22d900657}{Tracker$<$ cv\+::\+Mat, Circle$<$$>$ $>$}.
+
+
+
+Definition at line 54 of file Circle\+Tracker\+H\+T\+C\+F.\+cpp.
+
+\hypertarget{class_viscv_1_1_circle_tracker_h_t_c_f_ac7e0977fa702f98038bbe303df458a6c}{}\index{Viscv\+::\+Circle\+Tracker\+H\+T\+C\+F@{Viscv\+::\+Circle\+Tracker\+H\+T\+C\+F}!lost\+Track@{lost\+Track}}
+\index{lost\+Track@{lost\+Track}!Viscv\+::\+Circle\+Tracker\+H\+T\+C\+F@{Viscv\+::\+Circle\+Tracker\+H\+T\+C\+F}}
+\subsubsection[{lost\+Track() const }]{\setlength{\rightskip}{0pt plus 5cm}bool lost\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_viscv_1_1_circle_tracker_h_t_c_f_ac7e0977fa702f98038bbe303df458a6c}
+
+
+Returns true if the tracker lost the object track. 
+
+The cause for loosing the object track is not specified by the interface. It can be caused by the object going out of image limits, becoming ocluded, or even due to a tracker error. 
+
+Reimplemented from \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_af6217aec35983dca6dc39c91d08c1020}{Tracker$<$ cv\+::\+Mat, Circle$<$$>$ $>$}.
+
+
+
+Definition at line 61 of file Circle\+Tracker\+H\+T\+C\+F.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Circle\+Tracker\+H\+T\+C\+F.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Circle\+Tracker\+H\+T\+C\+F.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="FaceDetectorControl" name="FaceDetectorControl">
+<area shape="rect" id="node2" href="$class_detector_control.html" title="{DetectorControl\&lt; cv\l::Mat, cv::Rect \&gt;\n|# detector\l# asyncDetector\l# loggerDetector\l|+ DetectorControl()\l+ pause()\l+ start()\l+ exportLog()\l+ addCreateTrackerOption()\l+ ~DetectorControl()\l# drawResults()\l# drawObject()\l# resetLog()\l}" alt="" coords="5,336,188,575"/>
+<area shape="rect" id="node3" href="$class_process_control.html" title="Esta classe é responsável por controlar a execuçãoo de um algoritmo de visão computacional. " alt="" coords="11,5,182,288"/>
+</map>

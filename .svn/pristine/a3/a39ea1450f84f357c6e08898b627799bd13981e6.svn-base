@@ -1,0 +1,35 @@
+\hypertarget{class_ui_1_1_detector_control_widget}{}\section{Detector\+Control\+Widget Class Reference}
+\label{class_ui_1_1_detector_control_widget}\index{Detector\+Control\+Widget@{Detector\+Control\+Widget}}
+
+
+Inheritance diagram for Detector\+Control\+Widget\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{class_ui_1_1_detector_control_widget__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Detector\+Control\+Widget\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{class_ui_1_1_detector_control_widget__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 91 of file ui\+\_\+\+Detector\+Control\+Widget.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets/ui\+\_\+\+Detector\+Control\+Widget.\+h\end{DoxyCompactItemize}

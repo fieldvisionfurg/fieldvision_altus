@@ -1,0 +1,3 @@
+<map id="FrameServerControlWidget" name="FrameServerControlWidget">
+<area shape="rect" id="node2" href="$class_ui___frame_server_control_widget.html" title="{Ui_FrameServerControlWidget\n|+ verticalLayout\l+ groupBox\l+ verticalLayout_2\l+ horizontalLayout\l+ closeBtn\l+ stopBtn\l+ startBtn\l+ horizontalLayout_2\l+ label_2\l+ fpsInput\l+ label\l+ scaleSlider\l|+ setupUi()\l+ retranslateUi()\l}" alt="" coords="5,5,201,259"/>
+</map>

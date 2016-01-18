@@ -1,0 +1,15 @@
+﻿Build started 26/02/2014 18:07:58.
+     1>Project "E:\lixo\libmodbus-master\src\win32\modbus.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\lixo\libmodbus-master\src\win32\modbus.dll" /VERSION:"3" /INCREMENTAL:NO /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\lixo\libmodbus-master\src\win32\modbus.pdb" /MAP /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"E:\lixo\libmodbus-master\src\win32\modbus.lib" /MACHINE:X86 /SAFESEH /DLL "E:\lixo\libmodbus-master\src\win32\/modbus.res"
+         "Debug\modbus-data.obj"
+         "Debug\modbus-rtu.obj"
+         "Debug\modbus-tcp.obj"
+         Debug\modbus.obj
+            Creating library E:\lixo\libmodbus-master\src\win32\modbus.lib and object E:\lixo\libmodbus-master\src\win32\modbus.exp
+         modbus.vcxproj -> E:\lixo\libmodbus-master\src\win32\modbus.dll
+     1>Done Building Project "E:\lixo\libmodbus-master\src\win32\modbus.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.96

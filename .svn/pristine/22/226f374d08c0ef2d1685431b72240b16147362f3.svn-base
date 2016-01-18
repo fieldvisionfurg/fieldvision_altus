@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_process_control.html" title="Esta classe é responsável por controlar a execuçãoo de um algoritmo de visão computacional. " alt="" coords="5,177,116,203"/>
+<area shape="rect" id="node2" href="$class_detector_control.html" title="Esta classe é responsável por controlar a execução de um detector. " alt="" coords="167,5,323,47"/>
+<area shape="rect" id="node3" href="$class_detector_control.html" title="DetectorControl\&lt; cv\l::Mat, cv::Rect \&gt;" alt="" coords="177,71,313,112"/>
+<area shape="rect" id="node5" href="$class_tracker_control.html" title="Esta classe é responsável por controlar a execução de um rastreador. " alt="" coords="169,136,320,177"/>
+<area shape="rect" id="node6" href="$class_tracker_control.html" title="TrackerControl\&lt; cv\l::Mat, cv::Rect \&gt;" alt="" coords="179,201,310,243"/>
+<area shape="rect" id="node8" href="$class_tracker_control.html" title="TrackerControl\&lt; cv\l::Mat, std::map\&lt; long,\l Biometrics::Person \&gt; \&gt;" alt="" coords="164,267,325,323"/>
+<area shape="rect" id="node10" href="$class_tracker_control.html" title="TrackerControl\&lt; cv\l::Mat, std::vector\&lt;\l cv::Point2f \&gt; \&gt;" alt="" coords="179,347,310,403"/>
+<area shape="rect" id="node4" href="$class_face_detector_control.html" title="Esta classe é responsável por controlar a execução de um detector de objetos do tipo ObjectDetectorCC..." alt="" coords="395,78,536,105"/>
+<area shape="rect" id="node7" href="$class_object_tracker_p_f_hist_control.html" title="Esta classe é responsável por controlar a execução de um rastreador do tipo ObjectTrackerPFHist. " alt="" coords="373,209,557,235"/>
+<area shape="rect" id="node9" href="$class_face_recog_tracker_control.html" title="FaceRecogTrackerControl" alt="" coords="379,282,551,309"/>
+<area shape="rect" id="node11" href="$class_feature_tracker_control.html" title="Esta classe é responsável por controlar a execução de um rastreador do tipo FeatureTrackerKLTCv. " alt="" coords="390,362,541,389"/>
+</map>

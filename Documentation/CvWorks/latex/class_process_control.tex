@@ -1,0 +1,136 @@
+\hypertarget{class_process_control}{}\section{Process\+Control Class Reference}
+\label{class_process_control}\index{Process\+Control@{Process\+Control}}
+
+
+Esta classe é responsável por controlar a execuçãoo de um algoritmo de visão computacional.  
+
+
+
+
+{\ttfamily \#include $<$Process\+Control.\+h$>$}
+
+
+
+Inheritance diagram for Process\+Control\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_process_control__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Process\+Control\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_process_control__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_process_control_afc7ce4c99cd1dbeea91be72fe42c7e08}{}\hyperlink{class_process_control_afc7ce4c99cd1dbeea91be72fe42c7e08}{Process\+Control} ()\label{class_process_control_afc7ce4c99cd1dbeea91be72fe42c7e08}
+
+\begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_af8adcae7adceab76734731c6dbd9b8cb}{}\hyperlink{class_process_control_af8adcae7adceab76734731c6dbd9b8cb}{Process\+Control} (\hyperlink{class_frame_server_control_widget}{Frame\+Server\+Control\+Widget} $\ast$frame\+Server\+Control\+\_\+)\label{class_process_control_af8adcae7adceab76734731c6dbd9b8cb}
+
+\begin{DoxyCompactList}\small\item\em Construtor. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_a4a778f9624d81dff33181cbaa7b2ff33}{}virtual \hyperlink{class_process_control_a4a778f9624d81dff33181cbaa7b2ff33}{$\sim$\+Process\+Control} ()\label{class_process_control_a4a778f9624d81dff33181cbaa7b2ff33}
+
+\begin{DoxyCompactList}\small\item\em Destrutor. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_a9616aa7c12793e2bdf0a661f187e6c6b}{}\hyperlink{class_process_widget}{Process\+Widget} $\ast$ \hyperlink{class_process_control_a9616aa7c12793e2bdf0a661f187e6c6b}{get\+Widget} () const \label{class_process_control_a9616aa7c12793e2bdf0a661f187e6c6b}
+
+\begin{DoxyCompactList}\small\item\em Retorna o widget (parte gráfica) do processo. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_ad4cdd61d9764dff1012e170ddd629f8f}{}Q\+Color \hyperlink{class_process_control_ad4cdd61d9764dff1012e170ddd629f8f}{get\+Draw\+Color} ()\label{class_process_control_ad4cdd61d9764dff1012e170ddd629f8f}
+
+\begin{DoxyCompactList}\small\item\em Retorna a cor padrão para desenhar os resultados. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_aebd19108ae7957a2c5f4f55aa4a8737e}{}Q\+String \hyperlink{class_process_control_aebd19108ae7957a2c5f4f55aa4a8737e}{get\+Name} () const \label{class_process_control_aebd19108ae7957a2c5f4f55aa4a8737e}
+
+\begin{DoxyCompactList}\small\item\em Retorna o nome do processo. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_ae9b6ae8085e66d1a0440a443699b6e9a}{}void \hyperlink{class_process_control_ae9b6ae8085e66d1a0440a443699b6e9a}{set\+Name} (const Q\+String \&value)\label{class_process_control_ae9b6ae8085e66d1a0440a443699b6e9a}
+
+\begin{DoxyCompactList}\small\item\em Altera o nome do processo. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_a468fe2136e366509514bb38fed9d0102}{}virtual void \hyperlink{class_process_control_a468fe2136e366509514bb38fed9d0102}{pause} ()\label{class_process_control_a468fe2136e366509514bb38fed9d0102}
+
+\begin{DoxyCompactList}\small\item\em Pause process. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_a62b63bddf378b0e13a4affa3e8e1bedf}{}virtual void \hyperlink{class_process_control_a62b63bddf378b0e13a4affa3e8e1bedf}{start} ()\label{class_process_control_a62b63bddf378b0e13a4affa3e8e1bedf}
+
+\begin{DoxyCompactList}\small\item\em Start process. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_af1df9f770b44a1ec346c791f5bb72e32}{}void \hyperlink{class_process_control_af1df9f770b44a1ec346c791f5bb72e32}{add\+Numeric\+Parameter} (const std\+::string \hyperlink{class_process_control_abc29e461e01cc0c712944f8f47f91331}{name}, const std\+::function$<$ void(double)$>$ set\+Param, const double min=0.\+0, const double max=1.\+0, const double initial=0.\+5, const int steps=100, const int style=0)\label{class_process_control_af1df9f770b44a1ec346c791f5bb72e32}
+
+\begin{DoxyCompactList}\small\item\em Adiciona um widget para um parâmetro do tipo double. Quando o parâmetro é alterado a função set\+Param é chamada. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_a728585b52151f34fb52cffdef25a53ae}{}void \hyperlink{class_process_control_a728585b52151f34fb52cffdef25a53ae}{add\+Numeric\+Parameter} (const std\+::string \hyperlink{class_process_control_abc29e461e01cc0c712944f8f47f91331}{name}, double \&param, const double min=0.\+0, const double max=1.\+0, const double initial=0.\+5, const int steps=100, const int style=0)\label{class_process_control_a728585b52151f34fb52cffdef25a53ae}
+
+\begin{DoxyCompactList}\small\item\em Adiciona um widget para um parâmetro do tipo double. Quando o parâmetro é alterado o valor da variável param é alterado. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_a3d13872e46159846955f51ad4b651135}{}void \hyperlink{class_process_control_a3d13872e46159846955f51ad4b651135}{add\+Left\+Click\+Handler} (const std\+::string \hyperlink{class_process_control_abc29e461e01cc0c712944f8f47f91331}{name}, std\+::function$<$ void(Q\+Point)$>$ handler\+Fcn, bool enabled\+\_\+=false)\label{class_process_control_a3d13872e46159846955f51ad4b651135}
+
+\begin{DoxyCompactList}\small\item\em Adiciona um widget que executa a função handler\+Fcn quando um ponto da imagem é clicado. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_a7d15eb536761436d80d42b2959fb989e}{}void \hyperlink{class_process_control_a7d15eb536761436d80d42b2959fb989e}{add\+Multi\+Click\+Handler} (const std\+::string \hyperlink{class_process_control_abc29e461e01cc0c712944f8f47f91331}{name}, const unsigned int num\+Of\+Points, std\+::function$<$ void(std\+::vector$<$ Q\+Point $>$)$>$ handler\+Fcn, bool enabled\+\_\+=false)\label{class_process_control_a7d15eb536761436d80d42b2959fb989e}
+
+\begin{DoxyCompactList}\small\item\em Adiciona um widget que captura num\+Of\+Points cliques na imagem e chama a função handler\+Fcn repassando os pontos clicados. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_a4a0b533407f26dbe53130d931afb645d}{}void \hyperlink{class_process_control_a4a0b533407f26dbe53130d931afb645d}{add\+Sub\+Image\+Handler} (const std\+::string \hyperlink{class_process_control_abc29e461e01cc0c712944f8f47f91331}{name}, std\+::function$<$ void(cv\+::\+Mat img)$>$ handler\+Fcn, bool enabled\+\_\+=false)\label{class_process_control_a4a0b533407f26dbe53130d931afb645d}
+
+\begin{DoxyCompactList}\small\item\em Adiciona um widget que captura uma sub-\/imagem baseada na seleção do usuário. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_acbe523f427680c7b63756a998822c963}{}void \hyperlink{class_process_control_acbe523f427680c7b63756a998822c963}{add\+Sub\+Image\+And\+Rect\+Handler} (const std\+::string \hyperlink{class_process_control_abc29e461e01cc0c712944f8f47f91331}{name}, std\+::function$<$ void(cv\+::\+Mat img, cv\+::\+Rect r)$>$ handler\+Fcn, bool enabled\+\_\+=false)\label{class_process_control_acbe523f427680c7b63756a998822c963}
+
+\begin{DoxyCompactList}\small\item\em Adiciona um widget que captura uma sub-\/imagem baseada na seleção do usuário. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_a45754e768e48f832b466b9e2fe664d31}{}void \hyperlink{class_process_control_a45754e768e48f832b466b9e2fe664d31}{add\+File\+Choice} (const std\+::string \hyperlink{class_process_control_abc29e461e01cc0c712944f8f47f91331}{name}, std\+::function$<$ void(const std\+::string)$>$ handler\+Fcn)\label{class_process_control_a45754e768e48f832b466b9e2fe664d31}
+
+\begin{DoxyCompactList}\small\item\em Adiciona um widget que possibilita a definição do path de um arquivo. Repassa o path do arquivo a função handler\+Fcn. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_a2eeb77e2749ce88b06708aed586c9e68}{}void \hyperlink{class_process_control_a2eeb77e2749ce88b06708aed586c9e68}{add\+Numeric\+Parameter} (const std\+::string \hyperlink{class_process_control_abc29e461e01cc0c712944f8f47f91331}{name}, int \&param, const int min=0, const int max=100, const int initial=50)\label{class_process_control_a2eeb77e2749ce88b06708aed586c9e68}
+
+\begin{DoxyCompactList}\small\item\em Adiciona um widget para um parâmetro do tipo int. Quando o parâmetro é alterado o valor da variável param é alterado. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_a05adea2771aad5d07683f1da4027391c}{}void \hyperlink{class_process_control_a05adea2771aad5d07683f1da4027391c}{add\+Numeric\+Parameter} (const std\+::string \hyperlink{class_process_control_abc29e461e01cc0c712944f8f47f91331}{name}, const std\+::function$<$ void(int)$>$ set\+Param, const int min=0, const int max=100, const int initial=50)\label{class_process_control_a05adea2771aad5d07683f1da4027391c}
+
+\begin{DoxyCompactList}\small\item\em Adiciona um widget para um parâmetro do tipo int. Quando o parâmetro é alterado a função set\+Param é chamada. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_a29d5382fa365a84b2fe460e876f4e283}{}void \hyperlink{class_process_control_a29d5382fa365a84b2fe460e876f4e283}{add\+Bool\+Parameter} (const std\+::string \hyperlink{class_process_control_abc29e461e01cc0c712944f8f47f91331}{name}, bool \&param)\label{class_process_control_a29d5382fa365a84b2fe460e876f4e283}
+
+\begin{DoxyCompactList}\small\item\em Adiciona um widget para um parâmetro do tipo bool. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_af29744bba8cc61999481a5d3849004ce}{}void \hyperlink{class_process_control_af29744bba8cc61999481a5d3849004ce}{add\+Bool\+Parameter} (const std\+::string \hyperlink{class_process_control_abc29e461e01cc0c712944f8f47f91331}{name}, const std\+::function$<$ void(bool)$>$ set\+Param, const bool initial)\label{class_process_control_af29744bba8cc61999481a5d3849004ce}
+
+\begin{DoxyCompactList}\small\item\em Adiciona um widget para um parâmetro do tipo bool. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_aad8b7703b6f7c1e90253faa8a79246bc}{}virtual bool \hyperlink{class_process_control_aad8b7703b6f7c1e90253faa8a79246bc}{export\+Log} (std\+::string file\+Name)\label{class_process_control_aad8b7703b6f7c1e90253faa8a79246bc}
+
+\begin{DoxyCompactList}\small\item\em Exports the log data to file. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_a0f269bca8139be827d8f673bed676f60}{}virtual void \hyperlink{class_process_control_a0f269bca8139be827d8f673bed676f60}{reset\+Log} ()\label{class_process_control_a0f269bca8139be827d8f673bed676f60}
+
+\begin{DoxyCompactList}\small\item\em FunÃ§Ã£o que reseta o log. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_process_control_a1f47b0f6a1af3369f3feb1eabbe85543}{}void \hyperlink{class_process_control_a1f47b0f6a1af3369f3feb1eabbe85543}{set\+Status} (const Q\+String \&status)\label{class_process_control_a1f47b0f6a1af3369f3feb1eabbe85543}
+
+\begin{DoxyCompactList}\small\item\em Define status de execução do processo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_process_control_a92b9bba974596786a40980a15cbf57b0}{}\hyperlink{class_frame_server_control_widget}{Frame\+Server\+Control\+Widget} $\ast$ \hyperlink{class_process_control_a92b9bba974596786a40980a15cbf57b0}{frame\+Server\+Control}\label{class_process_control_a92b9bba974596786a40980a15cbf57b0}
+
+\begin{DoxyCompactList}\small\item\em Objeto que representa uma fonte de video. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_ae36e86e26d6a323a052c5e1b20c7deef}{}\hyperlink{class_process_widget}{Process\+Widget} $\ast$ \hyperlink{class_process_control_ae36e86e26d6a323a052c5e1b20c7deef}{widget}\label{class_process_control_ae36e86e26d6a323a052c5e1b20c7deef}
+
+\begin{DoxyCompactList}\small\item\em Widget com funcionalidades básicas de controle (fechar, pausar, definir cor de desenho). \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_a8479dec0c2314e7a56e43aa7ef3bba27}{}std\+::vector$<$ Q\+Meta\+Object\+::\+Connection $>$ \hyperlink{class_process_control_a8479dec0c2314e7a56e43aa7ef3bba27}{connections}\label{class_process_control_a8479dec0c2314e7a56e43aa7ef3bba27}
+
+\begin{DoxyCompactList}\small\item\em Vetor com conexões do Qt que devem ser desconectadas no destrutor. \end{DoxyCompactList}\item 
+\hypertarget{class_process_control_abc29e461e01cc0c712944f8f47f91331}{}Q\+String \hyperlink{class_process_control_abc29e461e01cc0c712944f8f47f91331}{name}\label{class_process_control_abc29e461e01cc0c712944f8f47f91331}
+
+\begin{DoxyCompactList}\small\item\em Nome de exibição do processo em execução. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Esta classe é responsável por controlar a execuçãoo de um algoritmo de visão computacional. 
+
+A classe não especifica como o algoritmo é executado. Ela apenas serve de base para outras classes e prove acesso a um \hyperlink{class_frame_server_control_widget}{Frame\+Server\+Control\+Widget} (que fornece uma fonte de video) e um widget com funcionalidades básicas de controle (fechar, pausar, definir cor de desenho). A classe também fornece métodos para adição de widgets que facilitam a entrada de dados pelo usuário (ex. add\+Left\+Click\+Handler, add\+Numeric\+Parameter). 
+
+Definition at line 45 of file Process\+Control.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets/Process\+Control.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets/Process\+Control.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,42 @@
+\hypertarget{group___evaluation}{}\section{Evaluation}
+\label{group___evaluation}\index{Evaluation@{Evaluation}}
+
+
+Implementation of generic validation algorithms for Cv\+Works interfaces.  
+
+
+Collaboration diagram for Evaluation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{group___evaluation}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_vision_core_1_1_evaluation_1_1_detection_dataset}{Detection\+Dataset$<$ T\+Img, T\+Obj $>$}
+\begin{DoxyCompactList}\small\item\em Abstract class for a generic detection dataset, contining images and its ground-\/truth. \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_evaluation_1_1_detection_sub_dataset}{Detection\+Sub\+Dataset$<$ T\+Img, T\+Obj $>$}
+\begin{DoxyCompactList}\small\item\em Class that provides access to a subset of a detection dataset. \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_evaluation_1_1_tracking_dataset}{Tracking\+Dataset$<$ T\+Img, T\+Obj $>$}
+\begin{DoxyCompactList}\small\item\em Abstract class for a generic tracking dataset, containing videos and its ground-\/truth data. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result}{Detector\+Eval\+Result}
+\begin{DoxyCompactList}\small\item\em Data structure that stores the statistics and evaluation results for a detector. \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_evaluation_1_1_detector_evaluator}{Detector\+Evaluator$<$ T\+Img, T\+Obj1, T\+Obj2 $>$}
+\begin{DoxyCompactList}\small\item\em Provides algorithms for performance evaluation of detectors. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_vision_core_1_1_evaluation_1_1_binary_classifier_eval_result}{Binary\+Classifier\+Eval\+Result}
+\begin{DoxyCompactList}\small\item\em Data structure that stores the statistics and evaluation data for a binary classifier. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_vision_core_1_1_evaluation_1_1_tracking_eval_result}{Tracking\+Eval\+Result}
+\begin{DoxyCompactList}\small\item\em Data structure that stores the statistics and evaluation results for a tracker. \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_evaluation_1_1_tracker_evaluator}{Tracker\+Evaluator$<$ T\+Img, T\+Obj1, T\+Obj2 $>$}
+\begin{DoxyCompactList}\small\item\em Provides algorithms for performance evaluation of trackers. \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_evaluation_1_1_frame_server_det_data}{Frame\+Server\+Det\+Data$<$ T\+Img, T\+Obj $>$}
+\begin{DoxyCompactList}\small\item\em Frame\+Server from a detection dataset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of generic validation algorithms for Cv\+Works interfaces. 
+
+In order to use this evaluation methods you need a detector (or tracker) and a set of samples with the ground truth. 

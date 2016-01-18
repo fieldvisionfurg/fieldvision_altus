@@ -1,0 +1,8 @@
+<map id="DetectorControl&lt; TImg, TObj &gt;" name="DetectorControl&lt; TImg, TObj &gt;">
+<area shape="rect" id="node2" href="$class_process_control.html" title="Esta classe é responsável por controlar a execuçãoo de um algoritmo de visão computacional. " alt="" coords="211,779,382,1017"/>
+<area shape="rect" id="node3" href="$class_process_widget.html" title="Interface gráfica para um objeto ProcessControl. Mostra funcionalidades básicas de controle (fechar..." alt="" coords="5,492,169,716"/>
+<area shape="rect" id="node5" href="$class_frame_server_control_widget.html" title="Esta classe controla a execução e representação gráfica de um vídeo (FrameServer). " alt="" coords="194,521,399,687"/>
+<area shape="rect" id="node7" href="$class_image_viewer_cv.html" title="Esta classe implementa um widget capaz de mostrar uma imagem do tipo cv::Mat. " alt="" coords="213,132,351,429"/>
+<area shape="rect" id="node8" href="$class_vision_core_1_1_async_1_1_async_frame_server_wrap.html" title="{AsyncFrameServerWrap\l\&lt; cv::Mat \&gt;\n||+ AsyncFrameServerWrap()\l+ ~AsyncFrameServerWrap()\l+ start()\l+ stop()\l+ started()\l+ finished()\l+ getCurrentFrame()\l+ lockCurrentFrame()\l+ unlockCurrentFrame()\l+ getThreadPtr()\land 7 more...\l}" alt="" coords="376,161,567,400"/>
+<area shape="rect" id="node9" href="$class_vision_core_1_1_interfaces_1_1_frame_server.html" title="{FrameServer\&lt; cv::Mat \&gt;\n||+ captureFrame()\l+ hasNext()\l+ releaseServer()\l+ ~FrameServer()\l}" alt="" coords="591,220,752,341"/>
+</map>

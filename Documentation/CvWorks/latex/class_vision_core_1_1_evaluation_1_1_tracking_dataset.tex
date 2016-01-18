@@ -1,0 +1,87 @@
+\hypertarget{class_vision_core_1_1_evaluation_1_1_tracking_dataset}{}\section{Tracking\+Dataset$<$ T\+Img, T\+Obj $>$ Class Template Reference}
+\label{class_vision_core_1_1_evaluation_1_1_tracking_dataset}\index{Tracking\+Dataset$<$ T\+Img, T\+Obj $>$@{Tracking\+Dataset$<$ T\+Img, T\+Obj $>$}}
+
+
+Abstract class for a generic tracking dataset, containing videos and its ground-\/truth data.  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Evaluation.\+h$>$}
+
+
+
+Collaboration diagram for Tracking\+Dataset$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{class_vision_core_1_1_evaluation_1_1_tracking_dataset__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_tracking_dataset_aaafe8051ac78bd4d8ed3027acd24a1c0}{}typedef T\+Img {\bfseries Img\+Type}\label{class_vision_core_1_1_evaluation_1_1_tracking_dataset_aaafe8051ac78bd4d8ed3027acd24a1c0}
+
+\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_tracking_dataset_a34f8ad85716743523e520af46032716e}{}typedef T\+Obj {\bfseries Obj\+Type}\label{class_vision_core_1_1_evaluation_1_1_tracking_dataset_a34f8ad85716743523e520af46032716e}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_tracking_dataset_af0ac69cd48c6f9a4f4326f3bc6f7dddc}{}virtual \hyperlink{class_vision_core_1_1_evaluation_1_1_tracking_dataset_af0ac69cd48c6f9a4f4326f3bc6f7dddc}{$\sim$\+Tracking\+Dataset} ()\label{class_vision_core_1_1_evaluation_1_1_tracking_dataset_af0ac69cd48c6f9a4f4326f3bc6f7dddc}
+
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_tracking_dataset_a4baafaba65ce3ae8e9fc8a5f74f5e0f8}{}virtual std\+::vector$<$ std\+::string $>$ \hyperlink{class_vision_core_1_1_evaluation_1_1_tracking_dataset_a4baafaba65ce3ae8e9fc8a5f74f5e0f8}{get\+Samples\+I\+D} () const  =0\label{class_vision_core_1_1_evaluation_1_1_tracking_dataset_a4baafaba65ce3ae8e9fc8a5f74f5e0f8}
+
+\begin{DoxyCompactList}\small\item\em Returns a vector of I\+Ds for all samples (videos) in the dataset. Each sample should be identified by a unique string I\+D. This I\+D can be anything (a number, the name of file, etc). It is used mainly to retrieve a sample through function get\+Frame\+Server and get\+Objects. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_tracking_dataset_a70a542f1492e1bde2a018641201bf1db}{}virtual \hyperlink{class_vision_core_1_1_interfaces_1_1_frame_server}{Frame\+Server}$<$ T\+Img $>$ $\ast$ \hyperlink{class_vision_core_1_1_evaluation_1_1_tracking_dataset_a70a542f1492e1bde2a018641201bf1db}{get\+Frame\+Server} (const std\+::string \&sample\+I\+D) const  =0\label{class_vision_core_1_1_evaluation_1_1_tracking_dataset_a70a542f1492e1bde2a018641201bf1db}
+
+\begin{DoxyCompactList}\small\item\em Returns a frame server for a sample (video) in the dataset. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ T\+Obj $>$ \hyperlink{class_vision_core_1_1_evaluation_1_1_tracking_dataset_a831ba73d31b15e00777727f98cf23669}{get\+Objects} (const std\+::string \&sample\+I\+D) const  =0
+\begin{DoxyCompactList}\small\item\em Returns a vector with the objects in a given sample (video). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Img, typename T\+Obj$>$class Vision\+Core\+::\+Evaluation\+::\+Tracking\+Dataset$<$ T\+Img, T\+Obj $>$}
+
+Abstract class for a generic tracking dataset, containing videos and its ground-\/truth data. 
+
+Each sample in the dataset has a video and a vector objects for each frame considered as ground-\/truth. Each sample has an unique I\+D. A vector with all samples I\+Ds can be retrieved by method \textquotesingle{}\hyperlink{class_vision_core_1_1_evaluation_1_1_tracking_dataset_a4baafaba65ce3ae8e9fc8a5f74f5e0f8}{get\+Samples\+I\+D()}\textquotesingle{}.
+
+The \textquotesingle{}get\+Frame\+Server(sample\+I\+D)\textquotesingle{} method returns a frame server related to a video from the dataset and the \textquotesingle{}get\+Objects(sample\+I\+D)\textquotesingle{} method returns the respective ground-\/truth objects.
+
+Derived classes implementing this interface must implement the three methods mentioned above.
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Img} & Tipo da imagem. \\
+\hline
+{\em T\+Obj} & Tipo do objeto rastreado. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 243 of file Vision\+Evaluation.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_vision_core_1_1_evaluation_1_1_tracking_dataset_a831ba73d31b15e00777727f98cf23669}{}\index{Vision\+Core\+::\+Evaluation\+::\+Tracking\+Dataset@{Vision\+Core\+::\+Evaluation\+::\+Tracking\+Dataset}!get\+Objects@{get\+Objects}}
+\index{get\+Objects@{get\+Objects}!Vision\+Core\+::\+Evaluation\+::\+Tracking\+Dataset@{Vision\+Core\+::\+Evaluation\+::\+Tracking\+Dataset}}
+\subsubsection[{get\+Objects(const std\+::string \&sample\+I\+D) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::vector$<$T\+Obj$>$ get\+Objects (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{sample\+I\+D}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_vision_core_1_1_evaluation_1_1_tracking_dataset_a831ba73d31b15e00777727f98cf23669}
+
+
+Returns a vector with the objects in a given sample (video). 
+
+The index of the vector is related with the frame number. So position x in this vector contains the object of frame x. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Evaluation.\+h\end{DoxyCompactItemize}

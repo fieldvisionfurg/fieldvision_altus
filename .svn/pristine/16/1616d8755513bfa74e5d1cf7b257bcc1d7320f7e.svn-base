@@ -1,0 +1,35 @@
+\hypertarget{class_ui_1_1_process_widget}{}\section{Process\+Widget Class Reference}
+\label{class_ui_1_1_process_widget}\index{Process\+Widget@{Process\+Widget}}
+
+
+Inheritance diagram for Process\+Widget\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_ui_1_1_process_widget__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Process\+Widget\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_ui_1_1_process_widget__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 261 of file ui\+\_\+\+Process\+Widget.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets/ui\+\_\+\+Process\+Widget.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,91 @@
+\hypertarget{class_vision_core_1_1_async_1_1_async_detector_wrap}{}\section{Async\+Detector\+Wrap$<$ T\+Img, T\+Obj $>$ Class Template Reference}
+\label{class_vision_core_1_1_async_1_1_async_detector_wrap}\index{Async\+Detector\+Wrap$<$ T\+Img, T\+Obj $>$@{Async\+Detector\+Wrap$<$ T\+Img, T\+Obj $>$}}
+
+
+Allows the execution of a detector asynchronously in an individual thread.  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Async.\+h$>$}
+
+
+
+Inheritance diagram for Async\+Detector\+Wrap$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{class_vision_core_1_1_async_1_1_async_detector_wrap__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Async\+Detector\+Wrap$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{class_vision_core_1_1_async_1_1_async_detector_wrap__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_vision_core_1_1_async_1_1_async_detector_wrap_a2b7d5e050fbeba8a1fbbda53258c041e}{Async\+Detector\+Wrap} (\hyperlink{class_vision_core_1_1_async_1_1_async_frame_server_wrap}{Async\+Frame\+Server\+Wrap}$<$ T\+Img $>$ $\ast$afs\+Ptr, const \hyperlink{class_vision_core_1_1_interfaces_1_1_detector}{Detector}$<$ T\+Img, T\+Obj $>$ $\ast$detector)
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_async_1_1_async_detector_wrap_a6c965557375c470298058247830c1633}{}const \hyperlink{class_vision_core_1_1_interfaces_1_1_detector}{Detector}$<$ T\+Img, T\+Obj $>$ $\ast$ {\bfseries get\+Detector} () const \label{class_vision_core_1_1_async_1_1_async_detector_wrap_a6c965557375c470298058247830c1633}
+
+\item 
+\hypertarget{class_vision_core_1_1_async_1_1_async_detector_wrap_a2d06cfb8e49df174b8315898a0e4e3c7}{}void {\bfseries set\+Detector} (const \hyperlink{class_vision_core_1_1_interfaces_1_1_detector}{Detector}$<$ T\+Img, T\+Obj $>$ $\ast$Sdetector)\label{class_vision_core_1_1_async_1_1_async_detector_wrap_a2d06cfb8e49df174b8315898a0e4e3c7}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Img, class T\+Obj$>$class Vision\+Core\+::\+Async\+::\+Async\+Detector\+Wrap$<$ T\+Img, T\+Obj $>$}
+
+Allows the execution of a detector asynchronously in an individual thread. 
+
+This class is a wrap for a Detector object. It listens an \hyperlink{class_vision_core_1_1_async_1_1_async_frame_server_wrap}{Async\+Frame\+Server\+Wrap} object (given in the constructor) and, when a new frame becomes available, it executes the object detection.
+
+After every detection, the results are passed to a user provided callback function (see set\+Calback).
+
+The detector runs in a exclusive internal thread.
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Img} & Image type. \\
+\hline
+{\em T\+Obj} & Object type. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 437 of file Vision\+Async.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_vision_core_1_1_async_1_1_async_detector_wrap_a2b7d5e050fbeba8a1fbbda53258c041e}{}\index{Vision\+Core\+::\+Async\+::\+Async\+Detector\+Wrap@{Vision\+Core\+::\+Async\+::\+Async\+Detector\+Wrap}!Async\+Detector\+Wrap@{Async\+Detector\+Wrap}}
+\index{Async\+Detector\+Wrap@{Async\+Detector\+Wrap}!Vision\+Core\+::\+Async\+::\+Async\+Detector\+Wrap@{Vision\+Core\+::\+Async\+::\+Async\+Detector\+Wrap}}
+\subsubsection[{Async\+Detector\+Wrap(\+Async\+Frame\+Server\+Wrap$<$ T\+Img $>$ $\ast$afs\+Ptr, const Detector$<$ T\+Img, T\+Obj $>$ $\ast$detector)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Async\+Detector\+Wrap} (
+\begin{DoxyParamCaption}
+\item[{{\bf Async\+Frame\+Server\+Wrap}$<$ T\+Img $>$ $\ast$}]{afs\+Ptr, }
+\item[{const {\bf Detector}$<$ T\+Img, T\+Obj $>$ $\ast$}]{detector}
+\end{DoxyParamCaption}
+)}\label{class_vision_core_1_1_async_1_1_async_detector_wrap_a2b7d5e050fbeba8a1fbbda53258c041e}
+
+
+Constructor method. 
+
+The user should provide a pointer to a async frame server, that will be listened for new frames, and a detector, that will be executed on every captured frame. 
+
+Definition at line 461 of file Vision\+Async.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Async.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,51 @@
+\hypertarget{class_face_detector_control}{}\section{Face\+Detector\+Control Class Reference}
+\label{class_face_detector_control}\index{Face\+Detector\+Control@{Face\+Detector\+Control}}
+
+
+Esta classe é responsável por controlar a execução de um detector de objetos do tipo Object\+Detector\+C\+C\+Cv.  
+
+
+
+
+{\ttfamily \#include $<$Face\+Detector\+Control.\+h$>$}
+
+
+
+Inheritance diagram for Face\+Detector\+Control\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_face_detector_control__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Face\+Detector\+Control\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_face_detector_control__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_face_detector_control_ab3732f3d867a62556862f26249e185ea}{}{\bfseries Face\+Detector\+Control} (\hyperlink{class_frame_server_control_widget}{Frame\+Server\+Control\+Widget} $\ast$frame\+Server\+Control\+\_\+)\label{class_face_detector_control_ab3732f3d867a62556862f26249e185ea}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Esta classe é responsável por controlar a execução de um detector de objetos do tipo Object\+Detector\+C\+C\+Cv. 
+
+Definition at line 43 of file Face\+Detector\+Control.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Applications/\+Vision\+G\+U\+I/Face\+Detector\+Control.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Applications/\+Vision\+G\+U\+I/Face\+Detector\+Control.\+cpp\end{DoxyCompactItemize}

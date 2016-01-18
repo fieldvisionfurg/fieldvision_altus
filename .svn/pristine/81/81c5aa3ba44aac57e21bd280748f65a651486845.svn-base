@@ -1,0 +1,4 @@
+<map id="FeatureTrackerControl" name="FeatureTrackerControl">
+<area shape="rect" id="node2" href="$class_tracker_control.html" title="{TrackerControl\&lt; cv\l::Mat, std::vector\&lt;\l cv::Point2f \&gt; \&gt;\n|# tracker\l# asyncTracker\l# loggerTracker\l|+ TrackerControl()\l+ TrackerControl()\l+ setTracker()\l+ pause()\l+ start()\l+ exportLog()\l+ resetLog()\l+ ~TrackerControl()\l# drawResults()\l# drawObject()\l}" alt="" coords="23,336,158,604"/>
+<area shape="rect" id="node3" href="$class_process_control.html" title="Esta classe é responsável por controlar a execuçãoo de um algoritmo de visão computacional. " alt="" coords="5,5,176,288"/>
+</map>

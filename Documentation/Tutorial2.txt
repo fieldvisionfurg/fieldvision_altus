@@ -1,0 +1,22 @@
+/** \tutorial2
+
+Introduction
+------------
+In this second tutorial we will run the blob detector provided with CvWorks. However, instead of processing only a single image, we will process a video (from webcam or from file).
+
+Objectives
+-------------
+- Learn how to use a FrameServer.
+- Learn about the detectors and trackers available in CvWorks.
+
+
+Steps
+-------------
+1) Create an empty project in Qt Creator.
+2) Add a cpp file and create a main function.
+3) Include VisionCore.h
+4) Include ImplementationCv.h
+5) Link ImplementationCv.lib
+6) 
+
+*/

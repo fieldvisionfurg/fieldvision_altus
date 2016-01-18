@@ -1,0 +1,74 @@
+\hypertarget{class_viscv_1_1_frame_server_cv}{}\section{Frame\+Server\+Cv Class Reference}
+\label{class_viscv_1_1_frame_server_cv}\index{Frame\+Server\+Cv@{Frame\+Server\+Cv}}
+
+
+Implementantion of interface Frame\+Server using Open\+Cv.  
+
+
+
+
+{\ttfamily \#include $<$Frame\+Server\+Cv.\+h$>$}
+
+
+
+Inheritance diagram for Frame\+Server\+Cv\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{class_viscv_1_1_frame_server_cv__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Frame\+Server\+Cv\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{class_viscv_1_1_frame_server_cv__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_viscv_1_1_frame_server_cv_afbbe5b7deab45c4b15f84bdf0cc2d45c}{}\hyperlink{class_viscv_1_1_frame_server_cv_afbbe5b7deab45c4b15f84bdf0cc2d45c}{Frame\+Server\+Cv} (const std\+::string \&filename)\label{class_viscv_1_1_frame_server_cv_afbbe5b7deab45c4b15f84bdf0cc2d45c}
+
+\begin{DoxyCompactList}\small\item\em Video file constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_frame_server_cv_afa10dfc0f660da596e10eedd689382bd}{}\hyperlink{class_viscv_1_1_frame_server_cv_afa10dfc0f660da596e10eedd689382bd}{Frame\+Server\+Cv} (const int device=0)\label{class_viscv_1_1_frame_server_cv_afa10dfc0f660da596e10eedd689382bd}
+
+\begin{DoxyCompactList}\small\item\em Webcam constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_frame_server_cv_a854cb9a501a11f2c27c5c35a9583d91b}{}\hyperlink{class_viscv_1_1_frame_server_cv_a854cb9a501a11f2c27c5c35a9583d91b}{Frame\+Server\+Cv} (const int device, const int width, const int height)\label{class_viscv_1_1_frame_server_cv_a854cb9a501a11f2c27c5c35a9583d91b}
+
+\begin{DoxyCompactList}\small\item\em Webcam constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_frame_server_cv_aabc865ffb5b6f99eb517bee2d1a4ac18}{}virtual \hyperlink{class_viscv_1_1_frame_server_cv_aabc865ffb5b6f99eb517bee2d1a4ac18}{$\sim$\+Frame\+Server\+Cv} ()\label{class_viscv_1_1_frame_server_cv_aabc865ffb5b6f99eb517bee2d1a4ac18}
+
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_frame_server_cv_a9ad5d34c4a7364130b2da00adc8f8638}{}virtual const \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Vision\+Core\+::\+Frame}$<$ cv\+::\+Mat $>$ \hyperlink{class_viscv_1_1_frame_server_cv_a9ad5d34c4a7364130b2da00adc8f8638}{capture\+Frame} ()\label{class_viscv_1_1_frame_server_cv_a9ad5d34c4a7364130b2da00adc8f8638}
+
+\begin{DoxyCompactList}\small\item\em Captures the next frame available. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_frame_server_cv_a634d758e1811c32295f5665e4f8a0178}{}virtual bool \hyperlink{class_viscv_1_1_frame_server_cv_a634d758e1811c32295f5665e4f8a0178}{has\+Next} ()\label{class_viscv_1_1_frame_server_cv_a634d758e1811c32295f5665e4f8a0178}
+
+\begin{DoxyCompactList}\small\item\em Return true if there exist more frames available. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_frame_server_cv_a881a1dc380e3eaa60c36716d8488cdbf}{}virtual void \hyperlink{class_viscv_1_1_frame_server_cv_a881a1dc380e3eaa60c36716d8488cdbf}{release\+Server} ()\label{class_viscv_1_1_frame_server_cv_a881a1dc380e3eaa60c36716d8488cdbf}
+
+\begin{DoxyCompactList}\small\item\em Stop capturing and release any resource (closes webcam or file). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementantion of interface Frame\+Server using Open\+Cv. 
+
+Uses cv\+::\+Video\+Capture class to load videos and capture frames. \begin{Desc}
+\item[Examples\+: ]\par
+\hyperlink{_vision_tests_2main_8cpp-example}{Vision\+Tests/main.\+cpp}.\end{Desc}
+
+
+Definition at line 43 of file Frame\+Server\+Cv.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Frame\+Server\+Cv.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Frame\+Server\+Cv.\+cpp\end{DoxyCompactItemize}

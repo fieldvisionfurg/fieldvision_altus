@@ -1,0 +1,20 @@
+\hypertarget{group___data_structures}{}\section{Data\+Structures}
+\label{group___data_structures}\index{Data\+Structures@{Data\+Structures}}
+
+
+Declaration and implementation of simple data structures for Vision framework.  
+
+
+Collaboration diagram for Data\+Structures\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{group___data_structures}
+\end{center}
+\end{figure}
+Declaration and implementation of simple data structures for Vision framework. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group___interfaces}{Interfaces} \hyperlink{group___abstractions}{Abstractions} \hyperlink{group___evaluation}{Evaluation} \hyperlink{group___async}{Async} 
+\end{DoxySeeAlso}

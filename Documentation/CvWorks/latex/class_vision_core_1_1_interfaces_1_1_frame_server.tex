@@ -1,0 +1,105 @@
+\hypertarget{class_vision_core_1_1_interfaces_1_1_frame_server}{}\section{Frame\+Server$<$ T\+Img $>$ Class Template Reference}
+\label{class_vision_core_1_1_interfaces_1_1_frame_server}\index{Frame\+Server$<$ T\+Img $>$@{Frame\+Server$<$ T\+Img $>$}}
+
+
+Interface for a source of frames. The frames can come from a video file, webcam, set of images, etc.  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Interfaces.\+h$>$}
+
+
+
+Inheritance diagram for Frame\+Server$<$ T\+Img $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_vision_core_1_1_interfaces_1_1_frame_server__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Frame\+Server$<$ T\+Img $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{class_vision_core_1_1_interfaces_1_1_frame_server__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_interfaces_1_1_frame_server_aaafe8051ac78bd4d8ed3027acd24a1c0}{}typedef T\+Img {\bfseries Img\+Type}\label{class_vision_core_1_1_interfaces_1_1_frame_server_aaafe8051ac78bd4d8ed3027acd24a1c0}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual const \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Frame}$<$ T\+Img $>$ \hyperlink{class_vision_core_1_1_interfaces_1_1_frame_server_a8d2ffbcea7c28182a48f32e86f830e12}{capture\+Frame} ()=0
+\begin{DoxyCompactList}\small\item\em Captures and returns a frame from the source. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_interfaces_1_1_frame_server_ac7d6b5c759a38e9e376f500f7155a679}{}virtual bool \hyperlink{class_vision_core_1_1_interfaces_1_1_frame_server_ac7d6b5c759a38e9e376f500f7155a679}{has\+Next} ()=0\label{class_vision_core_1_1_interfaces_1_1_frame_server_ac7d6b5c759a38e9e376f500f7155a679}
+
+\begin{DoxyCompactList}\small\item\em Returns true if there exist at least one frame available to be captured. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_interfaces_1_1_frame_server_a6a81377750a63504ad091b831cbb7786}{}virtual void \hyperlink{class_vision_core_1_1_interfaces_1_1_frame_server_a6a81377750a63504ad091b831cbb7786}{release\+Server} ()=0\label{class_vision_core_1_1_interfaces_1_1_frame_server_a6a81377750a63504ad091b831cbb7786}
+
+\begin{DoxyCompactList}\small\item\em Release the frame server resources (e.\+g. closes the video file, shut-\/down webcam). \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_interfaces_1_1_frame_server_ae302d35f6c7ab3201fe7bfc5e07e0154}{}virtual \hyperlink{class_vision_core_1_1_interfaces_1_1_frame_server_ae302d35f6c7ab3201fe7bfc5e07e0154}{$\sim$\+Frame\+Server} ()\label{class_vision_core_1_1_interfaces_1_1_frame_server_ae302d35f6c7ab3201fe7bfc5e07e0154}
+
+\begin{DoxyCompactList}\small\item\em Destrutor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Img$>$class Vision\+Core\+::\+Interfaces\+::\+Frame\+Server$<$ T\+Img $>$}
+
+Interface for a source of frames. The frames can come from a video file, webcam, set of images, etc. 
+
+The objective of this interface is to abstract a source of frames.
+
+The method \hyperlink{class_vision_core_1_1_interfaces_1_1_frame_server_a8d2ffbcea7c28182a48f32e86f830e12}{capture\+Frame()} should be called to get a Frame, which contains an image, a timestamp and a frame number.
+
+By definition, calling this method consumes a frame from the source, so subsequent calls return the next available frame.
+
+The method \hyperlink{class_vision_core_1_1_interfaces_1_1_frame_server_ac7d6b5c759a38e9e376f500f7155a679}{has\+Next()} should be called before capturing a frame to verify if there is an available frame.
+
+A typical use of a frame server is\+:
+
+while(frame\+Server.\+has\+Next())\{ Vision\+Core\+::\+Frame$<$frame\+Server\+::\+Img\+Type$>$ frame = frame\+Server.\+capture\+Frame(); P\+R\+O\+C\+E\+S\+S F\+R\+A\+M\+E \} frame\+Server.\+release\+Server();
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Img} & Image type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Frame Frame\+Server\+Cv Async\+Frame\+Server\+Wrap 
+\end{DoxySeeAlso}
+
+
+Definition at line 84 of file Vision\+Interfaces.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_vision_core_1_1_interfaces_1_1_frame_server_a8d2ffbcea7c28182a48f32e86f830e12}{}\index{Vision\+Core\+::\+Interfaces\+::\+Frame\+Server@{Vision\+Core\+::\+Interfaces\+::\+Frame\+Server}!capture\+Frame@{capture\+Frame}}
+\index{capture\+Frame@{capture\+Frame}!Vision\+Core\+::\+Interfaces\+::\+Frame\+Server@{Vision\+Core\+::\+Interfaces\+::\+Frame\+Server}}
+\subsubsection[{capture\+Frame()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf Frame}$<$T\+Img$>$ capture\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_vision_core_1_1_interfaces_1_1_frame_server_a8d2ffbcea7c28182a48f32e86f830e12}
+
+
+Captures and returns a frame from the source. 
+
+This methods should only be called when method \hyperlink{class_vision_core_1_1_interfaces_1_1_frame_server_ac7d6b5c759a38e9e376f500f7155a679}{has\+Next()} returns true, otherwise the behaviour is undefined. 
+
+Implemented in \hyperlink{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a8589f45eb1b80bfffdeaf49ed32694ce}{Frame\+Server\+Det\+Data$<$ T\+Img, T\+Obj $>$}, \hyperlink{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a8589f45eb1b80bfffdeaf49ed32694ce}{Frame\+Server\+Det\+Data$<$ cv\+::\+Mat, T\+Obj $>$}, and \hyperlink{class_viscv_1_1_frame_server_cv_a9ad5d34c4a7364130b2da00adc8f8638}{Frame\+Server\+Cv}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Interfaces.\+h\end{DoxyCompactItemize}

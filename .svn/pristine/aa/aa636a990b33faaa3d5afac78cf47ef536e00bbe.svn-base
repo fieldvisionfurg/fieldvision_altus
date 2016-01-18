@@ -1,0 +1,54 @@
+\hypertarget{dir_ebeeff2ba7b71368d5d52caadcb27de3}{}\section{D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets Directory Reference}
+\label{dir_ebeeff2ba7b71368d5d52caadcb27de3}\index{D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets Directory Reference@{D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets Directory Reference}}
+Directory dependency graph for Vision\+Widgets\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{dir_ebeeff2ba7b71368d5d52caadcb27de3_dep}
+\end{center}
+\end{figure}
+\subsection*{Directories}
+\begin{DoxyCompactItemize}
+\item 
+directory \hyperlink{dir_2be4c61ccd6288a0e87854a0fcca5a92}{release}
+\end{DoxyCompactItemize}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file {\bfseries Detector\+Control.\+h}
+\item 
+file {\bfseries Detector\+Control\+Widget.\+cpp}
+\item 
+file {\bfseries Detector\+Control\+Widget.\+h}
+\item 
+file {\bfseries Frame\+Server\+Control\+Widget.\+cpp}
+\item 
+file {\bfseries Frame\+Server\+Control\+Widget.\+h}
+\item 
+file {\bfseries Image\+Viewer\+Cv.\+cpp}
+\item 
+file {\bfseries Image\+Viewer\+Cv.\+h}
+\item 
+file {\bfseries Process\+Control.\+cpp}
+\item 
+file {\bfseries Process\+Control.\+h}
+\item 
+file {\bfseries Process\+Widget.\+cpp}
+\item 
+file {\bfseries Process\+Widget.\+h}
+\item 
+file {\bfseries Tracker\+Control.\+h}
+\item 
+file {\bfseries ui\+\_\+\+Detector\+Control\+Widget.\+h}
+\item 
+file {\bfseries ui\+\_\+\+Frame\+Server\+Control\+Widget.\+h}
+\item 
+file {\bfseries ui\+\_\+\+Image\+Viewer\+Cv.\+h}
+\item 
+file {\bfseries ui\+\_\+\+Process\+Widget.\+h}
+\item 
+file {\bfseries Vision\+Widgets.\+cpp}
+\item 
+file {\bfseries Vision\+Widgets.\+h}
+\end{DoxyCompactItemize}

@@ -1,0 +1,93 @@
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_based_tracker}{}\section{Detector\+Based\+Tracker$<$ T\+Img, T\+Obj $>$ Class Template Reference}
+\label{class_vision_core_1_1_abstractions_1_1_detector_based_tracker}\index{Detector\+Based\+Tracker$<$ T\+Img, T\+Obj $>$@{Detector\+Based\+Tracker$<$ T\+Img, T\+Obj $>$}}
+
+
+A simple tracker that applies a detector on every frame.  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Abstractions.\+h$>$}
+
+
+
+Inheritance diagram for Detector\+Based\+Tracker$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{class_vision_core_1_1_abstractions_1_1_detector_based_tracker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Detector\+Based\+Tracker$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{class_vision_core_1_1_abstractions_1_1_detector_based_tracker__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_ac8c932875d28df6cd06039f0df54b79e}{}\hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_ac8c932875d28df6cd06039f0df54b79e}{Detector\+Based\+Tracker} (\hyperlink{class_vision_core_1_1_interfaces_1_1_detector}{Detector}$<$ T\+Img, T\+Obj $>$ $\ast$detector)\label{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_ac8c932875d28df6cd06039f0df54b79e}
+
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_af1a54610c9af7fb54d00e4be2e75609e}{}virtual void \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_af1a54610c9af7fb54d00e4be2e75609e}{update} (const \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Frame}$<$ T\+Img $>$ \&frame)\label{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_af1a54610c9af7fb54d00e4be2e75609e}
+
+\begin{DoxyCompactList}\small\item\em Given an image (i.\+e. video frame), update the tracked object. \end{DoxyCompactList}\item 
+virtual const std\+::vector$<$ T\+Obj $>$ \& \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_ad44c04b88eb540c185acb24172b47e29}{get\+Last\+Track} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the current estimated object state. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_a7b9a9b9db5df041e366faef63e6594ef}{}virtual \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_a7b9a9b9db5df041e366faef63e6594ef}{$\sim$\+Detector\+Based\+Tracker} ()\label{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_a7b9a9b9db5df041e366faef63e6594ef}
+
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_aa6d92b5626575a0b8c680cc65065d657}{}std\+::vector$<$ T\+Obj $>$ \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_aa6d92b5626575a0b8c680cc65065d657}{m\+\_\+current\+Track}\label{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_aa6d92b5626575a0b8c680cc65065d657}
+
+\begin{DoxyCompactList}\small\item\em Stores the current tracked objects. Returned by method \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_ad44c04b88eb540c185acb24172b47e29}{get\+Last\+Track()}. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_a5e56e46f08984f7e62a33e0bf4bb057d}{}\hyperlink{class_vision_core_1_1_interfaces_1_1_detector}{Detector}$<$ T\+Img, T\+Obj $>$ $\ast$ \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_a5e56e46f08984f7e62a33e0bf4bb057d}{m\+\_\+detector}\label{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_a5e56e46f08984f7e62a33e0bf4bb057d}
+
+\begin{DoxyCompactList}\small\item\em Detector used on every frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Img, class T\+Obj$>$class Vision\+Core\+::\+Abstractions\+::\+Detector\+Based\+Tracker$<$ T\+Img, T\+Obj $>$}
+
+A simple tracker that applies a detector on every frame. 
+
+This tracker does a full detection on every frame. The result is the vector of detected objects. 
+
+Definition at line 264 of file Vision\+Abstractions.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_ad44c04b88eb540c185acb24172b47e29}{}\index{Vision\+Core\+::\+Abstractions\+::\+Detector\+Based\+Tracker@{Vision\+Core\+::\+Abstractions\+::\+Detector\+Based\+Tracker}!get\+Last\+Track@{get\+Last\+Track}}
+\index{get\+Last\+Track@{get\+Last\+Track}!Vision\+Core\+::\+Abstractions\+::\+Detector\+Based\+Tracker@{Vision\+Core\+::\+Abstractions\+::\+Detector\+Based\+Tracker}}
+\subsubsection[{get\+Last\+Track()}]{\setlength{\rightskip}{0pt plus 5cm}virtual const std\+::vector$<$T\+Obj$>$\& get\+Last\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_ad44c04b88eb540c185acb24172b47e29}
+
+
+Returns a reference to the current estimated object state. 
+
+This function is often call after calling the \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_af1a54610c9af7fb54d00e4be2e75609e}{update()} method. The returned reference is usualy to a class member. 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_a93ee7011307419e8c88db9f22d900657}{Tracker$<$ T\+Img, std\+::vector$<$ T\+Obj $>$ $>$}.
+
+
+
+Definition at line 282 of file Vision\+Abstractions.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Abstractions.\+h\end{DoxyCompactItemize}

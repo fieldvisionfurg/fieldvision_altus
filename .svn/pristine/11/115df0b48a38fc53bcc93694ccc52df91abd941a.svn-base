@@ -1,0 +1,94 @@
+\hypertarget{class_vision_core_1_1_evaluation_1_1_frame_server_det_data}{}\section{Frame\+Server\+Det\+Data$<$ T\+Img, T\+Obj $>$ Class Template Reference}
+\label{class_vision_core_1_1_evaluation_1_1_frame_server_det_data}\index{Frame\+Server\+Det\+Data$<$ T\+Img, T\+Obj $>$@{Frame\+Server\+Det\+Data$<$ T\+Img, T\+Obj $>$}}
+
+
+Frame\+Server from a detection dataset.  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Evaluation.\+h$>$}
+
+
+
+Inheritance diagram for Frame\+Server\+Det\+Data$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_vision_core_1_1_evaluation_1_1_frame_server_det_data__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Frame\+Server\+Det\+Data$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_vision_core_1_1_evaluation_1_1_frame_server_det_data__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a515c380604167b72d34127fa178e46dc}{}\hyperlink{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a515c380604167b72d34127fa178e46dc}{Frame\+Server\+Det\+Data} (\hyperlink{class_vision_core_1_1_evaluation_1_1_detection_dataset}{Detection\+Dataset}$<$ T\+Img, T\+Obj $>$ $\ast$det\+Data)\label{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a515c380604167b72d34127fa178e46dc}
+
+\begin{DoxyCompactList}\small\item\em Constructor. A \hyperlink{class_vision_core_1_1_evaluation_1_1_detection_dataset}{Detection\+Dataset} must be provided. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a2e23e0726d4ac6338e1cb326b4249bd1}{}virtual \hyperlink{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a2e23e0726d4ac6338e1cb326b4249bd1}{$\sim$\+Frame\+Server\+Det\+Data} ()\label{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a2e23e0726d4ac6338e1cb326b4249bd1}
+
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+virtual const \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Frame}$<$ T\+Img $>$ \hyperlink{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a8589f45eb1b80bfffdeaf49ed32694ce}{capture\+Frame} ()
+\begin{DoxyCompactList}\small\item\em Captures and returns a frame from the source. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a50f08e8eae0337fdc5dbe009f823470f}{}virtual bool \hyperlink{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a50f08e8eae0337fdc5dbe009f823470f}{has\+Next} ()\label{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a50f08e8eae0337fdc5dbe009f823470f}
+
+\begin{DoxyCompactList}\small\item\em Returns true if there exist at least one frame available to be captured. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a0fb61750dd00e678ea9cd0cbbd09a25c}{}virtual void \hyperlink{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a0fb61750dd00e678ea9cd0cbbd09a25c}{release\+Server} ()\label{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a0fb61750dd00e678ea9cd0cbbd09a25c}
+
+\begin{DoxyCompactList}\small\item\em Release the frame server resources (e.\+g. closes the video file, shut-\/down webcam). \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a39f441e9cd0f5b9676a3482169df713e}{}std\+::vector$<$ T\+Obj $>$ \hyperlink{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a39f441e9cd0f5b9676a3482169df713e}{get\+Objects} ()\label{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a39f441e9cd0f5b9676a3482169df713e}
+
+\begin{DoxyCompactList}\small\item\em Returns the objects from current captured object. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a6391f4cc7ba754bf8fb9fd19f80c5e4b}{}bool {\bfseries forward} () const \label{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a6391f4cc7ba754bf8fb9fd19f80c5e4b}
+
+\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a6c2a93db4170548f6c7aeca0f778873a}{}void {\bfseries set\+Forward} (bool forward)\label{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a6c2a93db4170548f6c7aeca0f778873a}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Img, class T\+Obj$>$class Vision\+Core\+::\+Evaluation\+::\+Frame\+Server\+Det\+Data$<$ T\+Img, T\+Obj $>$}
+
+Frame\+Server from a detection dataset. 
+
+Definition at line 1167 of file Vision\+Evaluation.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a8589f45eb1b80bfffdeaf49ed32694ce}{}\index{Vision\+Core\+::\+Evaluation\+::\+Frame\+Server\+Det\+Data@{Vision\+Core\+::\+Evaluation\+::\+Frame\+Server\+Det\+Data}!capture\+Frame@{capture\+Frame}}
+\index{capture\+Frame@{capture\+Frame}!Vision\+Core\+::\+Evaluation\+::\+Frame\+Server\+Det\+Data@{Vision\+Core\+::\+Evaluation\+::\+Frame\+Server\+Det\+Data}}
+\subsubsection[{capture\+Frame()}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf Frame}$<$T\+Img$>$ capture\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a8589f45eb1b80bfffdeaf49ed32694ce}
+
+
+Captures and returns a frame from the source. 
+
+This methods should only be called when method \hyperlink{class_vision_core_1_1_evaluation_1_1_frame_server_det_data_a50f08e8eae0337fdc5dbe009f823470f}{has\+Next()} returns true, otherwise the behaviour is undefined. 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_frame_server_a8d2ffbcea7c28182a48f32e86f830e12}{Frame\+Server$<$ T\+Img $>$}.
+
+
+
+Definition at line 1183 of file Vision\+Evaluation.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Evaluation.\+h\end{DoxyCompactItemize}

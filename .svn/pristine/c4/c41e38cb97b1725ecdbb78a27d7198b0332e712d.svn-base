@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_vision_core_1_1_interfaces_1_1_detector.html" title="Interface defining a generic object detector (e.g. faces, car, people). " alt="" coords="5,13,164,39"/>
+<area shape="rect" id="node2" href="$class_vision_core_1_1_abstractions_1_1_detector_logger.html" title="Provides log functionalities for a detector. Stores results, processing times and statistics..." alt="" coords="212,5,367,47"/>
+</map>

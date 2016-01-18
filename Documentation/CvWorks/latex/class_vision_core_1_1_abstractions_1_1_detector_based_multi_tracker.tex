@@ -1,0 +1,121 @@
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker}{}\section{Detector\+Based\+Multi\+Tracker$<$ T\+Img, T\+Obj $>$ Class Template Reference}
+\label{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker}\index{Detector\+Based\+Multi\+Tracker$<$ T\+Img, T\+Obj $>$@{Detector\+Based\+Multi\+Tracker$<$ T\+Img, T\+Obj $>$}}
+
+
+A tracker that applies a detector on every frame.  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Abstractions.\+h$>$}
+
+
+
+Inheritance diagram for Detector\+Based\+Multi\+Tracker$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Detector\+Based\+Multi\+Tracker$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_a1a1d90f1a87b6b645974c711686c14da}{}\hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_a1a1d90f1a87b6b645974c711686c14da}{Detector\+Based\+Multi\+Tracker} (\hyperlink{class_vision_core_1_1_interfaces_1_1_detector}{Detector}$<$ T\+Img, T\+Obj $>$ $\ast$detector)\label{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_a1a1d90f1a87b6b645974c711686c14da}
+
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_af1a54610c9af7fb54d00e4be2e75609e}{}void \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_af1a54610c9af7fb54d00e4be2e75609e}{update} (const \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Frame}$<$ T\+Img $>$ \&frame)\label{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_af1a54610c9af7fb54d00e4be2e75609e}
+
+\begin{DoxyCompactList}\small\item\em Given an image (i.\+e. video frame), update the tracked object. \end{DoxyCompactList}\item 
+const std\+::map$<$ long, T\+Obj $>$ \& \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_a9c8e82bfdf34a35ef2eee54006181e5b}{get\+Last\+Track} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the current estimated object state. \end{DoxyCompactList}\item 
+bool \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_ac7e0977fa702f98038bbe303df458a6c}{lost\+Track} () const 
+\begin{DoxyCompactList}\small\item\em Returns true if the tracker lost the object track. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_ab6f751b645585a462d8d2faa6edfbd44}{}virtual \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_ab6f751b645585a462d8d2faa6edfbd44}{$\sim$\+Detector\+Based\+Multi\+Tracker} ()\label{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_ab6f751b645585a462d8d2faa6edfbd44}
+
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_a0e0f9bebf9bf7ec1ff1bbac02ad9cca1}{}std\+::map$<$ long, T\+Obj $>$ \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_a0e0f9bebf9bf7ec1ff1bbac02ad9cca1}{m\+\_\+current\+Track}\label{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_a0e0f9bebf9bf7ec1ff1bbac02ad9cca1}
+
+\begin{DoxyCompactList}\small\item\em Stores the current tracked objects. Returned by method \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_a9c8e82bfdf34a35ef2eee54006181e5b}{get\+Last\+Track()}. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_a5e56e46f08984f7e62a33e0bf4bb057d}{}\hyperlink{class_vision_core_1_1_interfaces_1_1_detector}{Detector}$<$ T\+Img, T\+Obj $>$ $\ast$ \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_a5e56e46f08984f7e62a33e0bf4bb057d}{m\+\_\+detector}\label{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_a5e56e46f08984f7e62a33e0bf4bb057d}
+
+\begin{DoxyCompactList}\small\item\em Detector used on every frame. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_a1ac65c40264a42b7c9af36bb470fcc3a}{}long \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_a1ac65c40264a42b7c9af36bb470fcc3a}{m\+\_\+track\+Count}\label{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_a1ac65c40264a42b7c9af36bb470fcc3a}
+
+\begin{DoxyCompactList}\small\item\em Internal counter for identifying new tracked objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Img, class T\+Obj$>$class Vision\+Core\+::\+Abstractions\+::\+Detector\+Based\+Multi\+Tracker$<$ T\+Img, T\+Obj $>$}
+
+A tracker that applies a detector on every frame. 
+
+This tracker does a full detection on every frame and match each detected object with the currently tracked objects.
+
+If a detected object is not matched with a current tracked object it is assumed that it is a new object and, therefore, it is added to the tracked objects. On the other hand, if a currently tracked object is not detected in the frame, it is removed from tracked objects.
+
+The Hungarian algorithm is applied to match detected and tracked objects. 
+
+Definition at line 319 of file Vision\+Abstractions.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_a9c8e82bfdf34a35ef2eee54006181e5b}{}\index{Vision\+Core\+::\+Abstractions\+::\+Detector\+Based\+Multi\+Tracker@{Vision\+Core\+::\+Abstractions\+::\+Detector\+Based\+Multi\+Tracker}!get\+Last\+Track@{get\+Last\+Track}}
+\index{get\+Last\+Track@{get\+Last\+Track}!Vision\+Core\+::\+Abstractions\+::\+Detector\+Based\+Multi\+Tracker@{Vision\+Core\+::\+Abstractions\+::\+Detector\+Based\+Multi\+Tracker}}
+\subsubsection[{get\+Last\+Track()}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::map$<$long,T\+Obj$>$\& get\+Last\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_a9c8e82bfdf34a35ef2eee54006181e5b}
+
+
+Returns a reference to the current estimated object state. 
+
+This function is often call after calling the \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_af1a54610c9af7fb54d00e4be2e75609e}{update()} method. The returned reference is usualy to a class member. 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_a93ee7011307419e8c88db9f22d900657}{Tracker$<$ T\+Img, std\+::map$<$ long, T\+Obj $>$ $>$}.
+
+
+
+Definition at line 340 of file Vision\+Abstractions.\+h.
+
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_ac7e0977fa702f98038bbe303df458a6c}{}\index{Vision\+Core\+::\+Abstractions\+::\+Detector\+Based\+Multi\+Tracker@{Vision\+Core\+::\+Abstractions\+::\+Detector\+Based\+Multi\+Tracker}!lost\+Track@{lost\+Track}}
+\index{lost\+Track@{lost\+Track}!Vision\+Core\+::\+Abstractions\+::\+Detector\+Based\+Multi\+Tracker@{Vision\+Core\+::\+Abstractions\+::\+Detector\+Based\+Multi\+Tracker}}
+\subsubsection[{lost\+Track() const }]{\setlength{\rightskip}{0pt plus 5cm}bool lost\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_ac7e0977fa702f98038bbe303df458a6c}
+
+
+Returns true if the tracker lost the object track. 
+
+The cause for loosing the object track is not specified by the interface. It can be caused by the object going out of image limits, becoming ocluded, or even due to a tracker error. 
+
+Reimplemented from \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_af6217aec35983dca6dc39c91d08c1020}{Tracker$<$ T\+Img, std\+::map$<$ long, T\+Obj $>$ $>$}.
+
+
+
+Definition at line 342 of file Vision\+Abstractions.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Abstractions.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,50 @@
+\hypertarget{class_tracking_dataset_widget}{}\section{Tracking\+Dataset\+Widget Class Reference}
+\label{class_tracking_dataset_widget}\index{Tracking\+Dataset\+Widget@{Tracking\+Dataset\+Widget}}
+
+
+Inheritance diagram for Tracking\+Dataset\+Widget\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{class_tracking_dataset_widget__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tracking\+Dataset\+Widget\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{class_tracking_dataset_widget__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_tracking_dataset_widget_ad2ef311f10d7bd13e77778a6d9eb3a31}{}void {\bfseries sample\+Selected} (std\+::string sample\+I\+D)\label{class_tracking_dataset_widget_ad2ef311f10d7bd13e77778a6d9eb3a31}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_tracking_dataset_widget_a3f1fa252e09ecd9972e823f984c43a51}{}{\bfseries Tracking\+Dataset\+Widget} (Q\+Widget $\ast$parent=0)\label{class_tracking_dataset_widget_a3f1fa252e09ecd9972e823f984c43a51}
+
+\item 
+\hypertarget{class_tracking_dataset_widget_a0b3cd3fb273e830b05c2e556aa315fe4}{}void {\bfseries set\+Samples\+I\+D} (std\+::vector$<$ std\+::string $>$ samples\+I\+D)\label{class_tracking_dataset_widget_a0b3cd3fb273e830b05c2e556aa315fe4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 38 of file Tracking\+Dataset\+Widget.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Applications/\+Vision\+G\+U\+I/Tracking\+Dataset\+Widget.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Applications/\+Vision\+G\+U\+I/Tracking\+Dataset\+Widget.\+cpp\end{DoxyCompactItemize}

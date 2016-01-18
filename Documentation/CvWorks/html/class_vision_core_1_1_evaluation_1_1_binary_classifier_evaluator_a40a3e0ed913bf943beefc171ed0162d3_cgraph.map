@@ -1,0 +1,7 @@
+<map id="evaluateDetectorAsClassifier" name="evaluateDetectorAsClassifier">
+<area shape="rect" id="node2" href="$class_vision_core_1_1_evaluation_1_1_detection_dataset.html#af6f37eeccc1f47bbe5ec0e38199ca8bf" title="For each sample in dataset execute a function. " alt="" coords="240,5,467,47"/>
+<area shape="rect" id="node3" href="$class_vision_core_1_1_interfaces_1_1_detector.html#a0977745b253f810bb2ec009844618305" title="Detects objects in the image and returns a vector with the detected objects. " alt="" coords="279,71,428,112"/>
+<area shape="rect" id="node4" href="$class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator.html#af2197d681f638fd535e08c3cc559254a" title="Add a detection &#45; ground truth pair. " alt="" coords="304,137,403,163"/>
+<area shape="rect" id="node5" href="$class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator.html#ad578be8e9cf0140bf74635da8e5345d4" title="Compute the results using the data provided via &#39;addTestPoint&#39;. " alt="" coords="299,187,408,214"/>
+<area shape="rect" id="node6" href="$class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator.html#a54604d384e1a55cb93b04a640179eac0" title="Print the report for a binary classifier evaluation. By default recall and precision metrics are give..." alt="" coords="311,238,396,265"/>
+</map>

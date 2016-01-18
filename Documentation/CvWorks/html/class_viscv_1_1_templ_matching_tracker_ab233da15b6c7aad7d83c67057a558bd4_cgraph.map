@@ -1,0 +1,4 @@
+<map id="update" name="update">
+<area shape="rect" id="node2" href="$struct_vision_core_1_1_data_structures_1_1_frame.html#a8531d354b20874961d98c796e3973b4d" title="Returns a reference to the frame image. " alt="" coords="124,5,304,47"/>
+<area shape="rect" id="node3" href="$class_viscv_1_1_templ_matching_detector.html#a1d0c071b6e7a19b192c86ca0e47fd642" title="Detects objects in the image and returns a vector with the detected objects. " alt="" coords="115,71,313,112"/>
+</map>

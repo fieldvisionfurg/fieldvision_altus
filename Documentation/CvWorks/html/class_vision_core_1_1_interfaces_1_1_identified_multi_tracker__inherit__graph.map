@@ -1,0 +1,5 @@
+<map id="IdentifiedMultiTracker&lt; TImg, TObj &gt;" name="IdentifiedMultiTracker&lt; TImg, TObj &gt;">
+<area shape="rect" id="node3" href="$class_vision_core_1_1_abstractions_1_1_abstract_auto_tracker.html" title="Implements a tracker that can automatically detect and track multiple objects by creating a individua..." alt="" coords="5,359,175,568"/>
+<area shape="rect" id="node4" href="$class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker.html" title="A tracker that applies a detector on every frame. " alt="" coords="199,373,405,553"/>
+<area shape="rect" id="node2" href="$class_vision_core_1_1_interfaces_1_1_tracker.html" title="{Tracker\&lt; TImg, std\l::map\&lt; long, TObj \&gt; \&gt;\n|# m_lostTrack\l|+ Tracker()\l+ getLastTrack()\l+ lostTrack()\l+ update()\l+ ~Tracker()\l# lostTrack()\l}" alt="" coords="120,5,271,171"/>
+</map>

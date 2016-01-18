@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_vision_core_1_1_interfaces_1_1_tracker.html" title="Tracker\&lt; cv::Mat, std\l::map\&lt; long, cv::Rect \&gt; \&gt;" alt="" coords="5,5,176,47"/>
+<area shape="rect" id="node2" href="$class_vision_core_1_1_interfaces_1_1_identified_multi_tracker.html" title="IdentifiedMultiTracker\l\&lt; cv::Mat, cv::Rect \&gt;" alt="" coords="224,5,368,47"/>
+<area shape="rect" id="node3" href="$class_vision_core_1_1_abstractions_1_1_abstract_auto_tracker.html" title="AbstractAutoTracker\l\&lt; cv::Mat, cv::Rect \&gt;" alt="" coords="416,5,559,47"/>
+<area shape="rect" id="node4" href="$class_viscv_1_1_multi_object_tracker_c_c_cv.html" title="Detecta e rastreia multiplos objetos utilizando o rastreador &#39;ObjectTrackerCCCv&#39;. ..." alt="" coords="607,13,769,39"/>
+</map>

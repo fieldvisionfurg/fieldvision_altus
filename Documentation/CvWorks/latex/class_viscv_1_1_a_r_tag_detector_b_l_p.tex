@@ -1,0 +1,98 @@
+\hypertarget{class_viscv_1_1_a_r_tag_detector_b_l_p}{}\section{A\+R\+Tag\+Detector\+B\+L\+P Class Reference}
+\label{class_viscv_1_1_a_r_tag_detector_b_l_p}\index{A\+R\+Tag\+Detector\+B\+L\+P@{A\+R\+Tag\+Detector\+B\+L\+P}}
+
+
+Implements a augmented reality tag detector.  
+
+
+
+
+{\ttfamily \#include $<$A\+R\+Tag\+Detector\+B\+L\+P.\+h$>$}
+
+
+
+Inheritance diagram for A\+R\+Tag\+Detector\+B\+L\+P\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{class_viscv_1_1_a_r_tag_detector_b_l_p__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for A\+R\+Tag\+Detector\+B\+L\+P\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{class_viscv_1_1_a_r_tag_detector_b_l_p__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_viscv_1_1_a_r_tag_detector_b_l_p_a694456c6ce2eaf188d47f4cb61a859b7}{}\hyperlink{class_viscv_1_1_a_r_tag_detector_b_l_p_a694456c6ce2eaf188d47f4cb61a859b7}{A\+R\+Tag\+Detector\+B\+L\+P} ()\label{class_viscv_1_1_a_r_tag_detector_b_l_p_a694456c6ce2eaf188d47f4cb61a859b7}
+
+\begin{DoxyCompactList}\small\item\em Defult constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_a_r_tag_detector_b_l_p_aac8748a45253d9b678b66b5ce8ac0edd}{}\hyperlink{class_viscv_1_1_a_r_tag_detector_b_l_p_aac8748a45253d9b678b66b5ce8ac0edd}{$\sim$\+A\+R\+Tag\+Detector\+B\+L\+P} ()\label{class_viscv_1_1_a_r_tag_detector_b_l_p_aac8748a45253d9b678b66b5ce8ac0edd}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{class_viscv_1_1_a_r_tag}{A\+R\+Tag} $>$ \hyperlink{class_viscv_1_1_a_r_tag_detector_b_l_p_a0065a0a0e3dbed236849bf406e6cde66}{detect} (const cv\+::\+Mat \&img) const 
+\begin{DoxyCompactList}\small\item\em Detects objects in the image and returns a vector with the detected objects. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_a_r_tag_detector_b_l_p_a71fdd952985e3be53e73443a02b07cfe}{}void \hyperlink{class_viscv_1_1_a_r_tag_detector_b_l_p_a71fdd952985e3be53e73443a02b07cfe}{enroll\+Tag} (const cv\+::\+Mat \&tag\+Img, const std\+::string \&tag\+Name)\label{class_viscv_1_1_a_r_tag_detector_b_l_p_a71fdd952985e3be53e73443a02b07cfe}
+
+\begin{DoxyCompactList}\small\item\em Enrolls new tags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_viscv_1_1_a_r_tag_detector_b_l_p_acc427385dd28416f812523874f4d6502}{}int \hyperlink{class_viscv_1_1_a_r_tag_detector_b_l_p_acc427385dd28416f812523874f4d6502}{border\+Size}\label{class_viscv_1_1_a_r_tag_detector_b_l_p_acc427385dd28416f812523874f4d6502}
+
+\begin{DoxyCompactList}\small\item\em Tag border size. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_a_r_tag_detector_b_l_p_a0ebf501c4c0e6e53d9695a43466ea184}{}int \hyperlink{class_viscv_1_1_a_r_tag_detector_b_l_p_a0ebf501c4c0e6e53d9695a43466ea184}{binarization\+Threshold}\label{class_viscv_1_1_a_r_tag_detector_b_l_p_a0ebf501c4c0e6e53d9695a43466ea184}
+
+\begin{DoxyCompactList}\small\item\em Threshold used in image binarization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implements a augmented reality tag detector. 
+
+This algorith is similar to the one implemented in A\+R\+Toolkit. It first detects a bounding polygon around a tag. Then it extract the image inside the tag and match it agains a set of enrolled tags (see enroll\+Tag method), assigning the tag with higher similarity. \begin{Desc}
+\item[Examples\+: ]\par
+\hyperlink{_vision_tests_2main_8cpp-example}{Vision\+Tests/main.\+cpp}.\end{Desc}
+
+
+Definition at line 70 of file A\+R\+Tag\+Detector\+B\+L\+P.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_viscv_1_1_a_r_tag_detector_b_l_p_a0065a0a0e3dbed236849bf406e6cde66}{}\index{Viscv\+::\+A\+R\+Tag\+Detector\+B\+L\+P@{Viscv\+::\+A\+R\+Tag\+Detector\+B\+L\+P}!detect@{detect}}
+\index{detect@{detect}!Viscv\+::\+A\+R\+Tag\+Detector\+B\+L\+P@{Viscv\+::\+A\+R\+Tag\+Detector\+B\+L\+P}}
+\subsubsection[{detect(const cv\+::\+Mat \&img) const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf A\+R\+Tag} $>$ detect (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{img}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_viscv_1_1_a_r_tag_detector_b_l_p_a0065a0a0e3dbed236849bf406e6cde66}
+
+
+Detects objects in the image and returns a vector with the detected objects. 
+
+The vector should be empty if no object is detected. 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_detector_a0977745b253f810bb2ec009844618305}{Detector$<$ cv\+::\+Mat, A\+R\+Tag $>$}.
+
+\begin{Desc}
+\item[Examples\+: ]\par
+\hyperlink{_vision_tests_2main_8cpp-example}{Vision\+Tests/main.\+cpp}.\end{Desc}
+
+
+Definition at line 54 of file A\+R\+Tag\+Detector\+B\+L\+P.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/A\+R\+Tag\+Detector\+B\+L\+P.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/A\+R\+Tag\+Detector\+B\+L\+P.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="computeResult" name="computeResult">
+<area shape="rect" id="node2" href="$class_vision_core_1_1_evaluation_1_1_detector_evaluator.html#affd22efb035f7daffbc8ce1ae4b1e85f" title="Runs a detector over each dataset image and compute the performance statistics, printing the result i..." alt="" coords="214,5,333,32"/>
+<area shape="rect" id="node3" href="$class_vision_core_1_1_evaluation_1_1_tracker_evaluator.html#a806aa368bb6cb66f3bc990c145456cd2" title="Compute performance statistics. " alt="" coords="163,57,384,98"/>
+</map>

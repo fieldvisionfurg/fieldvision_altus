@@ -1,0 +1,16 @@
+\hypertarget{namespace_vision_core_1_1_data_structures}{}\section{Vision\+Core\+:\+:Data\+Structures Namespace Reference}
+\label{namespace_vision_core_1_1_data_structures}\index{Vision\+Core\+::\+Data\+Structures@{Vision\+Core\+::\+Data\+Structures}}
+
+
+Data structures used within Cv\+Works.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Frame}
+\begin{DoxyCompactList}\small\item\em A \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Frame} contains an image, number and timestamp from a video sequence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Data structures used within Cv\+Works. 

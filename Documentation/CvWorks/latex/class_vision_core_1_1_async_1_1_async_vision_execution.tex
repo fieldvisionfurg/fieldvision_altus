@@ -1,0 +1,94 @@
+\hypertarget{class_vision_core_1_1_async_1_1_async_vision_execution}{}\section{Async\+Vision\+Execution$<$ T\+Img, T\+Out $>$ Class Template Reference}
+\label{class_vision_core_1_1_async_1_1_async_vision_execution}\index{Async\+Vision\+Execution$<$ T\+Img, T\+Out $>$@{Async\+Vision\+Execution$<$ T\+Img, T\+Out $>$}}
+
+
+Allows the execution of a vision method asynchronously in an individual thread.  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Async.\+h$>$}
+
+
+
+Collaboration diagram for Async\+Vision\+Execution$<$ T\+Img, T\+Out $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{class_vision_core_1_1_async_1_1_async_vision_execution__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_async_1_1_async_vision_execution_a7c6b158b64e320c959e8bf6c5aeae822}{}virtual \hyperlink{class_vision_core_1_1_async_1_1_async_vision_execution_a7c6b158b64e320c959e8bf6c5aeae822}{$\sim$\+Async\+Vision\+Execution} ()\label{class_vision_core_1_1_async_1_1_async_vision_execution_a7c6b158b64e320c959e8bf6c5aeae822}
+
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_async_1_1_async_vision_execution_aa6308ff596cc79d9feae867931dc5df2}{}void \hyperlink{class_vision_core_1_1_async_1_1_async_vision_execution_aa6308ff596cc79d9feae867931dc5df2}{set\+Callback} (const std\+::function$<$ void(T\+Out)$>$ \&callback)\label{class_vision_core_1_1_async_1_1_async_vision_execution_aa6308ff596cc79d9feae867931dc5df2}
+
+\begin{DoxyCompactList}\small\item\em Set the callback function executed after every detection. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_async_1_1_async_vision_execution_a60de64d75454385b23995437f1d72669}{}void \hyperlink{class_vision_core_1_1_async_1_1_async_vision_execution_a60de64d75454385b23995437f1d72669}{start} ()\label{class_vision_core_1_1_async_1_1_async_vision_execution_a60de64d75454385b23995437f1d72669}
+
+\begin{DoxyCompactList}\small\item\em Activates the processing (i.\+e. frames will be processed). \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_async_1_1_async_vision_execution_a8c528baf37154d347366083f0f816846}{}void \hyperlink{class_vision_core_1_1_async_1_1_async_vision_execution_a8c528baf37154d347366083f0f816846}{stop} ()\label{class_vision_core_1_1_async_1_1_async_vision_execution_a8c528baf37154d347366083f0f816846}
+
+\begin{DoxyCompactList}\small\item\em Stops the processing. Works as a pause. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_async_1_1_async_vision_execution_af41b8630e5466023133f31442906e682}{}bool \hyperlink{class_vision_core_1_1_async_1_1_async_vision_execution_af41b8630e5466023133f31442906e682}{started} ()\label{class_vision_core_1_1_async_1_1_async_vision_execution_af41b8630e5466023133f31442906e682}
+
+\begin{DoxyCompactList}\small\item\em Indicates if the processing is active (i.\+e. is listening and processing frames). \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_async_1_1_async_vision_execution_abd8ac6727051c47ac2b8d695efc63603}{}std\+::thread $\ast$ \hyperlink{class_vision_core_1_1_async_1_1_async_vision_execution_abd8ac6727051c47ac2b8d695efc63603}{get\+Thread\+Ptr} ()\label{class_vision_core_1_1_async_1_1_async_vision_execution_abd8ac6727051c47ac2b8d695efc63603}
+
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the internal thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_vision_core_1_1_async_1_1_async_vision_execution_a4378a7425cb135692051eb5f4dc3ae58}{Async\+Vision\+Execution} (\hyperlink{class_vision_core_1_1_async_1_1_async_frame_server_wrap}{Async\+Frame\+Server\+Wrap}$<$ T\+Img $>$ $\ast$afs\+Ptr)
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Img, class T\+Out$>$class Vision\+Core\+::\+Async\+::\+Async\+Vision\+Execution$<$ T\+Img, T\+Out $>$}
+
+Allows the execution of a vision method asynchronously in an individual thread. 
+
+This is a abstract class for a processing a video asynchronously. It listens an \hyperlink{class_vision_core_1_1_async_1_1_async_frame_server_wrap}{Async\+Frame\+Server\+Wrap} object (given in the constructor) and, when a new frame becomes available, it calls the process method, passing the image.
+
+After every processing, the results are passed to a user provided callback function (see set\+Callback).
+
+The method runs in a exclusive internal thread.
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Img} & Image type. \\
+\hline
+{\em T\+Out} & Type returned by the processing method. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 290 of file Vision\+Async.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_vision_core_1_1_async_1_1_async_vision_execution_a4378a7425cb135692051eb5f4dc3ae58}{}\index{Vision\+Core\+::\+Async\+::\+Async\+Vision\+Execution@{Vision\+Core\+::\+Async\+::\+Async\+Vision\+Execution}!Async\+Vision\+Execution@{Async\+Vision\+Execution}}
+\index{Async\+Vision\+Execution@{Async\+Vision\+Execution}!Vision\+Core\+::\+Async\+::\+Async\+Vision\+Execution@{Vision\+Core\+::\+Async\+::\+Async\+Vision\+Execution}}
+\subsubsection[{Async\+Vision\+Execution(\+Async\+Frame\+Server\+Wrap$<$ T\+Img $>$ $\ast$afs\+Ptr)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Async\+Vision\+Execution} (
+\begin{DoxyParamCaption}
+\item[{{\bf Async\+Frame\+Server\+Wrap}$<$ T\+Img $>$ $\ast$}]{afs\+Ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_vision_core_1_1_async_1_1_async_vision_execution_a4378a7425cb135692051eb5f4dc3ae58}
+
+
+Constructor method. 
+
+The user should provide a pointer to an \hyperlink{class_vision_core_1_1_async_1_1_async_frame_server_wrap}{Async\+Frame\+Server\+Wrap}, that will be listened for new frames. 
+
+Definition at line 355 of file Vision\+Async.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Async.\+h\end{DoxyCompactItemize}

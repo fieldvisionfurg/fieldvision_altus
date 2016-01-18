@@ -1,0 +1,4 @@
+<map id="Tracker&lt; TImg, TObj &gt;" name="Tracker&lt; TImg, TObj &gt;">
+<area shape="rect" id="node2" href="$class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker.html" title="Implements a particle filtering algorithm for generic tracking models. " alt="" coords="5,233,187,413"/>
+<area shape="rect" id="node3" href="$class_vision_core_1_1_abstractions_1_1_tracker_logger.html" title="Provides log functionalities for a Tracker. Stores results, processing times and statistics. " alt="" coords="211,204,359,443"/>
+</map>

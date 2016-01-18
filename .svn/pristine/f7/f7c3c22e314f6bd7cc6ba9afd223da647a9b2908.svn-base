@@ -1,0 +1,43 @@
+\hypertarget{class_detection_dataset_control}{}\section{Detection\+Dataset\+Control$<$ T\+Obj $>$ Class Template Reference}
+\label{class_detection_dataset_control}\index{Detection\+Dataset\+Control$<$ T\+Obj $>$@{Detection\+Dataset\+Control$<$ T\+Obj $>$}}
+
+
+Inheritance diagram for Detection\+Dataset\+Control$<$ T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{class_detection_dataset_control__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Detection\+Dataset\+Control$<$ T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_detection_dataset_control__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_detection_dataset_control_a9fd1de3909b08bbf725de0f0156fe41c}{}{\bfseries Detection\+Dataset\+Control} (\hyperlink{class_vision_core_1_1_evaluation_1_1_detection_dataset}{Vision\+Core\+::\+Detection\+Dataset}$<$ cv\+::\+Mat, T\+Obj $>$ $\ast$det\+Data)\label{class_detection_dataset_control_a9fd1de3909b08bbf725de0f0156fe41c}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Obj$>$class Detection\+Dataset\+Control$<$ T\+Obj $>$}
+
+
+
+Definition at line 45 of file Detection\+Dataset\+Control.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Applications/\+Vision\+G\+U\+I/Detection\+Dataset\+Control.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,90 @@
+\hypertarget{class_tracker_control}{}\section{Tracker\+Control$<$ T\+Img, T\+Obj $>$ Class Template Reference}
+\label{class_tracker_control}\index{Tracker\+Control$<$ T\+Img, T\+Obj $>$@{Tracker\+Control$<$ T\+Img, T\+Obj $>$}}
+
+
+Esta classe é responsável por controlar a execução de um rastreador.  
+
+
+
+
+{\ttfamily \#include $<$Tracker\+Control.\+h$>$}
+
+
+
+Inheritance diagram for Tracker\+Control$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_tracker_control__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tracker\+Control$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_tracker_control__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_tracker_control_ae5bf27e4d42ef4cbe912e3246ab01553}{}{\bfseries Tracker\+Control} (\hyperlink{class_frame_server_control_widget}{Frame\+Server\+Control\+Widget} $\ast$fs\+Control\+Ptr\+\_\+)\label{class_tracker_control_ae5bf27e4d42ef4cbe912e3246ab01553}
+
+\item 
+\hypertarget{class_tracker_control_afc27bbdf05ee68eec54b6cb1b1713d9d}{}{\bfseries Tracker\+Control} (\hyperlink{class_vision_core_1_1_interfaces_1_1_tracker}{Vision\+Core\+::\+Tracker}$<$ T\+Img, T\+Obj $>$ $\ast$tracker\+Ptr\+\_\+, \hyperlink{class_frame_server_control_widget}{Frame\+Server\+Control\+Widget} $\ast$fs\+Control\+Ptr\+\_\+, bool start\+Paused=false)\label{class_tracker_control_afc27bbdf05ee68eec54b6cb1b1713d9d}
+
+\item 
+\hypertarget{class_tracker_control_a25836a6bfbe3cc2685f1caca18dd3d03}{}void {\bfseries set\+Tracker} (\hyperlink{class_vision_core_1_1_interfaces_1_1_tracker}{Vision\+Core\+::\+Tracker}$<$ T\+Img, T\+Obj $>$ $\ast$tracker\+Ptr\+\_\+, bool start\+Paused=false)\label{class_tracker_control_a25836a6bfbe3cc2685f1caca18dd3d03}
+
+\item 
+\hypertarget{class_tracker_control_a7167f5c196fc5e167bfabde1a730e81d}{}virtual void \hyperlink{class_tracker_control_a7167f5c196fc5e167bfabde1a730e81d}{pause} ()\label{class_tracker_control_a7167f5c196fc5e167bfabde1a730e81d}
+
+\begin{DoxyCompactList}\small\item\em Pause process. \end{DoxyCompactList}\item 
+\hypertarget{class_tracker_control_a60de64d75454385b23995437f1d72669}{}virtual void \hyperlink{class_tracker_control_a60de64d75454385b23995437f1d72669}{start} ()\label{class_tracker_control_a60de64d75454385b23995437f1d72669}
+
+\begin{DoxyCompactList}\small\item\em Start process. \end{DoxyCompactList}\item 
+\hypertarget{class_tracker_control_aaadbbf21c8bf5d7b6be811068d1ccc21}{}virtual bool \hyperlink{class_tracker_control_aaadbbf21c8bf5d7b6be811068d1ccc21}{export\+Log} (std\+::string file\+Name)\label{class_tracker_control_aaadbbf21c8bf5d7b6be811068d1ccc21}
+
+\begin{DoxyCompactList}\small\item\em Exports the log data to file. \end{DoxyCompactList}\item 
+\hypertarget{class_tracker_control_a0f269bca8139be827d8f673bed676f60}{}virtual void \hyperlink{class_tracker_control_a0f269bca8139be827d8f673bed676f60}{reset\+Log} ()\label{class_tracker_control_a0f269bca8139be827d8f673bed676f60}
+
+\begin{DoxyCompactList}\small\item\em FunÃ§Ã£o que reseta o log. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_tracker_control_aa429fbdf6a7f790d22dd1f23616f41de}{}virtual void \hyperlink{class_tracker_control_aa429fbdf6a7f790d22dd1f23616f41de}{draw\+Results} (Q\+Painter $\ast$painter)\label{class_tracker_control_aa429fbdf6a7f790d22dd1f23616f41de}
+
+\begin{DoxyCompactList}\small\item\em Função que desenha os resultados. Chamada quando uma nova imagem do frame\+Server\+Control estiver disponivel. \end{DoxyCompactList}\item 
+\hypertarget{class_tracker_control_ac36825442b03cbca4d3d57a89eb398e2}{}virtual void {\bfseries draw\+Object} (Q\+Painter $\ast$painter, const T\+Obj \&object)\label{class_tracker_control_ac36825442b03cbca4d3d57a89eb398e2}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_tracker_control_a36179771065f91f940d89df6e4b96dd4}{}\hyperlink{class_vision_core_1_1_interfaces_1_1_tracker}{Vision\+Core\+::\+Tracker}$<$ T\+Img, T\+Obj $>$ $\ast$ {\bfseries tracker}\label{class_tracker_control_a36179771065f91f940d89df6e4b96dd4}
+
+\item 
+\hypertarget{class_tracker_control_a69179e31455e5c998159f37988a1655a}{}\hyperlink{class_vision_core_1_1_async_1_1_async_tracker_wrap}{Vision\+Core\+::\+Async\+Tracker\+Wrap}$<$ T\+Img, T\+Obj $>$ $\ast$ {\bfseries async\+Tracker}\label{class_tracker_control_a69179e31455e5c998159f37988a1655a}
+
+\item 
+\hypertarget{class_tracker_control_a67ad12fda3cb84866231b27bcf7ccd7a}{}\hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger}{Vision\+Core\+::\+Tracker\+Logger}$<$ T\+Img, T\+Obj $>$ $\ast$ {\bfseries logger\+Tracker}\label{class_tracker_control_a67ad12fda3cb84866231b27bcf7ccd7a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Img, class T\+Obj$>$class Tracker\+Control$<$ T\+Img, T\+Obj $>$}
+
+Esta classe é responsável por controlar a execução de um rastreador. 
+
+Definition at line 42 of file Tracker\+Control.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets/Tracker\+Control.\+h\end{DoxyCompactItemize}

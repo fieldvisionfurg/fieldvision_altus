@@ -1,0 +1,171 @@
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detection_dataset}{}\section{Detection\+Dataset$<$ T\+Img, T\+Obj $>$ Class Template Reference}
+\label{class_vision_core_1_1_evaluation_1_1_detection_dataset}\index{Detection\+Dataset$<$ T\+Img, T\+Obj $>$@{Detection\+Dataset$<$ T\+Img, T\+Obj $>$}}
+
+
+Abstract class for a generic detection dataset, contining images and its ground-\/truth.  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Evaluation.\+h$>$}
+
+
+
+Inheritance diagram for Detection\+Dataset$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{class_vision_core_1_1_evaluation_1_1_detection_dataset__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Detection\+Dataset$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{class_vision_core_1_1_evaluation_1_1_detection_dataset__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detection_dataset_aaafe8051ac78bd4d8ed3027acd24a1c0}{}typedef T\+Img {\bfseries Img\+Type}\label{class_vision_core_1_1_evaluation_1_1_detection_dataset_aaafe8051ac78bd4d8ed3027acd24a1c0}
+
+\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detection_dataset_a34f8ad85716743523e520af46032716e}{}typedef T\+Obj {\bfseries Obj\+Type}\label{class_vision_core_1_1_evaluation_1_1_detection_dataset_a34f8ad85716743523e520af46032716e}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detection_dataset_a74f581b470028b781e9f4d6c2e0f56b0}{}virtual \hyperlink{class_vision_core_1_1_evaluation_1_1_detection_dataset_a74f581b470028b781e9f4d6c2e0f56b0}{$\sim$\+Detection\+Dataset} ()\label{class_vision_core_1_1_evaluation_1_1_detection_dataset_a74f581b470028b781e9f4d6c2e0f56b0}
+
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detection_dataset_a4baafaba65ce3ae8e9fc8a5f74f5e0f8}{}virtual std\+::vector$<$ std\+::string $>$ \hyperlink{class_vision_core_1_1_evaluation_1_1_detection_dataset_a4baafaba65ce3ae8e9fc8a5f74f5e0f8}{get\+Samples\+I\+D} () const  =0\label{class_vision_core_1_1_evaluation_1_1_detection_dataset_a4baafaba65ce3ae8e9fc8a5f74f5e0f8}
+
+\begin{DoxyCompactList}\small\item\em Returns a vector of I\+Ds for all samples in the dataset. Each sample should be identified by a unique string I\+D. This I\+D can be anything (a number, the name of file, etc). It is used mainly to retrieve a sample through function get\+Image and get\+Objects. \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ T\+Img $>$ \hyperlink{class_vision_core_1_1_evaluation_1_1_detection_dataset_afaca4ebdf527646b545947fd4c2ec73c}{get\+Image} (const std\+::string \&sample\+I\+D) const  =0
+\begin{DoxyCompactList}\small\item\em Returns a pointer to one of the images in the dataset. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ T\+Obj $>$ \hyperlink{class_vision_core_1_1_evaluation_1_1_detection_dataset_a831ba73d31b15e00777727f98cf23669}{get\+Objects} (const std\+::string \&sample\+I\+D) const  =0
+\begin{DoxyCompactList}\small\item\em Returns a vector of objects contained in a sample. This could be a vector of all the faces that appear on a image when working with a face dataset. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detection_dataset_ac21371d93712c4f10a2c44530f402a25}{}\hyperlink{class_vision_core_1_1_evaluation_1_1_detection_sub_dataset}{Detection\+Sub\+Dataset}$<$ T\+Img, T\+Obj $>$ \hyperlink{class_vision_core_1_1_evaluation_1_1_detection_dataset_ac21371d93712c4f10a2c44530f402a25}{get\+Subset} (std\+::vector$<$ std\+::string $>$ samples\+I\+D)\label{class_vision_core_1_1_evaluation_1_1_detection_dataset_ac21371d93712c4f10a2c44530f402a25}
+
+\begin{DoxyCompactList}\small\item\em Returns a dataset containing a subset of samples. The vector samples\+I\+D specify the subset samples. If some sample\+I\+D does not exist in the original dataset an exception is throw. The subset mantains a reference to the original dataset, so the subset is only accessible on the scope of the original dataset. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detection_dataset_a4703b31fbe4c89baf44dfeeb7f2bb18d}{}std\+::vector$<$ \hyperlink{class_vision_core_1_1_evaluation_1_1_detection_sub_dataset}{Detection\+Sub\+Dataset}$<$ T\+Img, T\+Obj $>$ $>$ \hyperlink{class_vision_core_1_1_evaluation_1_1_detection_dataset_a4703b31fbe4c89baf44dfeeb7f2bb18d}{split\+Dataset} (std\+::vector$<$ double $>$ proportions)\label{class_vision_core_1_1_evaluation_1_1_detection_dataset_a4703b31fbe4c89baf44dfeeb7f2bb18d}
+
+\begin{DoxyCompactList}\small\item\em Splits the dataset in several subdatasets according to proportions (must sum to 1). \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_vision_core_1_1_evaluation_1_1_detection_dataset_af6f37eeccc1f47bbe5ec0e38199ca8bf}{for\+Each\+Sample} (std\+::function$<$ void(T\+Img \&, std\+::vector$<$ T\+Obj $>$ \&, std\+::string \&)$>$ funct)
+\begin{DoxyCompactList}\small\item\em For each sample in dataset execute a function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Img, typename T\+Obj$>$class Vision\+Core\+::\+Evaluation\+::\+Detection\+Dataset$<$ T\+Img, T\+Obj $>$}
+
+Abstract class for a generic detection dataset, contining images and its ground-\/truth. 
+
+Each sample in the dataset has an image and a vector of objects considered as ground-\/truth.
+
+Each sample has an unique I\+D. A vector with all samples I\+Ds can be retrieved by method \textquotesingle{}\hyperlink{class_vision_core_1_1_evaluation_1_1_detection_dataset_a4baafaba65ce3ae8e9fc8a5f74f5e0f8}{get\+Samples\+I\+D()}\textquotesingle{}.
+
+The \textquotesingle{}get\+Image(sample\+I\+D)\textquotesingle{} method returns one image from the dataset and the \textquotesingle{}get\+Objects(sample\+I\+D)\textquotesingle{} method returns the respective ground-\/truth objects.
+
+Derived classes implementing this interface must implement the three methods mentioned above.
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Img} & Image type. \\
+\hline
+{\em T\+Obj} & Detected object type. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 71 of file Vision\+Evaluation.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detection_dataset_af6f37eeccc1f47bbe5ec0e38199ca8bf}{}\index{Vision\+Core\+::\+Evaluation\+::\+Detection\+Dataset@{Vision\+Core\+::\+Evaluation\+::\+Detection\+Dataset}!for\+Each\+Sample@{for\+Each\+Sample}}
+\index{for\+Each\+Sample@{for\+Each\+Sample}!Vision\+Core\+::\+Evaluation\+::\+Detection\+Dataset@{Vision\+Core\+::\+Evaluation\+::\+Detection\+Dataset}}
+\subsubsection[{for\+Each\+Sample(std\+::function$<$ void(\+T\+Img \&, std\+::vector$<$ T\+Obj $>$ \&, std\+::string \&)$>$ funct)}]{\setlength{\rightskip}{0pt plus 5cm}void for\+Each\+Sample (
+\begin{DoxyParamCaption}
+\item[{std\+::function$<$ void(T\+Img \&, std\+::vector$<$ T\+Obj $>$ \&, std\+::string \&)$>$}]{funct}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vision_core_1_1_evaluation_1_1_detection_dataset_af6f37eeccc1f47bbe5ec0e38199ca8bf}
+
+
+For each sample in dataset execute a function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Img} & Image type \\
+\hline
+{\em T\+Obj} & Object type of the ground truth annotations. \\
+\hline
+{\em funct} & A function that will be execute for each sample in the dataset. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 113 of file Vision\+Evaluation.\+h.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{class_vision_core_1_1_evaluation_1_1_detection_dataset_af6f37eeccc1f47bbe5ec0e38199ca8bf_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detection_dataset_afaca4ebdf527646b545947fd4c2ec73c}{}\index{Vision\+Core\+::\+Evaluation\+::\+Detection\+Dataset@{Vision\+Core\+::\+Evaluation\+::\+Detection\+Dataset}!get\+Image@{get\+Image}}
+\index{get\+Image@{get\+Image}!Vision\+Core\+::\+Evaluation\+::\+Detection\+Dataset@{Vision\+Core\+::\+Evaluation\+::\+Detection\+Dataset}}
+\subsubsection[{get\+Image(const std\+::string \&sample\+I\+D) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::shared\+\_\+ptr$<$T\+Img$>$ get\+Image (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{sample\+I\+D}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_vision_core_1_1_evaluation_1_1_detection_dataset_afaca4ebdf527646b545947fd4c2ec73c}
+
+
+Returns a pointer to one of the images in the dataset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sample\+I\+D} & The unique identifier for the sample you are fetching. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_vision_core_1_1_evaluation_1_1_detection_sub_dataset_a8d5c26c8bba720739540caea9cd2f630}{Detection\+Sub\+Dataset$<$ T\+Img, T\+Obj $>$}, and \hyperlink{class_viscv_1_1_dataset_f_d_d_b_a64f0340b5a377d18c5199f61a8ee7ffd}{Dataset\+F\+D\+D\+B}.
+
+\hypertarget{class_vision_core_1_1_evaluation_1_1_detection_dataset_a831ba73d31b15e00777727f98cf23669}{}\index{Vision\+Core\+::\+Evaluation\+::\+Detection\+Dataset@{Vision\+Core\+::\+Evaluation\+::\+Detection\+Dataset}!get\+Objects@{get\+Objects}}
+\index{get\+Objects@{get\+Objects}!Vision\+Core\+::\+Evaluation\+::\+Detection\+Dataset@{Vision\+Core\+::\+Evaluation\+::\+Detection\+Dataset}}
+\subsubsection[{get\+Objects(const std\+::string \&sample\+I\+D) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::vector$<$T\+Obj$>$ get\+Objects (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{sample\+I\+D}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_vision_core_1_1_evaluation_1_1_detection_dataset_a831ba73d31b15e00777727f98cf23669}
+
+
+Returns a vector of objects contained in a sample. This could be a vector of all the faces that appear on a image when working with a face dataset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sample\+I\+D} & The unique identifier for the sample you are fetching. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_vision_core_1_1_evaluation_1_1_detection_sub_dataset_a4c1bd88038f81317438d052bcbf2bfaa}{Detection\+Sub\+Dataset$<$ T\+Img, T\+Obj $>$}, and \hyperlink{class_viscv_1_1_dataset_f_d_d_b_a8c1fe796c01ff8d85626dd85e6a45418}{Dataset\+F\+D\+D\+B}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Evaluation.\+h\end{DoxyCompactItemize}

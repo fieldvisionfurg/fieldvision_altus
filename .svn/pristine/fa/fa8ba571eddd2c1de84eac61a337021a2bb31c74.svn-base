@@ -1,0 +1,94 @@
+\hypertarget{class_viscv_1_1_object_tracker_c_c_cv}{}\section{Object\+Tracker\+C\+C\+Cv Class Reference}
+\label{class_viscv_1_1_object_tracker_c_c_cv}\index{Object\+Tracker\+C\+C\+Cv@{Object\+Tracker\+C\+C\+Cv}}
+
+
+Simple tracker using Open\+Cv cascade classifier detector.  
+
+
+
+
+{\ttfamily \#include $<$Object\+Tracker\+C\+C\+Cv.\+h$>$}
+
+
+
+Inheritance diagram for Object\+Tracker\+C\+C\+Cv\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{class_viscv_1_1_object_tracker_c_c_cv__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Object\+Tracker\+C\+C\+Cv\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{class_viscv_1_1_object_tracker_c_c_cv__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_viscv_1_1_object_tracker_c_c_cv_a27f364cb86fa43bf71bdd5013ae78729}{}\hyperlink{class_viscv_1_1_object_tracker_c_c_cv_a27f364cb86fa43bf71bdd5013ae78729}{Object\+Tracker\+C\+C\+Cv} ()\label{class_viscv_1_1_object_tracker_c_c_cv_a27f364cb86fa43bf71bdd5013ae78729}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_object_tracker_c_c_cv_a262c6ed8ca1c7de3379a0febcc28b7a9}{}\hyperlink{class_viscv_1_1_object_tracker_c_c_cv_a262c6ed8ca1c7de3379a0febcc28b7a9}{Object\+Tracker\+C\+C\+Cv} (std\+::shared\+\_\+ptr$<$ cv\+::\+Cascade\+Classifier $>$ cascade\+Ptr, const cv\+::\+Rect \&initial\+Obj)\label{class_viscv_1_1_object_tracker_c_c_cv_a262c6ed8ca1c7de3379a0febcc28b7a9}
+
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_object_tracker_c_c_cv_ad531298c6e9709dde4947259d6170e2a}{}\hyperlink{class_viscv_1_1_object_tracker_c_c_cv_ad531298c6e9709dde4947259d6170e2a}{Object\+Tracker\+C\+C\+Cv} (const std\+::string \&cascade\+File, const cv\+::\+Rect \&initial\+Obj)\label{class_viscv_1_1_object_tracker_c_c_cv_ad531298c6e9709dde4947259d6170e2a}
+
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_object_tracker_c_c_cv_ada0b55f1e314f1ce620f5683934f434d}{}virtual \hyperlink{class_viscv_1_1_object_tracker_c_c_cv_ada0b55f1e314f1ce620f5683934f434d}{$\sim$\+Object\+Tracker\+C\+C\+Cv} ()\label{class_viscv_1_1_object_tracker_c_c_cv_ada0b55f1e314f1ce620f5683934f434d}
+
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+const cv\+::\+Rect \& \hyperlink{class_viscv_1_1_object_tracker_c_c_cv_ac9faa0124320853a52cb635538b604e4}{get\+Last\+Track} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the current estimated object state. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_object_tracker_c_c_cv_ab233da15b6c7aad7d83c67057a558bd4}{}void \hyperlink{class_viscv_1_1_object_tracker_c_c_cv_ab233da15b6c7aad7d83c67057a558bd4}{update} (const \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Vision\+Core\+::\+Frame}$<$ cv\+::\+Mat $>$ \&frame)\label{class_viscv_1_1_object_tracker_c_c_cv_ab233da15b6c7aad7d83c67057a558bd4}
+
+\begin{DoxyCompactList}\small\item\em Given an image (i.\+e. video frame), update the tracked objects. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_object_tracker_c_c_cv_a2eab82c376502055b29c460ff8b26cf9}{}void \hyperlink{class_viscv_1_1_object_tracker_c_c_cv_a2eab82c376502055b29c460ff8b26cf9}{reset} (const cv\+::\+Rect \&rectangle)\label{class_viscv_1_1_object_tracker_c_c_cv_a2eab82c376502055b29c460ff8b26cf9}
+
+\begin{DoxyCompactList}\small\item\em Reset tracker to a given initial state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Simple tracker using Open\+Cv cascade classifier detector. 
+
+A detector is used to search the object around the last tracked position.
+
+Similar to tracking by using a detector on every frame, but searches only on a reduced region around previous position. 
+
+Definition at line 45 of file Object\+Tracker\+C\+C\+Cv.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_viscv_1_1_object_tracker_c_c_cv_ac9faa0124320853a52cb635538b604e4}{}\index{Viscv\+::\+Object\+Tracker\+C\+C\+Cv@{Viscv\+::\+Object\+Tracker\+C\+C\+Cv}!get\+Last\+Track@{get\+Last\+Track}}
+\index{get\+Last\+Track@{get\+Last\+Track}!Viscv\+::\+Object\+Tracker\+C\+C\+Cv@{Viscv\+::\+Object\+Tracker\+C\+C\+Cv}}
+\subsubsection[{get\+Last\+Track()}]{\setlength{\rightskip}{0pt plus 5cm}const cv\+::\+Rect \& get\+Last\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_viscv_1_1_object_tracker_c_c_cv_ac9faa0124320853a52cb635538b604e4}
+
+
+Returns a reference to the current estimated object state. 
+
+This function is often call after calling the \hyperlink{class_viscv_1_1_object_tracker_c_c_cv_ab233da15b6c7aad7d83c67057a558bd4}{update()} method. The returned reference is usualy to a class member. 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_a93ee7011307419e8c88db9f22d900657}{Tracker$<$ cv\+::\+Mat, cv\+::\+Rect $>$}.
+
+
+
+Definition at line 79 of file Object\+Tracker\+C\+C\+Cv.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Object\+Tracker\+C\+C\+Cv.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Object\+Tracker\+C\+C\+Cv.\+cpp\end{DoxyCompactItemize}

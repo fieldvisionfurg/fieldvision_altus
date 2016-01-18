@@ -1,0 +1,161 @@
+\hypertarget{class_vision_core_1_1_abstractions_1_1_tracker_logger}{}\section{Tracker\+Logger$<$ T\+Img, T\+Obj $>$ Class Template Reference}
+\label{class_vision_core_1_1_abstractions_1_1_tracker_logger}\index{Tracker\+Logger$<$ T\+Img, T\+Obj $>$@{Tracker\+Logger$<$ T\+Img, T\+Obj $>$}}
+
+
+Provides log functionalities for a Tracker. Stores results, processing times and statistics.  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Abstractions.\+h$>$}
+
+
+
+Inheritance diagram for Tracker\+Logger$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{class_vision_core_1_1_abstractions_1_1_tracker_logger__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tracker\+Logger$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{class_vision_core_1_1_abstractions_1_1_tracker_logger__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_tracker_logger_a00d98127ef543d4faa377076168e9575}{}\hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_a00d98127ef543d4faa377076168e9575}{Tracker\+Logger} (\hyperlink{class_vision_core_1_1_interfaces_1_1_tracker}{Tracker}$<$ T\+Img, T\+Obj $>$ $\ast$tracker, const bool log\+Images=false)\label{class_vision_core_1_1_abstractions_1_1_tracker_logger_a00d98127ef543d4faa377076168e9575}
+
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_tracker_logger_a515e5ab772202771a2f0d3854dd0669a}{}virtual \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_a515e5ab772202771a2f0d3854dd0669a}{$\sim$\+Tracker\+Logger} ()\label{class_vision_core_1_1_abstractions_1_1_tracker_logger_a515e5ab772202771a2f0d3854dd0669a}
+
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_tracker_logger_a19b6ea758a0d8c45cfee3859eb483b67}{}std\+::chrono\+::milliseconds \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_a19b6ea758a0d8c45cfee3859eb483b67}{average\+Duration} () const \label{class_vision_core_1_1_abstractions_1_1_tracker_logger_a19b6ea758a0d8c45cfee3859eb483b67}
+
+\begin{DoxyCompactList}\small\item\em Returns the average processing duration. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_tracker_logger_aa7880b2f2cfb2d3bdd15566a428becff}{}const std\+::vector$<$ \hyperlink{struct_vision_core_1_1_abstractions_1_1_tracking_data}{Tracking\+Data}$<$ T\+Obj $>$ $>$ \& \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_aa7880b2f2cfb2d3bdd15566a428becff}{get\+Data} () const \label{class_vision_core_1_1_abstractions_1_1_tracker_logger_aa7880b2f2cfb2d3bdd15566a428becff}
+
+\begin{DoxyCompactList}\small\item\em Returns a vector with all tracking data. \end{DoxyCompactList}\item 
+void \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_a50968bdeed09c7b26cb46c839fe55a52}{lock\+Data} () const 
+\begin{DoxyCompactList}\small\item\em Locks the log data. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_tracker_logger_a59ce319514ddd7916f8962e25cc85869}{}void \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_a59ce319514ddd7916f8962e25cc85869}{unlock\+Data} () const \label{class_vision_core_1_1_abstractions_1_1_tracker_logger_a59ce319514ddd7916f8962e25cc85869}
+
+\begin{DoxyCompactList}\small\item\em Unlocks the log data. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_tracker_logger_a7a25babdd801ae1a4d4365a70af3032d}{}bool \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_a7a25babdd801ae1a4d4365a70af3032d}{write\+To\+File\+As\+Csv} (const std\+::string file\+Name)\label{class_vision_core_1_1_abstractions_1_1_tracker_logger_a7a25babdd801ae1a4d4365a70af3032d}
+
+\begin{DoxyCompactList}\small\item\em Write the data to file as C\+S\+V. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_tracker_logger_a0f269bca8139be827d8f673bed676f60}{}void \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_a0f269bca8139be827d8f673bed676f60}{reset\+Log} ()\label{class_vision_core_1_1_abstractions_1_1_tracker_logger_a0f269bca8139be827d8f673bed676f60}
+
+\begin{DoxyCompactList}\small\item\em Clears all log data. \end{DoxyCompactList}\item 
+void \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_af1a54610c9af7fb54d00e4be2e75609e}{update} (const \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Frame}$<$ T\+Img $>$ \&frame)
+\begin{DoxyCompactList}\small\item\em Updates the object position (state) given a new frame. \end{DoxyCompactList}\item 
+const T\+Obj \& \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_a60f002795ee2555f25dc4f7a9a0845ce}{get\+Last\+Track} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the current estimated object state. \end{DoxyCompactList}\item 
+bool \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_ac7e0977fa702f98038bbe303df458a6c}{lost\+Track} () const 
+\begin{DoxyCompactList}\small\item\em Returns true if the tracker lost the object track. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Img, class T\+Obj$>$class Vision\+Core\+::\+Abstractions\+::\+Tracker\+Logger$<$ T\+Img, T\+Obj $>$}
+
+Provides log functionalities for a Tracker. Stores results, processing times and statistics. 
+
+This class wraps a tracker and transparently provides log functionalities. When the update\+Tracker function is called, it calls the update\+Tracker method of its internal tracker and\+:
+\begin{DoxyItemize}
+\item Store the results.
+\item Compute the processing time for tracking.
+\item Compute statistics
+\item Save the results to file 
+\end{DoxyItemize}
+
+Definition at line 651 of file Vision\+Abstractions.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_vision_core_1_1_abstractions_1_1_tracker_logger_a60f002795ee2555f25dc4f7a9a0845ce}{}\index{Vision\+Core\+::\+Abstractions\+::\+Tracker\+Logger@{Vision\+Core\+::\+Abstractions\+::\+Tracker\+Logger}!get\+Last\+Track@{get\+Last\+Track}}
+\index{get\+Last\+Track@{get\+Last\+Track}!Vision\+Core\+::\+Abstractions\+::\+Tracker\+Logger@{Vision\+Core\+::\+Abstractions\+::\+Tracker\+Logger}}
+\subsubsection[{get\+Last\+Track()}]{\setlength{\rightskip}{0pt plus 5cm}const T\+Obj \& get\+Last\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vision_core_1_1_abstractions_1_1_tracker_logger_a60f002795ee2555f25dc4f7a9a0845ce}
+
+
+Returns a reference to the current estimated object state. 
+
+This function is often call after calling the \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_af1a54610c9af7fb54d00e4be2e75609e}{update()} method. The returned reference is usualy to a class member. 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_a93ee7011307419e8c88db9f22d900657}{Tracker$<$ T\+Img, T\+Obj $>$}.
+
+
+
+Definition at line 815 of file Vision\+Abstractions.\+h.
+
+\hypertarget{class_vision_core_1_1_abstractions_1_1_tracker_logger_a50968bdeed09c7b26cb46c839fe55a52}{}\index{Vision\+Core\+::\+Abstractions\+::\+Tracker\+Logger@{Vision\+Core\+::\+Abstractions\+::\+Tracker\+Logger}!lock\+Data@{lock\+Data}}
+\index{lock\+Data@{lock\+Data}!Vision\+Core\+::\+Abstractions\+::\+Tracker\+Logger@{Vision\+Core\+::\+Abstractions\+::\+Tracker\+Logger}}
+\subsubsection[{lock\+Data() const }]{\setlength{\rightskip}{0pt plus 5cm}void lock\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vision_core_1_1_abstractions_1_1_tracker_logger_a50968bdeed09c7b26cb46c839fe55a52}
+
+
+Locks the log data. 
+
+This function is used to synchronize the access to the data when other threads are accessing it. Don\textquotesingle{}t forget to unlock it after locking. 
+
+Definition at line 694 of file Vision\+Abstractions.\+h.
+
+\hypertarget{class_vision_core_1_1_abstractions_1_1_tracker_logger_ac7e0977fa702f98038bbe303df458a6c}{}\index{Vision\+Core\+::\+Abstractions\+::\+Tracker\+Logger@{Vision\+Core\+::\+Abstractions\+::\+Tracker\+Logger}!lost\+Track@{lost\+Track}}
+\index{lost\+Track@{lost\+Track}!Vision\+Core\+::\+Abstractions\+::\+Tracker\+Logger@{Vision\+Core\+::\+Abstractions\+::\+Tracker\+Logger}}
+\subsubsection[{lost\+Track() const }]{\setlength{\rightskip}{0pt plus 5cm}bool lost\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vision_core_1_1_abstractions_1_1_tracker_logger_ac7e0977fa702f98038bbe303df458a6c}
+
+
+Returns true if the tracker lost the object track. 
+
+The cause for loosing the object track is not specified by the interface. It can be caused by the object going out of image limits, becoming ocluded, or even due to a tracker error. 
+
+Reimplemented from \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_af6217aec35983dca6dc39c91d08c1020}{Tracker$<$ T\+Img, T\+Obj $>$}.
+
+
+
+Definition at line 820 of file Vision\+Abstractions.\+h.
+
+\hypertarget{class_vision_core_1_1_abstractions_1_1_tracker_logger_af1a54610c9af7fb54d00e4be2e75609e}{}\index{Vision\+Core\+::\+Abstractions\+::\+Tracker\+Logger@{Vision\+Core\+::\+Abstractions\+::\+Tracker\+Logger}!update@{update}}
+\index{update@{update}!Vision\+Core\+::\+Abstractions\+::\+Tracker\+Logger@{Vision\+Core\+::\+Abstractions\+::\+Tracker\+Logger}}
+\subsubsection[{update(const Frame$<$ T\+Img $>$ \&frame)}]{\setlength{\rightskip}{0pt plus 5cm}void update (
+\begin{DoxyParamCaption}
+\item[{const {\bf Frame}$<$ T\+Img $>$ \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vision_core_1_1_abstractions_1_1_tracker_logger_af1a54610c9af7fb54d00e4be2e75609e}
+
+
+Updates the object position (state) given a new frame. 
+
+To continuously track an object throughout a video, this method should be call in sequence for all frames. 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_aa298892351b5377fcdc227b6d53daf69}{Tracker$<$ T\+Img, T\+Obj $>$}.
+
+
+
+Definition at line 755 of file Vision\+Abstractions.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Abstractions.\+h\end{DoxyCompactItemize}

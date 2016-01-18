@@ -1,0 +1,4 @@
+<map id="FaceRecogTrackerControl" name="FaceRecogTrackerControl">
+<area shape="rect" id="node2" href="$class_tracker_control.html" title="{TrackerControl\&lt; cv\l::Mat, std::map\&lt; long,\l Biometrics::Person \&gt; \&gt;\n|# tracker\l# asyncTracker\l# loggerTracker\l|+ TrackerControl()\l+ TrackerControl()\l+ setTracker()\l+ pause()\l+ start()\l+ exportLog()\l+ resetLog()\l+ ~TrackerControl()\l# drawResults()\l# drawObject()\l}" alt="" coords="21,336,182,604"/>
+<area shape="rect" id="node3" href="$class_process_control.html" title="Esta classe é responsável por controlar a execuçãoo de um algoritmo de visão computacional. " alt="" coords="16,5,187,288"/>
+</map>

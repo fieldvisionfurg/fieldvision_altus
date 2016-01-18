@@ -1,0 +1,38 @@
+\hypertarget{group___interfaces}{}\section{Interfaces}
+\label{group___interfaces}\index{Interfaces@{Interfaces}}
+
+
+This module contains the generic interfaces used throughout the framework.  
+
+
+Collaboration diagram for Interfaces\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{group___interfaces}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_vision_core_1_1_abstractions_1_1_vision_helpper}{Vision\+Helpper}
+\begin{DoxyCompactList}\small\item\em This class defines some generic helper functions that can be overrided to provide key functionalities. \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_interfaces_1_1_frame_server}{Frame\+Server$<$ T\+Img $>$}
+\begin{DoxyCompactList}\small\item\em Interface for a source of frames. The frames can come from a video file, webcam, set of images, etc. \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_interfaces_1_1_detector}{Detector$<$ T\+Img, T\+Obj $>$}
+\begin{DoxyCompactList}\small\item\em Interface defining a generic object detector (e.\+g. faces, car, people). \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker}{Tracker$<$ T\+Img, T\+Obj $>$}
+\begin{DoxyCompactList}\small\item\em Interface defining a generic object tracker. \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_interfaces_1_1_identified_multi_tracker}{Identified\+Multi\+Tracker$<$ T\+Img, T\+Obj $>$}
+\begin{DoxyCompactList}\small\item\em A \hyperlink{class_vision_core_1_1_interfaces_1_1_identified_multi_tracker}{Identified\+Multi\+Tracker} is a tracker for multiple objects, each having its own I\+D. \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_interfaces_1_1_categorizer}{Categorizer$<$ T\+In, T\+Ctg $>$}
+\begin{DoxyCompactList}\small\item\em Interface defining a generic image categorizer (classifier). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This module contains the generic interfaces used throughout the framework. 
+
+The objective of these interfaces is to define minimal functionalities that detectors, trackers, categorizers, etc should implement.
+
+The image type and object is generalized by using templates, so these interfaces can be implemented for different types of images (e.\+g. Open\+Cv, Kinect, stereo cameras, C\+P\+L cloud points, etc) and for different types of objects (e.\+g. faces, cars, gestures, etc). 

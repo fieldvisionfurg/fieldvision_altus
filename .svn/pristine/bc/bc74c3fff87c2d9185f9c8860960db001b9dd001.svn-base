@@ -1,0 +1,36 @@
+\hypertarget{group___abstractions}{}\section{Abstractions}
+\label{group___abstractions}\index{Abstractions@{Abstractions}}
+
+
+Contains abstract computer vision methods.  
+
+
+Collaboration diagram for Abstractions\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{group___abstractions}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_vision_core_1_1_abstractions_1_1_abstract_auto_tracker}{Abstract\+Auto\+Tracker$<$ T\+Img, T\+Obj $>$}
+\begin{DoxyCompactList}\small\item\em Implements a tracker that can automatically detect and track multiple objects by creating a individual tracker for each object. \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_tracker}{Detector\+Based\+Tracker$<$ T\+Img, T\+Obj $>$}
+\begin{DoxyCompactList}\small\item\em A simple tracker that applies a detector on every frame. \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker}{Detector\+Based\+Multi\+Tracker$<$ T\+Img, T\+Obj $>$}
+\begin{DoxyCompactList}\small\item\em A tracker that applies a detector on every frame. \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_logger}{Detector\+Logger$<$ T\+Img, T\+Obj $>$}
+\begin{DoxyCompactList}\small\item\em Provides log functionalities for a detector. Stores results, processing times and statistics. \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger}{Tracker\+Logger$<$ T\+Img, T\+Obj $>$}
+\begin{DoxyCompactList}\small\item\em Provides log functionalities for a Tracker. Stores results, processing times and statistics. \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker}{Abstract\+Particle\+Filtering\+Tracker$<$ T\+Img, T\+Obj $>$}
+\begin{DoxyCompactList}\small\item\em Implements a particle filtering algorithm for generic tracking models. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains abstract computer vision methods. 
+
+This module contains several classes that provide general methods implementations for computer vision methods and higher level applications, such as particle filtering, detector based tracking, loggers, etc. The classes implemented in this module use template generalization for the image and object types. This way, the methods can be used with images from any source (e.\+g. Open\+Cv, Kinect, stereo cameras, termal cameras, etc). It can support diferent object representation as well (e.\+g. rectangles, contours, specific structs, etc). 

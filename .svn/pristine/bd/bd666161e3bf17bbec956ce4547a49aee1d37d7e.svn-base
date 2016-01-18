@@ -1,0 +1,146 @@
+\hypertarget{class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator}{}\section{Binary\+Classifier\+Evaluator Class Reference}
+\label{class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator}\index{Binary\+Classifier\+Evaluator@{Binary\+Classifier\+Evaluator}}
+
+
+{\ttfamily \#include $<$Vision\+Evaluation.\+h$>$}
+
+
+
+Collaboration diagram for Binary\+Classifier\+Evaluator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator_ac752f3567078dfabdfcaf82b272f3040}{}\hyperlink{class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator_ac752f3567078dfabdfcaf82b272f3040}{Binary\+Classifier\+Evaluator} ()\label{class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator_ac752f3567078dfabdfcaf82b272f3040}
+
+\begin{DoxyCompactList}\small\item\em Default Constuctor. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator_af2197d681f638fd535e08c3cc559254a}{}void \hyperlink{class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator_af2197d681f638fd535e08c3cc559254a}{add\+Test\+Point} (bool det\+Result, bool ground\+Truth)\label{class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator_af2197d681f638fd535e08c3cc559254a}
+
+\begin{DoxyCompactList}\small\item\em Add a detection -\/ ground truth pair. \end{DoxyCompactList}\item 
+\hyperlink{struct_vision_core_1_1_evaluation_1_1_binary_classifier_eval_result}{Binary\+Classifier\+Eval\+Result} \hyperlink{class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator_ad578be8e9cf0140bf74635da8e5345d4}{compute\+Result} ()
+\begin{DoxyCompactList}\small\item\em Compute the results using the data provided via \textquotesingle{}add\+Test\+Point\textquotesingle{}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T\+Img , class T\+Obj1 , class T\+Obj2 $>$ }\\\hyperlink{struct_vision_core_1_1_evaluation_1_1_binary_classifier_eval_result}{Binary\+Classifier\+Eval\+Result} \hyperlink{class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator_a40a3e0ed913bf943beefc171ed0162d3}{evaluate\+Detector\+As\+Classifier} (const \hyperlink{class_vision_core_1_1_interfaces_1_1_detector}{Detector}$<$ T\+Img, T\+Obj1 $>$ \&det, \hyperlink{class_vision_core_1_1_evaluation_1_1_detection_dataset}{Detection\+Dataset}$<$ T\+Img, T\+Obj2 $>$ \&dataset)
+\begin{DoxyCompactList}\small\item\em Helper function that iterates over a dataset by calling the detector for each image and comparing the result with the ground truth. By default, if a image has groundtruth annotations it is considered as a positive instance. Elsewhere, it is considered as a negative instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator_a54604d384e1a55cb93b04a640179eac0}{}static void \hyperlink{class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator_a54604d384e1a55cb93b04a640179eac0}{print\+Report} (const \hyperlink{struct_vision_core_1_1_evaluation_1_1_binary_classifier_eval_result}{Binary\+Classifier\+Eval\+Result} \&result, std\+::ostream \&out=std\+::cout)\label{class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator_a54604d384e1a55cb93b04a640179eac0}
+
+\begin{DoxyCompactList}\small\item\em Print the report for a binary classifier evaluation. By default recall and precision metrics are given considering the \textquotesingle{}true\textquotesingle{} samples. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that performs a binary classifier evaluation. There are two different ways to perform a evaluation of a binary classifier (or a detector as a classifier)\+:
+
+1) Manual\+: For each image in the test set, run the detector/classifier and use the detector $<$stront$>$output + grountruth$<$/stron$>$ as input for the add\+Test\+Point. A Test\+Point is usually one frame. You have to convert the output to boolean. To compute the evaluation results use the funcion \textquotesingle{}compute\+Results\textquotesingle{}. To print the output use the \textquotesingle{}print\+Report\textquotesingle{} function.
+
+2) Auto\+: Using the \textquotesingle{}evaluate\+Detector\+As\+Classifier\textquotesingle{} function to perform a evaluation of the whole dataset (\hyperlink{class_vision_core_1_1_evaluation_1_1_detection_dataset}{Detection\+Dataset} class). The method will assume that a empty vector is a negative and any non-\/empty vector is a positive. It executes all the steps above. 
+
+Definition at line 876 of file Vision\+Evaluation.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator_ad578be8e9cf0140bf74635da8e5345d4}{}\index{Vision\+Core\+::\+Evaluation\+::\+Binary\+Classifier\+Evaluator@{Vision\+Core\+::\+Evaluation\+::\+Binary\+Classifier\+Evaluator}!compute\+Result@{compute\+Result}}
+\index{compute\+Result@{compute\+Result}!Vision\+Core\+::\+Evaluation\+::\+Binary\+Classifier\+Evaluator@{Vision\+Core\+::\+Evaluation\+::\+Binary\+Classifier\+Evaluator}}
+\subsubsection[{compute\+Result()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Binary\+Classifier\+Eval\+Result} compute\+Result (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator_ad578be8e9cf0140bf74635da8e5345d4}
+
+
+Compute the results using the data provided via \textquotesingle{}add\+Test\+Point\textquotesingle{}. 
+
+Computed statistics\+: Accuracy ~\newline
+ $ ACC = \frac{TP+TN}{P+N} $
+
+Recall (Sensitivity/ Hit Rate) ~\newline
+ $ TPR = \frac{TP}{P} $
+
+Specificity ~\newline
+ $ SPC = \frac{TN}{N} $
+
+Precision or positive predictive value (correct detections) ~\newline
+ $ PPV = \frac{TP}{TP+FP} $
+
+Negative predictive value (the percent of negatives that are correctly classified) ~\newline
+ $ NPV = \frac{TN}{TN+FN} $
+
+Fall-\/out or false positive rate ~\newline
+ $ FPR = \frac{FP}{N} $
+
+False discovery rate ~\newline
+ $ FDR = \frac{FP}{FP+TP} $
+
+False negative rate ~\newline
+ $ FNR = \frac{FN}{FN + TP} $
+
+Matthews correlation coefficient is used in machine learning as a measure of the quality of binary (two-\/class) classifications. ~\newline
+ $ MCC = \frac{TP \times TN - FP \times FN}{\sqrt{(TP+FP)(TP+FN)(TN+FP)(TN+FN)}} $
+
+F1 score (is the harmonic mean of precision and recall) ~\newline
+ $ F_{1} = \frac{2 \times PPV \times TPR}{PPV + TPR} $ 
+
+Definition at line 898 of file Vision\+Evaluation.\+h.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator_ad578be8e9cf0140bf74635da8e5345d4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator_a40a3e0ed913bf943beefc171ed0162d3}{}\index{Vision\+Core\+::\+Evaluation\+::\+Binary\+Classifier\+Evaluator@{Vision\+Core\+::\+Evaluation\+::\+Binary\+Classifier\+Evaluator}!evaluate\+Detector\+As\+Classifier@{evaluate\+Detector\+As\+Classifier}}
+\index{evaluate\+Detector\+As\+Classifier@{evaluate\+Detector\+As\+Classifier}!Vision\+Core\+::\+Evaluation\+::\+Binary\+Classifier\+Evaluator@{Vision\+Core\+::\+Evaluation\+::\+Binary\+Classifier\+Evaluator}}
+\subsubsection[{evaluate\+Detector\+As\+Classifier(const Detector$<$ T\+Img, T\+Obj1 $>$ \&det, Detection\+Dataset$<$ T\+Img, T\+Obj2 $>$ \&dataset)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Binary\+Classifier\+Eval\+Result} evaluate\+Detector\+As\+Classifier (
+\begin{DoxyParamCaption}
+\item[{const {\bf Detector}$<$ T\+Img, T\+Obj1 $>$ \&}]{det, }
+\item[{{\bf Detection\+Dataset}$<$ T\+Img, T\+Obj2 $>$ \&}]{dataset}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator_a40a3e0ed913bf943beefc171ed0162d3}
+
+
+Helper function that iterates over a dataset by calling the detector for each image and comparing the result with the ground truth. By default, if a image has groundtruth annotations it is considered as a positive instance. Elsewhere, it is considered as a negative instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Img} & Tipo de imagem. \\
+\hline
+{\em T\+Obj1} & Detector output object type. \\
+\hline
+{\em T\+Obj2} & Ground truth annotation object type \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1003 of file Vision\+Evaluation.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator_a40a3e0ed913bf943beefc171ed0162d3_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Evaluation.\+h\end{DoxyCompactItemize}

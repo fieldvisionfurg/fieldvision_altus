@@ -1,0 +1,71 @@
+\hypertarget{class_vision_core_1_1_abstractions_1_1_vision_helpper}{}\section{Vision\+Helpper Class Reference}
+\label{class_vision_core_1_1_abstractions_1_1_vision_helpper}\index{Vision\+Helpper@{Vision\+Helpper}}
+
+
+This class defines some generic helper functions that can be overrided to provide key functionalities.  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Abstractions.\+h$>$}
+
+
+
+Collaboration diagram for Vision\+Helpper\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_vision_core_1_1_abstractions_1_1_vision_helpper__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_vision_helpper_a4dd2c344261a656daac958298676af6c}{}{\footnotesize template$<$$>$ }\\std\+::string {\bfseries get\+As\+Csv\+String} (const cv\+::\+Rect \&obj)\label{class_vision_core_1_1_abstractions_1_1_vision_helpper_a4dd2c344261a656daac958298676af6c}
+
+\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_vision_helpper_ab7a8387e78358ac86ac3febda232de75}{}{\footnotesize template$<$$>$ }\\std\+::string {\bfseries get\+As\+Csv\+String} (const cv\+::\+Point \&obj)\label{class_vision_core_1_1_abstractions_1_1_vision_helpper_ab7a8387e78358ac86ac3febda232de75}
+
+\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_vision_helpper_a6c6e7a29d1d9faae7865c6e598de42d6}{}{\footnotesize template$<$$>$ }\\std\+::string {\bfseries get\+As\+Csv\+String} (const std\+::map$<$ long, cv\+::\+Rect $>$ \&obj)\label{class_vision_core_1_1_abstractions_1_1_vision_helpper_a6c6e7a29d1d9faae7865c6e598de42d6}
+
+\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_vision_helpper_aca7edbdf8eb3726db7dc63cf76a0608a}{}{\footnotesize template$<$$>$ }\\std\+::string {\bfseries get\+As\+Csv\+String} (const double \&obj)\label{class_vision_core_1_1_abstractions_1_1_vision_helpper_aca7edbdf8eb3726db7dc63cf76a0608a}
+
+\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_vision_helpper_a27125dad1aa36a83561082ce9c97be8a}{}{\footnotesize template$<$$>$ }\\std\+::string {\bfseries get\+As\+Csv\+String} (const bool \&obj)\label{class_vision_core_1_1_abstractions_1_1_vision_helpper_a27125dad1aa36a83561082ce9c97be8a}
+
+\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_vision_helpper_a822de18d48253db54d3a2335340ca45a}{}{\footnotesize template$<$$>$ }\\double {\bfseries similarity} (const cv\+::\+Rect \&r1, const cv\+::\+Rect \&r2)\label{class_vision_core_1_1_abstractions_1_1_vision_helpper_a822de18d48253db54d3a2335340ca45a}
+
+\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_vision_helpper_a20a9e0a4c82f698f2e48e10d26171bb6}{}{\footnotesize template$<$$>$ }\\double {\bfseries similarity} (const std\+::vector$<$ cv\+::\+Point $>$ \&r1, const std\+::vector$<$ cv\+::\+Point $>$ \&r2)\label{class_vision_core_1_1_abstractions_1_1_vision_helpper_a20a9e0a4c82f698f2e48e10d26171bb6}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_vision_helpper_ad04dab2a4747e43dabd39f54f84a4f60}{}{\footnotesize template$<$class T $>$ }\\static std\+::string {\bfseries get\+As\+Csv\+String} (const T \&obj)\label{class_vision_core_1_1_abstractions_1_1_vision_helpper_ad04dab2a4747e43dabd39f54f84a4f60}
+
+\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_vision_helpper_ab987da14b0b76aea861c9bde8482cd19}{}{\footnotesize template$<$class T1 , class T2 $>$ }\\static double {\bfseries similarity} (const T1 \&obj1, const T2 \&obj2)\label{class_vision_core_1_1_abstractions_1_1_vision_helpper_ab987da14b0b76aea861c9bde8482cd19}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class defines some generic helper functions that can be overrided to provide key functionalities. 
+
+Whithin the framework, some functions may be needed for generic data types. Like for example, converting a generic object into string.
+
+This class provides static functions that implement such functions. The user should override this functions for specific data types if necessary. 
+
+Definition at line 1058 of file Vision\+Abstractions.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Abstractions.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Vision\+Helper\+Cv.\+h\end{DoxyCompactItemize}

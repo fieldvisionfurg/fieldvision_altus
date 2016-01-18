@@ -1,0 +1,157 @@
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_logger}{}\section{Detector\+Logger$<$ T\+Img, T\+Obj $>$ Class Template Reference}
+\label{class_vision_core_1_1_abstractions_1_1_detector_logger}\index{Detector\+Logger$<$ T\+Img, T\+Obj $>$@{Detector\+Logger$<$ T\+Img, T\+Obj $>$}}
+
+
+Provides log functionalities for a detector. Stores results, processing times and statistics.  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Abstractions.\+h$>$}
+
+
+
+Inheritance diagram for Detector\+Logger$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{class_vision_core_1_1_abstractions_1_1_detector_logger__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Detector\+Logger$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vision_core_1_1_abstractions_1_1_detector_logger__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_logger_af5876c32c6e7321c66a0ab299d68a391}{}\hyperlink{class_vision_core_1_1_abstractions_1_1_detector_logger_af5876c32c6e7321c66a0ab299d68a391}{Detector\+Logger} (\hyperlink{class_vision_core_1_1_interfaces_1_1_detector}{Detector}$<$ T\+Img, T\+Obj $>$ $\ast$detector, const bool log\+Images=false)\label{class_vision_core_1_1_abstractions_1_1_detector_logger_af5876c32c6e7321c66a0ab299d68a391}
+
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+bool \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_logger_a7a25babdd801ae1a4d4365a70af3032d}{write\+To\+File\+As\+Csv} (const std\+::string file\+Name)
+\begin{DoxyCompactList}\small\item\em Write the data to file as C\+S\+V. Uses method Vision\+Helpper\+::get\+As\+Csv\+String(\+T\+Obj x). \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_logger_a7197cfe2509322e00d3b8e1d2deda792}{}virtual \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_logger_a7197cfe2509322e00d3b8e1d2deda792}{$\sim$\+Detector\+Logger} ()\label{class_vision_core_1_1_abstractions_1_1_detector_logger_a7197cfe2509322e00d3b8e1d2deda792}
+
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_logger_a19b6ea758a0d8c45cfee3859eb483b67}{}std\+::chrono\+::milliseconds \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_logger_a19b6ea758a0d8c45cfee3859eb483b67}{average\+Duration} () const \label{class_vision_core_1_1_abstractions_1_1_detector_logger_a19b6ea758a0d8c45cfee3859eb483b67}
+
+\begin{DoxyCompactList}\small\item\em Returns the average processing duration. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_logger_ab52843f46819e59162d432e25766d429}{}const std\+::vector$<$ \hyperlink{struct_vision_core_1_1_abstractions_1_1_detection_data}{Detection\+Data}$<$ T\+Obj $>$ $>$ \& \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_logger_ab52843f46819e59162d432e25766d429}{get\+Data} () const \label{class_vision_core_1_1_abstractions_1_1_detector_logger_ab52843f46819e59162d432e25766d429}
+
+\begin{DoxyCompactList}\small\item\em Returns a vector with all detections data. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_logger_a0f269bca8139be827d8f673bed676f60}{}void \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_logger_a0f269bca8139be827d8f673bed676f60}{reset\+Log} ()\label{class_vision_core_1_1_abstractions_1_1_detector_logger_a0f269bca8139be827d8f673bed676f60}
+
+\begin{DoxyCompactList}\small\item\em Clears all log data. \end{DoxyCompactList}\item 
+void \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_logger_a50968bdeed09c7b26cb46c839fe55a52}{lock\+Data} () const 
+\begin{DoxyCompactList}\small\item\em Locks the log data. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_logger_a59ce319514ddd7916f8962e25cc85869}{}void \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_logger_a59ce319514ddd7916f8962e25cc85869}{unlock\+Data} () const \label{class_vision_core_1_1_abstractions_1_1_detector_logger_a59ce319514ddd7916f8962e25cc85869}
+
+\begin{DoxyCompactList}\small\item\em Unlocks the log data. \end{DoxyCompactList}\item 
+std\+::vector$<$ T\+Obj $>$ \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_logger_a1f2edd31854cbaeed7db844d4e5bcbfc}{detect} (const T\+Img \&img) const 
+\begin{DoxyCompactList}\small\item\em Detects objects in the image and returns a vector with the detected objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_logger_a771726ddd27137968dca04476b723beb}{}const \hyperlink{class_vision_core_1_1_interfaces_1_1_detector}{Detector}$<$ T\+Img, T\+Obj $>$ $\ast$ \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_logger_a771726ddd27137968dca04476b723beb}{m\+\_\+detector}\label{class_vision_core_1_1_abstractions_1_1_detector_logger_a771726ddd27137968dca04476b723beb}
+
+\begin{DoxyCompactList}\small\item\em Detector used to detect objects. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_logger_a42fd53b3eb82054fad2ea40334e6f4f3}{}bool \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_logger_a42fd53b3eb82054fad2ea40334e6f4f3}{m\+\_\+log\+Images}\label{class_vision_core_1_1_abstractions_1_1_detector_logger_a42fd53b3eb82054fad2ea40334e6f4f3}
+
+\begin{DoxyCompactList}\small\item\em Flag indicating if the logger should store the images. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_logger_aa20a7a964a4c6f898882498bde5c02cf}{}unsigned long \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_logger_aa20a7a964a4c6f898882498bde5c02cf}{m\+\_\+det\+Count}\label{class_vision_core_1_1_abstractions_1_1_detector_logger_aa20a7a964a4c6f898882498bde5c02cf}
+
+\begin{DoxyCompactList}\small\item\em Internal count for detections. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_logger_a3fee8c1000dd122a52b2a95f82b0726c}{}std\+::vector$<$ \hyperlink{struct_vision_core_1_1_abstractions_1_1_detection_data}{Detection\+Data}$<$ T\+Obj $>$ $>$ \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_logger_a3fee8c1000dd122a52b2a95f82b0726c}{m\+\_\+data}\label{class_vision_core_1_1_abstractions_1_1_detector_logger_a3fee8c1000dd122a52b2a95f82b0726c}
+
+\begin{DoxyCompactList}\small\item\em Internal storage for detection results. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_logger_aebfc182cead05fb2cb6d30ffd33eabd3}{}std\+::map$<$ unsigned long, T\+Img $>$ \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_logger_aebfc182cead05fb2cb6d30ffd33eabd3}{m\+\_\+imgs}\label{class_vision_core_1_1_abstractions_1_1_detector_logger_aebfc182cead05fb2cb6d30ffd33eabd3}
+
+\begin{DoxyCompactList}\small\item\em Internal storage for images (used only im m\+\_\+log\+Images is enabled) \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_logger_a0b3be8372825e4a3e7fe9d04aafd923e}{}std\+::chrono\+::milliseconds \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_logger_a0b3be8372825e4a3e7fe9d04aafd923e}{m\+\_\+cum\+Duration}\label{class_vision_core_1_1_abstractions_1_1_detector_logger_a0b3be8372825e4a3e7fe9d04aafd923e}
+
+\begin{DoxyCompactList}\small\item\em Cummulative processing time of all detections. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_logger_a864bbc1c90b2c0599463d65224c10e01}{}std\+::mutex \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_logger_a864bbc1c90b2c0599463d65224c10e01}{m\+\_\+data\+Mutex}\label{class_vision_core_1_1_abstractions_1_1_detector_logger_a864bbc1c90b2c0599463d65224c10e01}
+
+\begin{DoxyCompactList}\small\item\em Mutex for the log data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Img, class T\+Obj$>$class Vision\+Core\+::\+Abstractions\+::\+Detector\+Logger$<$ T\+Img, T\+Obj $>$}
+
+Provides log functionalities for a detector. Stores results, processing times and statistics. 
+
+This class wraps a detector and transparently provides log functionalities. When the detect function is called, it calls the detect method of its internal detector and\+:
+\begin{DoxyItemize}
+\item Store the results.
+\item Compute the processing time for detection.
+\item Compute statistics (e.\+g. number of objects detected on average).
+\item Save the results to file 
+\end{DoxyItemize}
+
+Definition at line 463 of file Vision\+Abstractions.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_logger_a1f2edd31854cbaeed7db844d4e5bcbfc}{}\index{Vision\+Core\+::\+Abstractions\+::\+Detector\+Logger@{Vision\+Core\+::\+Abstractions\+::\+Detector\+Logger}!detect@{detect}}
+\index{detect@{detect}!Vision\+Core\+::\+Abstractions\+::\+Detector\+Logger@{Vision\+Core\+::\+Abstractions\+::\+Detector\+Logger}}
+\subsubsection[{detect(const T\+Img \&img) const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ T\+Obj $>$ detect (
+\begin{DoxyParamCaption}
+\item[{const T\+Img \&}]{img}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vision_core_1_1_abstractions_1_1_detector_logger_a1f2edd31854cbaeed7db844d4e5bcbfc}
+
+
+Detects objects in the image and returns a vector with the detected objects. 
+
+The vector should be empty if no object is detected. 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_detector_a0977745b253f810bb2ec009844618305}{Detector$<$ T\+Img, T\+Obj $>$}.
+
+
+
+Definition at line 537 of file Vision\+Abstractions.\+h.
+
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_logger_a50968bdeed09c7b26cb46c839fe55a52}{}\index{Vision\+Core\+::\+Abstractions\+::\+Detector\+Logger@{Vision\+Core\+::\+Abstractions\+::\+Detector\+Logger}!lock\+Data@{lock\+Data}}
+\index{lock\+Data@{lock\+Data}!Vision\+Core\+::\+Abstractions\+::\+Detector\+Logger@{Vision\+Core\+::\+Abstractions\+::\+Detector\+Logger}}
+\subsubsection[{lock\+Data() const }]{\setlength{\rightskip}{0pt plus 5cm}void lock\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vision_core_1_1_abstractions_1_1_detector_logger_a50968bdeed09c7b26cb46c839fe55a52}
+
+
+Locks the log data. 
+
+This function is used to synchronize the access to the data when other threads are accessing it. Don\textquotesingle{}t forget to unlock it after locking. 
+
+Definition at line 515 of file Vision\+Abstractions.\+h.
+
+\hypertarget{class_vision_core_1_1_abstractions_1_1_detector_logger_a7a25babdd801ae1a4d4365a70af3032d}{}\index{Vision\+Core\+::\+Abstractions\+::\+Detector\+Logger@{Vision\+Core\+::\+Abstractions\+::\+Detector\+Logger}!write\+To\+File\+As\+Csv@{write\+To\+File\+As\+Csv}}
+\index{write\+To\+File\+As\+Csv@{write\+To\+File\+As\+Csv}!Vision\+Core\+::\+Abstractions\+::\+Detector\+Logger@{Vision\+Core\+::\+Abstractions\+::\+Detector\+Logger}}
+\subsubsection[{write\+To\+File\+As\+Csv(const std\+::string file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}bool write\+To\+File\+As\+Csv (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{class_vision_core_1_1_abstractions_1_1_detector_logger_a7a25babdd801ae1a4d4365a70af3032d}
+
+
+Write the data to file as C\+S\+V. Uses method Vision\+Helpper\+::get\+As\+Csv\+String(\+T\+Obj x). 
+
+The method Vision\+Helpper\+::get\+As\+Csv\+String(\+T\+Obj x) should be implemented for type T\+Obj, otherwise the object data will not be writen in the C\+S\+V file. 
+
+Definition at line 570 of file Vision\+Abstractions.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Abstractions.\+h\end{DoxyCompactItemize}

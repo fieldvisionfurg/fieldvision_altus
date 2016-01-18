@@ -1,0 +1,87 @@
+\hypertarget{class_process_widget}{}\section{Process\+Widget Class Reference}
+\label{class_process_widget}\index{Process\+Widget@{Process\+Widget}}
+
+
+Interface gráfica para um objeto \hyperlink{class_process_control}{Process\+Control}. Mostra funcionalidades básicas de controle (fechar, pausar, definir cor de desenho).  
+
+
+
+
+{\ttfamily \#include $<$Process\+Widget.\+h$>$}
+
+
+
+Inheritance diagram for Process\+Widget\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{class_process_widget__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Process\+Widget\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{class_process_widget__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_process_widget_a10e1c99ae3f62bbba072bfc96d9d857c}{}void \hyperlink{class_process_widget_a10e1c99ae3f62bbba072bfc96d9d857c}{close\+Button\+Clicked} ()\label{class_process_widget_a10e1c99ae3f62bbba072bfc96d9d857c}
+
+\begin{DoxyCompactList}\small\item\em Sinaliza que o botão para encerrar o processo foi clicado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_process_widget_a31a32f45ceeddbd698d06d74336f82a5}{}\hyperlink{class_process_widget_a31a32f45ceeddbd698d06d74336f82a5}{Process\+Widget} (\hyperlink{class_process_control}{Process\+Control} $\ast$control, Q\+Widget $\ast$parent=0)\label{class_process_widget_a31a32f45ceeddbd698d06d74336f82a5}
+
+\begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
+\hypertarget{class_process_widget_a8f3d4a1e3040c7694f8058c29e954952}{}\hyperlink{class_process_widget_a8f3d4a1e3040c7694f8058c29e954952}{$\sim$\+Process\+Widget} ()\label{class_process_widget_a8f3d4a1e3040c7694f8058c29e954952}
+
+\begin{DoxyCompactList}\small\item\em Destrutor padrão. \end{DoxyCompactList}\item 
+\hypertarget{class_process_widget_a956ae288828446d19581733815bad2b9}{}void \hyperlink{class_process_widget_a956ae288828446d19581733815bad2b9}{add\+Parameter\+Widget} (Q\+Widget $\ast$wid)\label{class_process_widget_a956ae288828446d19581733815bad2b9}
+
+\begin{DoxyCompactList}\small\item\em Adiciona um widget. \end{DoxyCompactList}\item 
+\hypertarget{class_process_widget_a9f19decc1f3154663af9222560b7aea0}{}void \hyperlink{class_process_widget_a9f19decc1f3154663af9222560b7aea0}{add\+Parameter\+Widget} (Q\+Label $\ast$lab, Q\+Widget $\ast$wid)\label{class_process_widget_a9f19decc1f3154663af9222560b7aea0}
+
+\begin{DoxyCompactList}\small\item\em Adiciona um widget com um label associado. \end{DoxyCompactList}\item 
+\hypertarget{class_process_widget_a458442ffa37c1bb997af6e2ae392d4c9}{}void \hyperlink{class_process_widget_a458442ffa37c1bb997af6e2ae392d4c9}{add\+Widget} (Q\+Widget $\ast$wid)\label{class_process_widget_a458442ffa37c1bb997af6e2ae392d4c9}
+
+\begin{DoxyCompactList}\small\item\em Adiciona um widget. \end{DoxyCompactList}\item 
+\hypertarget{class_process_widget_ad4cdd61d9764dff1012e170ddd629f8f}{}Q\+Color \hyperlink{class_process_widget_ad4cdd61d9764dff1012e170ddd629f8f}{get\+Draw\+Color} ()\label{class_process_widget_ad4cdd61d9764dff1012e170ddd629f8f}
+
+\begin{DoxyCompactList}\small\item\em Retorna a cor selecionada pelo usuário. \end{DoxyCompactList}\item 
+\hypertarget{class_process_widget_aba6dfbd926a8cfa14801311918f0311f}{}void {\bfseries set\+Proc\+Time} (double proc\+Time)\label{class_process_widget_aba6dfbd926a8cfa14801311918f0311f}
+
+\item 
+\hypertarget{class_process_widget_a2dae1852230e4eaee29660022e8a6b2f}{}int {\bfseries get\+Draw\+Size} ()\label{class_process_widget_a2dae1852230e4eaee29660022e8a6b2f}
+
+\item 
+\hypertarget{class_process_widget_a269159408fa7a92a98ce8176daac9026}{}bool {\bfseries draw\+Result} ()\label{class_process_widget_a269159408fa7a92a98ce8176daac9026}
+
+\item 
+\hypertarget{class_process_widget_a83f780f55acecbb262ab1a2e111b097c}{}bool {\bfseries keep\+Log} ()\label{class_process_widget_a83f780f55acecbb262ab1a2e111b097c}
+
+\item 
+\hypertarget{class_process_widget_a1f47b0f6a1af3369f3feb1eabbe85543}{}void {\bfseries set\+Status} (const Q\+String \&status)\label{class_process_widget_a1f47b0f6a1af3369f3feb1eabbe85543}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface gráfica para um objeto \hyperlink{class_process_control}{Process\+Control}. Mostra funcionalidades básicas de controle (fechar, pausar, definir cor de desenho). 
+
+Definition at line 48 of file Process\+Widget.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets/Process\+Widget.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets/Process\+Widget.\+cpp\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets/release/moc\+\_\+\+Process\+Widget.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="detect" name="detect">
+<area shape="rect" id="node2" href="$class_vision_core_1_1_evaluation_1_1_detector_evaluator.html#affd22efb035f7daffbc8ce1ae4b1e85f" title="Runs a detector over each dataset image and compute the performance statistics, printing the result i..." alt="" coords="116,5,303,61"/>
+<area shape="rect" id="node3" href="$class_vision_core_1_1_evaluation_1_1_detector_evaluator.html#a4ecff40990b902c608d4df4a5dab0bd3" title="Runs a detector over each dataset image and compute the performance statistics based on a many&#45;to&#45;man..." alt="" coords="116,85,303,141"/>
+<area shape="rect" id="node4" href="$class_vision_core_1_1_evaluation_1_1_binary_classifier_evaluator.html#a40a3e0ed913bf943beefc171ed0162d3" title="Helper function that iterates over a dataset by calling the detector for each image and comparing the..." alt="" coords="112,165,307,221"/>
+</map>

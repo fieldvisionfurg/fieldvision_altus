@@ -1,0 +1,138 @@
+\hypertarget{class_fire_tracker_c_t}{}\section{Fire\+Tracker\+C\+T Class Reference}
+\label{class_fire_tracker_c_t}\index{Fire\+Tracker\+C\+T@{Fire\+Tracker\+C\+T}}
+
+
+Inheritance diagram for Fire\+Tracker\+C\+T\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{class_fire_tracker_c_t__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Fire\+Tracker\+C\+T\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{class_fire_tracker_c_t__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_fire_tracker_c_t_a772d6cd8f7e032b8f0681a036950880b}{}{\bfseries Fire\+Tracker\+C\+T} (int history\+Size=10, int min\+Movement=8, int motion\+Method=M\+O\+T\+I\+O\+N\+\_\+\+C\+O\+L\+L\+I\+N\+S, int colour\+Method=F\+I\+R\+E\+\_\+\+C\+O\+L\+O\+U\+R\+\_\+\+H\+S\+V\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D, int gray\+Method=G\+R\+A\+Y\+\_\+\+S\+T\+E\+F\+F\+E\+N\+S)\label{class_fire_tracker_c_t_a772d6cd8f7e032b8f0681a036950880b}
+
+\item 
+const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$ $>$ \& \hyperlink{class_fire_tracker_c_t_ae1ccd303e827f5d00620e54bb11a968c}{get\+Last\+Track} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the current estimated object state. \end{DoxyCompactList}\item 
+bool \hyperlink{class_fire_tracker_c_t_ac7e0977fa702f98038bbe303df458a6c}{lost\+Track} () const 
+\begin{DoxyCompactList}\small\item\em Returns true if the tracker lost the object track. \end{DoxyCompactList}\item 
+void \hyperlink{class_fire_tracker_c_t_ab233da15b6c7aad7d83c67057a558bd4}{update} (const \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Vision\+Core\+::\+Frame}$<$ cv\+::\+Mat $>$ \&frame)
+\begin{DoxyCompactList}\small\item\em Given an image (i.\+e. video frame), update the tracked objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_fire_tracker_c_t_af17314d3b3ad16b256629df60fdc60d4}{}int \hyperlink{class_fire_tracker_c_t_af17314d3b3ad16b256629df60fdc60d4}{\+\_\+colour\+Method}\label{class_fire_tracker_c_t_af17314d3b3ad16b256629df60fdc60d4}
+
+\begin{DoxyCompactList}\small\item\em Colour segmentation Method. \end{DoxyCompactList}\item 
+\hypertarget{class_fire_tracker_c_t_a62f04f40d0a1215b7411f67ff2009173}{}int {\bfseries \+\_\+motion\+Method}\label{class_fire_tracker_c_t_a62f04f40d0a1215b7411f67ff2009173}
+
+\item 
+\hypertarget{class_fire_tracker_c_t_a829540891b54ff72f0b59b4ae11a4e02}{}int {\bfseries \+\_\+min\+Movement}\label{class_fire_tracker_c_t_a829540891b54ff72f0b59b4ae11a4e02}
+
+\item 
+\hypertarget{class_fire_tracker_c_t_a7aa4a11920828b069c21b2c63604157e}{}int {\bfseries \+\_\+history\+Size}\label{class_fire_tracker_c_t_a7aa4a11920828b069c21b2c63604157e}
+
+\item 
+\hypertarget{class_fire_tracker_c_t_ac5014b39f302adbf423f6bb2f65f470e}{}int {\bfseries \+\_\+gray\+Method}\label{class_fire_tracker_c_t_ac5014b39f302adbf423f6bb2f65f470e}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 57 of file Fire\+Tracker\+C\+T.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_fire_tracker_c_t_ae1ccd303e827f5d00620e54bb11a968c}{}\index{Fire\+Tracker\+C\+T@{Fire\+Tracker\+C\+T}!get\+Last\+Track@{get\+Last\+Track}}
+\index{get\+Last\+Track@{get\+Last\+Track}!Fire\+Tracker\+C\+T@{Fire\+Tracker\+C\+T}}
+\subsubsection[{get\+Last\+Track()}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$ $>$ \& get\+Last\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_fire_tracker_c_t_ae1ccd303e827f5d00620e54bb11a968c}
+
+
+Returns a reference to the current estimated object state. 
+
+This function is often call after calling the \hyperlink{class_fire_tracker_c_t_ab233da15b6c7aad7d83c67057a558bd4}{update()} method. The returned reference is usualy to a class member. 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_a93ee7011307419e8c88db9f22d900657}{Tracker$<$ cv\+::\+Mat, std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$ $>$ $>$}.
+
+
+
+Definition at line 54 of file Fire\+Tracker\+C\+T.\+cpp.
+
+\hypertarget{class_fire_tracker_c_t_ac7e0977fa702f98038bbe303df458a6c}{}\index{Fire\+Tracker\+C\+T@{Fire\+Tracker\+C\+T}!lost\+Track@{lost\+Track}}
+\index{lost\+Track@{lost\+Track}!Fire\+Tracker\+C\+T@{Fire\+Tracker\+C\+T}}
+\subsubsection[{lost\+Track() const }]{\setlength{\rightskip}{0pt plus 5cm}bool lost\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_fire_tracker_c_t_ac7e0977fa702f98038bbe303df458a6c}
+
+
+Returns true if the tracker lost the object track. 
+
+The cause for loosing the object track is not specified by the interface. It can be caused by the object going out of image limits, becoming ocluded, or even due to a tracker error. 
+
+Reimplemented from \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_af6217aec35983dca6dc39c91d08c1020}{Tracker$<$ cv\+::\+Mat, std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$ $>$ $>$}.
+
+
+
+Definition at line 48 of file Fire\+Tracker\+C\+T.\+cpp.
+
+\hypertarget{class_fire_tracker_c_t_ab233da15b6c7aad7d83c67057a558bd4}{}\index{Fire\+Tracker\+C\+T@{Fire\+Tracker\+C\+T}!update@{update}}
+\index{update@{update}!Fire\+Tracker\+C\+T@{Fire\+Tracker\+C\+T}}
+\subsubsection[{update(const Vision\+Core\+::\+Frame$<$ cv\+::\+Mat $>$ \&frame)}]{\setlength{\rightskip}{0pt plus 5cm}void update (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vision\+Core\+::\+Frame}$<$ cv\+::\+Mat $>$ \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_fire_tracker_c_t_ab233da15b6c7aad7d83c67057a558bd4}
+
+
+Given an image (i.\+e. video frame), update the tracked objects. 
+
+Find contours 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_aa298892351b5377fcdc227b6d53daf69}{Tracker$<$ cv\+::\+Mat, std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$ $>$ $>$}.
+
+
+
+Definition at line 61 of file Fire\+Tracker\+C\+T.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{class_fire_tracker_c_t_ab233da15b6c7aad7d83c67057a558bd4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Fire\+Detector/Fire\+Tracker\+C\+T.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Fire\+Detector/Fire\+Tracker\+C\+T.\+cpp\end{DoxyCompactItemize}

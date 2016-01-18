@@ -1,0 +1,126 @@
+\hypertarget{class_viscv_1_1_templ_matching_tracker}{}\section{Templ\+Matching\+Tracker Class Reference}
+\label{class_viscv_1_1_templ_matching_tracker}\index{Templ\+Matching\+Tracker@{Templ\+Matching\+Tracker}}
+
+
+Rastreia objetos usando template matching.  
+
+
+
+
+{\ttfamily \#include $<$Templ\+Matching\+Tracker.\+h$>$}
+
+
+
+Inheritance diagram for Templ\+Matching\+Tracker\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{class_viscv_1_1_templ_matching_tracker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Templ\+Matching\+Tracker\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{class_viscv_1_1_templ_matching_tracker__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_viscv_1_1_templ_matching_tracker_ad885725f17a30d91f02f762a83e0df22}{}cv\+::\+Mat {\bfseries get\+Template} () const \label{class_viscv_1_1_templ_matching_tracker_ad885725f17a30d91f02f762a83e0df22}
+
+\item 
+\hypertarget{class_viscv_1_1_templ_matching_tracker_a60a256669585256ac591f9b7c1e0bbf2}{}void {\bfseries set\+Template} (const cv\+::\+Mat \&value)\label{class_viscv_1_1_templ_matching_tracker_a60a256669585256ac591f9b7c1e0bbf2}
+
+\item 
+\hypertarget{class_viscv_1_1_templ_matching_tracker_a634e061907a567a2412dd2be2f2bd24c}{}int {\bfseries get\+Match\+Method} () const \label{class_viscv_1_1_templ_matching_tracker_a634e061907a567a2412dd2be2f2bd24c}
+
+\item 
+\hypertarget{class_viscv_1_1_templ_matching_tracker_aec8c39e71fdcbc008cf3ee4a98546993}{}void {\bfseries set\+Match\+Method} (int value)\label{class_viscv_1_1_templ_matching_tracker_aec8c39e71fdcbc008cf3ee4a98546993}
+
+\item 
+\hypertarget{class_viscv_1_1_templ_matching_tracker_aaaf8ed01798b173afdd47496e2748810}{}double {\bfseries get\+Enlarge\+Ratio} () const \label{class_viscv_1_1_templ_matching_tracker_aaaf8ed01798b173afdd47496e2748810}
+
+\item 
+\hypertarget{class_viscv_1_1_templ_matching_tracker_a317d7ee9a29062a7357d9d15e7921ba3}{}void {\bfseries set\+Enlarge\+Ratio} (double value)\label{class_viscv_1_1_templ_matching_tracker_a317d7ee9a29062a7357d9d15e7921ba3}
+
+\item 
+const cv\+::\+Rect \& \hyperlink{class_viscv_1_1_templ_matching_tracker_ac9faa0124320853a52cb635538b604e4}{get\+Last\+Track} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the current estimated object state. \end{DoxyCompactList}\item 
+void \hyperlink{class_viscv_1_1_templ_matching_tracker_ab233da15b6c7aad7d83c67057a558bd4}{update} (const \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Vision\+Core\+::\+Frame}$<$ cv\+::\+Mat $>$ \&frame)
+\begin{DoxyCompactList}\small\item\em Updates the object position (state) given a new frame. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_templ_matching_tracker_a2eab82c376502055b29c460ff8b26cf9}{}void {\bfseries reset} (const cv\+::\+Rect \&rectangle)\label{class_viscv_1_1_templ_matching_tracker_a2eab82c376502055b29c460ff8b26cf9}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Rastreia objetos usando template matching. 
+
+Definition at line 43 of file Templ\+Matching\+Tracker.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_viscv_1_1_templ_matching_tracker_ac9faa0124320853a52cb635538b604e4}{}\index{Viscv\+::\+Templ\+Matching\+Tracker@{Viscv\+::\+Templ\+Matching\+Tracker}!get\+Last\+Track@{get\+Last\+Track}}
+\index{get\+Last\+Track@{get\+Last\+Track}!Viscv\+::\+Templ\+Matching\+Tracker@{Viscv\+::\+Templ\+Matching\+Tracker}}
+\subsubsection[{get\+Last\+Track()}]{\setlength{\rightskip}{0pt plus 5cm}const cv\+::\+Rect \& get\+Last\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_viscv_1_1_templ_matching_tracker_ac9faa0124320853a52cb635538b604e4}
+
+
+Returns a reference to the current estimated object state. 
+
+This function is often call after calling the \hyperlink{class_viscv_1_1_templ_matching_tracker_ab233da15b6c7aad7d83c67057a558bd4}{update()} method. The returned reference is usualy to a class member. 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_a93ee7011307419e8c88db9f22d900657}{Tracker$<$ cv\+::\+Mat, cv\+::\+Rect $>$}.
+
+
+
+Definition at line 78 of file Templ\+Matching\+Tracker.\+cpp.
+
+\hypertarget{class_viscv_1_1_templ_matching_tracker_ab233da15b6c7aad7d83c67057a558bd4}{}\index{Viscv\+::\+Templ\+Matching\+Tracker@{Viscv\+::\+Templ\+Matching\+Tracker}!update@{update}}
+\index{update@{update}!Viscv\+::\+Templ\+Matching\+Tracker@{Viscv\+::\+Templ\+Matching\+Tracker}}
+\subsubsection[{update(const Vision\+Core\+::\+Frame$<$ cv\+::\+Mat $>$ \&frame)}]{\setlength{\rightskip}{0pt plus 5cm}void update (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vision\+Core\+::\+Frame}$<$ cv\+::\+Mat $>$ \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_viscv_1_1_templ_matching_tracker_ab233da15b6c7aad7d83c67057a558bd4}
+
+
+Updates the object position (state) given a new frame. 
+
+To continuously track an object throughout a video, this method should be call in sequence for all frames. 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_aa298892351b5377fcdc227b6d53daf69}{Tracker$<$ cv\+::\+Mat, cv\+::\+Rect $>$}.
+
+
+
+Definition at line 83 of file Templ\+Matching\+Tracker.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{class_viscv_1_1_templ_matching_tracker_ab233da15b6c7aad7d83c67057a558bd4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Templ\+Matching\+Tracker.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Templ\+Matching\+Tracker.\+cpp\end{DoxyCompactItemize}

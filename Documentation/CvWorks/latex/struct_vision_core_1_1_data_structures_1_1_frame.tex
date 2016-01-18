@@ -1,0 +1,98 @@
+\hypertarget{struct_vision_core_1_1_data_structures_1_1_frame}{}\section{Frame$<$ T\+Img $>$ Struct Template Reference}
+\label{struct_vision_core_1_1_data_structures_1_1_frame}\index{Frame$<$ T\+Img $>$@{Frame$<$ T\+Img $>$}}
+
+
+A \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Frame} contains an image, number and timestamp from a video sequence.  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Data\+Structures.\+h$>$}
+
+
+
+Collaboration diagram for Frame$<$ T\+Img $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{struct_vision_core_1_1_data_structures_1_1_frame__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct_vision_core_1_1_data_structures_1_1_frame_ab71e6ee46f0c2593266f9a62d9c5e029}{}\hyperlink{struct_vision_core_1_1_data_structures_1_1_frame_ab71e6ee46f0c2593266f9a62d9c5e029}{Frame} ()\label{struct_vision_core_1_1_data_structures_1_1_frame_ab71e6ee46f0c2593266f9a62d9c5e029}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. The image pointer will be N\+U\+L\+L. \end{DoxyCompactList}\item 
+\hypertarget{struct_vision_core_1_1_data_structures_1_1_frame_a1a66f2c129c5b9d1e01a91fb79a30955}{}\hyperlink{struct_vision_core_1_1_data_structures_1_1_frame_a1a66f2c129c5b9d1e01a91fb79a30955}{Frame} (const \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Frame}$<$ T\+Img $>$ \&f)\label{struct_vision_core_1_1_data_structures_1_1_frame_a1a66f2c129c5b9d1e01a91fb79a30955}
+
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\hypertarget{struct_vision_core_1_1_data_structures_1_1_frame_ad1922ee359de63de3408e5b8d0c55fbb}{}\hyperlink{struct_vision_core_1_1_data_structures_1_1_frame_ad1922ee359de63de3408e5b8d0c55fbb}{Frame} (T\+Img $\ast$const img\+Ptr, const double timestamp=-\/1.\+0, long number=-\/1)\label{struct_vision_core_1_1_data_structures_1_1_frame_ad1922ee359de63de3408e5b8d0c55fbb}
+
+\begin{DoxyCompactList}\small\item\em Constructor method. The \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Frame} object becomes the owner of img\+Ptr. \end{DoxyCompactList}\item 
+\hypertarget{struct_vision_core_1_1_data_structures_1_1_frame_a26120b2d2b02e07b403fd1998d6440cc}{}\hyperlink{struct_vision_core_1_1_data_structures_1_1_frame_a26120b2d2b02e07b403fd1998d6440cc}{Frame} (std\+::shared\+\_\+ptr$<$ T\+Img $>$ img\+Ptr, const double timestamp=-\/1.\+0, long number=-\/1)\label{struct_vision_core_1_1_data_structures_1_1_frame_a26120b2d2b02e07b403fd1998d6440cc}
+
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+\hypertarget{struct_vision_core_1_1_data_structures_1_1_frame_a2cd40493f7d60503437c03df06dba60f}{}virtual \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame_a2cd40493f7d60503437c03df06dba60f}{$\sim$\+Frame} ()\label{struct_vision_core_1_1_data_structures_1_1_frame_a2cd40493f7d60503437c03df06dba60f}
+
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+\hypertarget{struct_vision_core_1_1_data_structures_1_1_frame_a8531d354b20874961d98c796e3973b4d}{}const T\+Img \& \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame_a8531d354b20874961d98c796e3973b4d}{get\+Img} () const \label{struct_vision_core_1_1_data_structures_1_1_frame_a8531d354b20874961d98c796e3973b4d}
+
+\begin{DoxyCompactList}\small\item\em Returns a reference to the frame image. \end{DoxyCompactList}\item 
+\hypertarget{struct_vision_core_1_1_data_structures_1_1_frame_a44eaf0478af91aac4d80cffbb8f68673}{}std\+::shared\+\_\+ptr$<$ T\+Img $>$ const \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame_a44eaf0478af91aac4d80cffbb8f68673}{get\+Img\+Ptr} () const \label{struct_vision_core_1_1_data_structures_1_1_frame_a44eaf0478af91aac4d80cffbb8f68673}
+
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the frame image. \end{DoxyCompactList}\item 
+\hypertarget{struct_vision_core_1_1_data_structures_1_1_frame_a14dc2ac21bd59eb0bce43d5f839b8de0}{}unsigned long \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame_a14dc2ac21bd59eb0bce43d5f839b8de0}{get\+Number} () const \label{struct_vision_core_1_1_data_structures_1_1_frame_a14dc2ac21bd59eb0bce43d5f839b8de0}
+
+\begin{DoxyCompactList}\small\item\em Returns the frame number. \end{DoxyCompactList}\item 
+const double \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame_ab0e6d692261de323466e6b083a173e5e}{get\+Timestamp} () const 
+\begin{DoxyCompactList}\small\item\em Returns the frame timestamp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Img$>$struct Vision\+Core\+::\+Data\+Structures\+::\+Frame$<$ T\+Img $>$}
+
+A \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Frame} contains an image, number and timestamp from a video sequence. 
+
+This class contains (and owns) an image, as well as a frame number and a timestamp that relate to the time and position of the image within a video.
+
+A \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Frame} is constructed by providing an image pointer, in which case the \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Frame} object becomes the owner of the image object. 
+
+Definition at line 57 of file Vision\+Data\+Structures.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_vision_core_1_1_data_structures_1_1_frame_ab0e6d692261de323466e6b083a173e5e}{}\index{Vision\+Core\+::\+Data\+Structures\+::\+Frame@{Vision\+Core\+::\+Data\+Structures\+::\+Frame}!get\+Timestamp@{get\+Timestamp}}
+\index{get\+Timestamp@{get\+Timestamp}!Vision\+Core\+::\+Data\+Structures\+::\+Frame@{Vision\+Core\+::\+Data\+Structures\+::\+Frame}}
+\subsubsection[{get\+Timestamp() const }]{\setlength{\rightskip}{0pt plus 5cm}const double get\+Timestamp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_vision_core_1_1_data_structures_1_1_frame_ab0e6d692261de323466e6b083a173e5e}
+
+
+Returns the frame timestamp. 
+
+The unit (e.\+g. miliseconds, tics) is not defined. Usually, the unit is defined within an application. 
+
+Definition at line 101 of file Vision\+Data\+Structures.\+h.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{struct_vision_core_1_1_data_structures_1_1_frame_ab0e6d692261de323466e6b083a173e5e_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Data\+Structures.\+h\end{DoxyCompactItemize}

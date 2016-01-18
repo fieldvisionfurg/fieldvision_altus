@@ -1,0 +1,113 @@
+\hypertarget{class_vision_core_1_1_interfaces_1_1_detector}{}\section{Detector$<$ T\+Img, T\+Obj $>$ Class Template Reference}
+\label{class_vision_core_1_1_interfaces_1_1_detector}\index{Detector$<$ T\+Img, T\+Obj $>$@{Detector$<$ T\+Img, T\+Obj $>$}}
+
+
+Interface defining a generic object detector (e.\+g. faces, car, people).  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Interfaces.\+h$>$}
+
+
+
+Inheritance diagram for Detector$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{class_vision_core_1_1_interfaces_1_1_detector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Detector$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{class_vision_core_1_1_interfaces_1_1_detector__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_interfaces_1_1_detector_aaafe8051ac78bd4d8ed3027acd24a1c0}{}typedef T\+Img {\bfseries Img\+Type}\label{class_vision_core_1_1_interfaces_1_1_detector_aaafe8051ac78bd4d8ed3027acd24a1c0}
+
+\item 
+\hypertarget{class_vision_core_1_1_interfaces_1_1_detector_a34f8ad85716743523e520af46032716e}{}typedef T\+Obj {\bfseries Obj\+Type}\label{class_vision_core_1_1_interfaces_1_1_detector_a34f8ad85716743523e520af46032716e}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::vector$<$ T\+Obj $>$ \hyperlink{class_vision_core_1_1_interfaces_1_1_detector_a0977745b253f810bb2ec009844618305}{detect} (const T\+Img \&img) const  =0
+\begin{DoxyCompactList}\small\item\em Detects objects in the image and returns a vector with the detected objects. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_interfaces_1_1_detector_a4e37933b023a5f4d4f28c5b5bf3f9459}{}virtual void {\bfseries detect} (const T\+Img \&img, std\+::vector$<$ T\+Obj $>$ \&obj) const \label{class_vision_core_1_1_interfaces_1_1_detector_a4e37933b023a5f4d4f28c5b5bf3f9459}
+
+\item 
+\hypertarget{class_vision_core_1_1_interfaces_1_1_detector_a91a737d10b7440970932af8c8d8380d2}{}virtual \hyperlink{class_vision_core_1_1_interfaces_1_1_detector_a91a737d10b7440970932af8c8d8380d2}{$\sim$\+Detector} ()\label{class_vision_core_1_1_interfaces_1_1_detector_a91a737d10b7440970932af8c8d8380d2}
+
+\begin{DoxyCompactList}\small\item\em Destrutor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Img, class T\+Obj$>$class Vision\+Core\+::\+Interfaces\+::\+Detector$<$ T\+Img, T\+Obj $>$}
+
+Interface defining a generic object detector (e.\+g. faces, car, people). 
+
+An object detector, as defined here, is a computer vision method that finds objects in a given image.
+
+Usually, the object position is represented by a bounding rectangle around the object, however other representation can also be used (a bounding circle, the object contour, or simple a point). Some methods can detect not only the position, but also more complex information, like a skeleton for a people detector.
+
+This interface provides a minimal and generic description of an object detector. The interface has only one method\+: \hyperlink{class_vision_core_1_1_interfaces_1_1_detector_a0977745b253f810bb2ec009844618305}{detect()}, which receives an input image and returns a vector of objects found within the image. Both the image and object types are generic.
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Img} & Image type used in the detector. \\
+\hline
+{\em T\+Obj} & Object type returned by the detector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Async\+Detector\+Wrap Circle\+Detector\+H\+T\+C\+F 
+\end{DoxySeeAlso}
+
+
+Definition at line 125 of file Vision\+Interfaces.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_vision_core_1_1_interfaces_1_1_detector_a0977745b253f810bb2ec009844618305}{}\index{Vision\+Core\+::\+Interfaces\+::\+Detector@{Vision\+Core\+::\+Interfaces\+::\+Detector}!detect@{detect}}
+\index{detect@{detect}!Vision\+Core\+::\+Interfaces\+::\+Detector@{Vision\+Core\+::\+Interfaces\+::\+Detector}}
+\subsubsection[{detect(const T\+Img \&img) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::vector$<$T\+Obj$>$ detect (
+\begin{DoxyParamCaption}
+\item[{const T\+Img \&}]{img}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_vision_core_1_1_interfaces_1_1_detector_a0977745b253f810bb2ec009844618305}
+
+
+Detects objects in the image and returns a vector with the detected objects. 
+
+The vector should be empty if no object is detected. 
+
+Implemented in \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_logger_a1f2edd31854cbaeed7db844d4e5bcbfc}{Detector\+Logger$<$ T\+Img, T\+Obj $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_logger_a1f2edd31854cbaeed7db844d4e5bcbfc}{Detector\+Logger$<$ cv\+::\+Mat, cv\+::\+Rect $>$}, \hyperlink{class_viscv_1_1_a_r_tag_detector_b_l_p_a0065a0a0e3dbed236849bf406e6cde66}{A\+R\+Tag\+Detector\+B\+L\+P}, \hyperlink{class_viscv_1_1_object_detector_c_c_cv_a1d0c071b6e7a19b192c86ca0e47fd642}{Object\+Detector\+C\+C\+Cv}, \hyperlink{class_viscv_1_1_circle_detector_h_t_c_f_ad8f008988f0c246f86a192f8c17c3a88}{Circle\+Detector\+H\+T\+C\+F}, \hyperlink{class_viscv_1_1_line_detector_h_t_a8128bf0deed5f697117c5948fc7c014d}{Line\+Detector\+H\+T}, \hyperlink{class_viscv_1_1_color_blob_detector_h_f_a76311b08b5cb9df65524e070e9c15048}{Color\+Blob\+Detector\+H\+F}, \hyperlink{class_viscv_1_1_templ_matching_detector_a1d0c071b6e7a19b192c86ca0e47fd642}{Templ\+Matching\+Detector}, and \hyperlink{class_viscv_1_1_object_detector_f_m_cv_a1d0c071b6e7a19b192c86ca0e47fd642}{Object\+Detector\+F\+M\+Cv}.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{class_vision_core_1_1_interfaces_1_1_detector_a0977745b253f810bb2ec009844618305_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Interfaces.\+h\end{DoxyCompactItemize}

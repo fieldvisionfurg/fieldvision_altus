@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['datasetfddb',['DatasetFDDB',['../class_viscv_1_1_dataset_f_d_d_b.html',1,'Viscv']]],
+  ['datasetfire',['DatasetFire',['../class_dataset_fire.html',1,'']]],
+  ['detectiondata',['DetectionData',['../struct_vision_core_1_1_abstractions_1_1_detection_data.html',1,'VisionCore::Abstractions']]],
+  ['detectiondata_3c_20cv_3a_3arect_20_3e',['DetectionData&lt; cv::Rect &gt;',['../struct_vision_core_1_1_abstractions_1_1_detection_data.html',1,'VisionCore::Abstractions']]],
+  ['detectiondataset',['DetectionDataset',['../class_vision_core_1_1_evaluation_1_1_detection_dataset.html',1,'VisionCore::Evaluation']]],
+  ['detectiondataset_3c_20cv_3a_3amat_2c_20cv_3a_3arect_20_3e',['DetectionDataset&lt; cv::Mat, cv::Rect &gt;',['../class_vision_core_1_1_evaluation_1_1_detection_dataset.html',1,'VisionCore::Evaluation']]],
+  ['detectiondataset_3c_20cv_3a_3amat_2c_20tobj_20_3e',['DetectionDataset&lt; cv::Mat, TObj &gt;',['../class_vision_core_1_1_evaluation_1_1_detection_dataset.html',1,'VisionCore::Evaluation']]],
+  ['detectiondatasetcontrol',['DetectionDatasetControl',['../class_detection_dataset_control.html',1,'']]],
+  ['detectionsubdataset',['DetectionSubDataset',['../class_vision_core_1_1_evaluation_1_1_detection_sub_dataset.html',1,'VisionCore::Evaluation']]],
+  ['detector',['Detector',['../class_vision_core_1_1_interfaces_1_1_detector.html',1,'VisionCore::Interfaces']]],
+  ['detector_3c_20cv_3a_3amat_2c_20artag_20_3e',['Detector&lt; cv::Mat, ARTag &gt;',['../class_vision_core_1_1_interfaces_1_1_detector.html',1,'VisionCore::Interfaces']]],
+  ['detector_3c_20cv_3a_3amat_2c_20circle_3c_3e_20_3e',['Detector&lt; cv::Mat, Circle&lt;&gt; &gt;',['../class_vision_core_1_1_interfaces_1_1_detector.html',1,'VisionCore::Interfaces']]],
+  ['detector_3c_20cv_3a_3amat_2c_20cv_3a_3arect_20_3e',['Detector&lt; cv::Mat, cv::Rect &gt;',['../class_vision_core_1_1_interfaces_1_1_detector.html',1,'VisionCore::Interfaces']]],
+  ['detector_3c_20cv_3a_3amat_2c_20line_3c_3e_20_3e',['Detector&lt; cv::Mat, Line&lt;&gt; &gt;',['../class_vision_core_1_1_interfaces_1_1_detector.html',1,'VisionCore::Interfaces']]],
+  ['detector_3c_20cv_3a_3amat_2c_20std_3a_3avector_3c_20cv_3a_3apoint_20_3e_20_3e',['Detector&lt; cv::Mat, std::vector&lt; cv::Point &gt; &gt;',['../class_vision_core_1_1_interfaces_1_1_detector.html',1,'VisionCore::Interfaces']]],
+  ['detectorbasedmultitracker',['DetectorBasedMultiTracker',['../class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker.html',1,'VisionCore::Abstractions']]],
+  ['detectorbasedtracker',['DetectorBasedTracker',['../class_vision_core_1_1_abstractions_1_1_detector_based_tracker.html',1,'VisionCore::Abstractions']]],
+  ['detectorcontrol',['DetectorControl',['../class_detector_control.html',1,'']]],
+  ['detectorcontrol_3c_20cv_3a_3amat_2c_20cv_3a_3arect_20_3e',['DetectorControl&lt; cv::Mat, cv::Rect &gt;',['../class_detector_control.html',1,'']]],
+  ['detectorcontrolwidget',['DetectorControlWidget',['../class_detector_control_widget.html',1,'']]],
+  ['detectorcontrolwidget',['DetectorControlWidget',['../class_ui_1_1_detector_control_widget.html',1,'Ui']]],
+  ['detectorevalresult',['DetectorEvalResult',['../struct_vision_core_1_1_evaluation_1_1_detector_eval_result.html',1,'VisionCore::Evaluation']]],
+  ['detectorevaluator',['DetectorEvaluator',['../class_vision_core_1_1_evaluation_1_1_detector_evaluator.html',1,'VisionCore::Evaluation']]],
+  ['detectorlogger',['DetectorLogger',['../class_vision_core_1_1_abstractions_1_1_detector_logger.html',1,'VisionCore::Abstractions']]],
+  ['detectorlogger_3c_20cv_3a_3amat_2c_20cv_3a_3arect_20_3e',['DetectorLogger&lt; cv::Mat, cv::Rect &gt;',['../class_vision_core_1_1_abstractions_1_1_detector_logger.html',1,'VisionCore::Abstractions']]]
+];

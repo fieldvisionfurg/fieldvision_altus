@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_vision_core_1_1_interfaces_1_1_tracker.html" title="Tracker\&lt; TImg, std\l::vector\&lt; TObj \&gt; \&gt;" alt="" coords="5,5,136,47"/>
+<area shape="rect" id="node2" href="$class_vision_core_1_1_abstractions_1_1_detector_based_tracker.html" title="A simple tracker that applies a detector on every frame. " alt="" coords="184,5,335,47"/>
+</map>

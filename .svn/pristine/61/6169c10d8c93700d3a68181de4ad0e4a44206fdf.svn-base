@@ -1,0 +1,32 @@
+\hypertarget{group___async}{}\section{Async}
+\label{group___async}\index{Async@{Async}}
+
+
+Contains classes that execute the Cv\+Works methods asynchronously in separate threads.  
+
+
+Collaboration diagram for Async\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{group___async}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_vision_core_1_1_async_1_1_async_frame_server_wrap}{Async\+Frame\+Server\+Wrap$<$ T\+Img $>$}
+\begin{DoxyCompactList}\small\item\em Allows the execution of a frame server asynchronously in an individual thread. \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_async_1_1_async_vision_execution}{Async\+Vision\+Execution$<$ T\+Img, T\+Out $>$}
+\begin{DoxyCompactList}\small\item\em Allows the execution of a vision method asynchronously in an individual thread. \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_async_1_1_async_detector_wrap}{Async\+Detector\+Wrap$<$ T\+Img, T\+Obj $>$}
+\begin{DoxyCompactList}\small\item\em Allows the execution of a detector asynchronously in an individual thread. \end{DoxyCompactList}\item 
+class \hyperlink{class_vision_core_1_1_async_1_1_async_tracker_wrap}{Async\+Tracker\+Wrap$<$ T\+Img, T\+Obj $>$}
+\begin{DoxyCompactList}\small\item\em Allows the execution of a tracker asynchronously in an individual thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains classes that execute the Cv\+Works methods asynchronously in separate threads. 
+
+The classes in this module work as wraps that receive an object (detector, tracker, etc) and coordinate its execution in individual threads. 

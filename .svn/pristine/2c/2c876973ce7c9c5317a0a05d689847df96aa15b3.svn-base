@@ -1,0 +1,167 @@
+\hypertarget{class_vision_core_1_1_interfaces_1_1_tracker}{}\section{Tracker$<$ T\+Img, T\+Obj $>$ Class Template Reference}
+\label{class_vision_core_1_1_interfaces_1_1_tracker}\index{Tracker$<$ T\+Img, T\+Obj $>$@{Tracker$<$ T\+Img, T\+Obj $>$}}
+
+
+Interface defining a generic object tracker.  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Interfaces.\+h$>$}
+
+
+
+Inheritance diagram for Tracker$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{class_vision_core_1_1_interfaces_1_1_tracker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tracker$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{class_vision_core_1_1_interfaces_1_1_tracker__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_interfaces_1_1_tracker_aaafe8051ac78bd4d8ed3027acd24a1c0}{}typedef T\+Img {\bfseries Img\+Type}\label{class_vision_core_1_1_interfaces_1_1_tracker_aaafe8051ac78bd4d8ed3027acd24a1c0}
+
+\item 
+\hypertarget{class_vision_core_1_1_interfaces_1_1_tracker_a34f8ad85716743523e520af46032716e}{}typedef T\+Obj {\bfseries Obj\+Type}\label{class_vision_core_1_1_interfaces_1_1_tracker_a34f8ad85716743523e520af46032716e}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_interfaces_1_1_tracker_aa43757593e7744038c0fc6c9c35b75a5}{}\hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_aa43757593e7744038c0fc6c9c35b75a5}{Tracker} ()\label{class_vision_core_1_1_interfaces_1_1_tracker_aa43757593e7744038c0fc6c9c35b75a5}
+
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+virtual const T\+Obj \& \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_a93ee7011307419e8c88db9f22d900657}{get\+Last\+Track} ()=0
+\begin{DoxyCompactList}\small\item\em Returns a reference to the current estimated object state. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_af6217aec35983dca6dc39c91d08c1020}{lost\+Track} () const 
+\begin{DoxyCompactList}\small\item\em Returns true if the tracker lost the object track. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_aa298892351b5377fcdc227b6d53daf69}{update} (const \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Frame}$<$ T\+Img $>$ \&frame)=0
+\begin{DoxyCompactList}\small\item\em Updates the object position (state) given a new frame. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_interfaces_1_1_tracker_a6ef2039344d051290df033a31fa7d8b3}{}virtual \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_a6ef2039344d051290df033a31fa7d8b3}{$\sim$\+Tracker} ()\label{class_vision_core_1_1_interfaces_1_1_tracker_a6ef2039344d051290df033a31fa7d8b3}
+
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_interfaces_1_1_tracker_a0f12b4a4e0a1b6b997a763db3ebac72f}{}virtual void \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_a0f12b4a4e0a1b6b997a763db3ebac72f}{lost\+Track} (bool lost)\label{class_vision_core_1_1_interfaces_1_1_tracker_a0f12b4a4e0a1b6b997a763db3ebac72f}
+
+\begin{DoxyCompactList}\small\item\em Set whether the tracker has lost track or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_interfaces_1_1_tracker_a00d04584106f8301ddf686b5e5f8f710}{}bool {\bfseries m\+\_\+lost\+Track}\label{class_vision_core_1_1_interfaces_1_1_tracker_a00d04584106f8301ddf686b5e5f8f710}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Img, class T\+Obj$>$class Vision\+Core\+::\+Interfaces\+::\+Tracker$<$ T\+Img, T\+Obj $>$}
+
+Interface defining a generic object tracker. 
+
+A tracker, as defined here, is a computer vision method that can follow an object within a video.
+
+Usually, the object is represented by a bounding rectangle around the object, however other representation can also be used (a bounding circle, the object contour, or simple a point).
+
+This interface provides a generic description for a object tracker. We assume the tracker is initialized with a known position when constructed or is able to self-\/initialization. Then, function \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_aa298892351b5377fcdc227b6d53daf69}{update()} is called by the user to update the position for subsequent frames.
+
+At any time, the method \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_a93ee7011307419e8c88db9f22d900657}{get\+Last\+Track()} can be called to get the current estimated object position.
+
+Function \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_af6217aec35983dca6dc39c91d08c1020}{lost\+Track()} can be used to verify if the tracker lost track from the object, which can be caused by the object going out of image limits, becoming ocluded, or even due to a tracker error.
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Img} & Image type used in the tracker. \\
+\hline
+{\em T\+Obj} & Object type returned by the tracker. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Async\+Tracker\+Wrap Circle\+Tracker\+H\+T\+C\+F 
+\end{DoxySeeAlso}
+
+
+Definition at line 165 of file Vision\+Interfaces.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_vision_core_1_1_interfaces_1_1_tracker_a93ee7011307419e8c88db9f22d900657}{}\index{Vision\+Core\+::\+Interfaces\+::\+Tracker@{Vision\+Core\+::\+Interfaces\+::\+Tracker}!get\+Last\+Track@{get\+Last\+Track}}
+\index{get\+Last\+Track@{get\+Last\+Track}!Vision\+Core\+::\+Interfaces\+::\+Tracker@{Vision\+Core\+::\+Interfaces\+::\+Tracker}}
+\subsubsection[{get\+Last\+Track()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual const T\+Obj\& get\+Last\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_vision_core_1_1_interfaces_1_1_tracker_a93ee7011307419e8c88db9f22d900657}
+
+
+Returns a reference to the current estimated object state. 
+
+This function is often call after calling the \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_aa298892351b5377fcdc227b6d53daf69}{update()} method. The returned reference is usualy to a class member. 
+
+Implemented in \hyperlink{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_a60f002795ee2555f25dc4f7a9a0845ce}{Abstract\+Particle\+Filtering\+Tracker$<$ T\+Img, T\+Obj $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_a60f002795ee2555f25dc4f7a9a0845ce}{Abstract\+Particle\+Filtering\+Tracker$<$ cv\+::\+Mat, cv\+::\+Rect $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_a60f002795ee2555f25dc4f7a9a0845ce}{Tracker\+Logger$<$ T\+Img, T\+Obj $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_a60f002795ee2555f25dc4f7a9a0845ce}{Tracker\+Logger$<$ cv\+::\+Mat, cv\+::\+Rect $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_a60f002795ee2555f25dc4f7a9a0845ce}{Tracker\+Logger$<$ cv\+::\+Mat, std\+::map$<$ long, Biometrics\+::\+Person $>$ $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_a60f002795ee2555f25dc4f7a9a0845ce}{Tracker\+Logger$<$ cv\+::\+Mat, std\+::vector$<$ cv\+::\+Point2f $>$ $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_a9c8e82bfdf34a35ef2eee54006181e5b}{Detector\+Based\+Multi\+Tracker$<$ T\+Img, T\+Obj $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_ad44c04b88eb540c185acb24172b47e29}{Detector\+Based\+Tracker$<$ T\+Img, T\+Obj $>$}, \hyperlink{class_fire_tracker_c_t_ae1ccd303e827f5d00620e54bb11a968c}{Fire\+Tracker\+C\+T}, \hyperlink{class_fire_tracker_s_a_ae1ccd303e827f5d00620e54bb11a968c}{Fire\+Tracker\+S\+A}, \hyperlink{class_fire_tracker_chenebert_ae1ccd303e827f5d00620e54bb11a968c}{Fire\+Tracker\+Chenebert}, \hyperlink{class_vision_core_1_1_abstractions_1_1_abstract_auto_tracker_afdfc24d8a5f14f873caf5e1d3ff55546}{Abstract\+Auto\+Tracker$<$ T\+Img, T\+Obj $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_abstract_auto_tracker_afdfc24d8a5f14f873caf5e1d3ff55546}{Abstract\+Auto\+Tracker$<$ cv\+::\+Mat, cv\+::\+Rect $>$}, \hyperlink{class_viscv_1_1_object_tracker_c_c_cv_ac9faa0124320853a52cb635538b604e4}{Object\+Tracker\+C\+C\+Cv}, \hyperlink{class_viscv_1_1_feature_tracker_k_l_t_cv_af54d7c5518cd3377ba19514359d51ca7}{Feature\+Tracker\+K\+L\+T\+Cv}, \hyperlink{class_viscv_1_1_templ_matching_tracker_ac9faa0124320853a52cb635538b604e4}{Templ\+Matching\+Tracker}, \hyperlink{class_object_tracker_struck_ac9faa0124320853a52cb635538b604e4}{Object\+Tracker\+Struck}, \hyperlink{class_viscv_1_1_circle_tracker_h_t_c_f_a0dcaebc9de9ff2ad85ef0a7ec554c363}{Circle\+Tracker\+H\+T\+C\+F}, and \hyperlink{class_viscv_1_1_object_tracker_k_l_t_ac9faa0124320853a52cb635538b604e4}{Object\+Tracker\+K\+L\+T}.
+
+\hypertarget{class_vision_core_1_1_interfaces_1_1_tracker_af6217aec35983dca6dc39c91d08c1020}{}\index{Vision\+Core\+::\+Interfaces\+::\+Tracker@{Vision\+Core\+::\+Interfaces\+::\+Tracker}!lost\+Track@{lost\+Track}}
+\index{lost\+Track@{lost\+Track}!Vision\+Core\+::\+Interfaces\+::\+Tracker@{Vision\+Core\+::\+Interfaces\+::\+Tracker}}
+\subsubsection[{lost\+Track() const }]{\setlength{\rightskip}{0pt plus 5cm}virtual bool lost\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_vision_core_1_1_interfaces_1_1_tracker_af6217aec35983dca6dc39c91d08c1020}
+
+
+Returns true if the tracker lost the object track. 
+
+The cause for loosing the object track is not specified by the interface. It can be caused by the object going out of image limits, becoming ocluded, or even due to a tracker error. 
+
+Reimplemented in \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_ac7e0977fa702f98038bbe303df458a6c}{Tracker\+Logger$<$ T\+Img, T\+Obj $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_ac7e0977fa702f98038bbe303df458a6c}{Tracker\+Logger$<$ cv\+::\+Mat, cv\+::\+Rect $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_ac7e0977fa702f98038bbe303df458a6c}{Tracker\+Logger$<$ cv\+::\+Mat, std\+::map$<$ long, Biometrics\+::\+Person $>$ $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_ac7e0977fa702f98038bbe303df458a6c}{Tracker\+Logger$<$ cv\+::\+Mat, std\+::vector$<$ cv\+::\+Point2f $>$ $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_ac7e0977fa702f98038bbe303df458a6c}{Detector\+Based\+Multi\+Tracker$<$ T\+Img, T\+Obj $>$}, \hyperlink{class_fire_tracker_s_a_ac7e0977fa702f98038bbe303df458a6c}{Fire\+Tracker\+S\+A}, \hyperlink{class_fire_tracker_chenebert_ac7e0977fa702f98038bbe303df458a6c}{Fire\+Tracker\+Chenebert}, \hyperlink{class_fire_tracker_c_t_ac7e0977fa702f98038bbe303df458a6c}{Fire\+Tracker\+C\+T}, \hyperlink{class_object_tracker_struck_ac7e0977fa702f98038bbe303df458a6c}{Object\+Tracker\+Struck}, and \hyperlink{class_viscv_1_1_circle_tracker_h_t_c_f_ac7e0977fa702f98038bbe303df458a6c}{Circle\+Tracker\+H\+T\+C\+F}.
+
+
+
+Definition at line 181 of file Vision\+Interfaces.\+h.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{class_vision_core_1_1_interfaces_1_1_tracker_af6217aec35983dca6dc39c91d08c1020_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_vision_core_1_1_interfaces_1_1_tracker_aa298892351b5377fcdc227b6d53daf69}{}\index{Vision\+Core\+::\+Interfaces\+::\+Tracker@{Vision\+Core\+::\+Interfaces\+::\+Tracker}!update@{update}}
+\index{update@{update}!Vision\+Core\+::\+Interfaces\+::\+Tracker@{Vision\+Core\+::\+Interfaces\+::\+Tracker}}
+\subsubsection[{update(const Frame$<$ T\+Img $>$ \&frame)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void update (
+\begin{DoxyParamCaption}
+\item[{const {\bf Frame}$<$ T\+Img $>$ \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_vision_core_1_1_interfaces_1_1_tracker_aa298892351b5377fcdc227b6d53daf69}
+
+
+Updates the object position (state) given a new frame. 
+
+To continuously track an object throughout a video, this method should be call in sequence for all frames. 
+
+Implemented in \hyperlink{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_af1a54610c9af7fb54d00e4be2e75609e}{Abstract\+Particle\+Filtering\+Tracker$<$ T\+Img, T\+Obj $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_abstract_particle_filtering_tracker_af1a54610c9af7fb54d00e4be2e75609e}{Abstract\+Particle\+Filtering\+Tracker$<$ cv\+::\+Mat, cv\+::\+Rect $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_af1a54610c9af7fb54d00e4be2e75609e}{Tracker\+Logger$<$ T\+Img, T\+Obj $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_af1a54610c9af7fb54d00e4be2e75609e}{Tracker\+Logger$<$ cv\+::\+Mat, cv\+::\+Rect $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_af1a54610c9af7fb54d00e4be2e75609e}{Tracker\+Logger$<$ cv\+::\+Mat, std\+::map$<$ long, Biometrics\+::\+Person $>$ $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_tracker_logger_af1a54610c9af7fb54d00e4be2e75609e}{Tracker\+Logger$<$ cv\+::\+Mat, std\+::vector$<$ cv\+::\+Point2f $>$ $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker_af1a54610c9af7fb54d00e4be2e75609e}{Detector\+Based\+Multi\+Tracker$<$ T\+Img, T\+Obj $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_detector_based_tracker_af1a54610c9af7fb54d00e4be2e75609e}{Detector\+Based\+Tracker$<$ T\+Img, T\+Obj $>$}, \hyperlink{class_fire_tracker_s_a_ab233da15b6c7aad7d83c67057a558bd4}{Fire\+Tracker\+S\+A}, \hyperlink{class_fire_tracker_chenebert_ab233da15b6c7aad7d83c67057a558bd4}{Fire\+Tracker\+Chenebert}, \hyperlink{class_fire_tracker_c_t_ab233da15b6c7aad7d83c67057a558bd4}{Fire\+Tracker\+C\+T}, \hyperlink{class_vision_core_1_1_abstractions_1_1_abstract_auto_tracker_af1a54610c9af7fb54d00e4be2e75609e}{Abstract\+Auto\+Tracker$<$ T\+Img, T\+Obj $>$}, \hyperlink{class_vision_core_1_1_abstractions_1_1_abstract_auto_tracker_af1a54610c9af7fb54d00e4be2e75609e}{Abstract\+Auto\+Tracker$<$ cv\+::\+Mat, cv\+::\+Rect $>$}, \hyperlink{class_viscv_1_1_object_tracker_c_c_cv_ab233da15b6c7aad7d83c67057a558bd4}{Object\+Tracker\+C\+C\+Cv}, \hyperlink{class_viscv_1_1_feature_tracker_k_l_t_cv_ab233da15b6c7aad7d83c67057a558bd4}{Feature\+Tracker\+K\+L\+T\+Cv}, \hyperlink{class_viscv_1_1_templ_matching_tracker_ab233da15b6c7aad7d83c67057a558bd4}{Templ\+Matching\+Tracker}, \hyperlink{class_object_tracker_struck_ab233da15b6c7aad7d83c67057a558bd4}{Object\+Tracker\+Struck}, \hyperlink{class_viscv_1_1_circle_tracker_h_t_c_f_ab233da15b6c7aad7d83c67057a558bd4}{Circle\+Tracker\+H\+T\+C\+F}, and \hyperlink{class_viscv_1_1_object_tracker_k_l_t_ab233da15b6c7aad7d83c67057a558bd4}{Object\+Tracker\+K\+L\+T}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Interfaces.\+h\end{DoxyCompactItemize}

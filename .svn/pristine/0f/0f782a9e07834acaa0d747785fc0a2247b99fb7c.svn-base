@@ -1,0 +1,78 @@
+\hypertarget{class_vision_core_1_1_evaluation_1_1_tracker_evaluator}{}\section{Tracker\+Evaluator$<$ T\+Img, T\+Obj1, T\+Obj2 $>$ Class Template Reference}
+\label{class_vision_core_1_1_evaluation_1_1_tracker_evaluator}\index{Tracker\+Evaluator$<$ T\+Img, T\+Obj1, T\+Obj2 $>$@{Tracker\+Evaluator$<$ T\+Img, T\+Obj1, T\+Obj2 $>$}}
+
+
+Provides algorithms for performance evaluation of trackers.  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Evaluation.\+h$>$}
+
+
+
+Collaboration diagram for Tracker\+Evaluator$<$ T\+Img, T\+Obj1, T\+Obj2 $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{class_vision_core_1_1_evaluation_1_1_tracker_evaluator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_tracker_evaluator_a581e36aae4d36c4743eeb9ebf861b1d8}{}\hyperlink{class_vision_core_1_1_evaluation_1_1_tracker_evaluator_a581e36aae4d36c4743eeb9ebf861b1d8}{Tracker\+Evaluator} ()\label{class_vision_core_1_1_evaluation_1_1_tracker_evaluator_a581e36aae4d36c4743eeb9ebf861b1d8}
+
+\begin{DoxyCompactList}\small\item\em Default construtor. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_tracker_evaluator_a7501e88308f9c5dbe162e113c6ad9bc1}{}void \hyperlink{class_vision_core_1_1_evaluation_1_1_tracker_evaluator_a7501e88308f9c5dbe162e113c6ad9bc1}{add\+Test\+Point} (std\+::vector$<$ std\+::vector$<$ T\+Obj1 $>$$>$ \&track\+Result, std\+::vector$<$ std\+::vector$<$ T\+Obj2 $>$$>$ \&ground\+Truth)\label{class_vision_core_1_1_evaluation_1_1_tracker_evaluator_a7501e88308f9c5dbe162e113c6ad9bc1}
+
+\begin{DoxyCompactList}\small\item\em Add a tracking result and its respective ground-\/truth. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_tracker_evaluator_a0c973d5fd9480a0cca418ac96f79cf39}{}void \hyperlink{class_vision_core_1_1_evaluation_1_1_tracker_evaluator_a0c973d5fd9480a0cca418ac96f79cf39}{set\+Similarity\+Function} (std\+::function$<$ double(T\+Obj1 \&, T\+Obj2 \&)$>$ similarity\+Fcn)\label{class_vision_core_1_1_evaluation_1_1_tracker_evaluator_a0c973d5fd9480a0cca418ac96f79cf39}
+
+\begin{DoxyCompactList}\small\item\em Sets the similarity function between tracked object and ground-\/truth. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_tracker_evaluator_a2494e14c6a1e5bc544aa5e26816267d1}{}void \hyperlink{class_vision_core_1_1_evaluation_1_1_tracker_evaluator_a2494e14c6a1e5bc544aa5e26816267d1}{set\+Threshold} (const double t)\label{class_vision_core_1_1_evaluation_1_1_tracker_evaluator_a2494e14c6a1e5bc544aa5e26816267d1}
+
+\begin{DoxyCompactList}\small\item\em Two objects are considered the same if the similarity between them is bigger than this threshold. \end{DoxyCompactList}\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_tracker_evaluator_a806aa368bb6cb66f3bc990c145456cd2}{}\hyperlink{struct_vision_core_1_1_evaluation_1_1_tracking_eval_result}{Tracking\+Eval\+Result} \hyperlink{class_vision_core_1_1_evaluation_1_1_tracker_evaluator_a806aa368bb6cb66f3bc990c145456cd2}{compute\+Result} ()\label{class_vision_core_1_1_evaluation_1_1_tracker_evaluator_a806aa368bb6cb66f3bc990c145456cd2}
+
+\begin{DoxyCompactList}\small\item\em Compute performance statistics. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_vision_core_1_1_evaluation_1_1_tracker_evaluator_ac26805d769b890cf93ad468ff49c370c}{}static void \hyperlink{class_vision_core_1_1_evaluation_1_1_tracker_evaluator_ac26805d769b890cf93ad468ff49c370c}{print\+Report} (const \hyperlink{struct_vision_core_1_1_evaluation_1_1_tracking_eval_result}{Tracking\+Eval\+Result} \&result, std\+::ostream \&out=std\+::cout)\label{class_vision_core_1_1_evaluation_1_1_tracker_evaluator_ac26805d769b890cf93ad468ff49c370c}
+
+\begin{DoxyCompactList}\small\item\em Print an evaluation report. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Img, class T\+Obj1, class T\+Obj2 = T\+Obj1$>$class Vision\+Core\+::\+Evaluation\+::\+Tracker\+Evaluator$<$ T\+Img, T\+Obj1, T\+Obj2 $>$}
+
+Provides algorithms for performance evaluation of trackers. 
+
+There are two forms of running the evaluation of a tracker\+:
+
+1) Manual\+: For each video in a test set, execute the tracker and store the results in a vector where each position stores the result of a frame. Extract the ground-\/truth for this video as a vector as well. Use function \textquotesingle{}add\+Test\+Point\textquotesingle{} to add these results into the evaluator. After doing this for all videos in the test set, call function \textquotesingle{}compute\+Results\textquotesingle{} which will compute several performance statistics.
+
+2) Automatic\+: Use function \textquotesingle{}evaluate\+Tracker\textquotesingle{} to evaluate a tracker (object of class Tracker) over a dataset (object of class \hyperlink{class_vision_core_1_1_evaluation_1_1_tracking_dataset}{Tracking\+Dataset}). This method will execute the steps in the manual mode for all videos in the dataset.
+
+Before executing the evaluation, it is necessary to define a similarity function by calling \textquotesingle{}set\+Similarity\+Function\textquotesingle{}. This function computes a similarity score between a tracked object and a ground-\/truth object.
+
+T\+O\+D\+O\+: add examples 
+\begin{DoxyParams}{Parameters}
+{\em T\+Img} & Image type. \\
+\hline
+{\em T\+Obj1} & Type returned by the detector. \\
+\hline
+{\em T\+Obj2} & Type for the ground-\/truth. Usually -\/ and by default -\/ it is the same of T\+Obj1, but could be different. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1062 of file Vision\+Evaluation.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Evaluation.\+h\end{DoxyCompactItemize}

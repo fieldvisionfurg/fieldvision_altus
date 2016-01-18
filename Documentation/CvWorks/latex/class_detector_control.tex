@@ -1,0 +1,87 @@
+\hypertarget{class_detector_control}{}\section{Detector\+Control$<$ T\+Img, T\+Obj $>$ Class Template Reference}
+\label{class_detector_control}\index{Detector\+Control$<$ T\+Img, T\+Obj $>$@{Detector\+Control$<$ T\+Img, T\+Obj $>$}}
+
+
+Esta classe é responsável por controlar a execução de um detector.  
+
+
+
+
+{\ttfamily \#include $<$Detector\+Control.\+h$>$}
+
+
+
+Inheritance diagram for Detector\+Control$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{class_detector_control__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Detector\+Control$<$ T\+Img, T\+Obj $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_detector_control__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_detector_control_aba6469573c749f73ecc4b13940bb4c6b}{}{\bfseries Detector\+Control} (\hyperlink{class_vision_core_1_1_interfaces_1_1_detector}{Vision\+Core\+::\+Detector}$<$ T\+Img, T\+Obj $>$ $\ast$detector\+\_\+, \hyperlink{class_frame_server_control_widget}{Frame\+Server\+Control\+Widget} $\ast$frame\+Server\+Control\+\_\+)\label{class_detector_control_aba6469573c749f73ecc4b13940bb4c6b}
+
+\item 
+\hypertarget{class_detector_control_a7167f5c196fc5e167bfabde1a730e81d}{}virtual void \hyperlink{class_detector_control_a7167f5c196fc5e167bfabde1a730e81d}{pause} ()\label{class_detector_control_a7167f5c196fc5e167bfabde1a730e81d}
+
+\begin{DoxyCompactList}\small\item\em Pause process. \end{DoxyCompactList}\item 
+\hypertarget{class_detector_control_a60de64d75454385b23995437f1d72669}{}virtual void \hyperlink{class_detector_control_a60de64d75454385b23995437f1d72669}{start} ()\label{class_detector_control_a60de64d75454385b23995437f1d72669}
+
+\begin{DoxyCompactList}\small\item\em Start process. \end{DoxyCompactList}\item 
+\hypertarget{class_detector_control_aaadbbf21c8bf5d7b6be811068d1ccc21}{}virtual bool \hyperlink{class_detector_control_aaadbbf21c8bf5d7b6be811068d1ccc21}{export\+Log} (std\+::string file\+Name)\label{class_detector_control_aaadbbf21c8bf5d7b6be811068d1ccc21}
+
+\begin{DoxyCompactList}\small\item\em Exports the log data to file. \end{DoxyCompactList}\item 
+\hypertarget{class_detector_control_a13f870b13ebedc10aecf403b8f0c9a50}{}void {\bfseries add\+Create\+Tracker\+Option} ()\label{class_detector_control_a13f870b13ebedc10aecf403b8f0c9a50}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_detector_control_aa429fbdf6a7f790d22dd1f23616f41de}{}virtual void \hyperlink{class_detector_control_aa429fbdf6a7f790d22dd1f23616f41de}{draw\+Results} (Q\+Painter $\ast$painter)\label{class_detector_control_aa429fbdf6a7f790d22dd1f23616f41de}
+
+\begin{DoxyCompactList}\small\item\em Função que desenha os resultados. Chamada quando uma nova imagem do frame\+Server\+Control estiver disponivel. \end{DoxyCompactList}\item 
+\hypertarget{class_detector_control_ac36825442b03cbca4d3d57a89eb398e2}{}virtual void {\bfseries draw\+Object} (Q\+Painter $\ast$painter, const T\+Obj \&object)\label{class_detector_control_ac36825442b03cbca4d3d57a89eb398e2}
+
+\item 
+\hypertarget{class_detector_control_a0f269bca8139be827d8f673bed676f60}{}virtual void \hyperlink{class_detector_control_a0f269bca8139be827d8f673bed676f60}{reset\+Log} ()\label{class_detector_control_a0f269bca8139be827d8f673bed676f60}
+
+\begin{DoxyCompactList}\small\item\em FunÃ§Ã£o que reseta o log. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_detector_control_acb792f10e755c53f2d9a3da84a5793ea}{}\hyperlink{class_vision_core_1_1_interfaces_1_1_detector}{Vision\+Core\+::\+Detector}$<$ T\+Img, T\+Obj $>$ $\ast$ {\bfseries detector}\label{class_detector_control_acb792f10e755c53f2d9a3da84a5793ea}
+
+\item 
+\hypertarget{class_detector_control_a86143917479ecb80b7af4e0503f06d65}{}\hyperlink{class_vision_core_1_1_async_1_1_async_detector_wrap}{Vision\+Core\+::\+Async\+Detector\+Wrap}$<$ T\+Img, T\+Obj $>$ $\ast$ {\bfseries async\+Detector}\label{class_detector_control_a86143917479ecb80b7af4e0503f06d65}
+
+\item 
+\hypertarget{class_detector_control_a50385c631dcd9b492af876c26aca9fce}{}\hyperlink{class_vision_core_1_1_abstractions_1_1_detector_logger}{Vision\+Core\+::\+Detector\+Logger}$<$ T\+Img, T\+Obj $>$ $\ast$ {\bfseries logger\+Detector}\label{class_detector_control_a50385c631dcd9b492af876c26aca9fce}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Img, class T\+Obj$>$class Detector\+Control$<$ T\+Img, T\+Obj $>$}
+
+Esta classe é responsável por controlar a execução de um detector. 
+
+Definition at line 46 of file Detector\+Control.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets/Detector\+Control.\+h\end{DoxyCompactItemize}

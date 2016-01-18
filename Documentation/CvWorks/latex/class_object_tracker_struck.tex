@@ -1,0 +1,132 @@
+\hypertarget{class_object_tracker_struck}{}\section{Object\+Tracker\+Struck Class Reference}
+\label{class_object_tracker_struck}\index{Object\+Tracker\+Struck@{Object\+Tracker\+Struck}}
+
+
+Inheritance diagram for Object\+Tracker\+Struck\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{class_object_tracker_struck__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Object\+Tracker\+Struck\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{class_object_tracker_struck__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_object_tracker_struck_ab3906e1718fbdf3793e379b703a04a27}{}{\bfseries Object\+Tracker\+Struck} (const std\+::string \&config\+File)\label{class_object_tracker_struck_ab3906e1718fbdf3793e379b703a04a27}
+
+\item 
+\hypertarget{class_object_tracker_struck_ab1e8fff61d3b722505dddefa42ddad99}{}{\bfseries Object\+Tracker\+Struck} (Config conf)\label{class_object_tracker_struck_ab1e8fff61d3b722505dddefa42ddad99}
+
+\item 
+const cv\+::\+Rect \& \hyperlink{class_object_tracker_struck_ac9faa0124320853a52cb635538b604e4}{get\+Last\+Track} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the current estimated object state. \end{DoxyCompactList}\item 
+bool \hyperlink{class_object_tracker_struck_ac7e0977fa702f98038bbe303df458a6c}{lost\+Track} () const 
+\begin{DoxyCompactList}\small\item\em Returns true if the tracker lost the object track. \end{DoxyCompactList}\item 
+void \hyperlink{class_object_tracker_struck_ab233da15b6c7aad7d83c67057a558bd4}{update} (const \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Vision\+Core\+::\+Frame}$<$ cv\+::\+Mat $>$ \&frame)
+\begin{DoxyCompactList}\small\item\em Updates the object position (state) given a new frame. \end{DoxyCompactList}\item 
+\hypertarget{class_object_tracker_struck_a6bd5d0fef45f701527bacde3130d9ee0}{}void {\bfseries initialize} (const cv\+::\+Mat \&img, cv\+::\+Rect init\+Rect)\label{class_object_tracker_struck_a6bd5d0fef45f701527bacde3130d9ee0}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_object_tracker_struck_a8662172688610593f8b8427754c47b3a}{}Config $\ast$ {\bfseries config\+\_\+}\label{class_object_tracker_struck_a8662172688610593f8b8427754c47b3a}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 51 of file Object\+Tracker\+Struck.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_object_tracker_struck_ac9faa0124320853a52cb635538b604e4}{}\index{Object\+Tracker\+Struck@{Object\+Tracker\+Struck}!get\+Last\+Track@{get\+Last\+Track}}
+\index{get\+Last\+Track@{get\+Last\+Track}!Object\+Tracker\+Struck@{Object\+Tracker\+Struck}}
+\subsubsection[{get\+Last\+Track()}]{\setlength{\rightskip}{0pt plus 5cm}const cv\+::\+Rect \& get\+Last\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_object_tracker_struck_ac9faa0124320853a52cb635538b604e4}
+
+
+Returns a reference to the current estimated object state. 
+
+This function is often call after calling the \hyperlink{class_object_tracker_struck_ab233da15b6c7aad7d83c67057a558bd4}{update()} method. The returned reference is usualy to a class member. 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_a93ee7011307419e8c88db9f22d900657}{Tracker$<$ cv\+::\+Mat, cv\+::\+Rect $>$}.
+
+
+
+Definition at line 36 of file Object\+Tracker\+Struck.\+cpp.
+
+\hypertarget{class_object_tracker_struck_ac7e0977fa702f98038bbe303df458a6c}{}\index{Object\+Tracker\+Struck@{Object\+Tracker\+Struck}!lost\+Track@{lost\+Track}}
+\index{lost\+Track@{lost\+Track}!Object\+Tracker\+Struck@{Object\+Tracker\+Struck}}
+\subsubsection[{lost\+Track() const }]{\setlength{\rightskip}{0pt plus 5cm}bool lost\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_object_tracker_struck_ac7e0977fa702f98038bbe303df458a6c}
+
+
+Returns true if the tracker lost the object track. 
+
+The cause for loosing the object track is not specified by the interface. It can be caused by the object going out of image limits, becoming ocluded, or even due to a tracker error. 
+
+Reimplemented from \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_af6217aec35983dca6dc39c91d08c1020}{Tracker$<$ cv\+::\+Mat, cv\+::\+Rect $>$}.
+
+
+
+Definition at line 60 of file Object\+Tracker\+Struck.\+h.
+
+\hypertarget{class_object_tracker_struck_ab233da15b6c7aad7d83c67057a558bd4}{}\index{Object\+Tracker\+Struck@{Object\+Tracker\+Struck}!update@{update}}
+\index{update@{update}!Object\+Tracker\+Struck@{Object\+Tracker\+Struck}}
+\subsubsection[{update(const Vision\+Core\+::\+Frame$<$ cv\+::\+Mat $>$ \&frame)}]{\setlength{\rightskip}{0pt plus 5cm}void update (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vision\+Core\+::\+Frame}$<$ cv\+::\+Mat $>$ \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_object_tracker_struck_ab233da15b6c7aad7d83c67057a558bd4}
+
+
+Updates the object position (state) given a new frame. 
+
+To continuously track an object throughout a video, this method should be call in sequence for all frames. 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_aa298892351b5377fcdc227b6d53daf69}{Tracker$<$ cv\+::\+Mat, cv\+::\+Rect $>$}.
+
+
+
+Definition at line 40 of file Object\+Tracker\+Struck.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{class_object_tracker_struck_ab233da15b6c7aad7d83c67057a558bd4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Struck\+Tracker/Object\+Tracker\+Struck.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Struck\+Tracker/Object\+Tracker\+Struck.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+<map id="MultiObjectTrackerCCCv" name="MultiObjectTrackerCCCv">
+<area shape="rect" id="node2" href="$class_vision_core_1_1_abstractions_1_1_abstract_auto_tracker.html" title="{AbstractAutoTracker\l\&lt; cv::Mat, cv::Rect \&gt;\n|# m_lastDetectionTime\l# m_detectPeriod\l|+ getLastTrack()\l+ update()\l+ AbstractAutoTracker()\l+ AbstractAutoTracker()\l+ ~AbstractAutoTracker()\l}" alt="" coords="273,404,443,569"/>
+<area shape="rect" id="node3" href="$class_vision_core_1_1_interfaces_1_1_identified_multi_tracker.html" title="{IdentifiedMultiTracker\l\&lt; cv::Mat, cv::Rect \&gt;\n||+ ~IdentifiedMultiTracker()\l}" alt="" coords="5,235,177,327"/>
+<area shape="rect" id="node4" href="$class_vision_core_1_1_interfaces_1_1_tracker.html" title="{Tracker\&lt; cv::Mat, std\l::map\&lt; long, cv::Rect \&gt; \&gt;\n|# m_lostTrack\l|+ Tracker()\l+ getLastTrack()\l+ lostTrack()\l+ update()\l+ ~Tracker()\l# lostTrack()\l}" alt="" coords="6,5,177,171"/>
+<area shape="rect" id="node6" href="$class_vision_core_1_1_interfaces_1_1_detector.html" title="{Detector\&lt; cv::Mat,\l cv::Rect \&gt;\n||+ detect()\l+ detect()\l+ ~Detector()\l}" alt="" coords="376,220,505,341"/>
+</map>

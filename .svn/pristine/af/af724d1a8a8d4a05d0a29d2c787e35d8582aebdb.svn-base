@@ -1,0 +1,4 @@
+<map id="DetectorBasedMultiTracker&lt; TImg, TObj &gt;" name="DetectorBasedMultiTracker&lt; TImg, TObj &gt;">
+<area shape="rect" id="node2" href="$class_vision_core_1_1_interfaces_1_1_identified_multi_tracker.html" title="A IdentifiedMultiTracker is a tracker for multiple objects, each having its own ID. " alt="" coords="5,233,177,325"/>
+<area shape="rect" id="node3" href="$class_vision_core_1_1_interfaces_1_1_tracker.html" title="{Tracker\&lt; TImg, std\l::map\&lt; long, TObj \&gt; \&gt;\n|# m_lostTrack\l|+ Tracker()\l+ getLastTrack()\l+ lostTrack()\l+ update()\l+ ~Tracker()\l# lostTrack()\l}" alt="" coords="16,5,167,171"/>
+</map>

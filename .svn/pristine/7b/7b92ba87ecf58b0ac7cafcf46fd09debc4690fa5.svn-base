@@ -1,0 +1,206 @@
+\hypertarget{class_fire_tracker_chenebert}{}\section{Fire\+Tracker\+Chenebert Class Reference}
+\label{class_fire_tracker_chenebert}\index{Fire\+Tracker\+Chenebert@{Fire\+Tracker\+Chenebert}}
+
+
+Inheritance diagram for Fire\+Tracker\+Chenebert\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{class_fire_tracker_chenebert__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Fire\+Tracker\+Chenebert\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_fire_tracker_chenebert__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$ $>$ \& \hyperlink{class_fire_tracker_chenebert_ae1ccd303e827f5d00620e54bb11a968c}{get\+Last\+Track} ()
+\begin{DoxyCompactList}\small\item\em Get the last track. \end{DoxyCompactList}\item 
+bool \hyperlink{class_fire_tracker_chenebert_ac7e0977fa702f98038bbe303df458a6c}{lost\+Track} () const 
+\begin{DoxyCompactList}\small\item\em True if no fire is detected. \end{DoxyCompactList}\item 
+void \hyperlink{class_fire_tracker_chenebert_ab233da15b6c7aad7d83c67057a558bd4}{update} (const \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Vision\+Core\+::\+Frame}$<$ cv\+::\+Mat $>$ \&frame)
+\begin{DoxyCompactList}\small\item\em Given an image (i.\+e. video frame), update the tracked objects. \end{DoxyCompactList}\item 
+\hyperlink{class_fire_tracker_chenebert_addfad480395fa1a2af767e8efefb8980}{Fire\+Tracker\+Chenebert} (std\+::string region\+\_\+classification\+\_\+model)
+\item 
+\hypertarget{class_fire_tracker_chenebert_ab323eee4bdbac7f3d9783aa7840440ef}{}\hyperlink{class_fire_tracker_chenebert_ab323eee4bdbac7f3d9783aa7840440ef}{$\sim$\+Fire\+Tracker\+Chenebert} (void)\label{class_fire_tracker_chenebert_ab323eee4bdbac7f3d9783aa7840440ef}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \hyperlink{class_fire_tracker_chenebert_a68d4ec4232aa3139b0ffa3196f2aa58a}{generate\+Region\+Training\+Data} (std\+::function$<$ double(std\+::vector$<$ cv\+::\+Point $>$ \&dt, cv\+::\+Rect \&gt)$>$ sim\+Fcn, std\+::vector$<$ cv\+::\+Rect $>$ ground\+Truth)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_fire_tracker_chenebert_aadaf4276495f46a63d9cdf1a53e6c318}{}C45\+Helper \hyperlink{class_fire_tracker_chenebert_aadaf4276495f46a63d9cdf1a53e6c318}{region\+\_\+classifier}\label{class_fire_tracker_chenebert_aadaf4276495f46a63d9cdf1a53e6c318}
+
+\begin{DoxyCompactList}\small\item\em Random Forests. \end{DoxyCompactList}\item 
+\hypertarget{class_fire_tracker_chenebert_ac139cc55cf55def96683867873bc9841}{}cv\+::\+Mat \hyperlink{class_fire_tracker_chenebert_ac139cc55cf55def96683867873bc9841}{color\+\_\+classified}\label{class_fire_tracker_chenebert_ac139cc55cf55def96683867873bc9841}
+
+\begin{DoxyCompactList}\small\item\em stores the color classified regions on the last frame \end{DoxyCompactList}\item 
+\hypertarget{class_fire_tracker_chenebert_a41191012c3a576338e0a1c18e4670e03}{}std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \hyperlink{class_fire_tracker_chenebert_a41191012c3a576338e0a1c18e4670e03}{spatial\+\_\+data}\label{class_fire_tracker_chenebert_a41191012c3a576338e0a1c18e4670e03}
+
+\begin{DoxyCompactList}\small\item\em vector with the statistics for each contour \end{DoxyCompactList}\item 
+\hypertarget{class_fire_tracker_chenebert_aa436b53f5f363c7ef9ae5dab5d8b6a5b}{}std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$ $>$ \hyperlink{class_fire_tracker_chenebert_aa436b53f5f363c7ef9ae5dab5d8b6a5b}{current\+\_\+contours}\label{class_fire_tracker_chenebert_aa436b53f5f363c7ef9ae5dab5d8b6a5b}
+
+\begin{DoxyCompactList}\small\item\em temporary contour store for the current frame \end{DoxyCompactList}\item 
+\hypertarget{class_fire_tracker_chenebert_abe54bba15c2d4f0c76050eaca5304674}{}bool {\bfseries static\+\_\+video}\label{class_fire_tracker_chenebert_abe54bba15c2d4f0c76050eaca5304674}
+
+\item 
+\hypertarget{class_fire_tracker_chenebert_a30b38dbacfbdef6a3e9a33f6feefb6cc}{}int {\bfseries frame\+\_\+rate}\label{class_fire_tracker_chenebert_a30b38dbacfbdef6a3e9a33f6feefb6cc}
+
+\item 
+\hypertarget{class_fire_tracker_chenebert_abc06dfc966087167fe1237e12a3eb36d}{}bool {\bfseries show\+\_\+debug\+\_\+info}\label{class_fire_tracker_chenebert_abc06dfc966087167fe1237e12a3eb36d}
+
+\item 
+bool \hyperlink{class_fire_tracker_chenebert_abc9326cea4683208d23aa1854bf6cd89}{dont\+\_\+classify\+\_\+by\+\_\+region\+\_\+stats}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 39 of file Fire\+Tracker\+Chenebert.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_fire_tracker_chenebert_addfad480395fa1a2af767e8efefb8980}{}\index{Fire\+Tracker\+Chenebert@{Fire\+Tracker\+Chenebert}!Fire\+Tracker\+Chenebert@{Fire\+Tracker\+Chenebert}}
+\index{Fire\+Tracker\+Chenebert@{Fire\+Tracker\+Chenebert}!Fire\+Tracker\+Chenebert@{Fire\+Tracker\+Chenebert}}
+\subsubsection[{Fire\+Tracker\+Chenebert(std\+::string region\+\_\+classification\+\_\+model)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Fire\+Tracker\+Chenebert} (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{region\+\_\+classification\+\_\+model}
+\end{DoxyParamCaption}
+)}\label{class_fire_tracker_chenebert_addfad480395fa1a2af767e8efefb8980}
+Create a new tracker As parameters you should provide trained classification models. Trained models are provided on the package. If you don\textquotesingle{}t have them now, you can create them using the Random\+Forest\+Helper Class The Region Classification Model takes 14 attributes + a class where 1 is equal fire and 0 is non fire The parameters are given in the following order\+: 0 -\/ area 1 -\/ roundness 2,3,4 -\/ mean 5,6,7 -\/ median 8,9,10 -\/ standard deviation 11,12,13 -\/ skewness The Color Classification Model should be created considering R\+G\+B and H\+S\+V pixel values + a binary class that states the if it represents fire (1) or not (0). The parameters are given in the following order\+: 0,1,2 -\/ B, G, R 3,4,5 -\/ H, S, V
+
+You can also build your own models by accessing the rfh\+\_\+color and rfh\+\_\+region public attributes. Ex\+: rfh\+\_\+region.\+params.\+max\+\_\+depth = 10; rfh\+\_\+region.\+params.\+min\+\_\+sample\+\_\+count = 50; rfh\+\_\+region.\+read\+Train\+Data\+From\+Csv(\char`\"{}region\+\_\+training\+\_\+data3.\+csv\char`\"{}, \textquotesingle{},\textquotesingle{}, true, false); rfh\+\_\+region.\+train\+Classifier(); You can save the generated classification model using\+: rfh\+\_\+region.\+save\+Classifier(\char`\"{}region\+\_\+classification\+\_\+model\char`\"{}); Further information about how the Random Forests are supposed to work can be found in Breiman 2001.
+
+Create a new tracker As parameters you should provide trained classification models. Trained models are provided on the package. If you don\textquotesingle{}t have them now, you can create them using the Random\+Forest\+Helper Class The Region Classification Model takes 30 attributes + a class where 1 is equal fire and 0 is non fire The parameters are given in the following order\+:
+
+You can also build your own models by accessing the rfh\+\_\+color and region\+\_\+classifier public attributes. Ex\+: region\+\_\+classifier.\+params.\+max\+\_\+depth = 10; region\+\_\+classifier.\+params.\+min\+\_\+sample\+\_\+count = 50; region\+\_\+classifier.\+read\+Train\+Data\+From\+Csv(\char`\"{}region\+\_\+training\+\_\+data3.\+csv\char`\"{}, \textquotesingle{},\textquotesingle{}, true, false); region\+\_\+classifier.\+train\+Classifier(); You can save the generated classification model using\+: region\+\_\+classifier.\+save\+Classifier(\char`\"{}region\+\_\+classification\+\_\+model\char`\"{}); Further information about how the Random Forests are supposed to work can be found in Breiman 2001. 
+
+Definition at line 314 of file Fire\+Tracker\+Chenebert.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_fire_tracker_chenebert_a68d4ec4232aa3139b0ffa3196f2aa58a}{}\index{Fire\+Tracker\+Chenebert@{Fire\+Tracker\+Chenebert}!generate\+Region\+Training\+Data@{generate\+Region\+Training\+Data}}
+\index{generate\+Region\+Training\+Data@{generate\+Region\+Training\+Data}!Fire\+Tracker\+Chenebert@{Fire\+Tracker\+Chenebert}}
+\subsubsection[{generate\+Region\+Training\+Data(std\+::function$<$ double(std\+::vector$<$ cv\+::\+Point $>$ \&dt, cv\+::\+Rect \&gt)$>$ sim\+Fcn, std\+::vector$<$ cv\+::\+Rect $>$ ground\+Truth)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::vector$<$ float $>$ $>$ generate\+Region\+Training\+Data (
+\begin{DoxyParamCaption}
+\item[{std\+::function$<$ double(std\+::vector$<$ cv\+::\+Point $>$ \&dt, cv\+::\+Rect \&gt)$>$}]{sim\+Fcn, }
+\item[{std\+::vector$<$ cv\+::\+Rect $>$}]{ground\+Truth}
+\end{DoxyParamCaption}
+)}\label{class_fire_tracker_chenebert_a68d4ec4232aa3139b0ffa3196f2aa58a}
+This is method used to extract region training data. Before you use this, you have to set the \textquotesingle{}dont\+\_\+classify\+\_\+by\+\_\+region\+\_\+stats\textquotesingle{} to false As it is a task that is very hard to do manually we created it so that you can easilly validate the contours against the groud truth. appending the class attribute and returning a string with good and bad contours. By good contours we assume the ones where the similarity is greater than 0.\+8. Bad bad contours we assum the ones that do not have any intersection with the ground truth. Usage example\+: for(auto c\+: tracker.\+generate\+Region\+Training\+Data(sim\+Fc, gt.\+get\+Frame\+At(frame.\+get\+Number()).rect\+On\+Frame))\{ for(auto v\+: c)\{ export\+\_\+data.\+append(to\+\_\+string(v) + \char`\"{};\char`\"{}); \} export\+\_\+data.\+append(\char`\"{}\textbackslash{}n\char`\"{}); \}
+
+This is a helper method used to generate region training data As it is a task that is very hard to do manually we created it so that you can easilly validate the contours against the groud truth appending the class attribute and returning a string with good and bad contours By good contours we assume the ones where the similarity is greater than 0.\+8. Bad bad contours we assum the ones that do not have any intersection with the ground truth 
+
+Definition at line 332 of file Fire\+Tracker\+Chenebert.\+cpp.
+
+\hypertarget{class_fire_tracker_chenebert_ae1ccd303e827f5d00620e54bb11a968c}{}\index{Fire\+Tracker\+Chenebert@{Fire\+Tracker\+Chenebert}!get\+Last\+Track@{get\+Last\+Track}}
+\index{get\+Last\+Track@{get\+Last\+Track}!Fire\+Tracker\+Chenebert@{Fire\+Tracker\+Chenebert}}
+\subsubsection[{get\+Last\+Track()}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$ $>$ \& get\+Last\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_fire_tracker_chenebert_ae1ccd303e827f5d00620e54bb11a968c}
+
+
+Get the last track. 
+
+Get last track. 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_a93ee7011307419e8c88db9f22d900657}{Tracker$<$ cv\+::\+Mat, std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$ $>$ $>$}.
+
+
+
+Definition at line 40 of file Fire\+Tracker\+Chenebert.\+cpp.
+
+\hypertarget{class_fire_tracker_chenebert_ac7e0977fa702f98038bbe303df458a6c}{}\index{Fire\+Tracker\+Chenebert@{Fire\+Tracker\+Chenebert}!lost\+Track@{lost\+Track}}
+\index{lost\+Track@{lost\+Track}!Fire\+Tracker\+Chenebert@{Fire\+Tracker\+Chenebert}}
+\subsubsection[{lost\+Track() const }]{\setlength{\rightskip}{0pt plus 5cm}bool lost\+Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_fire_tracker_chenebert_ac7e0977fa702f98038bbe303df458a6c}
+
+
+True if no fire is detected. 
+
+Lost track. 
+
+Reimplemented from \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_af6217aec35983dca6dc39c91d08c1020}{Tracker$<$ cv\+::\+Mat, std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$ $>$ $>$}.
+
+
+
+Definition at line 32 of file Fire\+Tracker\+Chenebert.\+cpp.
+
+\hypertarget{class_fire_tracker_chenebert_ab233da15b6c7aad7d83c67057a558bd4}{}\index{Fire\+Tracker\+Chenebert@{Fire\+Tracker\+Chenebert}!update@{update}}
+\index{update@{update}!Fire\+Tracker\+Chenebert@{Fire\+Tracker\+Chenebert}}
+\subsubsection[{update(const Vision\+Core\+::\+Frame$<$ cv\+::\+Mat $>$ \&frame)}]{\setlength{\rightskip}{0pt plus 5cm}void update (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vision\+Core\+::\+Frame}$<$ cv\+::\+Mat $>$ \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_fire_tracker_chenebert_ab233da15b6c7aad7d83c67057a558bd4}
+
+
+Given an image (i.\+e. video frame), update the tracked objects. 
+
+Update tracker. motion
+
+color segmentation
+
+get the channels as vector
+
+filter contours based on roundness
+
+get variance and skewness
+
+smooth resulting contours
+
+show debug info 
+
+Implements \hyperlink{class_vision_core_1_1_interfaces_1_1_tracker_aa298892351b5377fcdc227b6d53daf69}{Tracker$<$ cv\+::\+Mat, std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$ $>$ $>$}.
+
+
+
+Definition at line 47 of file Fire\+Tracker\+Chenebert.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{class_fire_tracker_chenebert_ab233da15b6c7aad7d83c67057a558bd4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_fire_tracker_chenebert_abc9326cea4683208d23aa1854bf6cd89}{}\index{Fire\+Tracker\+Chenebert@{Fire\+Tracker\+Chenebert}!dont\+\_\+classify\+\_\+by\+\_\+region\+\_\+stats@{dont\+\_\+classify\+\_\+by\+\_\+region\+\_\+stats}}
+\index{dont\+\_\+classify\+\_\+by\+\_\+region\+\_\+stats@{dont\+\_\+classify\+\_\+by\+\_\+region\+\_\+stats}!Fire\+Tracker\+Chenebert@{Fire\+Tracker\+Chenebert}}
+\subsubsection[{dont\+\_\+classify\+\_\+by\+\_\+region\+\_\+stats}]{\setlength{\rightskip}{0pt plus 5cm}bool dont\+\_\+classify\+\_\+by\+\_\+region\+\_\+stats}\label{class_fire_tracker_chenebert_abc9326cea4683208d23aa1854bf6cd89}
+Only extract statistics!!! Set as true only if you\textquotesingle{}re trying to generate training data. By setting this parameter as true you can access the statistics. You can easily get the data on \textquotesingle{}spatial\+\_\+data\textquotesingle{} and \textquotesingle{}current\+\_\+contours\textquotesingle{} or call the \textquotesingle{}generate\+Region\+Training\+Data\textquotesingle{} function 
+
+Definition at line 115 of file Fire\+Tracker\+Chenebert.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Fire\+Detector/Fire\+Tracker\+Chenebert.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Fire\+Detector/Fire\+Tracker\+Chenebert.\+cpp\end{DoxyCompactItemize}

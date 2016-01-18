@@ -1,0 +1,88 @@
+\hypertarget{class_viscv_1_1_color_blob_detector_h_f}{}\section{Color\+Blob\+Detector\+H\+F Class Reference}
+\label{class_viscv_1_1_color_blob_detector_h_f}\index{Color\+Blob\+Detector\+H\+F@{Color\+Blob\+Detector\+H\+F}}
+
+
+Implementa um detector de blobs baseado em cor.  
+
+
+
+
+{\ttfamily \#include $<$Color\+Blob\+Detector\+H\+F.\+h$>$}
+
+
+
+Inheritance diagram for Color\+Blob\+Detector\+H\+F\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{class_viscv_1_1_color_blob_detector_h_f__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Color\+Blob\+Detector\+H\+F\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{class_viscv_1_1_color_blob_detector_h_f__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_viscv_1_1_color_blob_detector_h_f_a22080136627bd90459c3a7cc68db48fc}{}\hyperlink{class_viscv_1_1_color_blob_detector_h_f_a22080136627bd90459c3a7cc68db48fc}{Color\+Blob\+Detector\+H\+F} (void)\label{class_viscv_1_1_color_blob_detector_h_f_a22080136627bd90459c3a7cc68db48fc}
+
+\begin{DoxyCompactList}\small\item\em Construtor default. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_color_blob_detector_h_f_a1a287459fc13984350ba9e1d68eac14e}{}virtual \hyperlink{class_viscv_1_1_color_blob_detector_h_f_a1a287459fc13984350ba9e1d68eac14e}{$\sim$\+Color\+Blob\+Detector\+H\+F} (void)\label{class_viscv_1_1_color_blob_detector_h_f_a1a287459fc13984350ba9e1d68eac14e}
+
+\begin{DoxyCompactList}\small\item\em Destrutor. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_color_blob_detector_h_f_a76311b08b5cb9df65524e070e9c15048}{}std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$ $>$ \hyperlink{class_viscv_1_1_color_blob_detector_h_f_a76311b08b5cb9df65524e070e9c15048}{detect} (const cv\+::\+Mat \&img) const \label{class_viscv_1_1_color_blob_detector_h_f_a76311b08b5cb9df65524e070e9c15048}
+
+\begin{DoxyCompactList}\small\item\em Detecta blobs em uma imagem. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_color_blob_detector_h_f_ae985929bdd9605ac5ab2460f6b824a97}{}void \hyperlink{class_viscv_1_1_color_blob_detector_h_f_ae985929bdd9605ac5ab2460f6b824a97}{set\+Min\+Hsv} (const cv\+::\+Scalar \&min\+Hsv\+\_\+)\label{class_viscv_1_1_color_blob_detector_h_f_ae985929bdd9605ac5ab2460f6b824a97}
+
+\begin{DoxyCompactList}\small\item\em Define a cor mínima que será filtrada. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_color_blob_detector_h_f_a842c89f58a06bc5d08b555e0ebcce3a4}{}void \hyperlink{class_viscv_1_1_color_blob_detector_h_f_a842c89f58a06bc5d08b555e0ebcce3a4}{set\+Max\+Hsv} (const cv\+::\+Scalar \&max\+Hsv\+\_\+)\label{class_viscv_1_1_color_blob_detector_h_f_a842c89f58a06bc5d08b555e0ebcce3a4}
+
+\begin{DoxyCompactList}\small\item\em Define a cor máxima que será filtrada. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_color_blob_detector_h_f_a34a1242cfaf748ff5c2ebd03b2e9daf6}{}const cv\+::\+Scalar \& \hyperlink{class_viscv_1_1_color_blob_detector_h_f_a34a1242cfaf748ff5c2ebd03b2e9daf6}{get\+Min\+Hsv} () const \label{class_viscv_1_1_color_blob_detector_h_f_a34a1242cfaf748ff5c2ebd03b2e9daf6}
+
+\begin{DoxyCompactList}\small\item\em Retorna a cor mínima que será filtrada. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_color_blob_detector_h_f_a762033ea84177602ff2b152b5d144c1b}{}const cv\+::\+Scalar \& \hyperlink{class_viscv_1_1_color_blob_detector_h_f_a762033ea84177602ff2b152b5d144c1b}{get\+Max\+Hsv} () const \label{class_viscv_1_1_color_blob_detector_h_f_a762033ea84177602ff2b152b5d144c1b}
+
+\begin{DoxyCompactList}\small\item\em Retorna a cor máxima que será filtrada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_viscv_1_1_color_blob_detector_h_f_ade892534cd32ce4ae635c5d79c76dbbf}{}int \hyperlink{class_viscv_1_1_color_blob_detector_h_f_ade892534cd32ce4ae635c5d79c76dbbf}{erode\+Size}\label{class_viscv_1_1_color_blob_detector_h_f_ade892534cd32ce4ae635c5d79c76dbbf}
+
+\begin{DoxyCompactList}\small\item\em Diâmetro do kernel (circular) usado na erosão. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_color_blob_detector_h_f_ad0b5e1ba575b162ef99943983c9ca931}{}int \hyperlink{class_viscv_1_1_color_blob_detector_h_f_ad0b5e1ba575b162ef99943983c9ca931}{dilate\+Size}\label{class_viscv_1_1_color_blob_detector_h_f_ad0b5e1ba575b162ef99943983c9ca931}
+
+\begin{DoxyCompactList}\small\item\em Diâmetro do kernel (circular) usado na dilatação. \end{DoxyCompactList}\item 
+\hypertarget{class_viscv_1_1_color_blob_detector_h_f_ad56f3dc42f92c3f920caed1aec8ead03}{}bool \hyperlink{class_viscv_1_1_color_blob_detector_h_f_ad56f3dc42f92c3f920caed1aec8ead03}{show\+Processing\+Imgs}\label{class_viscv_1_1_color_blob_detector_h_f_ad56f3dc42f92c3f920caed1aec8ead03}
+
+\begin{DoxyCompactList}\small\item\em Define se as imagens intermediárias de processamento devem ser mostradas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementa um detector de blobs baseado em cor. 
+
+O detector executa os seguintes passos\+: 1) Aplica um filtro de cor, baseado em um mínimo e máximo. 2) Aplica dilatação e erosão para fechar buracos e eliminar pequenos blobs. 3) Encontra blobs 4) Filtra blobs baseado em características (tamanho e forma)
+
+Obs\+: A Open\+Cv possui uma implementação de detector de blobs na classe cv\+::\+Simple\+Blob\+Detector. \begin{Desc}
+\item[Examples\+: ]\par
+\hyperlink{_vision_tests_2main_8cpp-example}{Vision\+Tests/main.\+cpp}.\end{Desc}
+
+
+Definition at line 45 of file Color\+Blob\+Detector\+H\+F.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Color\+Blob\+Detector\+H\+F.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Color\+Blob\+Detector\+H\+F.\+cpp\end{DoxyCompactItemize}

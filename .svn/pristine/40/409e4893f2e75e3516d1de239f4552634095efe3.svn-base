@@ -1,0 +1,7 @@
+<map id="Core" name="Core">
+<area shape="rect" id="node2" href="$group___evaluation.html" title="Implementation of generic validation algorithms for CvWorks interfaces. " alt="" coords="117,5,198,32"/>
+<area shape="rect" id="node3" href="$group___async.html" title="Contains classes that execute the CvWorks methods asynchronously in separate threads. " alt="" coords="128,56,187,83"/>
+<area shape="rect" id="node4" href="$group___data_structures.html" title="Declaration and implementation of simple data structures for Vision framework. " alt="" coords="103,107,212,133"/>
+<area shape="rect" id="node5" href="$group___interfaces.html" title="This module contains the generic interfaces used throughout the framework. " alt="" coords="118,157,197,184"/>
+<area shape="rect" id="node6" href="$group___abstractions.html" title="Contains abstract computer vision methods. " alt="" coords="110,208,205,235"/>
+</map>

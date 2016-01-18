@@ -1,0 +1,133 @@
+\hypertarget{class_ui___process_widget}{}\section{Ui\+\_\+\+Process\+Widget Class Reference}
+\label{class_ui___process_widget}\index{Ui\+\_\+\+Process\+Widget@{Ui\+\_\+\+Process\+Widget}}
+
+
+Inheritance diagram for Ui\+\_\+\+Process\+Widget\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_ui___process_widget__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ui\+\_\+\+Process\+Widget\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_ui___process_widget__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_ui___process_widget_a62590943c5485b0c2709fea3a9cdcdd8}{}void {\bfseries setup\+Ui} (Q\+Group\+Box $\ast$\hyperlink{class_process_widget}{Process\+Widget})\label{class_ui___process_widget_a62590943c5485b0c2709fea3a9cdcdd8}
+
+\item 
+\hypertarget{class_ui___process_widget_a14dba3bce6e173c80dc21bf7775cb62a}{}void {\bfseries retranslate\+Ui} (Q\+Group\+Box $\ast$\hyperlink{class_process_widget}{Process\+Widget})\label{class_ui___process_widget_a14dba3bce6e173c80dc21bf7775cb62a}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_ui___process_widget_ad85f9339d941aa92fe82db7dcba6664c}{}Q\+V\+Box\+Layout $\ast$ {\bfseries vertical\+Layout}\label{class_ui___process_widget_ad85f9339d941aa92fe82db7dcba6664c}
+
+\item 
+\hypertarget{class_ui___process_widget_abdf6ae306987e2427f22eea513893d44}{}Q\+Group\+Box $\ast$ {\bfseries group\+Box}\label{class_ui___process_widget_abdf6ae306987e2427f22eea513893d44}
+
+\item 
+\hypertarget{class_ui___process_widget_ac8d7bf4a44ded070834d27f8edc73959}{}Q\+V\+Box\+Layout $\ast$ {\bfseries vertical\+Layout\+\_\+4}\label{class_ui___process_widget_ac8d7bf4a44ded070834d27f8edc73959}
+
+\item 
+\hypertarget{class_ui___process_widget_a9ca831b3e7278c1cc7cebba2329486b4}{}Q\+H\+Box\+Layout $\ast$ {\bfseries horizontal\+Layout}\label{class_ui___process_widget_a9ca831b3e7278c1cc7cebba2329486b4}
+
+\item 
+\hypertarget{class_ui___process_widget_a21740e02d771fb549b8818eb8aab4bde}{}Q\+Push\+Button $\ast$ {\bfseries color\+Btn}\label{class_ui___process_widget_a21740e02d771fb549b8818eb8aab4bde}
+
+\item 
+\hypertarget{class_ui___process_widget_a701098e9acd54f38e28ad936f22fd06e}{}Q\+Push\+Button $\ast$ {\bfseries start\+Btn}\label{class_ui___process_widget_a701098e9acd54f38e28ad936f22fd06e}
+
+\item 
+\hypertarget{class_ui___process_widget_a9ac95751c437d5eaae5d7f8699373403}{}Q\+Push\+Button $\ast$ {\bfseries pause\+Btn}\label{class_ui___process_widget_a9ac95751c437d5eaae5d7f8699373403}
+
+\item 
+\hypertarget{class_ui___process_widget_a8ac35828c01d1144abfd6b4640c347b6}{}Q\+Push\+Button $\ast$ {\bfseries close\+Btn}\label{class_ui___process_widget_a8ac35828c01d1144abfd6b4640c347b6}
+
+\item 
+\hypertarget{class_ui___process_widget_ae5b2a36773d57ab8104197dbd5c3425e}{}Q\+Form\+Layout $\ast$ {\bfseries form\+Layout\+\_\+4}\label{class_ui___process_widget_ae5b2a36773d57ab8104197dbd5c3425e}
+
+\item 
+\hypertarget{class_ui___process_widget_a438b2626933f28a63dec19ae9e3ef121}{}Q\+Label $\ast$ {\bfseries label\+\_\+3}\label{class_ui___process_widget_a438b2626933f28a63dec19ae9e3ef121}
+
+\item 
+\hypertarget{class_ui___process_widget_adf4afe0a8b1fedc529ef5ad4628ebeee}{}Q\+Label $\ast$ {\bfseries max\+Processing\+Fps\+Label}\label{class_ui___process_widget_adf4afe0a8b1fedc529ef5ad4628ebeee}
+
+\item 
+\hypertarget{class_ui___process_widget_a22925632964060df176ccbc0de5fa511}{}Q\+Label $\ast$ {\bfseries label}\label{class_ui___process_widget_a22925632964060df176ccbc0de5fa511}
+
+\item 
+\hypertarget{class_ui___process_widget_a87faf5f32ee7fd32de3bf3a07dc99036}{}Q\+Label $\ast$ {\bfseries proc\+Time\+Label}\label{class_ui___process_widget_a87faf5f32ee7fd32de3bf3a07dc99036}
+
+\item 
+\hypertarget{class_ui___process_widget_ab69605878cf029a933e2966216a4114c}{}Q\+Label $\ast$ {\bfseries label\+\_\+4}\label{class_ui___process_widget_ab69605878cf029a933e2966216a4114c}
+
+\item 
+\hypertarget{class_ui___process_widget_a7561c398dc60e3020e47ee16cee24c06}{}Q\+Label $\ast$ {\bfseries status\+Label}\label{class_ui___process_widget_a7561c398dc60e3020e47ee16cee24c06}
+
+\item 
+\hypertarget{class_ui___process_widget_aec06235062834c6c3c25b29e1103d20e}{}Q\+Check\+Box $\ast$ {\bfseries keep\+Log\+Check\+Btn}\label{class_ui___process_widget_aec06235062834c6c3c25b29e1103d20e}
+
+\item 
+\hypertarget{class_ui___process_widget_af1b2167ad3027fe2c2328701164e54ec}{}Q\+H\+Box\+Layout $\ast$ {\bfseries horizontal\+Layout\+\_\+3}\label{class_ui___process_widget_af1b2167ad3027fe2c2328701164e54ec}
+
+\item 
+\hypertarget{class_ui___process_widget_a1f81b7e95162efcbe551b64ca41869c8}{}Q\+V\+Box\+Layout $\ast$ {\bfseries vertical\+Layout\+\_\+2}\label{class_ui___process_widget_a1f81b7e95162efcbe551b64ca41869c8}
+
+\item 
+\hypertarget{class_ui___process_widget_a341fc97913bfe041aa2e0945ebd525d5}{}Q\+Push\+Button $\ast$ {\bfseries export\+Log\+Btn}\label{class_ui___process_widget_a341fc97913bfe041aa2e0945ebd525d5}
+
+\item 
+\hypertarget{class_ui___process_widget_a6c896de50fc592ace1c6688e0dd26080}{}Q\+Push\+Button $\ast$ {\bfseries reset\+Log\+Btn}\label{class_ui___process_widget_a6c896de50fc592ace1c6688e0dd26080}
+
+\item 
+\hypertarget{class_ui___process_widget_a8c743d4dfcb156124d08713b5cdc19b7}{}Q\+V\+Box\+Layout $\ast$ {\bfseries vertical\+Layout\+\_\+3}\label{class_ui___process_widget_a8c743d4dfcb156124d08713b5cdc19b7}
+
+\item 
+\hypertarget{class_ui___process_widget_af9ea18b1b92eff359fbaad3338a700d5}{}Q\+Radio\+Button $\ast$ {\bfseries extort\+Csv\+Radio\+Btn}\label{class_ui___process_widget_af9ea18b1b92eff359fbaad3338a700d5}
+
+\item 
+\hypertarget{class_ui___process_widget_a6cf36a530c083a6aa792f77ee99e7a83}{}Q\+Radio\+Button $\ast$ {\bfseries export\+Xml\+Radio\+Btn}\label{class_ui___process_widget_a6cf36a530c083a6aa792f77ee99e7a83}
+
+\item 
+\hypertarget{class_ui___process_widget_aeb3eff1a8b0673c92f1ed957263d272b}{}Q\+H\+Box\+Layout $\ast$ {\bfseries horizontal\+Layout\+\_\+4}\label{class_ui___process_widget_aeb3eff1a8b0673c92f1ed957263d272b}
+
+\item 
+\hypertarget{class_ui___process_widget_aa57e5c817c205c76c67562b44d934f05}{}Q\+Check\+Box $\ast$ {\bfseries draw\+Check\+Btn}\label{class_ui___process_widget_aa57e5c817c205c76c67562b44d934f05}
+
+\item 
+\hypertarget{class_ui___process_widget_a9a4cf5cefb632d53e271d1c3cd9d9834}{}Q\+Label $\ast$ {\bfseries label\+\_\+2}\label{class_ui___process_widget_a9a4cf5cefb632d53e271d1c3cd9d9834}
+
+\item 
+\hypertarget{class_ui___process_widget_a17ff644258c02bde2c80dbc2d48d9759}{}Q\+Spin\+Box $\ast$ {\bfseries draw\+Hist\+Size}\label{class_ui___process_widget_a17ff644258c02bde2c80dbc2d48d9759}
+
+\item 
+\hypertarget{class_ui___process_widget_a34dd0c05ef6c1d2f934ec09117b925f2}{}Q\+Group\+Box $\ast$ {\bfseries method\+Parameters\+Group}\label{class_ui___process_widget_a34dd0c05ef6c1d2f934ec09117b925f2}
+
+\item 
+\hypertarget{class_ui___process_widget_acbe0600e63ca9c63fe807730289e677a}{}Q\+V\+Box\+Layout $\ast$ {\bfseries vertical\+Layout\+\_\+5}\label{class_ui___process_widget_acbe0600e63ca9c63fe807730289e677a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 29 of file ui\+\_\+\+Process\+Widget.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets/ui\+\_\+\+Process\+Widget.\+h\end{DoxyCompactItemize}

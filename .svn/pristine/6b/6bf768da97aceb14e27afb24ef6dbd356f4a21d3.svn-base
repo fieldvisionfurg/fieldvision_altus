@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>993</width>
+    <height>593</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FieldVision</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QScrollArea" name="scrollArea">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>180</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="sourceArea">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>178</width>
+          <height>520</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2"/>
+       </widget>
+      </widget>
+      <widget class="QScrollArea" name="scrollArea_2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>2</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="videoArea">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>483</width>
+          <height>520</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <layout class="QVBoxLayout" name="videoLayout0"/>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="videoLayout1"/>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QScrollArea" name="scrollArea_3">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>300</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="processArea">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>298</width>
+          <height>520</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QToolBox" name="toolBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="page_2">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>280</width>
+              <height>475</height>
+             </rect>
+            </property>
+            <attribute name="label">
+             <string>Page 2</string>
+            </attribute>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>993</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuAdd">
+    <property name="title">
+     <string>Add</string>
+    </property>
+    <widget class="QMenu" name="menuVideo">
+     <property name="title">
+      <string>Video</string>
+     </property>
+     <addaction name="actionWebCAM"/>
+     <addaction name="actionFirewire_Camera"/>
+     <addaction name="actionVideo_Local"/>
+     <addaction name="actionVideo_Url"/>
+    </widget>
+    <widget class="QMenu" name="menuDetectors">
+     <property name="title">
+      <string>Visual Sensor</string>
+     </property>
+     <addaction name="actionAnalogMeterDetector"/>
+     <addaction name="actionAnalog_Meter_Non_Frontal"/>
+     <addaction name="actionLevelTracker"/>
+     <addaction name="actionDiffractionLevelTracker"/>
+     <addaction name="actionFeatureTracker"/>
+     <addaction name="actionPresenceTracker"/>
+     <addaction name="actionFireTrackerCT"/>
+    </widget>
+    <addaction name="menuVideo"/>
+    <addaction name="menuDetectors"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionAbout_FieldVision"/>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionGeneral_Settings"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuSettings"/>
+   <addaction name="menuAdd"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionFaceDetector">
+   <property name="text">
+    <string>FaceDetector</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionAnalogMeterDetector">
+   <property name="text">
+    <string>AnalogMeterDetector</string>
+   </property>
+  </action>
+  <action name="actionWebCAM">
+   <property name="text">
+    <string>WebCAM</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionFeatureTracker">
+   <property name="text">
+    <string>FeatureTracker</string>
+   </property>
+  </action>
+  <action name="actionObjectTrackerPFHist">
+   <property name="text">
+    <string>ObjectTrackerPFHist</string>
+   </property>
+  </action>
+  <action name="actionARTagDetectorBLP">
+   <property name="text">
+    <string>ARTagDetectorBLP</string>
+   </property>
+  </action>
+  <action name="actionObjectDetectorFMCv">
+   <property name="text">
+    <string>ObjectDetectorFMCv</string>
+   </property>
+  </action>
+  <action name="actionMultiObjectTrackerCCCv">
+   <property name="text">
+    <string>MultiObjectTrackerCCCv</string>
+   </property>
+  </action>
+  <action name="actionQw">
+   <property name="text">
+    <string>qw</string>
+   </property>
+  </action>
+  <action name="actionA">
+   <property name="text">
+    <string>a</string>
+   </property>
+  </action>
+  <action name="actionVideo_Local">
+   <property name="text">
+    <string>Video Local</string>
+   </property>
+  </action>
+  <action name="actionVideo_Url">
+   <property name="text">
+    <string>Video Url</string>
+   </property>
+  </action>
+  <action name="actionFireTrackerCT">
+   <property name="text">
+    <string>Fire Detector</string>
+   </property>
+  </action>
+  <action name="actionCircleDetectorHTCF">
+   <property name="text">
+    <string>CircleDetectorHTCF</string>
+   </property>
+  </action>
+  <action name="actionColorBlobDetector">
+   <property name="text">
+    <string>ColorBlobDetectorHF</string>
+   </property>
+  </action>
+  <action name="actionColorBlobDetectorHF">
+   <property name="text">
+    <string>ColorBlobDetectorHF</string>
+   </property>
+  </action>
+  <action name="actionPresenceTracker">
+   <property name="text">
+    <string>PresenceTracker</string>
+   </property>
+  </action>
+  <action name="actionLevelTracker">
+   <property name="text">
+    <string>LevelTracker</string>
+   </property>
+  </action>
+  <action name="actionFirewire_Camera">
+   <property name="text">
+    <string>Firewire Camera</string>
+   </property>
+  </action>
+  <action name="actionGeneral_Settings">
+   <property name="text">
+    <string>General Settings</string>
+   </property>
+  </action>
+  <action name="actionAbout_FieldVision">
+   <property name="text">
+    <string>About FieldVision</string>
+   </property>
+  </action>
+  <action name="actionDiffractionLevelTracker">
+   <property name="text">
+    <string>LevelTracker (Diffraction)</string>
+   </property>
+   <property name="whatsThis">
+    <string>Level tracker for transparent liquids</string>
+   </property>
+  </action>
+  <action name="actionAnalog_Meter_Non_Frontal">
+   <property name="text">
+    <string>Analog Meter (Non Frontal)</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>302</x>
+     <y>202</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,41 @@
+\hypertarget{class_viscv_1_1_line}{}\section{Line$<$ T $>$ Class Template Reference}
+\label{class_viscv_1_1_line}\index{Line$<$ T $>$@{Line$<$ T $>$}}
+
+
+Collaboration diagram for Line$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=138pt]{class_viscv_1_1_line__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_viscv_1_1_line_a87b235f70cf01492e82d2ca7f410d7c7}{}virtual \hyperlink{class_viscv_1_1_line_a87b235f70cf01492e82d2ca7f410d7c7}{$\sim$\+Line} ()\label{class_viscv_1_1_line_a87b235f70cf01492e82d2ca7f410d7c7}
+
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_viscv_1_1_line_a67fe614c9a98a740ff1ab9caadc9e7db}{}cv\+::\+Point {\bfseries p1}\label{class_viscv_1_1_line_a67fe614c9a98a740ff1ab9caadc9e7db}
+
+\item 
+\hypertarget{class_viscv_1_1_line_a3c6a95a7c883d8685764a07760e023e1}{}cv\+::\+Point {\bfseries p2}\label{class_viscv_1_1_line_a3c6a95a7c883d8685764a07760e023e1}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T = int$>$class Viscv\+::\+Line$<$ T $>$}
+
+
+
+Definition at line 35 of file Line\+Detector\+H\+T.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Implementation\+Cv/Line\+Detector\+H\+T.\+h\end{DoxyCompactItemize}

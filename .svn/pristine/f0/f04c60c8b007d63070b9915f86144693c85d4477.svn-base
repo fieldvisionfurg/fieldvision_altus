@@ -1,0 +1,417 @@
+\hypertarget{_vision_tests_2main_8cpp-example}{}\section{Vision\+Tests/main.\+cpp}
+Contains several examples for Cv\+Works methods. Each function is a complete example.
+
+
+\begin{DoxyCodeInclude}
+
+
+\textcolor{preprocessor}{#include "VisionImplementationCv.h"}
+\textcolor{preprocessor}{#include "FireDetectorCv.h"}
+
+\textcolor{keyword}{using namespace }\hyperlink{namespace_vision_core}{VisionCore};
+\textcolor{keyword}{using namespace }\hyperlink{namespace_viscv}{Viscv};
+
+\textcolor{comment}{// Example showing the execution of a detector.}
+\textcolor{comment}{/* This example runs a ColorBlobDetector, which segments blobs in the image within a}
+\textcolor{comment}{given color range. The blobs are represented by their contour as a vector of points.}
+\textcolor{comment}{*/}
+\textcolor{keywordtype}{void} testColorBlobDetector()\{
+    \textcolor{comment}{// Defines a contour}
+    \textcolor{keyword}{typedef} std::vector<cv::Point> Contours;
+
+    \textcolor{comment}{// Create a frame server. By default it will try to open the first webcam.}
+    \hyperlink{class_viscv_1_1_frame_server_cv}{FrameServerCv} frameServer;
+
+    \textcolor{comment}{// Create a color blob detector.}
+    \hyperlink{class_viscv_1_1_color_blob_detector_h_f}{ColorBlobDetectorHF} detector;
+
+    \textcolor{comment}{// Creates a window for simple visualisation of results.}
+    \hyperlink{class_viscv_1_1_cv_image_g_u_i}{CvImageGUI} gui;
+
+    \textcolor{comment}{// Loop over frames}
+    \textcolor{keywordflow}{while}(frameServer.\hyperlink{class_viscv_1_1_frame_server_cv_a634d758e1811c32295f5665e4f8a0178}{hasNext}())\{
+        \textcolor{comment}{// Capture frame.}
+        Frame<cv::Mat> frame = frameServer.\hyperlink{class_viscv_1_1_frame_server_cv_a9ad5d34c4a7364130b2da00adc8f8638}{captureFrame}();
+
+        \textcolor{comment}{// Perform detection}
+        std::vector<Contours> blobs = detector.\hyperlink{class_viscv_1_1_color_blob_detector_h_f_a76311b08b5cb9df65524e070e9c15048}{detect}(frame.getImg());
+
+        \textcolor{comment}{// Visualization of results.}
+        gui.\hyperlink{class_viscv_1_1_cv_image_g_u_i_a4ae2d7fd59643d69dfe83dff37582501}{setImg}(frame.getImg());
+        gui.draw(blobs);
+        gui.show();
+    \}
+\}
+
+
+\textcolor{comment}{// Example showing how to create a multi-tracker based on a detector.}
+\textcolor{comment}{/* This example first creates a face detector based on ObjectDetectorCCCv method (which is a}
+\textcolor{comment}{ * wrap for OpenCv haar cascade detector).}
+\textcolor{comment}{ *}
+\textcolor{comment}{ * Based on this detector, a tracker for multiple faces is created. The DetectorBasedMultiTracker class}
+\textcolor{comment}{ * can keep a track of faces along a video. This class can be used with any generic detector.}
+\textcolor{comment}{ *}
+\textcolor{comment}{ * \(\backslash\)see DetectorBasedMultiTracker}
+\textcolor{comment}{*/}
+\textcolor{keywordtype}{void} testDetectorBasedTracker()\{
+    \textcolor{keyword}{typedef} cv::Mat TImg;
+    \textcolor{keyword}{typedef} cv::Rect TObj;
+
+    \textcolor{comment}{// Create a frame server. By default it will try to open the first webcam.}
+    FrameServer<TImg> &frameServer = \hyperlink{class_viscv_1_1_frame_server_cv}{FrameServerCv}();
+
+    \textcolor{comment}{// Create a face detector}
+    std::string cascadeFile = \textcolor{stringliteral}{"..\(\backslash\)\(\backslash\)..\(\backslash\)\(\backslash\)ExternalLibraries\(\backslash\)\(\backslash\)OpenCV2.4.9\(\backslash\)\(\backslash\)data\(\backslash\)\(\backslash\)haarcascades\(\backslash\)\(\backslash\)
+      haarcascade\_frontalface\_default.xml"};
+    Detector<TImg,TObj> &detector = \hyperlink{class_viscv_1_1_object_detector_c_c_cv}{ObjectDetectorCCCv}(cascadeFile);
+
+    \textcolor{comment}{// Create a multiple face tracker using the generic detector based multi tracker.}
+    DetectorBasedMultiTracker<TImg,TObj> tracker(&detector);
+
+    \textcolor{comment}{// Start processing frames}
+    \hyperlink{class_viscv_1_1_cv_image_g_u_i}{CvImageGUI} gui;
+    \textcolor{keywordflow}{while}(frameServer.hasNext())\{
+        \textcolor{comment}{// Capture frame}
+        Frame<TImg> frame = frameServer.captureFrame();
+
+        \textcolor{comment}{// Update tracker}
+        tracker.update(frame);
+        \textcolor{keyword}{auto} objects=tracker.getLastTrack();
+
+        \textcolor{comment}{// Draw results}
+        gui.\hyperlink{class_viscv_1_1_cv_image_g_u_i_a4ae2d7fd59643d69dfe83dff37582501}{setImg}(frame.getImg());
+        gui.draw(objects);
+        gui.show();
+    \}
+\}
+
+
+\textcolor{comment}{// Example showing a multi-tracker based on abstract class AbstractAutoTracker.}
+\textcolor{comment}{/* This example runs a multi-face tracker implemented in class MultiObjectTrackerCCCv.}
+\textcolor{comment}{ *}
+\textcolor{comment}{ * This class is derived from AbstractAutoTracker, which provides a base implementation for automaticly}
+\textcolor{comment}{ * detecting new objects and managing a pool of individual trackers.}
+\textcolor{comment}{ *}
+\textcolor{comment}{ * \(\backslash\)see AbstractAutoTracker}
+\textcolor{comment}{ *}
+\textcolor{comment}{*/}
+\textcolor{keywordtype}{void} testMultiTracker()\{
+    \textcolor{keyword}{typedef} cv::Mat TImg;
+    \textcolor{keyword}{typedef} cv::Rect TObj;
+
+     \textcolor{comment}{// Create a frame server. By default it will try to open the first webcam.}
+    FrameServer<TImg> &frameServer = \hyperlink{class_viscv_1_1_frame_server_cv}{FrameServerCv}();
+
+    \textcolor{comment}{// Create a multiple face tracker.}
+    std::string cascadeFile = \textcolor{stringliteral}{"..\(\backslash\)\(\backslash\)..\(\backslash\)\(\backslash\)ExternalLibraries\(\backslash\)\(\backslash\)OpenCV2.4.9\(\backslash\)\(\backslash\)data\(\backslash\)\(\backslash\)haarcascades\(\backslash\)\(\backslash\)
+      haarcascade\_frontalface\_default.xml"};
+    AbstractAutoTracker<TImg,TObj> &track = \hyperlink{class_viscv_1_1_multi_object_tracker_c_c_cv}{MultiObjectTrackerCCCv}(cascadeFile);
+
+    \textcolor{comment}{// Start processing frames}
+    \hyperlink{class_viscv_1_1_cv_image_g_u_i}{CvImageGUI} gui;
+    \textcolor{keywordflow}{while}(frameServer.hasNext())\{
+        \textcolor{comment}{// Capture frame.}
+        Frame<TImg> frame = frameServer.captureFrame();
+
+        \textcolor{comment}{// Update tracker}
+        track.update(frame);
+        \textcolor{keyword}{auto} objects=track.getLastTrack();
+
+        \textcolor{comment}{// Draw results}
+        gui.\hyperlink{class_viscv_1_1_cv_image_g_u_i_a4ae2d7fd59643d69dfe83dff37582501}{setImg}(frame.getImg());
+        \textcolor{keywordflow}{for}(\textcolor{keyword}{const} std::pair<long,TObj>& t : objects)
+            gui.draw(t.second);
+        gui.show();
+    \}
+\}
+
+\textcolor{keywordtype}{void} testCircleDetector()\{
+    FrameServer<cv::Mat> &frameServer = \hyperlink{class_viscv_1_1_frame_server_cv}{FrameServerCv}();
+    \hyperlink{class_viscv_1_1_circle_detector_h_t_c_f}{CircleDetectorHTCF} circleDetector;
+
+    \hyperlink{class_viscv_1_1_cv_image_g_u_i}{CvImageGUI} gui;
+    \textcolor{keywordflow}{while}(frameServer.hasNext())\{
+        Frame<cv::Mat> frame = frameServer.captureFrame();
+        std::vector<Circle<>> circles = circleDetector.\hyperlink{class_viscv_1_1_circle_detector_h_t_c_f_ad8f008988f0c246f86a192f8c17c3a88}{detect}(frame.getImg());
+
+        gui.\hyperlink{class_viscv_1_1_cv_image_g_u_i_a4ae2d7fd59643d69dfe83dff37582501}{setImg}(frame.getImg());
+        gui.draw(circles);
+        gui.show();
+    \}
+\}
+
+
+\textcolor{comment}{// Example showing the execution of a frame server and a detector in separate threads.}
+\textcolor{comment}{/* This example shows how to use the asynchronous execution provided by CvWorks.}
+\textcolor{comment}{ *}
+\textcolor{comment}{ * First a frame server is created and wrapped in a AsyncFrameServerWrap object, which runs it in a}
+\textcolor{comment}{ * individual thread.}
+\textcolor{comment}{ *}
+\textcolor{comment}{ * Then a face detector is created and wrapped in a AsyncDetectorWrap.}
+\textcolor{comment}{ *}
+\textcolor{comment}{ * \(\backslash\)see AsyncFrameServerWrap AsyncDetectorWrap}
+\textcolor{comment}{*/}
+\textcolor{keywordtype}{void} asyncTest()\{
+    \hyperlink{class_viscv_1_1_cv_image_g_u_i}{CvImageGUI} gui;
+
+    \textcolor{comment}{// Create an AsyncFrameServer from webcam}
+    FrameServer<cv::Mat> &frameServer = \hyperlink{class_viscv_1_1_frame_server_cv}{FrameServerCv}();
+    AsyncFrameServerWrap<cv::Mat> asyncFS(&frameServer);
+
+    \textcolor{comment}{// Set callback when frame is capture. Set the frame for visualization.}
+    asyncFS.setCallback([&](std::shared\_ptr<Frame<cv::Mat>> framePtr)\{
+        gui.\hyperlink{class_viscv_1_1_cv_image_g_u_i_a4ae2d7fd59643d69dfe83dff37582501}{setImg}(framePtr->getImg());
+    \});
+
+    \textcolor{comment}{// Create an AsyncDetector}
+    \hyperlink{class_viscv_1_1_object_detector_c_c_cv}{ObjectDetectorCCCv} detector(\textcolor{stringliteral}{"..\(\backslash\)\(\backslash\)..\(\backslash\)\(\backslash\)ExternalLibraries\(\backslash\)\(\backslash\)OpenCV2.4.9\(\backslash\)\(\backslash\)data\(\backslash\)\(\backslash\)
+      haarcascades\(\backslash\)\(\backslash\)haarcascade\_frontalface\_default.xml"});
+    AsyncDetectorWrap<cv::Mat,cv::Rect> asyncDet(&asyncFS,&detector);
+
+    \textcolor{comment}{// Set the callback function that is called when objects are detected}
+    asyncDet.setCallback([&](std::vector<cv::Rect> det)\{
+        std::cout<<\textcolor{stringliteral}{"Face detected!!!\(\backslash\)n\(\backslash\)n"};
+        gui.draw(det);
+        \textcolor{comment}{//gui.show(); // doesn't work (probably because gui was created on a different thread)}
+        cv::imshow(\textcolor{stringliteral}{"Async Detection"},gui.\hyperlink{class_viscv_1_1_cv_image_g_u_i_a128346d089624c27ffddb80f0526dc24}{getImg}());
+        cv::waitKey(1);
+    \});
+
+    \textcolor{comment}{// Start frame server and detector}
+    asyncDet.start();
+    asyncFS.start();
+
+    \textcolor{comment}{// Wait for the AsyncFrameServer thread to finish}
+    asyncFS.getThreadPtr()->join();
+    std::cout<<\textcolor{stringliteral}{"Finished."};
+\}
+
+
+\textcolor{comment}{/* Callback function to get a rectangle clicked in a image.*/}
+cv::Point firstPoint;
+cv::Point secondPoint;
+\textcolor{keywordtype}{int} clickCount = 0;
+\textcolor{keywordtype}{bool} rectReady=\textcolor{keyword}{false};
+
+\textcolor{keywordtype}{void} onMouse( \textcolor{keywordtype}{int} event, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{int}, \textcolor{keywordtype}{void}* )
+\{
+    \textcolor{keywordflow}{if}( event != cv::EVENT\_LBUTTONDOWN )
+        \textcolor{keywordflow}{return};
+    clickCount++;
+    \textcolor{keywordflow}{if}(clickCount==1)\{
+        firstPoint = cv::Point(x,y);
+        rectReady=\textcolor{keyword}{false};
+    \}
+    \textcolor{keywordflow}{if}(clickCount==2)\{
+        secondPoint = cv::Point(x,y);
+        clickCount=0;
+        rectReady=\textcolor{keyword}{true};
+    \}
+\}
+
+
+\textcolor{comment}{// Example showing the use of feature matching object detector.}
+\textcolor{comment}{/* This example shows how to use the ObjectDetectorFMCv class.}
+\textcolor{comment}{ *}
+\textcolor{comment}{ * The user has to click on the top left corner and botton right corner}
+\textcolor{comment}{ * to define a rectangle containing the object to be detected.}
+\textcolor{comment}{ * This object is passed to the detector by calling setTargetImage().}
+\textcolor{comment}{ *}
+\textcolor{comment}{ * \(\backslash\)see ObjectDetectorFMCv}
+\textcolor{comment}{*/}
+\textcolor{keywordtype}{void} testObjectDetectorFMCv()\{
+    FrameServer<cv::Mat> &frameServer = \hyperlink{class_viscv_1_1_frame_server_cv}{FrameServerCv}();
+    \hyperlink{class_viscv_1_1_object_detector_f_m_cv}{ObjectDetectorFMCv} detector;
+
+    \hyperlink{class_viscv_1_1_cv_image_g_u_i}{CvImageGUI} gui;
+    \textcolor{comment}{// defines callback for image click}
+    cv::setMouseCallback(gui.\hyperlink{class_viscv_1_1_cv_image_g_u_i_afb48ea0df1b0f3d228839536031af917}{getWindowName}(),onMouse);
+
+    \textcolor{keywordflow}{while}(frameServer.hasNext())\{
+        Frame<cv::Mat> frame = frameServer.captureFrame();
+
+        \textcolor{comment}{// when two clicks, defines object to detect}
+        \textcolor{keywordflow}{if}(rectReady)\{
+            cv::Mat img = frame.\hyperlink{class_viscv_1_1_cv_image_g_u_i_a128346d089624c27ffddb80f0526dc24}{getImg}();
+            cv::Rect ROI(firstPoint,secondPoint);
+            detector.setTargetImage(img(ROI));
+            rectReady=\textcolor{keyword}{false};
+        \}
+
+        \textcolor{comment}{//detect}
+        std::vector<cv::Rect> obj = detector.\hyperlink{class_viscv_1_1_object_detector_f_m_cv_a1d0c071b6e7a19b192c86ca0e47fd642}{detect}(frame.getImg());
+
+        \textcolor{comment}{//shows result}
+        gui.\hyperlink{class_viscv_1_1_cv_image_g_u_i_a4ae2d7fd59643d69dfe83dff37582501}{setImg}(frame.getImg());
+        gui.draw(obj);
+        gui.show();
+    \}
+\}
+
+
+\textcolor{comment}{// Example showing the evaluation of a detector.}
+\textcolor{comment}{/* This example shows the evaluation of a face detector.}
+\textcolor{comment}{ * The detector is an ObjectDetectorCCCv object (which is a simple wrap for OpenCv}
+\textcolor{comment}{ * haar cascade detector).}
+\textcolor{comment}{ *}
+\textcolor{comment}{ * The class DatasetFDDB implements interface DetectionDataset, providing generic access to the FDDB face}
+\textcolor{comment}{ * dataset.}
+\textcolor{comment}{ *}
+\textcolor{comment}{ * Then the generic DetectorEvaluator class is used to evaluate the detector.}
+\textcolor{comment}{ *}
+\textcolor{comment}{ * \(\backslash\)see DetectorEvaluator DetectionDataset}
+\textcolor{comment}{*/}
+\textcolor{keywordtype}{void} testFDDBDataset()\{
+    \textcolor{comment}{// Creates dataset}
+   \hyperlink{class_viscv_1_1_dataset_f_d_d_b}{DatasetFDDB} db(\textcolor{stringliteral}{"C:/Datasets/FDDB/"},\textcolor{stringliteral}{"C:/Datasets/FDDB/FDDB-fold-01-ellipseList.txt"});
+
+   \textcolor{comment}{// Creates detector}
+   \hyperlink{class_viscv_1_1_object_detector_c_c_cv}{ObjectDetectorCCCv} det(\textcolor{stringliteral}{"
+      ../../ExternalLibraries/OpenCV2.4.9/data/haarcascades/haarcascade\_frontalface\_default.xml"});
+
+    \textcolor{comment}{// Defines the similarity between two rectangles as the proportion of intersection between them.}
+    std::function<double(const cv::Rect &r1,const cv::Rect &r2)> simFc = [](\textcolor{keyword}{const} cv::Rect &r1,\textcolor{keyword}{const} 
+      cv::Rect &r2)\{
+        \textcolor{keywordtype}{double} areaR1=r1.area();
+        \textcolor{keywordtype}{double} areaR2=r2.area();
+        \textcolor{keywordtype}{double} areaIntrsect=(r1 & r2).area(); \textcolor{comment}{//intersection area}
+        \textcolor{keywordtype}{double} similarity = areaIntrsect / (areaR1+areaR2-areaIntrsect);
+        \textcolor{keywordflow}{return} similarity;
+    \};
+
+
+    \textcolor{comment}{// Create the evaluator, passing the dataset, detector and similarity function. A report is printed at
+       the end.}
+    DetectorEvaluator<cv::Mat,cv::Rect> evaluator;
+    evaluator.evaluateDetector(det,db,simFc);
+
+    \textcolor{comment}{// The evaluation is done.}
+    \textcolor{comment}{// Just as a visualization example, iterates again over the dataset showing the dataset}
+    \textcolor{comment}{// objects and the result of detections.}
+    \hyperlink{class_viscv_1_1_cv_image_g_u_i}{CvImageGUI} gui;
+    db.forEachSample([&](cv::Mat& img,std::vector<cv::Rect>& objects,\textcolor{keyword}{const} std::string& sampleID)\{
+        gui.\hyperlink{class_viscv_1_1_cv_image_g_u_i_a4ae2d7fd59643d69dfe83dff37582501}{setImg}(img);
+        gui.draw(det.detect(img));
+        gui.draw(objects);
+        gui.show();
+    \});
+\}
+
+
+\textcolor{comment}{// Example showing the generic tracker logger usage.}
+\textcolor{comment}{/* This example shows the usage of TrackerLogger class.}
+\textcolor{comment}{ * First a multiple face tracker is created based on haar cascade classifier.}
+\textcolor{comment}{ *}
+\textcolor{comment}{ * Then it is wrapped on a TrackerLogger, which provides transparent logging functionalities.}
+\textcolor{comment}{ * Note that the tracking with the logger object is performed as any other tracker.}
+\textcolor{comment}{ *}
+\textcolor{comment}{ * After 100 frames the result is saved in a CSV file.}
+\textcolor{comment}{ *}
+\textcolor{comment}{ * \(\backslash\)see TrackerLogger}
+\textcolor{comment}{*/}
+\textcolor{keywordtype}{void} testDetectionLogger()
+\{
+    \textcolor{comment}{// Create frame server from webcam}
+    \hyperlink{class_viscv_1_1_frame_server_cv}{FrameServerCv} frameServer;
+
+    \textcolor{comment}{// Create multiple face tracking}
+    std::string cascadeFile = \textcolor{stringliteral}{"..\(\backslash\)\(\backslash\)..\(\backslash\)\(\backslash\)ExternalLibraries\(\backslash\)\(\backslash\)OpenCV2.4.9\(\backslash\)\(\backslash\)data\(\backslash\)\(\backslash\)haarcascades\(\backslash\)\(\backslash\)
+      haarcascade\_frontalface\_default.xml"};
+    \hyperlink{class_viscv_1_1_multi_object_tracker_c_c_cv}{MultiObjectTrackerCCCv} faceTracker(cascadeFile);
+
+    \textcolor{comment}{// Wrap tracker in a TrackerLogger.}
+    TrackerLogger<cv::Mat,MultiObjectTrackerCCCv::ObjType> tracker(&faceTracker);
+
+    \textcolor{comment}{// Start capturing frames}
+    \hyperlink{class_viscv_1_1_cv_image_g_u_i}{CvImageGUI} gui;
+    \textcolor{keywordflow}{while}(frameServer.\hyperlink{class_viscv_1_1_frame_server_cv_a634d758e1811c32295f5665e4f8a0178}{hasNext}())\{
+        Frame<cv::Mat> frame = frameServer.\hyperlink{class_viscv_1_1_frame_server_cv_a9ad5d34c4a7364130b2da00adc8f8638}{captureFrame}();
+
+        \textcolor{comment}{// Update tracker}
+        tracker.update(frame);
+
+        \textcolor{comment}{// Visualization}
+        gui.\hyperlink{class_viscv_1_1_cv_image_g_u_i_a4ae2d7fd59643d69dfe83dff37582501}{setImg}(frame.getImg());
+        \textcolor{keywordflow}{for}(\textcolor{keyword}{const} std::pair<long,cv::Rect>& t : tracker.getLastTrack())
+            gui.draw(t.second);
+        gui.show();
+
+        \textcolor{comment}{// Stop after 100 frames}
+        \textcolor{keywordflow}{if}(frame.getNumber()>100)
+            \textcolor{keywordflow}{break};
+    \}
+    \textcolor{comment}{// Write log to a CSV file}
+    tracker.writeToFileAsCsv(\textcolor{stringliteral}{"test.txt"});
+\}
+
+\textcolor{comment}{// Simple tag detector example.}
+\textcolor{keywordtype}{void} testTagDetection()\{
+    FrameServer<cv::Mat> &frameServer = \hyperlink{class_viscv_1_1_frame_server_cv}{FrameServerCv}();
+    \hyperlink{class_viscv_1_1_a_r_tag_detector_b_l_p}{ARTagDetectorBLP} tagDetector;
+
+    \hyperlink{class_viscv_1_1_cv_image_g_u_i}{CvImageGUI} gui;
+    \textcolor{keywordflow}{while}(frameServer.hasNext())\{
+        Frame<cv::Mat> frame = frameServer.captureFrame();
+        std::vector<ARTag> tags = tagDetector.\hyperlink{class_viscv_1_1_a_r_tag_detector_b_l_p_a0065a0a0e3dbed236849bf406e6cde66}{detect}(frame.getImg());
+
+        gui.\hyperlink{class_viscv_1_1_cv_image_g_u_i_a4ae2d7fd59643d69dfe83dff37582501}{setImg}(frame.getImg());
+        gui.draw(tags);
+        gui.show();
+    \}
+\}
+
+\textcolor{keywordtype}{void} videoChenebertXProposed()\{
+
+    std::function<double(std::vector<cv::Point> &dt, cv::Rect &gt)> simFc = [](std::vector<cv::Point> &dt, 
+      cv::Rect &gt)\{
+        cv::Rect dtr = cv::boundingRect(dt);
+        \textcolor{keywordtype}{double} area\_dtr= dtr.area();
+        \textcolor{keywordtype}{double} areaIntrsect=(dtr & gt).area();
+        \textcolor{keywordtype}{double} similarity = areaIntrsect/area\_dtr;
+        \textcolor{keywordflow}{return} similarity;
+    \};
+
+    \hyperlink{class_dataset_fire}{DatasetFire} db(\textcolor{stringliteral}{"../../Files/FireDataset/"});
+
+    \textcolor{comment}{//Cria evaluator}
+    TrackerEvaluator<cv::Mat, std::vector<cv::Point>, cv::Rect> evaluator;
+    evaluator.setSimilarityFunction(simFc);
+
+    \hyperlink{class_fire_tracker_s_a}{FireTrackerSA} tracker(\textcolor{stringliteral}{"
+      ../../Files/FireDataset/rf\_classifiers/20150218\_region\_classification\_model"},
+                          \textcolor{stringliteral}{"../../Files/FireDataset/rf\_classifiers/color\_classification\_model"});
+
+    \hyperlink{class_viscv_1_1_cv_image_g_u_i}{CvImageGUI} gui;
+    \textcolor{keywordflow}{for} (std::string s: db.getSamplesID())\{
+        std::cout << s<< std::endl;
+        FrameServer<cv::Mat> *fs = db.getFrameServer(s);
+        std::vector<std::vector<cv::Rect>> objects = db.getObjects(s);
+        \textcolor{keywordflow}{while}(fs->hasNext())\{
+            Frame<cv::Mat> f = fs->captureFrame();
+            gui.\hyperlink{class_viscv_1_1_cv_image_g_u_i_a4ae2d7fd59643d69dfe83dff37582501}{setImg}(f.getImg());
+            tracker.update(f);
+            gui.draw(objects.at(f.getNumber()));
+            gui.draw(tracker.getLastTrack());
+            gui.show();
+            cv::waitKey(1);
+        \}
+
+    \}
+\}
+
+\textcolor{keywordtype}{int} main(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}* argv[])
+\{
+    \textcolor{comment}{//testColorBlobDetector();}
+    \textcolor{comment}{//testCircleDetector();}
+    testDetectorBasedTracker();
+    \textcolor{comment}{//testMultiTracker();}
+    \textcolor{comment}{//testDetectionLogger();}
+    \textcolor{comment}{//asyncTest();}
+    \textcolor{comment}{//testFDDBDataset()}
+    \textcolor{comment}{//testTagDetection();}
+    \textcolor{comment}{//testObjectDetectorFMCv();}
+    \textcolor{comment}{//videoChenebertXProposed();}
+    system (\textcolor{stringliteral}{"PAUSE"});
+\}
+\end{DoxyCodeInclude}
+ 

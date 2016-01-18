@@ -1,0 +1,90 @@
+\hypertarget{class_frame_server_control_widget}{}\section{Frame\+Server\+Control\+Widget Class Reference}
+\label{class_frame_server_control_widget}\index{Frame\+Server\+Control\+Widget@{Frame\+Server\+Control\+Widget}}
+
+
+Esta classe controla a execução e representação gráfica de um vídeo (Frame\+Server).  
+
+
+
+
+{\ttfamily \#include $<$Frame\+Server\+Control\+Widget.\+h$>$}
+
+
+
+Inheritance diagram for Frame\+Server\+Control\+Widget\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_frame_server_control_widget__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Frame\+Server\+Control\+Widget\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_frame_server_control_widget__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_frame_server_control_widget_a6fb22b9f3a3e5171405523f1464e645b}{}void {\bfseries new\+Image} (cv\+::\+Mat img)\label{class_frame_server_control_widget_a6fb22b9f3a3e5171405523f1464e645b}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_frame_server_control_widget_ad3eb64df6392475d7eba15b61b641239}{}{\bfseries Frame\+Server\+Control\+Widget} (\hyperlink{class_vision_core_1_1_interfaces_1_1_frame_server}{Vision\+Core\+::\+Frame\+Server}$<$ cv\+::\+Mat $>$ $\ast$frame\+Server\+\_\+, bool start\+Paused=false, int frames\+Per\+Second=25, Q\+Widget $\ast$parent=0)\label{class_frame_server_control_widget_ad3eb64df6392475d7eba15b61b641239}
+
+\item 
+\hypertarget{class_frame_server_control_widget_a49e9fd9d8e83eb95d3203f62280623c1}{}\hyperlink{class_vision_core_1_1_async_1_1_async_frame_server_wrap}{Vision\+Core\+::\+Async\+Frame\+Server\+Wrap}$<$ cv\+::\+Mat $>$ $\ast$ {\bfseries get\+Async\+Frame\+Srv} () const \label{class_frame_server_control_widget_a49e9fd9d8e83eb95d3203f62280623c1}
+
+\item 
+\hypertarget{class_frame_server_control_widget_a0e734df2eb23730586e1045769c3784a}{}\hyperlink{class_image_viewer_cv}{Image\+Viewer\+Cv} $\ast$ {\bfseries get\+Img\+Viewer} () const \label{class_frame_server_control_widget_a0e734df2eb23730586e1045769c3784a}
+
+\item 
+\hypertarget{class_frame_server_control_widget_aebd19108ae7957a2c5f4f55aa4a8737e}{}Q\+String {\bfseries get\+Name} () const \label{class_frame_server_control_widget_aebd19108ae7957a2c5f4f55aa4a8737e}
+
+\item 
+\hypertarget{class_frame_server_control_widget_ae9b6ae8085e66d1a0440a443699b6e9a}{}void {\bfseries set\+Name} (const Q\+String \&value)\label{class_frame_server_control_widget_ae9b6ae8085e66d1a0440a443699b6e9a}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_frame_server_control_widget_a19e5584acbf54680cd8dba3a947d7dd2}{}\hyperlink{class_ui_1_1_frame_server_control_widget}{Ui\+::\+Frame\+Server\+Control\+Widget} $\ast$ {\bfseries ui}\label{class_frame_server_control_widget_a19e5584acbf54680cd8dba3a947d7dd2}
+
+\item 
+\hypertarget{class_frame_server_control_widget_ad2a05381cf735f490564c01d521f276e}{}\hyperlink{class_vision_core_1_1_interfaces_1_1_frame_server}{Vision\+Core\+::\+Frame\+Server}$<$ cv\+::\+Mat $>$ $\ast$ {\bfseries frame\+Server}\label{class_frame_server_control_widget_ad2a05381cf735f490564c01d521f276e}
+
+\item 
+\hypertarget{class_frame_server_control_widget_a744324e5ef1e1f0fab87c771498e7ec9}{}\hyperlink{class_vision_core_1_1_async_1_1_async_frame_server_wrap}{Vision\+Core\+::\+Async\+Frame\+Server\+Wrap}$<$ cv\+::\+Mat $>$ $\ast$ {\bfseries async\+Frame\+Srv}\label{class_frame_server_control_widget_a744324e5ef1e1f0fab87c771498e7ec9}
+
+\item 
+\hypertarget{class_frame_server_control_widget_ac3be121915d30186e86fcaa863ef0b09}{}\hyperlink{class_image_viewer_cv}{Image\+Viewer\+Cv} $\ast$ {\bfseries img\+Viewer}\label{class_frame_server_control_widget_ac3be121915d30186e86fcaa863ef0b09}
+
+\item 
+\hypertarget{class_frame_server_control_widget_abc29e461e01cc0c712944f8f47f91331}{}Q\+String {\bfseries name}\label{class_frame_server_control_widget_abc29e461e01cc0c712944f8f47f91331}
+
+\item 
+\hypertarget{class_frame_server_control_widget_aa76d912ee0bb41910f213aacdf03f6aa}{}std\+::shared\+\_\+ptr$<$ \hyperlink{struct_vision_core_1_1_data_structures_1_1_frame}{Vision\+Core\+::\+Frame}$<$ cv\+::\+Mat $>$ $>$ {\bfseries previous\+Frame}\label{class_frame_server_control_widget_aa76d912ee0bb41910f213aacdf03f6aa}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Esta classe controla a execução e representação gráfica de um vídeo (Frame\+Server). 
+
+Definition at line 46 of file Frame\+Server\+Control\+Widget.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets/Frame\+Server\+Control\+Widget.\+h\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets/Frame\+Server\+Control\+Widget.\+cpp\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Components/\+Vision\+Widgets/release/moc\+\_\+\+Frame\+Server\+Control\+Widget.\+cpp\end{DoxyCompactItemize}

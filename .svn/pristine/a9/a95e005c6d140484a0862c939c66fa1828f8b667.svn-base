@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_vision_core_1_1_interfaces_1_1_tracker.html" title="Tracker\&lt; TImg, std\l::map\&lt; long, TObj \&gt; \&gt;" alt="" coords="5,39,156,80"/>
+<area shape="rect" id="node2" href="$class_vision_core_1_1_interfaces_1_1_identified_multi_tracker.html" title="A IdentifiedMultiTracker is a tracker for multiple objects, each having its own ID. " alt="" coords="204,39,348,80"/>
+<area shape="rect" id="node3" href="$class_vision_core_1_1_abstractions_1_1_abstract_auto_tracker.html" title="Implements a tracker that can automatically detect and track multiple objects by creating a individua..." alt="" coords="415,5,556,47"/>
+<area shape="rect" id="node4" href="$class_vision_core_1_1_abstractions_1_1_detector_based_multi_tracker.html" title="A tracker that applies a detector on every frame. " alt="" coords="396,71,575,112"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="update" name="update">
+<area shape="rect" id="node2" href="$struct_vision_core_1_1_data_structures_1_1_frame.html#ab0e6d692261de323466e6b083a173e5e" title="Returns the frame timestamp. " alt="" coords="115,5,295,47"/>
+<area shape="rect" id="node3" href="$struct_vision_core_1_1_data_structures_1_1_frame.html#a8531d354b20874961d98c796e3973b4d" title="Returns a reference to the frame image. " alt="" coords="115,71,295,112"/>
+</map>

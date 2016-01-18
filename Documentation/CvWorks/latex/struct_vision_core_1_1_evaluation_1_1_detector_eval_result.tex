@@ -1,0 +1,104 @@
+\hypertarget{struct_vision_core_1_1_evaluation_1_1_detector_eval_result}{}\section{Detector\+Eval\+Result Struct Reference}
+\label{struct_vision_core_1_1_evaluation_1_1_detector_eval_result}\index{Detector\+Eval\+Result@{Detector\+Eval\+Result}}
+
+
+Data structure that stores the statistics and evaluation results for a detector.  
+
+
+
+
+{\ttfamily \#include $<$Vision\+Evaluation.\+h$>$}
+
+
+
+Inheritance diagram for Detector\+Eval\+Result\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{struct_vision_core_1_1_evaluation_1_1_detector_eval_result__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Detector\+Eval\+Result\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{struct_vision_core_1_1_evaluation_1_1_detector_eval_result__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a3025bb62de2c4fee2369d7f387d37b8c}{}\hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a3025bb62de2c4fee2369d7f387d37b8c}{Detector\+Eval\+Result} ()\label{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a3025bb62de2c4fee2369d7f387d37b8c}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a3106f64e0c19391502195e9d87ef882d}{}unsigned int \hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a3106f64e0c19391502195e9d87ef882d}{detection\+Count}\label{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a3106f64e0c19391502195e9d87ef882d}
+
+\begin{DoxyCompactList}\small\item\em Number of detected objects. \end{DoxyCompactList}\item 
+\hypertarget{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a3c05e025a44b84e5e08e6ed525d78b2f}{}unsigned int \hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a3c05e025a44b84e5e08e6ed525d78b2f}{ground\+Truth\+Count}\label{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a3c05e025a44b84e5e08e6ed525d78b2f}
+
+\begin{DoxyCompactList}\small\item\em Number of real objects (ground truth) \end{DoxyCompactList}\item 
+\hypertarget{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a37d9752b7bc1fe547579c3d34350d789}{}unsigned int \hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a37d9752b7bc1fe547579c3d34350d789}{false\+Pos\+Count}\label{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a37d9752b7bc1fe547579c3d34350d789}
+
+\begin{DoxyCompactList}\small\item\em Number of false positives (detections that do not match any ground-\/truth annotation) \end{DoxyCompactList}\item 
+\hypertarget{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a3a724b2694d3cdc8174e9bf3980f6b6e}{}unsigned int \hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a3a724b2694d3cdc8174e9bf3980f6b6e}{false\+Neg\+Count}\label{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a3a724b2694d3cdc8174e9bf3980f6b6e}
+
+\begin{DoxyCompactList}\small\item\em Number of false negatives (objects that exist in the ground truth but have not been detected) \end{DoxyCompactList}\item 
+\hypertarget{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a5fbd4e58004da97e2bfe6c706b5b3dca}{}unsigned int \hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a5fbd4e58004da97e2bfe6c706b5b3dca}{abs\+Fn\+Count}\label{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a5fbd4e58004da97e2bfe6c706b5b3dca}
+
+\begin{DoxyCompactList}\small\item\em Number of absolute false positives (detected objects that do not have any similarity with the ground-\/truth) \end{DoxyCompactList}\item 
+\hypertarget{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_acd7858689999a5ff8eefc7efff7d5a95}{}unsigned int \hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_acd7858689999a5ff8eefc7efff7d5a95}{abs\+Fp\+Count}\label{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_acd7858689999a5ff8eefc7efff7d5a95}
+
+\begin{DoxyCompactList}\small\item\em Number of absolute false negatives (ground-\/truth annotations that are not associated to any detection) \end{DoxyCompactList}\item 
+\hypertarget{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_ab14e03e0a494c8495d3cff1629fed7ca}{}unsigned int \hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_ab14e03e0a494c8495d3cff1629fed7ca}{true\+Pos\+Count}\label{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_ab14e03e0a494c8495d3cff1629fed7ca}
+
+\begin{DoxyCompactList}\small\item\em Number of true positives. \end{DoxyCompactList}\item 
+\hypertarget{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_ad340900488bec039f83bd8dd3d3c7d9d}{}std\+::vector$<$ double $>$ \hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_ad340900488bec039f83bd8dd3d3c7d9d}{similarity\+Scores}\label{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_ad340900488bec039f83bd8dd3d3c7d9d}
+
+\begin{DoxyCompactList}\small\item\em Vector containing the similarity scores for the pair detection-\/ground-\/truth. \end{DoxyCompactList}\item 
+\hypertarget{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a0fb25e19c2b2cfc018d2ef6cdf7947e3}{}double \hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a0fb25e19c2b2cfc018d2ef6cdf7947e3}{recall}\label{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a0fb25e19c2b2cfc018d2ef6cdf7947e3}
+
+\begin{DoxyCompactList}\small\item\em Recall (Sensitivity/ Hit Rate) ~\newline
+ $ TPR = \frac{TP}{P} $. \end{DoxyCompactList}\item 
+\hypertarget{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a98ce42142601aa81694132ce8af84e8b}{}double \hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a98ce42142601aa81694132ce8af84e8b}{precision}\label{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a98ce42142601aa81694132ce8af84e8b}
+
+\begin{DoxyCompactList}\small\item\em Precision or positive predictive value (correct detections) ~\newline
+ $ PPV = \frac{TP}{TP+FP} $. \end{DoxyCompactList}\item 
+\hypertarget{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_ac8bfb2aa00ec18131ea1b1f9383a8c8f}{}double \hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_ac8bfb2aa00ec18131ea1b1f9383a8c8f}{f1score}\label{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_ac8bfb2aa00ec18131ea1b1f9383a8c8f}
+
+\begin{DoxyCompactList}\small\item\em F1 score (is the harmonic mean of precision and recall) ~\newline
+ $ F_{1} = \frac{2 \times PPV \times TPR}{PPV + TPR} $. \end{DoxyCompactList}\item 
+\hypertarget{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a4b55320813a56a9e113b23525e17f574}{}double \hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a4b55320813a56a9e113b23525e17f574}{fdr}\label{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a4b55320813a56a9e113b23525e17f574}
+
+\begin{DoxyCompactList}\small\item\em False discovery rate (F\+D\+R) ~\newline
+ $ FDR = \frac{FP}{FP+TP}$. \end{DoxyCompactList}\item 
+\hypertarget{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a2f9dbff026930716e4e219ce2d94b6f1}{}double \hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a2f9dbff026930716e4e219ce2d94b6f1}{fnr}\label{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_a2f9dbff026930716e4e219ce2d94b6f1}
+
+\begin{DoxyCompactList}\small\item\em False negative rate (F\+N\+R) ~\newline
+ $ FRN = \frac{FN}{FN+TP} $. \end{DoxyCompactList}\item 
+\hypertarget{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_af2732e62f1e295d9400418318a62536b}{}double \hyperlink{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_af2732e62f1e295d9400418318a62536b}{mean\+Similarity}\label{struct_vision_core_1_1_evaluation_1_1_detector_eval_result_af2732e62f1e295d9400418318a62536b}
+
+\begin{DoxyCompactList}\small\item\em Mean similarity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Data structure that stores the statistics and evaluation results for a detector. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_vision_core_1_1_evaluation_1_1_detector_evaluator}{Detector\+Evaluator} 
+\end{DoxySeeAlso}
+
+
+Definition at line 282 of file Vision\+Evaluation.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+F\+U\+R\+G/\+Software/\+Cv\+Works\+Release1/\+Core/\+Vision/Vision\+Evaluation.\+h\end{DoxyCompactItemize}

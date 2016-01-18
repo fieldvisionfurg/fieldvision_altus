@@ -1,0 +1,3 @@
+<map id="DatasetFDDB" name="DatasetFDDB">
+<area shape="rect" id="node2" href="$class_vision_core_1_1_evaluation_1_1_detection_dataset.html" title="{DetectionDataset\&lt; cv\l::Mat, cv::Rect \&gt;\n||+ ~DetectionDataset()\l+ getSamplesID()\l+ getImage()\l+ getObjects()\l+ getSubset()\l+ splitDataset()\l+ forEachSample()\l}" alt="" coords="5,5,156,185"/>
+</map>
